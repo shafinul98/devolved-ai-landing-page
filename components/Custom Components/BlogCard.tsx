@@ -7,6 +7,7 @@ type BlogCardProps = {
   blogImage: any;
   blogDescription: string;
   blogLink: string;
+  imageStyles?: string;
 };
 
 const BlogCard: React.FC<BlogCardProps> = ({
@@ -14,15 +15,20 @@ const BlogCard: React.FC<BlogCardProps> = ({
   blogImage,
   blogDescription,
   blogLink,
+  imageStyles,
 }: BlogCardProps) => {
   return (
     <article className="flex flex-col my-5 p-5 shadow-lg">
       {/* Image */}
-      <Image src={blogImage} alt={blogTitle} />
+      <Image src={blogImage} alt={blogTitle} className={imageStyles} />
       {/* Blog Title */}
-      <h1 className="text-lg font-semibold text-start my-2">{blogTitle}</h1>
+      <h1 className="text-lg font-semibold text-start md:text-center my-2">
+        {blogTitle}
+      </h1>
       {/* Blog Description */}
-      <p className="text-gray-600 text-sm text-start mb-4">{blogDescription}</p>
+      <p className="text-gray-600 text-sm text-start md:text-center mb-4">
+        {blogDescription}
+      </p>
       {/* Blog Link */}
       <Link
         href={blogLink}

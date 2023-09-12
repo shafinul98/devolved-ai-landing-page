@@ -303,7 +303,7 @@ const About = () => {
         </article>
       </section>
 
-      <section className="w-full my-10 px-5 place-items-center md:hidden">
+      <section className="w-full my-10 px-10 place-items-center md:hidden mb-20">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-[#0074D9] text-center">BLOGS</h1>
           <h1 className="text-[#2D3748] text-center font-bold text-2xl">
@@ -332,14 +332,14 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full my-5 px-5 place-items-center hidden md:flex md:flex-col md:mb-40">
+      <section className="w-full my-10 px-5 place-items-center hidden md:flex md:flex-col md:mb-40">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-[#0074D9] text-center">BLOGS</h1>
           <h1 className="text-[#2D3748] text-center font-bold text-2xl">
             Press & Media
           </h1>
           <Carousel extraStyles="h-72" bottomStyle="bottom-1">
-            <div className="flex px-10 gap-5">
+            <div className="flex gap-5 px-5 justify-center items-center">
               <BlogCard
                 blogTitle="Increasing Prosperity With Positive Thinking"
                 blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
@@ -359,7 +359,7 @@ const About = () => {
                 blogLink="/blogs/2"
               />
             </div>
-            <div className="flex px-10 gap-5">
+            <div className="flex gap-5 px-5 justify-center items-center">
               <BlogCard
                 blogTitle="Increasing Prosperity With Positive Thinking"
                 blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
