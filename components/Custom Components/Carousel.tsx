@@ -4,9 +4,11 @@ import React, { useState } from "react";
 
 type CarouselProps = {
   children: React.ReactNode[];
+  extraStyles: string;
+  bottomStyle: string;
 };
 
-const Carousel: React.FC<CarouselProps> = ({ children }) => {
+const Carousel = ({ children, extraStyles, bottomStyle }: CarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const totalSlides = children.length;
@@ -18,7 +20,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
       data-carousel="static"
     >
       {/* Carousel wrapper */}
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96 mt-5">
+      <div className={`relative overflow-hidden rounded-lg mt-5` + extraStyles}>
         {children.map((child, index) => (
           <div
             key={index}
@@ -32,7 +34,12 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
         ))}
       </div>
       {/* Slider indicators */}
-      <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-1 left-1/2 mt-5">
+      <div
+        className={
+          `absolute z-30 flex space-x-3 -translate-x-1/2 left-1/2 mt-5` +
+          bottomStyle
+        }
+      >
         {children.map((_, index) => (
           <button
             key={index}
