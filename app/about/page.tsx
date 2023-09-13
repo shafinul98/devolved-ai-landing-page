@@ -9,7 +9,6 @@ import Image from "next/image";
 import TeamMemberCard from "@/components/Custom Components/Team Member Card";
 import Carousel from "@/components/Custom Components/Carousel";
 import MilestoneCard from "@/components/Custom Components/MilestoneCard";
-import Link from "next/link";
 import BlogCard from "@/components/Custom Components/BlogCard";
 import Button from "@/components/Custom Components/Button";
 
@@ -19,7 +18,7 @@ const About = () => {
       <section className="w-full place-items-center">
         <div className="relative">
           <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-3xl md:text-5xl">
-            About
+            ABOUT
           </h1>
           <Image src={AboutHeroImage} alt="Hero Image" className="w-full" />
         </div>

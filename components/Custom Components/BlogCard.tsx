@@ -36,7 +36,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
         target="_blank"
         className="text-blue-500 text-end"
       >
-        Learn More
+        Learn more
       </Link>
     </article>
   );

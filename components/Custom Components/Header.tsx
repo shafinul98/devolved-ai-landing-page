@@ -18,18 +18,13 @@ const Header = () => {
     <nav className="shadow-lg min-w-max">
       <div className="flex justify-between items-center md:px-10 py-1 md:justify-around">
         <Link href={"/"}>
-          <Image src={Logo} alt="Devolved AI Logo" />
+          <Image src={Logo} alt="Devolved AI Logo" loading="lazy" width={150} />
         </Link>
         <div className="md:hidden">
           <DropdownMenu>
             <DropdownMenuTrigger className="px-5 py-1">
-              <div className="w-5 h-5 flex border items-center justify-center rounded-sm p-1">
-                <Image
-                  src={MenuIcon}
-                  alt="Menu Icon"
-                  width={100}
-                  height={100}
-                />
+              <div className="w-10 h-10 flex border items-center justify-center rounded-sm p-1">
+                <Image src={MenuIcon} alt="Menu Icon" />
               </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent>

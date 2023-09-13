@@ -4,8 +4,8 @@ import React, { useState } from "react";
 
 type CarouselProps = {
   children: React.ReactNode[];
-  extraStyles: string;
-  bottomStyle: string;
+  extraStyles?: string;
+  bottomStyle?: string;
 };
 
 const Carousel = ({ children, extraStyles, bottomStyle }: CarouselProps) => {

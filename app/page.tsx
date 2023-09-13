@@ -20,7 +20,7 @@ import Button from "@/components/Custom Components/Button";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between px-6 py-8 md:p-0">
-      <section className="grid w-full rounded-b-[30px] min-h-screen place-items-center md:bg-slate-50 md:px-12 md:py-8 lg:py-14 lg:px-16 mb-20 md:mb-20">
+      <section className="grid w-full rounded-b-[30px] min-h-screen place-items-center md:bg[#F5F5F5] md:px-12 md:py-8 lg:py-14 lg:px-16 mb-20 md:mb-20">
         <div className="flex flex-col gap-x-72 items-center md:flex-row md:justify-between md:p-10">
           <div className="flex flex-col gap-5 mb-10">
             <h1 className="font-bold text-3xl md:text-start md:text-5xl md:text-clip text-[#2D3748]">
@@ -49,7 +49,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col gap-10 md:px-10 md:flex-row bg-slate-50 md:bg-white border-t-2 md:border-0 py-5 rounded-sm">
+        <div className="mt-20 flex flex-col gap-10 md:px-10 md:flex-row bg[#F5F5F5] md:bg-white border-t-2 md:border-0 py-5 rounded-sm">
           <div className="flex flex-col items-center md:items-start gap-5">
             <Image src={MoneyBag} alt="" />
             <h1 className="text-xl font-semibold text-[#2D3748]">
@@ -332,7 +332,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full p-4 md:p-20 md:mb-0 mb-20 bg-slate-50">
+      <section className="w-full p-4 md:p-20 md:mb-0 mb-20 bg[#F5F5F5]">
         <div className="flex flex-col gap-3 text-center">
           <h3 className="text-base font-semibold text-primary ">
             EMPOWERING THE FUTURE OF AI TOGETHER

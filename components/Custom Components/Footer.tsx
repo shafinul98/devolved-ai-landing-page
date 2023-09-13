@@ -23,8 +23,8 @@ const Footer = () => {
             </Link>
           </div>
           <Button
-            title="LAUNCH APP"
-            extraStyles=" p-1 bg-[#FF6F00] rounded-full text-center text-white"
+            title="Launch App"
+            extraStyles=" w-3/4 p-1 bg-[#FF6F00] rounded-full text-center text-white"
           />
           <Button
             title="Whitepaper"

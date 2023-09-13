@@ -30,7 +30,7 @@ const TechnologyPage = () => {
       <section className="w-full place-items-center">
         <div className="relative">
           <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-3xl md:text-5xl">
-            Core
+            CORE
           </h1>
           <Image
             src={TechnologyHeroImage}
@@ -272,7 +272,7 @@ const TechnologyPage = () => {
         </div>
       </section>
 
-      <section className="w-full place-items-center md:hidden mb-20 bg-[#377DFF] min-h-screen">
+      <section className="w-full place-items-center md:hidden mb-20 bg-[#0074D9] min-h-screen">
         <div className="flex flex-col my-10">
           <Image src={TechPageMidIllustration} alt="" />
           <div className="flex flex-col text-white px-5 gap-3">
@@ -329,7 +329,7 @@ const TechnologyPage = () => {
         </div>
       </section>
 
-      <section className="w-full place-items-center hidden md:flex mb-20 bg-[#377DFF] min-h-screen">
+      <section className="w-full place-items-center hidden md:flex mb-20 bg-[#0074D9] min-h-screen">
         <div className="flex my-10">
           <Image src={TechPageMidIllustration} alt="" />
           <div className="flex flex-col text-white px-20 mt-14 gap-5">
