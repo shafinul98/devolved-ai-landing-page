@@ -64,15 +64,20 @@ const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-        <div className="p-3 justify-between items-center gap-10 hidden md:flex">
+        <div className="p-3 md:ms-20 xl:ms-0 justify-between items-center gap-10 hidden md:flex text-sm text-[#2D3748]">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/technology">Technology</Link>
           <Link href="/community">Community</Link>
           <Link href="/governance">Governance</Link>
           <Link href="/rewards">Rewards</Link>
-          <Link href="/contact">Contact</Link>
-          <Button title="Launch App" extraStyles=" bg-[#FF6F00] text-white" />
+          <Link href="/contact" className="xl:pr-16">
+            Contact
+          </Link>
+          <Button
+            title="Launch App"
+            extraStyles=" bg-[#FF6F00] text-white xl:ms-10 px-10 py-2"
+          />
         </div>
       </div>
     </nav>

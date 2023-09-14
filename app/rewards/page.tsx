@@ -30,7 +30,7 @@ const RewardsPage = () => {
           />
         </div>
       </section>
-      <section className="w-full my-10 items-center">
+      <section className="w-full my-10 md:my-16 md:px-10 items-center">
         <div className="flex flex-col md:flex-row justify-center px-5 gap-5">
           <div className="flex flex-col px-5 md:mt-20 gap-5">
             <h1 className="text-base text-[#0074D9]">REWARD SYSTEM OVERVIEW</h1>

@@ -149,7 +149,7 @@ export default function Home() {
       </section>
 
       <section className="w-full min-h-screen justify-center items-center px-16 lg:px-24 lg:py-36 my-15 hidden md:flex bg-[#F5F5F5]">
-        <div className="flex flex-row gap-16">
+        <div className="flex flex-row gap-16 md:p-10 lg:p-0">
           <Image src={SteveJobs} alt="Steve Jobs" className="w-1/2" />
           <div className="flex-col py-16 space-y-8 text-start">
             <h1 className="font-bold text-3xl">
@@ -266,7 +266,7 @@ export default function Home() {
       </section>
 
       <section className="w-full min-h-screen md:px-12 lg:px-16 hidden md:flex items-center gap-5">
-        <div className="flex flex-col gap-y-8">
+        <div className="flex flex-col gap-y-8 p-10">
           <div className="flex flex-col gap-y-8">
             <h1 className="font-bold text-3xl pr-72">
               <span className="text-[#0074D9]">Devolved AI: </span> A Communal
@@ -280,7 +280,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 rounded-sm mt-12">
+          <div className="flex flex-col gap-3 rounded-sm mt-12 xl:pr-36">
             <div className="flex items-center md:items-start gap-5">
               <Image src={Community} alt="" width={50} />
               <div className="flex flex-col gap-y-2">
@@ -332,8 +332,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full p-4 md:p-20 md:mb-0 mb-20 bg[#F5F5F5]">
-        <div className="flex flex-col gap-3 text-center">
+      <section className="w-full p-4 md:p-14 md:mb-0 mb-20 bg-[#F5F5F5]">
+        <div className="flex flex-col gap-5 text-center">
           <h3 className="text-base font-semibold text-primary ">
             EMPOWERING THE FUTURE OF AI TOGETHER
           </h3>
@@ -345,14 +345,14 @@ export default function Home() {
             earn rewards with Argocoin (AGC) as you partake in a transparent and
             community guided AI ecosystem.
           </p>
-          <div className="flex gap-x-2 md:px-96">
+          <div className="flex gap-x-2 md:px-72 justify-center">
             <Button
               title="Launch App"
-              extraStyles=" bg-[#FF6F00] w-full md:w-1/2 text-white"
+              extraStyles=" bg-[#FF6F00] w-full md:w-1/2 xl:w-1/3 text-white"
             />
             <Button
               title="Whitepaper"
-              extraStyles=" w-full md:w-1/2 bg-white text-[#0074D9] border-[#0074D9] text-primary"
+              extraStyles=" w-full md:w-1/2 xl:w-1/3 bg-white text-[#0074D9] border-[#0074D9] text-primary"
             />
           </div>
         </div>

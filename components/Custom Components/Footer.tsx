@@ -44,24 +44,24 @@ const Footer = () => {
         </div>
         <div className="flex flex-col items-center">
           <h1 className="mb-5 font-semibold">Follow Us on</h1>
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             <Link href={"https://www.facebook.com/deepengineai/"}>
-              <FaFacebook />
+              <FaFacebook size={25} />
             </Link>
 
             <Link href={"https://twitter.com/deepengineai"}>
-              <FaTwitter />
+              <FaTwitter size={25} />
             </Link>
 
             <Link href={"https://www.reddit.com/r/DeepEngineAI/?rdt=38444"}>
-              <FaReddit />
+              <FaReddit size={25} />
             </Link>
 
             <Link href={"https://discord.com/invite/Z2avfRQ4xc"}>
-              <FaDiscord />
+              <FaDiscord size={25} />
             </Link>
 
-            <FaTelegram />
+            <FaTelegram size={25} />
           </div>
         </div>
       </div>

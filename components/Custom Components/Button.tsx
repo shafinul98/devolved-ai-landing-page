@@ -5,11 +5,13 @@ type PropTypes = {
   title: string;
   extraStyles?: string;
   hasRightArrowIcon?: boolean;
+  type?: string | any;
 };
 
-const Button = ({ title, extraStyles, hasRightArrowIcon }: PropTypes) => {
+const Button = ({ title, extraStyles, hasRightArrowIcon, type }: PropTypes) => {
   return (
-    <div
+    <button
+      type={type}
       className={
         `border rounded-md p-3 text-sm font-light flex items-center justify-center gap-2` +
         extraStyles
@@ -21,7 +23,7 @@ const Button = ({ title, extraStyles, hasRightArrowIcon }: PropTypes) => {
           <FaArrowRight />
         </span>
       )}
-    </div>
+    </button>
   );
 };
 

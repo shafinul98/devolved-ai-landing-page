@@ -283,9 +283,9 @@ const About = () => {
             milestone="We initiate the development and implementation of new AI modules, as we aim to extend the platform's applicability and reach."
           />
         </div>
-        <article className="mx-10 rounded-2xl shadow-lg flex flex-row-reverse items-center justify-center my-10 gap-5">
+        <article className="mx-10 rounded-2xl shadow-xl flex flex-row-reverse items-center justify-center my-10 gap-5">
           <Image src={FuturePlansImageCurved} alt="" className="round" />
-          <div className="flex flex-col gap-3 p-5 pr-36">
+          <div className="flex flex-col gap-3 p-5 md:p-10 pr-36">
             <h1 className="text-[#0074D9] text-start text-sm">Future Plans</h1>
             <h1 className="text-[#2D3748] text-start text-lg">
               Advancing Toward a Decentralized AI Ecosystem: Our Roadmap for
@@ -382,7 +382,7 @@ const About = () => {
 
           <Button
             title="View all"
-            extraStyles=" bg-blue-500 text-white mt-10 w-1/2"
+            extraStyles=" bg-blue-500 text-white mt-10 md:mt-20 w-1/2 lg:w-1/3"
             hasRightArrowIcon={true}
           />
         </div>
