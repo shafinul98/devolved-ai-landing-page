@@ -10,7 +10,6 @@ import Button from "./Button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -18,7 +17,7 @@ import {
 } from "@/components/ui/form";
 
 import { Input } from "@/components/ui/input";
-import { toast } from "../ui/use-toast";
+import { useToast } from "../ui/use-toast";
 import { Textarea } from "../ui/textarea";
 
 const FormSchema = z.object({
@@ -57,9 +56,9 @@ export function ContactForm() {
     },
   });
 
-  async function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data);
+  const { formState } = useForm();
 
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -73,23 +72,15 @@ export function ContactForm() {
       }
       setMessageSent(true);
     } catch (error: any) {
-      console.log(
-        "There was a problem with the fetch operation " + error.message
-      );
+      alert("There was a problem with sending the question " + error.message);
     }
   }
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
     if (isMessageSent && formRef) {
       form.reset();
-      setTimeout(() => {
-        setMessageSent(false);
-      }, 2000);
+      setMessageSent(false);
     }
-    return () => {
-      clearTimeout(timeout);
-    };
   }, [isMessageSent]);
 
   return (
@@ -173,9 +164,10 @@ export function ContactForm() {
         </div>
 
         <Button
-          type={"submit"}
+          type="submit"
           title="Send this question"
           extraStyles=" bg-[#0074D9] w-1/2 lg:w-1/4 mx-auto text-white"
+          disabled={formState.isValidating}
         />
       </form>
     </Form>

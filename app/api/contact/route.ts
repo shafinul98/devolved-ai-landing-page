@@ -10,7 +10,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
 	try {
 		client = await mongoose.connect(MONGODB_URI);
-		console.log("DB connected");
 	} catch (error) {
 		console.log("There was an error connection to the DB", error);
 	}

@@ -6,9 +6,16 @@ type PropTypes = {
   extraStyles?: string;
   hasRightArrowIcon?: boolean;
   type?: string | any;
+  disabled?: boolean;
 };
 
-const Button = ({ title, extraStyles, hasRightArrowIcon, type }: PropTypes) => {
+const Button = ({
+  title,
+  extraStyles,
+  hasRightArrowIcon,
+  type,
+  disabled,
+}: PropTypes) => {
   return (
     <button
       type={type}
@@ -16,6 +23,7 @@ const Button = ({ title, extraStyles, hasRightArrowIcon, type }: PropTypes) => {
         `border rounded-md p-3 text-sm font-light flex items-center justify-center gap-2` +
         extraStyles
       }
+      disabled={disabled}
     >
       {title}
       {hasRightArrowIcon && (
