@@ -1,9 +1,12 @@
+"use client";
+
 import Header from "@/components/Custom Components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import Footer from "@/components/Custom Components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import { useEffect } from "react";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -12,7 +15,7 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   title: "Devolved AI",
-  description: "Devovled AI Home Page",
+  description: "Devolved AI Home Page",
 };
 
 export default function RootLayout({
@@ -20,9 +23,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  useEffect(() => {
+    // Disable right-click
+    const handleContextMenu = (event: MouseEvent) => {
+      event.preventDefault();
+    };
+    document.addEventListener("contextmenu", handleContextMenu);
+
+    // Disable text selection
+    document.body.style.userSelect = "none";
+
+    // Cleanup event listeners on unmount
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+    };
+  }, []);
+
   return (
     <html lang="en">
-      <body className={`${lato.className} grid`}>
+      <body className={`${lato.className} grid`} style={{ userSelect: "none" }}>
         <Header />
         {children}
         <Toaster />
