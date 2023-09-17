@@ -1,6 +1,6 @@
 import React from "react";
 
-import ContactPageHeroImage from "../../public/Contact Page Hero Image.svg";
+import ContactPageHeroImage from "../../public/Contact Page Hero Image.webp";
 import Image from "next/image";
 import { ContactForm } from "@/components/Custom Components/ContactForm";
 

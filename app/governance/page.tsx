@@ -1,7 +1,7 @@
 import React from "react";
 
-import GovernanceHeroImage from "../../public/Governance Page Hero Image.svg";
-import GovernanceStructureImage from "../../public/Governance Structure Image.svg";
+import GovernanceHeroImage from "../../public/Governance Page Hero Image.webp";
+import GovernanceStructureImage from "../../public/Governance Structure Image.webp";
 import GovernanceHeroIllustration from "../../public/Voting Illustration.svg";
 
 import CheckIconYellow from "../../public/Check Icon Yellow.svg";
@@ -35,7 +35,7 @@ const GovernancePage = () => {
             </h1>
             <Image
               src={GovernanceStructureImage}
-              alt="Steve Jobs"
+              alt="Governance Structure"
               className="mx-auto"
             />
             <p className="md:break-words w-full md:w-3/4 text-[#646E73]">
@@ -95,7 +95,7 @@ const GovernancePage = () => {
         <div className="flex flex-row gap-16">
           <Image
             src={GovernanceStructureImage}
-            alt="Steve Jobs"
+            alt="Governance Structure"
             className="w-1/2"
           />
           <div className="flex-col py-16 md:mt-20 md:ms-20 space-y-8 text-start">

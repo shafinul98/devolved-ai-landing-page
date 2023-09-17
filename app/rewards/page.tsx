@@ -1,8 +1,9 @@
 import React from "react";
 
-import RewardsPageHeroImage from "../../public/Rewards Page Hero Image.svg";
+import RewardsPageHeroImage from "../../public/Rewards Page Hero Image.webp";
+import AGCIllustration from "../../public/AGC Distribution Illustration.webp";
+
 import RewardsIllustration from "../../public/Rewards Illustration.svg";
-import AGCIllustration from "../../public/AGC Distribution Illustration.svg";
 import TransparencyReportIllustration from "../../public/Transparency Report Illustration.svg";
 
 import OneIcon from "../../public/One Icon.svg";

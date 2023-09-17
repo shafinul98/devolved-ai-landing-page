@@ -1,11 +1,12 @@
 import Image from "next/image";
-import HeroImage from "../public/Home Page Hero.svg";
+import HeroImage from "../public/Home Page Hero.webp";
+import SteveJobs from "../public/Steve Jobs.webp";
+import DevolvedAIHeroLogo from "../public/Devolved AI Hero Logo.svg";
+
 import MoneyBag from "../public/Money Bag.svg";
 import TeamWork from "../public/Team Work.svg";
 import Blockchain from "../public/Blockchain.svg";
-import SteveJobs from "../public/Steve Jobs.svg";
 import BlueTick from "../public/Blue Tick.svg";
-import DevolvedAIHeroLogo from "../public/Devolved AI Hero Logo.svg";
 import Community from "../public/Community and Outreach Logo.svg";
 import Rewards from "../public/Rewarding Contributions Logo.svg";
 import LinkIcon from "../public/Link Logo.svg";
@@ -219,7 +220,7 @@ export default function Home() {
             </h1>
           </div>
           <div>
-            <Image src={DevolvedAIHeroLogo} alt="Robot and Human" />
+            <Image src={DevolvedAIHeroLogo} alt="Devolved AI Logo" />
           </div>
           <p className="text-center text-[#646E73]">
             We're crafting a shared journey in AI, ensuring transparency,

@@ -20,7 +20,12 @@ const BlogCard: React.FC<BlogCardProps> = ({
   return (
     <article className="flex flex-col my-5 p-5 shadow-lg">
       {/* Image */}
-      <Image src={blogImage} alt={blogTitle} className={imageStyles} />
+      <Image
+        src={blogImage}
+        alt={blogTitle}
+        className={imageStyles}
+        width={500}
+      />
       {/* Blog Title */}
       <h1 className="text-lg font-semibold text-start md:text-center my-2">
         {blogTitle}

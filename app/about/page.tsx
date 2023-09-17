@@ -4,7 +4,10 @@ import AboutHeroImage from "../../public/About Page Hero Image.webp";
 import AboutHeroIllustration from "../../public/About Page Hero Illustration.webp";
 import FuturePlansImage from "../../public/Future Plans Image.webp";
 import FuturePlansImageCurved from "../../public/Future Plans Curved Image.webp";
+
 import BlogsOnePicture from "../../public/Blogs One Picture.webp";
+import BlogsTwoPicture from "../../public/Blogs Two Picture.webp";
+import BlogsThreePicture from "../../public/Blogs Three Picture.webp";
 
 import Tahlil from "../../public/tahlil.png";
 import Lamima from "../../public/Lamima.jpg";
@@ -164,7 +167,7 @@ const About = () => {
               />
             </Carousel>
           </div>
-          <div className="md:flex md:flex-wrap md:justify-evenly md:my-10 md:px-10 md:gap-x-10 hidden">
+          <div className="md:flex md:justify-evenly md:my-10 md:px-10 md:gap-x-10 hidden">
             <TeamMemberCard
               cardImage={Tahlil}
               cardDescription="Lead Blockchain Developer"
@@ -313,7 +316,7 @@ const About = () => {
             <BlogCard
               blogTitle="Increasing Prosperity With Positive Thinking"
               blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-              blogImage={BlogsOnePicture}
+              blogImage={BlogsTwoPicture}
               blogLink="/blogs/2"
             />
           </Carousel>
@@ -343,13 +346,13 @@ const About = () => {
               <BlogCard
                 blogTitle="Increasing Prosperity With Positive Thinking"
                 blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-                blogImage={BlogsOnePicture}
+                blogImage={BlogsTwoPicture}
                 blogLink="/blogs/2"
               />
               <BlogCard
                 blogTitle="Increasing Prosperity With Positive Thinking"
                 blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-                blogImage={BlogsOnePicture}
+                blogImage={BlogsThreePicture}
                 blogLink="/blogs/2"
               />
             </div>
@@ -363,13 +366,13 @@ const About = () => {
               <BlogCard
                 blogTitle="Increasing Prosperity With Positive Thinking"
                 blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-                blogImage={BlogsOnePicture}
+                blogImage={BlogsTwoPicture}
                 blogLink="/blogs/2"
               />
               <BlogCard
                 blogTitle="Increasing Prosperity With Positive Thinking"
                 blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-                blogImage={BlogsOnePicture}
+                blogImage={BlogsThreePicture}
                 blogLink="/blogs/2"
               />
             </div>

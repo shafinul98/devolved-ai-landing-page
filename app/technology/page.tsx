@@ -1,20 +1,20 @@
 import React from "react";
 
-import TechnologyHeroImage from "../../public/Technology Page Hero Image.svg";
-import TechnologyHeroIllustration from "../../public/Technology Page Hero Illustration.svg";
+import TechnologyHeroImage from "../../public/Technology Page Hero Image.webp";
+import TechnologyHeroIllustration from "../../public/Technology Page Hero Illustration.webp";
 
-import TechBlogPictureOne from "../../public/Tech Page First Blog Pic.svg";
-import TechBlogPictureTwo from "../../public/Tech Page Second Blog.svg";
-import TechBlogPictureThree from "../../public/Tech Page Third Blog Pic.svg";
-import TechBlogPictureFour from "../../public/Tech Page Fourth Blog.svg";
-import TechBlogPictureFive from "../../public/Tech Page Fifth Blog.svg";
-import TechBlogPictureSix from "../../public/Tech Page Sixth Blog.svg";
-import TechBlogPictureSeven from "../../public/Tech Page Seventh Blog.svg";
-import TechBlogPictureEight from "../../public/Tech Page Eighth Blog.svg";
-import TechBlogPictureNine from "../../public/Tech Page Ninth Blog.svg";
-import TechBlogPictureTen from "../../public/Tech Page Tenth Blog.svg";
-import TechBlogPictureEleven from "../../public/Tech Page Eleventh Blog.svg";
-import TechBlogPictureTwelve from "../../public/Tech Page Twelfth Blog.svg";
+import TechBlogPictureOne from "../../public/Tech Page First Blog Pic.webp";
+import TechBlogPictureTwo from "../../public/Tech Page Second Blog.webp";
+import TechBlogPictureThree from "../../public/Tech Page Third Blog Pic.webp";
+import TechBlogPictureFour from "../../public/Tech Page Fourth Blog.webp";
+import TechBlogPictureFive from "../../public/Tech Page Fifth Blog.webp";
+import TechBlogPictureSix from "../../public/Tech Page Sixth Blog.webp";
+import TechBlogPictureSeven from "../../public/Tech Page Seventh Blog.webp";
+import TechBlogPictureEight from "../../public/Tech Page Eighth Blog.webp";
+import TechBlogPictureNine from "../../public/Tech Page Ninth Blog.webp";
+import TechBlogPictureTen from "../../public/Tech Page Tenth Blog.webp";
+import TechBlogPictureEleven from "../../public/Tech Page Eleventh Blog.webp";
+import TechBlogPictureTwelve from "../../public/Tech Page Twelfth Blog.webp";
 
 import TechPageMidIllustration from "../../public/Tech Page Contribute Section Illustration.svg";
 import CheckIconWhite from "../../public/Check Icon White.svg";

@@ -1,8 +1,8 @@
 import React from "react";
-
-import CommunityHeroImage from "../../public/Community Page Hero Image.svg";
 import Image from "next/image";
 import Link from "next/link";
+
+import CommunityHeroImage from "../../public/Community Page Hero Image.webp";
 
 import Community from "../../public/Community and Outreach Logo.svg";
 import Rewards from "../../public/Rewarding Contributions Logo.svg";
