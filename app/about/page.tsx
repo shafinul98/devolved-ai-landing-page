@@ -6,6 +6,11 @@ import FuturePlansImage from "../../public/Future Plans Image.webp";
 import FuturePlansImageCurved from "../../public/Future Plans Curved Image.webp";
 import BlogsOnePicture from "../../public/Blogs One Picture.webp";
 
+import Tahlil from "../../public/tahlil.png";
+import Lamima from "../../public/Lamima.jpg";
+import Samir from "../../public/Samir.jpg";
+import Shafinul from "../../public/Shafinul.jpg";
+
 import Image from "next/image";
 import TeamMemberCard from "@/components/Custom Components/Team Member Card";
 import Carousel from "@/components/Custom Components/Carousel";
@@ -43,7 +48,11 @@ const About = () => {
           technology; we're building a future that belongs to all of us.
         </p>
         <div className="my-5">
-          <Image src={AboutHeroIllustration} alt="Thinking User Illustration" />
+          <Image
+            src={AboutHeroIllustration}
+            alt="Futuristic World Illustration"
+            loading="eager"
+          />
         </div>
       </section>
 
@@ -114,107 +123,87 @@ const About = () => {
           <div className="md:hidden">
             <Carousel extraStyles="h-56 md:my-10" bottomStyle="">
               <TeamMemberCard
-                cardTitle="Shafinul Islam"
+                cardImage={Tahlil}
+                cardDescription="Lead Blockchain Developer"
+                cardFooter={[
+                  "https://github.com/tahlil",
+                  "https://www.linkedin.com/in/tahlil/",
+                  "https://twitter.com/TahlilBsse0803",
+                ]}
+                cardTitle="Tahlil"
+              />
+              <TeamMemberCard
+                cardImage={Lamima}
+                cardDescription="Lead Machine Learning Engineer"
+                cardFooter={[
+                  "https://github.com/Ava7i",
+                  "https://www.linkedin.com/in/lamima-tabassum-ava",
+                  "https://twitter.com/AvaLamima17577",
+                ]}
+                cardTitle="Lamima"
+              />
+              <TeamMemberCard
+                cardImage={Samir}
+                cardDescription="Machine Learning Engineer"
+                cardFooter={[
+                  "https://github.com/Mahfuzzur-Rahman",
+                  "https://www.linkedin.com/in/mahfuzzur-rahman-samir/",
+                  "https://x.com/rahmanmahfuzzur?s=21&t=ItQTV17i_DjsOjCmwO3JTg",
+                ]}
+                cardTitle="Mahfuzzur"
+              />
+              <TeamMemberCard
+                cardImage={Shafinul}
                 cardDescription="Full Stack Developer"
-                cardImage={AboutHeroImage}
                 cardFooter={[
-                  "https://github.com/shafoo98/",
-                  "https://linkedin.com",
-                  "https://twitter.com/",
+                  "https://github.com/Mahfuzzur-Rahman",
+                  "https://www.linkedin.com/in/mahfuzzur-rahman-samir/",
+                  "https://x.com/rahmanmahfuzzur?s=21&t=ItQTV17i_DjsOjCmwO3JTg",
                 ]}
-              />
-              <TeamMemberCard
-                cardTitle="Tahlil"
-                cardDescription="Lead Blockchain Developer"
-                cardImage={AboutHeroIllustration}
-                cardFooter={[
-                  "https://github.com/shafoo98/",
-                  "https://linkedin.com",
-                  "https://twitter.com/",
-                ]}
-              />
-              <TeamMemberCard
-                cardTitle="Tahlil"
-                cardDescription="Lead Blockchain Developer"
-                cardImage={AboutHeroIllustration}
-                cardFooter={[
-                  "https://github.com/shafoo98/",
-                  "https://linkedin.com",
-                  "https://twitter.com/",
-                ]}
-              />
-              <TeamMemberCard
-                cardTitle="Tahlil"
-                cardDescription="Lead Blockchain Developer"
-                cardImage={AboutHeroIllustration}
-                cardFooter={[
-                  "https://github.com/shafoo98/",
-                  "https://linkedin.com",
-                  "https://twitter.com/",
-                ]}
+                cardTitle="Shafinul"
               />
             </Carousel>
           </div>
           <div className="md:flex md:flex-wrap md:justify-evenly md:my-10 md:px-10 md:gap-x-10 hidden">
             <TeamMemberCard
-              cardTitle="Shafinul Islam"
+              cardImage={Tahlil}
+              cardDescription="Lead Blockchain Developer"
+              cardFooter={[
+                "https://github.com/tahlil",
+                "https://www.linkedin.com/in/tahlil/",
+                "https://twitter.com/TahlilBsse0803",
+              ]}
+              cardTitle="Tahlil"
+            />
+            <TeamMemberCard
+              cardImage={Lamima}
+              cardDescription="Lead Machine Learning Engineer"
+              cardFooter={[
+                "https://github.com/Ava7i",
+                "https://www.linkedin.com/in/lamima-tabassum-ava",
+                "https://twitter.com/AvaLamima17577",
+              ]}
+              cardTitle="Lamima"
+            />
+            <TeamMemberCard
+              cardImage={Samir}
+              cardDescription="Machine Learning Engineer"
+              cardFooter={[
+                "https://github.com/Mahfuzzur-Rahman",
+                "https://www.linkedin.com/in/mahfuzzur-rahman-samir/",
+                "https://x.com/rahmanmahfuzzur?s=21&t=ItQTV17i_DjsOjCmwO3JTg",
+              ]}
+              cardTitle="Mahfuzzur"
+            />
+            <TeamMemberCard
+              cardImage={Shafinul}
               cardDescription="Full Stack Developer"
-              cardImage={AboutHeroImage}
               cardFooter={[
-                "https://github.com/shafoo98/",
-                "https://linkedin.com",
-                "https://twitter.com/",
+                "https://github.com/shafoo98",
+                "https://www.linkedin.com/in/shafinulislam/",
+                "https://twitter.com/ShafinulIs10648",
               ]}
-            />
-            <TeamMemberCard
-              cardTitle="Tahlil"
-              cardDescription="Lead Blockchain Developer"
-              cardImage={AboutHeroIllustration}
-              cardFooter={[
-                "https://github.com/shafoo98/",
-                "https://linkedin.com",
-                "https://twitter.com/",
-              ]}
-            />
-            <TeamMemberCard
-              cardTitle="Tahlil"
-              cardDescription="Lead Blockchain Developer"
-              cardImage={AboutHeroIllustration}
-              cardFooter={[
-                "https://github.com/shafoo98/",
-                "https://linkedin.com",
-                "https://twitter.com/",
-              ]}
-            />
-            <TeamMemberCard
-              cardTitle="Tahlil"
-              cardDescription="Lead Blockchain Developer"
-              cardImage={AboutHeroIllustration}
-              cardFooter={[
-                "https://github.com/shafoo98/",
-                "https://linkedin.com",
-                "https://twitter.com/",
-              ]}
-            />
-            <TeamMemberCard
-              cardTitle="Tahlil"
-              cardDescription="Lead Blockchain Developer"
-              cardImage={AboutHeroIllustration}
-              cardFooter={[
-                "https://github.com/shafoo98/",
-                "https://linkedin.com",
-                "https://twitter.com/",
-              ]}
-            />
-            <TeamMemberCard
-              cardTitle="Tahlil"
-              cardDescription="Lead Blockchain Developer"
-              cardImage={AboutHeroIllustration}
-              cardFooter={[
-                "https://github.com/shafoo98/",
-                "https://linkedin.com",
-                "https://twitter.com/",
-              ]}
+              cardTitle="Shafinul"
             />
           </div>
         </div>
@@ -285,7 +274,12 @@ const About = () => {
           />
         </div>
         <article className="mx-10 rounded-2xl shadow-xl flex flex-row-reverse items-center justify-center my-10 gap-5">
-          <Image src={FuturePlansImageCurved} alt="" className="round" />
+          <Image
+            src={FuturePlansImageCurved}
+            alt=""
+            className="rounded"
+            width={500}
+          />
           <div className="flex flex-col gap-3 p-5 md:p-10 pr-36">
             <h1 className="text-[#0074D9] text-start text-sm">Future Plans</h1>
             <h1 className="text-[#2D3748] text-start text-lg">

@@ -25,7 +25,8 @@ const TeamMemberCard = ({
             alt={cardTitle}
             layout="fill"
             objectFit="cover"
-            objectPosition="center"
+            objectPosition="top"
+            quality={100}
           />
         </div>
       </div>
@@ -44,14 +45,14 @@ const TeamMemberCard = ({
             <FaGithub />
           </Link>
           <Link
-            href={`${cardFooter[0]}`}
+            href={`${cardFooter[1]}`}
             rel="noopener noreferrer"
             target="_blank"
           >
             <FaLinkedin />
           </Link>
           <Link
-            href={`${cardFooter[0]}`}
+            href={`${cardFooter[2]}`}
             rel="noopener noreferrer"
             target="_blank"
           >
