@@ -10,7 +10,7 @@ import TechBlogPictureTwo from "../../public/Tech Page Second Blog.webp";
 import TechBlogPictureThree from "../../public/Tech Page Third Blog Pic.webp";
 import TechBlogPictureFour from "../../public/Tech Page Fourth Blog.webp";
 import TechBlogPictureFive from "../../public/Tech Page Fifth Blog.webp";
-import TechBlogPictureSix from "../../public/Tech Page Sixth Blog.webp";
+import TechBlogPictureSix from "../../public/Tech Blog Six.webp";
 import TechBlogPictureSeven from "../../public/Tech Page Seventh Blog.webp";
 import TechBlogPictureEight from "../../public/Tech Page Eighth Blog.webp";
 import TechBlogPictureNine from "../../public/Tech Page Ninth Blog.webp";
