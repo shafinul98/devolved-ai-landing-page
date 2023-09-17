@@ -14,7 +14,7 @@ import BlogsThreePicture from "../../public/Blogs Three Picture.webp";
 import Tahlil from "../../public/tahlil.png";
 import Lamima from "../../public/Lamima.jpg";
 import Samir from "../../public/Samir.jpg";
-import Shafin from "../../public/Shafinul.jpg";
+import Shafin from "../../public/Shafinul.png";
 
 import Image from "next/image";
 import TeamMemberCard from "@/components/Custom Components/Team Member Card";
