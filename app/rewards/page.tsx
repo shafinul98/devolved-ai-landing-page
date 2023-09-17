@@ -199,7 +199,7 @@ const RewardsPage = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center mx-5 my-3">
-          <article className="w-full flex flex-col my-5 md:p-12 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
+          <article className="w-full flex flex-col my-5 md:p-12 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5] transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110">
             <h1 className="text-lg font-semibold text-start my-2">
               High quality
             </h1>
@@ -208,7 +208,7 @@ const RewardsPage = () => {
               instrument closer.
             </p>
             <Link
-              href={""}
+              href={"#"}
               rel="noopener noreferrer"
               target="_blank"
               className="text-blue-500 text-end"
@@ -216,7 +216,7 @@ const RewardsPage = () => {
               Download Report
             </Link>
           </article>
-          <article className="w-full flex flex-col my-5 md:p-10 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
+          <article className="w-full flex flex-col my-5 md:p-10 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5] transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110">
             <h1 className="text-lg font-semibold text-start my-2">
               Musical instruments{" "}
             </h1>
@@ -226,7 +226,7 @@ const RewardsPage = () => {
               other instrument.
             </p>
             <Link
-              href={""}
+              href={"#"}
               rel="noopener noreferrer"
               target="_blank"
               className="text-blue-500 text-end"
@@ -234,7 +234,7 @@ const RewardsPage = () => {
               Download Report
             </Link>
           </article>
-          <article className="w-full flex flex-col my-5 md:p-10 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
+          <article className="w-full flex flex-col my-5 md:p-10 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5] transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110">
             <h1 className="text-lg font-semibold text-start my-2">
               Free assistance
             </h1>
@@ -243,7 +243,7 @@ const RewardsPage = () => {
               musical instruments, equipment and accessories.
             </p>
             <Link
-              href={""}
+              href={"#"}
               rel="noopener noreferrer"
               target="_blank"
               className="text-blue-500 text-end"
@@ -256,7 +256,7 @@ const RewardsPage = () => {
         <div className="flex items-center justify-center">
           <Button
             title="View All Reports"
-            extraStyles=" bg-[#0074D9] text-white px-10"
+            extraStyles=" bg-[#0074D9] text-white px-10 "
           />
         </div>
       </section>

@@ -7,7 +7,7 @@ type PropTypes = {
 
 const MilestoneCard = ({ date, milestone }: PropTypes) => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110">
       <div className=" w-1/2 border border-[#0074D9] rounded-lg px-5 py-3 mt-10 mx-5 text-center">
         <p className="text-[#0074D9]">{date}</p>
       </div>

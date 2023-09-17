@@ -45,23 +45,41 @@ const Footer = () => {
         <div className="flex flex-col items-center">
           <h1 className="mb-5 font-semibold">Follow Us on</h1>
           <div className="flex gap-3">
-            <Link href={"https://www.facebook.com/deepengineai/"}>
+            <Link
+              href={"https://www.facebook.com/deepengineai/"}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FaFacebook size={25} />
             </Link>
 
-            <Link href={"https://twitter.com/deepengineai"}>
+            <Link
+              href={"https://twitter.com/deepengineai"}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FaTwitter size={25} />
             </Link>
 
-            <Link href={"https://www.reddit.com/r/DeepEngineAI/?rdt=38444"}>
+            <Link
+              href={"https://www.reddit.com/r/DeepEngineAI/?rdt=38444"}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FaReddit size={25} />
             </Link>
 
-            <Link href={"https://discord.com/invite/Z2avfRQ4xc"}>
+            <Link
+              href={"https://discord.com/invite/Z2avfRQ4xc"}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FaDiscord size={25} />
             </Link>
 
-            <FaTelegram size={25} />
+            <Link href="#" rel="noopener noreferrer" target="_blank">
+              <FaTelegram size={25} />
+            </Link>
           </div>
         </div>
       </div>

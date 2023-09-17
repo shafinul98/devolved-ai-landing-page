@@ -388,7 +388,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col md:flex-row md:flex-wrap gap-5 justify-center md:py-10">
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-105">
               <Image src={DemocraticGovIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Democratic Governance</h6>
               <p className="text-[#646E73]">
@@ -397,7 +397,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-105">
               <Image src={InnovationIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">
                 User Centric Innovation
@@ -408,7 +408,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-105">
               <Image src={ProsperityIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Shared Prosperity</h6>
               <p className="text-[#646E73]">
@@ -417,7 +417,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 transition ease-in-out delay-150 hover:translate-y-3 hover:scale-105">
               <Image src={PrivacyIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Privacy and Security</h6>
               <p className="text-[#646E73]">
@@ -426,7 +426,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 transition ease-in-out delay-150 hover:translate-y-3 hover:scale-105">
               <Image src={Community} alt="" />
               <h6 className="text-xl text-[#2D3748]">Community and Outreach</h6>
               <p className="text-[#646E73]">
@@ -435,7 +435,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 transition ease-in-out delay-150 hover:translate-y-3 hover:scale-105">
               <Image src={TransparencyIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Transparency</h6>
               <p className="text-[#646E73]">

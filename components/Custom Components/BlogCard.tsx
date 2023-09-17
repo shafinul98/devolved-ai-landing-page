@@ -18,7 +18,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   imageStyles,
 }: BlogCardProps) => {
   return (
-    <article className="flex flex-col my-5 p-5 shadow-lg">
+    <article className="flex flex-col my-5 p-5 shadow-lg transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-105">
       {/* Image */}
       <Image
         src={blogImage}

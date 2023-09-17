@@ -145,7 +145,7 @@ const About = () => {
             <Carousel extraStyles="h-56 md:my-10" bottomStyle="">
               <TeamMemberCard
                 cardImage={Tahlil}
-                cardDescription="Lead Blockchain Developer"
+                cardDescription="Lead Blockchain Engineer"
                 cardFooter={[
                   "https://github.com/tahlil",
                   "https://www.linkedin.com/in/tahlil/",
@@ -165,7 +165,7 @@ const About = () => {
               />
               <TeamMemberCard
                 cardImage={Samir}
-                cardDescription="Machine Learning Engineer"
+                cardDescription="Associate Machine Learning Engineer"
                 cardFooter={[
                   "https://github.com/Mahfuzzur-Rahman",
                   "https://www.linkedin.com/in/mahfuzzur-rahman-samir/",
@@ -175,11 +175,11 @@ const About = () => {
               />
               <TeamMemberCard
                 cardImage={Shafin}
-                cardDescription="Full Stack Developer"
+                cardDescription="Full Stack Engineer"
                 cardFooter={[
-                  "https://github.com/Mahfuzzur-Rahman",
-                  "https://www.linkedin.com/in/mahfuzzur-rahman-samir/",
-                  "https://x.com/rahmanmahfuzzur?s=21&t=ItQTV17i_DjsOjCmwO3JTg",
+                  "https://github.com/shafoo98",
+                  "https://www.linkedin.com/in/shafinulislam/",
+                  "https://twitter.com/ShafinulIs10648",
                 ]}
                 cardTitle="Shafinul"
               />

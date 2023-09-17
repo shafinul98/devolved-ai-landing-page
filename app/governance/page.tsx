@@ -310,16 +310,19 @@ const GovernancePage = () => {
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
+            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110"
           />
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
+            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110"
           />
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
+            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110"
           />
         </div>
         <div className="flex flex-col md:flex-row">
@@ -327,16 +330,19 @@ const GovernancePage = () => {
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
+            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110"
           />
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
+            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110"
           />
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
+            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110"
           />
         </div>
       </section>

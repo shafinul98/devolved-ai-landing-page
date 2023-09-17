@@ -87,9 +87,9 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 flex flex-col items-center justify-center my-10 2xl:px-[500px]"
+        className="space-y-8 flex flex-col items-center justify-center my-10"
       >
-        <div className="flex gap-x-2 md:px-72 lg:px-56 md:w-full">
+        <div className="flex gap-x-2 md:px-20 lg:px-40 md:w-full">
           <FormField
             control={form.control}
             name="firstName"
@@ -118,7 +118,7 @@ export function ContactForm() {
           />
         </div>
 
-        <div className="flex gap-x-2 md:px-72 lg:px-56 md:w-full">
+        <div className="flex gap-x-2 md:px-20 lg:px-40 md:w-full">
           <FormField
             control={form.control}
             name="email"
@@ -147,7 +147,7 @@ export function ContactForm() {
           />
         </div>
 
-        <div className="w-full md:w-1/2 lg:w-3/4 md:px-2 lg:px-20 xl:px-14 2xl:px-8">
+        <div className="w-3/4 md:w-full md:px-20 lg:px-40">
           <FormField
             control={form.control}
             name="message"
