@@ -14,7 +14,7 @@ import BlogsThreePicture from "../../public/Blogs Three Picture.webp";
 import Tahlil from "../../public/tahlil.png";
 import Lamima from "../../public/Lamima.jpg";
 import Samir from "../../public/Samir.jpg";
-import Shafinul from "../../public/Shafinul.jpg";
+import Shafin from "../../public/Shafinul.jpg";
 
 import Image from "next/image";
 import TeamMemberCard from "@/components/Custom Components/Team Member Card";
@@ -174,7 +174,7 @@ const About = () => {
                 cardTitle="Mahfuzzur"
               />
               <TeamMemberCard
-                cardImage={Shafinul}
+                cardImage={Shafin}
                 cardDescription="Full Stack Developer"
                 cardFooter={[
                   "https://github.com/Mahfuzzur-Rahman",
@@ -217,7 +217,7 @@ const About = () => {
               cardTitle="Mahfuzzur"
             />
             <TeamMemberCard
-              cardImage={Shafinul}
+              cardImage={Shafin}
               cardDescription="Full Stack Developer"
               cardFooter={[
                 "https://github.com/shafoo98",
