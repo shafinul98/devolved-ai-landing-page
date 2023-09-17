@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 
 import AboutHeroImage from "../../public/About Page Hero Image.webp";
 import AboutHeroIllustration from "../../public/About Page Hero Illustration.webp";
@@ -22,6 +24,22 @@ import BlogCard from "@/components/Custom Components/BlogCard";
 import Button from "@/components/Custom Components/Button";
 
 const About = () => {
+  useEffect(() => {
+    // Disable right-click
+    const handleContextMenu = (event: MouseEvent) => {
+      event.preventDefault();
+    };
+    document.addEventListener("contextmenu", handleContextMenu);
+
+    // Disable text selection
+    document.body.style.userSelect = "none";
+
+    // Cleanup event listeners on unmount
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+    };
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <section className="w-full place-items-center">

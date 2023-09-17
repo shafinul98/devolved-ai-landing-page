@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import HeroImage from "../public/Home Page Hero.webp";
 import SteveJobs from "../public/Steve Jobs.webp";
@@ -17,8 +19,25 @@ import PrivacyIcon from "../public/Privacy and Security Logo.svg";
 import TransparencyIcon from "../public/Transparency Icon.svg";
 
 import Button from "@/components/Custom Components/Button";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    // Disable right-click
+    const handleContextMenu = (event: MouseEvent) => {
+      event.preventDefault();
+    };
+    document.addEventListener("contextmenu", handleContextMenu);
+
+    // Disable text selection
+    document.body.style.userSelect = "none";
+
+    // Cleanup event listeners on unmount
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+    };
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between px-6 py-8 md:p-0">
       <section className="grid w-full rounded-b-[30px] min-h-screen place-items-center md:bg[#F5F5F5] md:px-12 md:py-8 lg:py-14 lg:px-16 mb-20 md:mb-20">

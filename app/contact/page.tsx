@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 
 import ContactPageHeroImage from "../../public/Contact Page Hero Image.webp";
 import Image from "next/image";
@@ -12,6 +14,22 @@ import {
 } from "@/components/ui/accordion";
 
 const ContactPage = () => {
+  useEffect(() => {
+    // Disable right-click
+    const handleContextMenu = (event: MouseEvent) => {
+      event.preventDefault();
+    };
+    document.addEventListener("contextmenu", handleContextMenu);
+
+    // Disable text selection
+    document.body.style.userSelect = "none";
+
+    // Cleanup event listeners on unmount
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+    };
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center">
       <section className="w-full place-items-center">
