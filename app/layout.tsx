@@ -5,6 +5,7 @@ import "./globals.css";
 import { Lato } from "next/font/google";
 import Footer from "@/components/Custom Components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import { Analytics } from "@vercel/analytics/react";
 import { useEffect } from "react";
 
 const lato = Lato({
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body className={`${lato.className} grid`} style={{ userSelect: "none" }}>
         <Header />
         {children}
+        <Analytics />
         <Toaster />
         <Footer />
       </body>
