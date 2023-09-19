@@ -8,6 +8,8 @@ import GovernanceHeroIllustration from "../../public/Voting Illustration.svg";
 
 import CheckIconYellow from "../../public/Check Icon Yellow.svg";
 import MouseClickIcon from "../../public/Mouse Click Icon.svg";
+import StackedCards from "../../public/Stacked Cards Icon.svg";
+import CodeIcon from "../../public/Code Icon.svg";
 import ProposalIcon from "../../public/Proposal Icon.svg";
 
 import Image from "next/image";
@@ -40,15 +42,15 @@ const GovernancePage = () => {
           <Image
             src={GovernanceHeroImage}
             alt="Hero Image"
-            className="w-full"
+            className="w-full md:h-[25rem]"
           />
         </div>
       </section>
 
       <section className="flex w-full min-h-screen justify-center items-center p-8 md:hidden">
-        <div className="flex flex-col md:flex-row md:justify-center gap-x-32">
-          <div className="md:mt-24 flex-col space-y-8 md:space-y-4 md:text-start">
-            <h1 className="font-bold text-[20px] md:text-3xl text-center">
+        <div className="flex flex-col gap-x-32">
+          <div className="flex-col space-y-8 md:space-y-4">
+            <h1 className="font-bold text-[1.5625rem] text-center">
               Governance Structure
             </h1>
             <Image
@@ -56,51 +58,53 @@ const GovernancePage = () => {
               alt="Governance Structure"
               className="mx-auto"
             />
-            <p className="md:break-words w-full md:w-3/4 text-[#646E73]">
+            <p className="w-full text-[1.25rem] text-[#646E73]">
               Using theFront to build your site means never worrying about
               designing another page or cross browser compatibility. Our
               ever-growing library of components and pre-designed layouts will
               make your life easier.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-0 md:justify-start">
-              <div className="flex my-2 w-full justify-around">
-                <div className="flex items-center space-x-2">
+            <div className="flex flex-wrap justify-center gap-5 sm:gap-0 md:justify-start">
+              <div className="flex my-2 w-full justify-center">
+                <div className="flex items-center space-x-2 me-10">
                   <Image src={CheckIconYellow} alt="Blue tick" />
-                  <p className="text-[#2D3748] text-sm font-normal">Security</p>
+                  <p className="text-[#2D3748] text-sm font-normal">
+                    All features
+                  </p>
                 </div>
                 <div className="flex items-center space-x-2 ms-2">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
-                    Governance
+                    Email Support
                   </p>
                 </div>
               </div>
-              <div className="flex my-2 w-full justify-around">
-                <div className="flex items-center space-x-2 ms-1">
+              <div className="flex my-2 w-full justify-center">
+                <div className="flex items-center space-x-2 me-4">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
-                    Innovation
+                    Lifetime updates
                   </p>
                 </div>
                 <div className="flex items-center space-x-2 me-2">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
-                    Community
+                    Tons of assets
                   </p>
                 </div>
               </div>
-              <div className="flex my-2 w-full justify-around">
-                <div className="flex items-center space-x-2 ms-2">
+              <div className="flex my-2 w-full justify-center">
+                <div className="flex items-center space-x-2 ms-2 me-8">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
-                    Prosperity
+                    Tech support
                   </p>
                 </div>
-                <div className="flex items-center space-x-2 ms-1">
+                <div className="flex items-center space-x-2 ms-[0.5rem]">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
-                    Transparency
+                    Integration ready
                   </p>
                 </div>
               </div>
@@ -109,59 +113,62 @@ const GovernancePage = () => {
         </div>
       </section>
 
-      <section className="w-full justify-center items-center px-16 lg:px-24 lg:py-36 hidden md:flex bg-[#F5F5F5]">
+      <section className="w-full justify-center items-center px-16 hidden md:flex pb-20 bg-[#F5F5F5]">
         <div className="flex flex-row gap-16">
           <Image
             src={GovernanceStructureImage}
             alt="Governance Structure"
-            className="w-1/2"
+            className="w-[33.375rem] h-[37.25rem] mt-[4rem] ms-[5rem] lg:ms-[6rem]"
           />
-          <div className="flex-col py-16 md:mt-20 md:ms-20 space-y-8 text-start">
-            <h1 className="font-bold text-3xl">Governance Structure</h1>
-            <p className="md:break-words w-full md:w-3/4 text-[#646E73]">
-              “Technology is nothing. What's important is that you have a faith
-              in people, that they're basically good and smart, and if you give
-              them tools, they'll do wonderful things with them.”
+          <div className="flex-col py-16 md:mt-20 md:ms-20 lg:ms-36 space-y-8 text-start">
+            <h1 className="font-bold text-[2rem]">Governance Structure</h1>
+            <p className=" text-[#646E73] text-[1.25rem] pr-[6.5rem]">
+              Using theFront to build your site means never worrying about
+              designing another page or cross browser compatibility. Our
+              ever-growing library of components and pre-designed layouts will
+              make your life easier.
             </p>
 
             <div className="flex flex-wrap gap-2 sm:gap-0 justify-start">
               <div className="flex my-2 w-full justify-start gap-40">
                 <div className="flex items-center space-x-2">
                   <Image src={CheckIconYellow} alt="Blue tick" />
-                  <p className="text-[#2D3748] text-sm font-normal">Security</p>
+                  <p className="text-[#2D3748] text-sm font-normal">
+                    All features
+                  </p>
                 </div>
                 <div className="flex items-center space-x-2 ms-4">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
-                    Governance
+                    Email support
                   </p>
                 </div>
               </div>
-              <div className="flex my-2 w-full justify-start gap-40">
+              <div className="flex my-2 w-full justify-start gap-36">
                 <div className="flex items-center space-x-2">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
-                    Innovation
+                    Lifetime updates
                   </p>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
-                    Community
+                    Tons of assets
                   </p>
                 </div>
               </div>
-              <div className="flex my-2 w-full justify-start gap-40">
+              <div className="flex my-2 w-full justify-start gap-[10.5rem]">
                 <div className="flex items-center space-x-2">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
-                    Prosperity
+                    Tech support
                   </p>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
-                    Transparency
+                    Integration ready
                   </p>
                 </div>
               </div>
@@ -173,7 +180,7 @@ const GovernancePage = () => {
       <section className="w-full min-h-screen p-8 md:hidden bg-[#f5f5f5] pb-10 mb-10">
         <div className="flex flex-col items-center justify-center gap-y-10">
           <div className="flex flex-col">
-            <span className="text-[#0074D9]">VOTING PROCESS:</span>
+            <span className="text-[#0074D9] text-[1rem]">VOTING PROCESS:</span>
             <h1 className="font-bold text-3xl inline">
               <span className="text-[#0074D9]">Develop anything </span> your
               business needs
@@ -184,36 +191,39 @@ const GovernancePage = () => {
             </p>
           </div>
           <div>
-            <Image src={GovernanceHeroIllustration} alt="Robot and Human" />
+            <Image
+              src={GovernanceHeroIllustration}
+              alt="Governance Illustration"
+            />
           </div>
 
           <div className="mt-10 flex flex-col gap-10 border-t-2 md:border-0 py-10 rounded-sm">
-            <div className="flex flex-col items-center md:items-start gap-5">
-              <Image src={MouseClickIcon} alt="" />
-              <h1 className="text-lg font-semibold text-[#2D3748]">
+            <div className="flex flex-col items-start gap-[0.625rem] md:gap-5">
+              <Image src={MouseClickIcon} alt="Mouse Click Icon" />
+              <h1 className="text-[1rem] font-normal text-[#2D3748]">
                 Built for developers
               </h1>
-              <p className="text-sm text-center text-[#646E73]">
+              <p className="text-sm  text-[#646E73]">
                 theFront is built to make your life easier. Variables, build
                 tooling, documentation, and reusable components.
               </p>
             </div>
-            <div className="flex flex-col items-center md:items-start gap-5">
-              <Image src={MouseClickIcon} alt="" />
-              <h1 className="text-xl font-semibold text-[#2D3748]">
+            <div className="flex flex-col items-start gap-5">
+              <Image src={StackedCards} alt="" />
+              <h1 className="text-[1rem] font-normal text-[#2D3748]">
                 Designed to be modern
               </h1>
-              <p className="text-sm text-center md:text-start font-light text-[#646E73]">
+              <p className="text-sm  font-light text-[#646E73]">
                 Designed with the latest design trends in mind. theFront feels
                 modern, minimal, and beautiful.
               </p>
             </div>
-            <div className="flex flex-col items-center md:items-start gap-5">
-              <Image src={MouseClickIcon} alt="" />
-              <h1 className="text-xl font-semibold text-center text-[#2D3748]">
+            <div className="flex flex-col items-start gap-5">
+              <Image src={CodeIcon} alt="" />
+              <h1 className="text-[1rem] font-normal text-[#2D3748]">
                 Documentation for everything
               </h1>
-              <p className="text-sm text-center md:text-start font-light text-[#646E73]">
+              <p className="text-sm  font-light text-[#646E73]">
                 We've written extensive documentation for components and tools,
                 so you never have to reverse engineer anything.{" "}
               </p>
@@ -222,23 +232,24 @@ const GovernancePage = () => {
         </div>
       </section>
 
-      <section className="w-full min-h-screen md:px-12 lg:px-16 hidden md:flex items-center gap-5 bg-[#f5f5f5] rounded-b-[30px] pb-10 mb-20">
-        <div className="flex flex-col gap-y-8">
+      <section
+        className="w-full hidden md:px-16 md:flex items-center gap-5 bg-[#f5f5f5] pb-[7rem] mb-[4.5rem]"
+        id="curved-rectangle"
+      >
+        <div className="flex flex-col gap-y-8 w-[43.25rem]">
           <div className="flex flex-col">
-            <span className="text-[#0074D9]">VOTING PROCESS:</span>
-            <h1 className="font-bold text-3xl pr-72 inline">
+            <span className="text-[#0074D9] text-[1rem]">VOTING PROCESS:</span>
+            <h1 className="font-bold text-[2rem] inline">
               <span className="text-[#0074D9]">Develop anything </span> your
               business needs
             </h1>
-            <p className="mt-5 text-xl text-[#646E73] pr-32">
-              We're crafting a shared journey in AI, ensuring transparency,
-              inclusiveness, and rewarding your essential role with Argocoin
-              (AGC). Embrace a future where artificial intelligence is
-              democratized and accessible to all.
+            <p className="mt-5 text-xl text-[#646E73]">
+              Build a beautiful, modern website with flexible, fully
+              customizable, atomic Material-UI components.
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 rounded-sm mt-12">
+          <div className="flex flex-col gap-3 rounded-sm mt-8">
             <div className="flex items-center md:items-start gap-5">
               <Image src={MouseClickIcon} alt="" width={50} />
               <div className="flex flex-col gap-y-2">
@@ -253,7 +264,7 @@ const GovernancePage = () => {
               </div>
             </div>
             <div className="flex items-center md:items-start gap-5">
-              <Image src={MouseClickIcon} alt="" width={50} />
+              <Image src={StackedCards} alt="" width={50} />
               <div className="flex flex-col gap-y-2">
                 <h1 className="text-lg font-semibold text-[#2D3748]">
                   Rewarding Contributions{" "}
@@ -266,7 +277,7 @@ const GovernancePage = () => {
               </div>
             </div>
             <div className="flex items-center md:items-start gap-5">
-              <Image src={MouseClickIcon} alt="" width={50} />
+              <Image src={CodeIcon} alt="" width={50} />
               <div className="flex flex-col gap-y-2">
                 <h1 className="text-lg font-semibold text-[#2D3748]">
                   A Nexus for Visionaries{" "}
@@ -284,19 +295,20 @@ const GovernancePage = () => {
           <Image
             src={GovernanceHeroIllustration}
             alt="Decentralized AI Governance"
-            width={1000}
-            height={1000}
+            className="w-[28.375rem] h-[32.1875rem] ms-[5rem]"
           />
         </div>
       </section>
 
-      <section className="w-full my-10">
-        <div className="flex flex-col items-center justify-center px-10 md:px-52 gap-5 md:gap-2">
-          <span className="text-[#0074D9]">GOVERNANCE PROPOSALS</span>
-          <h1 className="font-bold text-2xl inline text-center">
+      <section className="w-full mt-8 md:mt-16 mb-20 flex justify-center">
+        <div className="flex flex-col items-center justify-center px-10 gap-5 md:gap-4 md:w-[54.0625rem]">
+          <span className="text-[#0074D9] text-[1rem]">
+            GOVERNANCE PROPOSALS
+          </span>
+          <h1 className="font-bold text-[1.5625rem] md:text-[2rem] md:px-20 text-center">
             The powerful and flexible theme for all kinds of businesses
           </h1>
-          <p className="mt-5 text-base text-[#646E73] text-center">
+          <p className="mt-5 text-base text-[#646E73] text-center md:px-10 px-6">
             Build a beautiful, modern website with flexible, fully customizable,
             atomic Material-UI components. An experience you'd expect from a
             design system.
@@ -304,45 +316,45 @@ const GovernancePage = () => {
         </div>
       </section>
 
-      <section className="w-full mt-10 mb-20">
-        <div className="flex flex-col md:flex-row">
+      <section className="w-full md:mt-10 mb-20">
+        <div className="flex flex-col items-center md:flex-row md:justify-center gap-5">
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
-            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110"
+            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
           />
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
-            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110"
+            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
           />
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
-            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110"
+            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
           />
         </div>
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row md:justify-center gap-5">
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
-            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110"
+            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
           />
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
-            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110"
+            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
           />
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
-            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110"
+            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
           />
         </div>
       </section>

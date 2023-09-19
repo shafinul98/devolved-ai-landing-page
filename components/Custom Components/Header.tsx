@@ -16,9 +16,14 @@ import Button from "./Button";
 const Header = () => {
   return (
     <nav className="shadow-lg min-w-max">
-      <div className="flex justify-between items-center md:px-10 py-1 md:justify-around">
+      <div className="flex justify-between items-center md:px-10 py-1">
         <Link href={"/"}>
-          <Image src={Logo} alt="Devolved AI Logo" loading="lazy" width={150} />
+          <Image
+            src={Logo}
+            alt="Devolved AI Logo"
+            className="w-[8rem] h-[1.875rem] ms-[0.5rem] md:w-[12.875rem] md:h-[2.4375rem]"
+            quality={100}
+          />
         </Link>
         <div className="md:hidden">
           <DropdownMenu>
@@ -37,7 +42,7 @@ const Header = () => {
               </DropdownMenuItem>
               <DropdownMenuItem>
                 {" "}
-                <Link href="/technology">Technology</Link>
+                <Link href="/core">Core</Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 {" "}
@@ -65,18 +70,30 @@ const Header = () => {
           </DropdownMenu>
         </div>
         <div className="p-3 md:ms-20 xl:ms-0 justify-between items-center gap-10 hidden md:flex text-sm text-[#2D3748]">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/technology">Technology</Link>
-          <Link href="/community">Community</Link>
-          <Link href="/governance">Governance</Link>
-          <Link href="/rewards">Rewards</Link>
-          <Link href="/contact" className="xl:pr-16">
+          <Link className="text-[1rem]" href="/">
+            Home
+          </Link>
+          <Link className="text-[1rem]" href="/about">
+            About
+          </Link>
+          <Link className="text-[1rem]" href="/core">
+            Core
+          </Link>
+          <Link className="text-[1rem]" href="/community">
+            Community
+          </Link>
+          <Link className="text-[1rem]" href="/governance">
+            Governance
+          </Link>
+          <Link className="text-[1rem]" href="/rewards">
+            Rewards
+          </Link>
+          <Link className="text-[1rem] pr-12" href="/contact">
             Contact
           </Link>
           <Button
             title="Launch App"
-            extraStyles=" bg-[#FF6F00] text-white xl:ms-10 px-10 py-2"
+            extraStyles=" bg-[#FF6F00] text-white rounded-[0.3125rem] w-[8.5rem] h-[2.625rem]"
           />
         </div>
       </div>

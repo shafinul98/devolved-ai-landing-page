@@ -87,14 +87,14 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 flex flex-col items-center justify-center my-10"
+        className="space-y-8 flex flex-col items-center justify-center my-10 lg:mx-[22.5rem]"
       >
-        <div className="flex gap-x-2 md:px-20 lg:px-40 md:w-full">
+        <div className="flex md:flex-col lg:flex-row gap-2 md:gap-y-5 w-full lg:gap-0">
           <FormField
             control={form.control}
             name="firstName"
             render={({ field }) => (
-              <FormItem className="md:w-1/2">
+              <FormItem className="w-full md:px-[15rem] lg:px-0 lg:ms-[5rem]">
                 <FormLabel className="font-bold">First Name</FormLabel>
                 <FormControl>
                   <Input placeholder="First Name" {...field} />
@@ -107,7 +107,7 @@ export function ContactForm() {
             control={form.control}
             name="lastName"
             render={({ field }) => (
-              <FormItem className="md:w-1/2">
+              <FormItem className="w-full md:px-[15rem] lg:px-2 lg:me-[5rem]">
                 <FormLabel className="font-bold">Last Name</FormLabel>
                 <FormControl>
                   <Input placeholder="Last Name" {...field} />
@@ -118,12 +118,12 @@ export function ContactForm() {
           />
         </div>
 
-        <div className="flex gap-x-2 md:px-20 lg:px-40 md:w-full">
+        <div className="w-full">
           <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
-              <FormItem className="md:w-1/2">
+              <FormItem className="w-full md:px-[15rem] lg:px-[5rem]">
                 <FormLabel className="font-bold">Email</FormLabel>
                 <FormControl>
                   <Input placeholder="Email" type="email" {...field} />
@@ -132,22 +132,9 @@ export function ContactForm() {
               </FormItem>
             )}
           />
-          <FormField
-            control={form.control}
-            name="phoneNumber"
-            render={({ field }) => (
-              <FormItem className="md:w-1/2">
-                <FormLabel className="font-bold">Phone</FormLabel>
-                <FormControl>
-                  <Input placeholder="Phone" {...field} pattern="^\+?[0-9]*$" />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
         </div>
 
-        <div className="w-3/4 md:w-full md:px-20 lg:px-40">
+        <div className="w-full md:px-[15rem] lg:px-[5rem]">
           <FormField
             control={form.control}
             name="message"
@@ -155,7 +142,7 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel className="font-bold">Message</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Message" {...field} />
+                  <Textarea placeholder="Message" {...field} rows={6} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -165,7 +152,7 @@ export function ContactForm() {
 
         <Button
           type="submit"
-          title="Send this question"
+          title="Submit"
           extraStyles=" bg-[#0074D9] w-1/2 lg:w-1/4 mx-auto text-white"
           disabled={formState.isValidating}
         />

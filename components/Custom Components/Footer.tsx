@@ -19,23 +19,30 @@ const Footer = () => {
         <div className="flex flex-col gap-5 items-center">
           <div>
             <Link href={"/"}>
-              <Image src={FooterLogo} alt="" width={150} height={200} />
+              <Image
+                src={FooterLogo}
+                alt=""
+                className="w-[11.75rem] h-[2rem]"
+                quality={100}
+              />
             </Link>
           </div>
-          <Button
-            title="Launch App"
-            extraStyles=" w-3/4 p-1 bg-[#FF6F00] rounded-full text-center text-white"
-          />
-          <Button
-            title="Whitepaper"
-            extraStyles=" w-3/4 p-1 bg-white text-[#0074D9] border-[#0074D9] rounded-full text-center"
-          />
+          <div className="md:flex md:flex-row flex flex-col gap-5">
+            <Button
+              title="Launch App"
+              extraStyles=" p-1 bg-[#FF6F00] rounded-full text-center text-white"
+            />
+            <Button
+              title="Whitepaper"
+              extraStyles=" p-1 bg-white text-[#0074D9] border-[#0074D9] rounded-full text-center"
+            />
+          </div>
         </div>
         <div className="flex flex-col">
-          <h1 className="mb-5 font-semibold">Quick Links</h1>
+          <h1 className="mb-5 font-normal text-[1.5rem]">Quick Links</h1>
           <div className="flex flex-col items-start gap-2">
             <Link href="/about">About</Link>
-            <Link href="/technology">Technology</Link>
+            <Link href="/core">Core</Link>
             <Link href="/community">Community</Link>
             <Link href="/governance">Governance</Link>
             <Link href="/rewards">Rewards</Link>
@@ -43,10 +50,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <h1 className="mb-5 font-semibold">Follow Us on</h1>
+          <h1 className="mb-5 font-normal text-[1.5rem]">Follow Us on</h1>
           <div className="flex gap-3">
             <Link
-              href={"https://www.facebook.com/deepengineai/"}
+              href={"https://facebook.com/devolvedai"}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -54,7 +61,7 @@ const Footer = () => {
             </Link>
 
             <Link
-              href={"https://twitter.com/deepengineai"}
+              href={"https://twitter.com/devolvedai"}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -62,7 +69,7 @@ const Footer = () => {
             </Link>
 
             <Link
-              href={"https://www.reddit.com/r/DeepEngineAI/?rdt=38444"}
+              href={"https://www.reddit.com/user/devolvedai"}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -70,14 +77,18 @@ const Footer = () => {
             </Link>
 
             <Link
-              href={"https://discord.com/invite/Z2avfRQ4xc"}
+              href={"https://discord.gg/Z2avfRQ4xc"}
               rel="noopener noreferrer"
               target="_blank"
             >
               <FaDiscord size={25} />
             </Link>
 
-            <Link href="#" rel="noopener noreferrer" target="_blank">
+            <Link
+              href={"https://t.me/devolvedai"}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FaTelegram size={25} />
             </Link>
           </div>

@@ -12,6 +12,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
+import {
+  FaDiscord,
+  FaFacebook,
+  FaReddit,
+  FaTelegram,
+  FaTwitter,
+} from "react-icons/fa";
 
 const ContactPage = () => {
   useEffect(() => {
@@ -40,17 +48,62 @@ const ContactPage = () => {
           <Image
             src={ContactPageHeroImage}
             alt="Hero Image"
-            className="w-full"
+            className="w-full md:h-[25rem]"
           />
         </div>
       </section>
 
-      <section className="w-full bg-[#f5f5f5]">
-        <div className="flex flex-col my-10 px-3">
-          <h1 className="text-center text-2xl font-bold text-[#2D3748]">
+      <div className="flex flex-col items-center justify-center mt-10">
+        <h1 className="text-xl my-5">Find us on these platforms</h1>
+        <div className="flex gap-3 md:gap-10">
+          <Link
+            href={"https://facebook.com/devolvedai"}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FaFacebook size={30} />
+          </Link>
+
+          <Link
+            href={"https://twitter.com/devolvedai"}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FaTwitter size={30} />
+          </Link>
+
+          <Link
+            href={"https://www.reddit.com/user/devolvedai"}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FaReddit size={30} />
+          </Link>
+
+          <Link
+            href={"https://discord.gg/Z2avfRQ4xc"}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FaDiscord size={30} />
+          </Link>
+
+          <Link
+            href={"https://t.me/devolvedai"}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FaTelegram size={30} />
+          </Link>
+        </div>
+      </div>
+
+      <section className="w-full mt-[7.5rem] lg:mt-[5rem] bg-[#f5f5f5]">
+        <div className="flex flex-col mt-[4rem] px-3">
+          <h1 className="text-center text-[2rem] font-bold text-[#2D3748] mb-[1rem]">
             Contact us
           </h1>
-          <p className="text-center text-base text-[#646E73] py-5">
+          <p className="text-center text-base text-[#646E73] md:px-[25.63rem]">
             theFront will make your product look modern and professional while
             saving you precious time.
           </p>

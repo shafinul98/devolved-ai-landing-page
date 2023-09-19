@@ -16,7 +16,7 @@ const TeamMemberCard = ({
   cardFooter,
 }: PropTypes) => {
   return (
-    <article className="flex gap-5 my-2 bg-[#F8F9FC] p-5 rounded-3xl transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110">
+    <article className="flex w-full md:w-[20rem] lg:w-[25rem] gap-5 my-2 bg-[#F8F9FC] p-5 rounded-3xl transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110">
       {/* Image on the left */}
       <div className="flex-shrink-0">
         <div className="h-32 w-32 relative rounded-3xl overflow-hidden">
