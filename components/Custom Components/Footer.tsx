@@ -22,7 +22,7 @@ const Footer = () => {
               <Image
                 src={FooterLogo}
                 alt=""
-                className="w-[11.75rem] h-[2rem]"
+                className="md:w-[15rem] md:h-[5rem] w-[11.75rem] h-[2rem]"
                 quality={100}
               />
             </Link>
@@ -49,8 +49,10 @@ const Footer = () => {
             <Link href="/contact">Contact</Link>
           </div>
         </div>
-        <div className="flex flex-col items-center">
-          <h1 className="mb-5 font-normal text-[1.5rem]">Follow Us on</h1>
+        <div className="flex flex-col items-center md:items-start">
+          <h1 className="mb-5 font-normal text-[1.5rem] text-start">
+            Follow Us on
+          </h1>
           <div className="flex gap-3">
             <Link
               href={"https://facebook.com/devolvedai"}

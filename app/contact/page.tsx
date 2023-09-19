@@ -48,7 +48,7 @@ const ContactPage = () => {
           <Image
             src={ContactPageHeroImage}
             alt="Hero Image"
-            className="w-full md:h-[25rem]"
+            className="w-full md:h-[30rem]"
           />
         </div>
       </section>

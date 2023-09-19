@@ -53,7 +53,7 @@ const TechnologyPage = () => {
           <Image
             src={TechnologyHeroImage}
             alt="Hero Image"
-            className="w-full md:h-[25rem]"
+            className="w-full md:h-[30rem]"
           />
         </div>
       </section>
@@ -84,7 +84,7 @@ const TechnologyPage = () => {
             </div>
           </div>
 
-          <div className="px-14 md:px-0 md:ms-[6rem]">
+          <div className="px-14 md:px-0 md:ms-[6rem] lg:ms-[15rem]">
             <Image
               src={TechnologyHeroIllustration}
               alt="Hero Image"
@@ -94,7 +94,7 @@ const TechnologyPage = () => {
         </div>
       </section>
 
-      <section className="w-full my-10 px-10 place-items-center md:hidden mb-20">
+      <section className="w-full my-10 px-10 flex flex-col items-center justify-center md:hidden mb-20">
         <div className="flex flex-col justify-center items-center">
           <Carousel extraStyles="h-72" bottomStyle="bottom-1">
             <div className="flex flex-col gap-5 px-5">
@@ -193,9 +193,9 @@ const TechnologyPage = () => {
         </div>
       </section>
 
-      <section className="w-full px-5 place-items-center hidden md:flex md:flex-col md:mb-[5rem]">
+      <section className="w-full px-5 lg:px-0 place-items-center hidden md:flex md:flex-col md:mb-[5rem]">
         <div className="flex flex-col justify-center items-center">
-          <div className="flex gap-5 px-5 justify-center items-center">
+          <div className="flex gap-10 px-5 justify-center items-center">
             <BlogCard
               blogTitle="Decentralization"
               blogDescription="The very fabric of our architecture that ensures no single point of control or failure."
@@ -224,7 +224,7 @@ const TechnologyPage = () => {
               extraStyles="lg:h-[32.23rem]"
             />
           </div>
-          <div className="flex gap-5 px-5 justify-center items-center">
+          <div className="flex gap-10 px-5 justify-center items-center">
             <BlogCard
               blogTitle="Argocoin (AGC)"
               blogDescription="Our native token, designed to incentivize and empower community participation."
@@ -253,7 +253,7 @@ const TechnologyPage = () => {
               extraStyles="lg:h-[32.23rem]"
             />
           </div>
-          <div className="flex gap-5 px-5 justify-center items-center">
+          <div className="flex gap-10 px-5 justify-center items-center">
             <BlogCard
               blogTitle="Security Infrastructure"
               blogDescription="Innovative, state-of-the-art measures for ensuring utmost data privacy and network integrity."

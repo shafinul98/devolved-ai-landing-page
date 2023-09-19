@@ -97,7 +97,11 @@ export function ContactForm() {
               <FormItem className="w-full md:px-[15rem] lg:px-0 lg:ms-[5rem]">
                 <FormLabel className="font-bold">First Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="First Name" {...field} />
+                  <Input
+                    className="h-[3.5rem]"
+                    placeholder="First Name"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -110,7 +114,11 @@ export function ContactForm() {
               <FormItem className="w-full md:px-[15rem] lg:px-2 lg:me-[5rem]">
                 <FormLabel className="font-bold">Last Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Last Name" {...field} />
+                  <Input
+                    className="h-[3.5rem]"
+                    placeholder="Last Name"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -126,7 +134,12 @@ export function ContactForm() {
               <FormItem className="w-full md:px-[15rem] lg:px-[5rem]">
                 <FormLabel className="font-bold">Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="Email" type="email" {...field} />
+                  <Input
+                    className="h-[3.5rem]"
+                    placeholder="Email"
+                    type="email"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>

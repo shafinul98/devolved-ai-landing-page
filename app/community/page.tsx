@@ -48,7 +48,7 @@ const CommunityPage = () => {
           <Image
             src={CommunityHeroImage}
             alt="Hero Image"
-            className="w-full md:h-[25rem]"
+            className="w-full md:h-[30rem]"
           />
         </div>
       </section>
@@ -403,11 +403,11 @@ const CommunityPage = () => {
           <h3 className="text-[1.5625rem] md:text-3xl font-bold text-[#2D3748]">
             Why Devolved AI Community is Unique
           </h3>
-          <p className="text-[1rem] md text-[#646E73] text-start">
-            The Devolved AI community is not just a user base; it’s a
-            collaborative force propelling us toward AI’s next frontier. Our
-            innovative PoV protocol ensures that everyone’s contributions are
-            valued, creating a rewarding and dynamic ecosystem you’ll want to be
+          <p className="text-[1rem] md text-[#646E73] text-start lg:text-center lg:px-44">
+            The Devolved AI community is not just a user base; it's a
+            collaborative force propelling us toward AI's next frontier. Our
+            innovative PoV protocol ensures that everyone's contributions are
+            valued, creating a rewarding and dynamic ecosystem you'll want to be
             a part of.
           </p>
           <div className="flex justify-center gap-x-2">

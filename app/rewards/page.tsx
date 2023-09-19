@@ -45,14 +45,14 @@ const RewardsPage = () => {
           <Image
             src={RewardsPageHeroImage}
             alt="Hero Image"
-            className="w-full md:h-[25rem]"
+            className="w-full md:h-[30rem]"
           />
         </div>
       </section>
 
       <section className="w-full my-10 md:mt-20 md:mb-0 items-center">
-        <div className="flex flex-col items-center md:flex-row justify-between md:mx-16">
-          <div className="flex flex-col px-6 md:mt-20 gap-5 md:w-[28.25rem]">
+        <div className="flex flex-col items-center md:flex-row justify-around md:gap-20 lg:gap-20 md:mx-16">
+          <div className="flex flex-col px-6 md:mt-20 gap-5 md:w-[28.25rem] lg:me-[10rem]">
             <h1 className="text-base text-[#0074D9]">REWARD SYSTEM OVERVIEW</h1>
             <h1 className="text-[2rem] font-bold text-[#2D3748]">
               PoV Protocol
@@ -70,7 +70,7 @@ const RewardsPage = () => {
           />
         </div>
 
-        <div className="flex flex-col-reverse items-center md:flex-row justify-between md:mx-16">
+        <div className="flex flex-col-reverse items-center md:flex-row justify-around md:gap-20 lg:gap-20 md:mx-16">
           <Image
             src={AGCIllustration}
             alt="ArgoCoin Distribution Illustration"
@@ -172,38 +172,38 @@ const RewardsPage = () => {
           <Image
             src={TransparencyReportIllustration}
             alt=""
-            className="md:w-[31.25rem] md:h-[31.25rem]"
+            className="lg:ms-[10rem] md:w-[31.25rem] md:h-[31.25rem]"
           />
           <div className="flex flex-col gap-6">
-            <h1 className="text-3xl font-bold text-[#2D3748] mb-3 px-10">
+            <h1 className="text-[2rem] font-bold text-[#2D3748] mb-3 px-10">
               Transparency Report
             </h1>
-            <p className="text-[#646E73] text-sm pl-10 pr-32 mb-3">
+            <p className="text-[#646E73] text-[1.25rem] pl-10 pr-32 mb-3">
               Send one-off and automated email, push, and in-app messages to
               people. Create better stories.
             </p>
             <div className="flex flex-col items-start px-10 gap-3">
               <div className="flex items-center space-x-2">
                 <Image src={CheckIconYellow} alt="Blue tick" />
-                <p className="text-[#2D3748] text-xs font-normal">
+                <p className="text-[#2D3748] text-[1rem] font-normal">
                   Lifetime Updates & Introduction and Working
                 </p>
               </div>
               <div className="flex items-center space-x-2">
                 <Image src={CheckIconYellow} alt="Blue tick" />
-                <p className="text-[#2D3748] text-xs font-normal">
+                <p className="text-[#2D3748] text-[1rem] font-normal">
                   Tech support & Mutual Funds
                 </p>
               </div>
               <div className="flex items-center space-x-2">
                 <Image src={CheckIconYellow} alt="Blue tick" />
-                <p className="text-[#2D3748] text-xs font-normal">
+                <p className="text-[#2D3748] text-[1rem] font-normal">
                   Tons of assets & Lifetime Updates
                 </p>
               </div>
               <div className="flex items-center space-x-2">
                 <Image src={CheckIconYellow} alt="Blue tick" />
-                <p className="text-[#2D3748] text-xs font-normal">
+                <p className="text-[#2D3748] text-[1rem] font-normal">
                   Integration ready & Tech support
                 </p>
               </div>

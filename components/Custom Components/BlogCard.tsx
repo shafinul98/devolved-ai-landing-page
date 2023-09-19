@@ -29,7 +29,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
       <Image
         src={blogImage}
         alt={blogTitle}
-        className={imageStyles + "md:w-[23.25rem] md:h-[18.5rem]"}
+        className={imageStyles + "md:w-[150rem] md:h-[18.5rem]"}
       />
       {/* Blog Title */}
       <h1

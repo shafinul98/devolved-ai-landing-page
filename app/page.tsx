@@ -44,8 +44,8 @@ export default function Home() {
         className="w-full md:w-[85.375rem] md:h-[41.125rem] lg:w-full md:bg-[#f5f5f5]"
         id="curved-rectangle"
       >
-        <div className="flex flex-col items-center md:flex-row md:justify-between md:p-10 lg:px-16 md:mt-[2.1rem]">
-          <div className="flex flex-col gap-5 mb-10 md:w-[33.9375rem] md:me-[5.38rem]">
+        <div className="flex flex-col items-center md:flex-row md:justify-center md:p-10 lg:px-16 md:mt-[2.1rem]">
+          <div className="flex flex-col gap-5 mb-10 md:w-[33.9375rem] md:me-[7.5rem] lg:me-[25rem]">
             <h1 className="font-bold text-[2rem] text-start md:text-[3rem] md:leading-[1.15]  text-[#2D3748]">
               Empowering <span className="text-[#0074D9]">You</span> to Shape
               the Future of Artificial Intelligence
@@ -184,8 +184,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full md:w-[85.375rem] md:h-[41.125rem] lg:w-full hidden md:flex bg-[#F5F5F5]">
-        <div className="flex flex-row gap-20 md:p-10">
+      <section className="w-full md:w-[85.375rem] md:h-[41.125rem] lg:w-full hidden md:flex lg:justify-center bg-[#F5F5F5]">
+        <div className="flex flex-row  gap-20 md:p-10">
           <Image
             src={SteveJobs}
             alt="Steve Jobs"
@@ -365,7 +365,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="ms-[8rem]">
+        <div className="md:ms-[7rem] lg:ms-[13rem]">
           <Image
             src={DevolvedAIHeroLogo}
             alt="Devolved AI Hero Logo"
@@ -400,7 +400,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full md:py-20 mb-20">
+      <section className="w-full md:py-14">
         <div className="flex flex-col">
           <div className="flex flex-col text-center gap-3">
             <h1 className="text-3xl font-bold">Our Guiding Principles</h1>

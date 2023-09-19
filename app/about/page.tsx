@@ -52,7 +52,7 @@ const About = () => {
           <Image
             src={AboutHeroImage}
             alt="Hero Image"
-            className="w-full md:h-[25rem]"
+            className="w-full md:h-[30rem]"
           />
         </div>
       </section>
@@ -74,17 +74,18 @@ const About = () => {
           place in this community. Together, we're not just developing
           technology; we're building a future that belongs to all of us.
         </p>
-        <div className="my-5">
+        <div className="my-5 flex justify-center">
           <Image
             src={AboutHeroIllustration}
             alt="Futuristic World Illustration"
             loading="eager"
+            className="w-[25rem] h-[25rem]"
           />
         </div>
       </section>
 
-      <section className="w-full mt-10 mb-[4.5rem] px-16 place-items-center hidden md:flex md:items-center">
-        <div className="flex flex-col w-[36.75rem] h-[24.875rem] me-[3rem]">
+      <section className="w-full mt-10 mb-[4.5rem] place-items-center hidden md:flex md:items-center lg:justify-center">
+        <div className="flex flex-col w-[36.75rem] h-[24.875rem] px-20 md:px-16 md:me-[3rem] lg:px-0 lg:me-[17.5rem]">
           <h1 className="text-[2rem] font-bold text-[#2D3748] mb-3">
             Our Story
           </h1>
@@ -116,8 +117,8 @@ const About = () => {
       </section>
 
       <section className="w-full px-3 md:mb-[4.5rem]">
-        <div className="flex flex-col gap-10 md:flex md:flex-row lg:justify-center lg:gap-10 lg:mx-12">
-          <div className="flex flex-col shadow-lg md:pl-[1.19rem] rounded-md md:w-[36.5625rem] lg:w-full md:h-[11.6875rem] lg:h-[12.6875rem] lg:p-5 pb-[5rem]">
+        <div className="flex flex-col gap-10 md:flex md:flex-row md:m-8 lg:justify-center lg:gap-10 lg:mx-12">
+          <div className="flex flex-col shadow-lg md:pl-[1.19rem] p-3 rounded-md md:w-[36.5625rem] lg:w-full md:h-[11.6875rem] lg:h-[12.6875rem] lg:p-5 pb-[5rem]">
             <h1 className="text-[2rem] font-bold text-[#2D3748] mb-5">
               Mission
             </h1>
@@ -129,7 +130,7 @@ const About = () => {
               aspirations of those who interact with it.
             </p>
           </div>
-          <div className="flex flex-col shadow-lg pl-[1.19rem] rounded-md md:w-[36.5625rem] lg:w-full md:h-[11.6875rem] lg:h-[12.6875rem] lg:p-5 pb-[5rem]">
+          <div className="flex flex-col shadow-lg pl-[1.19rem] p-5 rounded-md md:w-[36.5625rem] lg:w-full md:h-[11.6875rem] lg:h-[12.6875rem] lg:p-5 pb-[5rem]">
             <h1 className="text-[2rem] font-bold text-[#2D3748] mb-5">
               Vision
             </h1>
@@ -144,7 +145,7 @@ const About = () => {
       </section>
 
       <section className="w-full px-3 mx-auto bg-[#f5f5f5]">
-        <div className="mt-[3rem]">
+        <div className="mt-[2rem]">
           <h1 className="text-[#0074D9] md:text-[1rem] text-center">
             OUR TEAM
           </h1>
@@ -280,7 +281,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full my-10 px-5 place-items-center md:hidden">
+      <section className="w-full mt-16 pt-5 place-items-center md:hidden">
         <h1 className="text-[#0074D9] text-center">Timeline</h1>
         <h1 className="text-[#2D3748] text-center font-bold text-2xl">
           Milestones and Future Plans
@@ -397,7 +398,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full my-10 px-5 place-items-center hidden md:flex md:flex-col bg-[#f5f5f5]">
+      <section className="w-full my-10 md:my-14 px-5 place-items-center hidden md:flex md:flex-col bg-[#f5f5f5]">
         <div className="flex flex-col justify-center items-center mt-[3.5rem]">
           <h1 className="text-[#0074D9] text-center">BLOGS</h1>
           <h1 className="text-[#2D3748] text-center font-bold text-2xl">
