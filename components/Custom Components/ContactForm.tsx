@@ -17,7 +17,6 @@ import {
 } from "@/components/ui/form";
 
 import { Input } from "@/components/ui/input";
-import { useToast } from "../ui/use-toast";
 import { Textarea } from "../ui/textarea";
 
 const FormSchema = z.object({
@@ -30,10 +29,6 @@ const FormSchema = z.object({
     invalid_type_error: "Name must be a string",
   }),
   email: z.string().email({ message: "Invalid Email Address" }),
-  phoneNumber: z.string({
-    required_error: "Phone number is required",
-    invalid_type_error: "Phone number must be a string",
-  }),
   message: z.string({
     required_error: "Message is required",
     invalid_type_error: "Message must be a string",
@@ -51,7 +46,6 @@ export function ContactForm() {
       firstName: "",
       lastName: "",
       email: "",
-      phoneNumber: "",
       message: "",
     },
   });
