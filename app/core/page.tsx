@@ -59,8 +59,8 @@ const TechnologyPage = () => {
       </section>
 
       <section className="w-full">
-        <div className="flex flex-col gap-x-72 md:gap-0 items-center md:flex-row lg:justify-center">
-          <div className="flex flex-col gap-5 mb-10 px-8 md:px-20 lg:px-28 xl:px-32">
+        <div className="flex flex-col gap-x-72 md:gap-0 md:mt-10 items-center md:flex-row lg:justify-center">
+          <div className="flex flex-col gap-5 mb-10 px-8 md:px-20 lg:py-10 xl:px-32">
             <h1 className="text-center mt-[1.5rem] md:mt-0 md:text-start text-[1rem] text-[#0074D9]">
               OUR CORE COMPONENTS
             </h1>
@@ -94,7 +94,7 @@ const TechnologyPage = () => {
         </div>
       </section>
 
-      <section className="w-full my-10 px-10 flex flex-col items-center justify-center md:hidden mb-20">
+      <section className="w-full my-10 px-10 flex flex-col items-center justify-center lg:hidden mb-20">
         <div className="flex flex-col justify-center items-center">
           <Carousel extraStyles="h-72" bottomStyle="bottom-1">
             <div className="flex flex-col gap-5 px-5">
@@ -181,7 +181,7 @@ const TechnologyPage = () => {
         </div>
       </section>
 
-      <section className="w-full px-5 lg:px-0 hidden md:flex md:flex-col md:mb-[5rem]">
+      <section className="w-full px-5 lg:px-0 hidden lg:flex lg:flex-col md:mb-[5rem]">
         <div className="flex flex-col justify-center items-center md:px-8 lg:px-12 xl:px-16">
           <div className="flex gap-10 lg:gap-3 xl:gap-5 px-5 justify-center items-center">
             <CoreDetailsCard
@@ -290,7 +290,7 @@ const TechnologyPage = () => {
         </div>
       </section>
 
-      <section className="w-full place-items-center md:hidden mb-20 bg-[#0074D9] min-h-screen">
+      <section className="w-full place-items-center lg:hidden mb-20 bg-[#0074D9] min-h-screen">
         <div className="flex flex-col my-10">
           <Image src={TechPageMidIllustration} alt="" />
           <div className="flex flex-col text-white px-5 gap-3">
@@ -347,14 +347,10 @@ const TechnologyPage = () => {
         </div>
       </section>
 
-      <section className="w-full hidden md:flex bg-[#0074D9] my-10 lg:pt-20 lg:mb-24">
-        <div className="flex my-[1.5rem] pl-[5.5rem] ">
-          <Image
-            src={TechPageMidIllustration}
-            alt=""
-            className="md:w-[32.125rem] md:h-[32.125rem] mt-[2.5rem] lg:w-[42.125rem]"
-          />
-          <div className="flex flex-col text-white pl-[2rem] w-[38.3125rem] lg:w-[40.3125rem]">
+      <section className="w-full hidden lg:flex bg-[#0074D9] my-10 lg:pt-20 lg:mb-24">
+        <div className="flex my-[1.5rem] lg:px-0 xl:px-20">
+          <Image src={TechPageMidIllustration} width={400} alt="" />
+          <div className="flex flex-col text-white pl-[2rem]">
             <h6 className="text-[1rem] font-normal mb-[1.2rem]">
               WHY THESE MATTER:
             </h6>
