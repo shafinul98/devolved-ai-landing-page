@@ -44,7 +44,7 @@ const TechnologyPage = () => {
   }, []);
 
   return (
-    <main className="flex min-h-screen  flex-col items-center justify-between">
+    <main className="flex min-h-screen flex-col items-center justify-between">
       <section className="w-full ">
         <div className="relative">
           <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-3xl md:text-5xl">
@@ -58,9 +58,9 @@ const TechnologyPage = () => {
         </div>
       </section>
 
-      <section className="w-full md:px-20 lg:px-36 xl:px-32">
-        <div className="flex flex-col gap-x-72 md:gap-0 items-center md:flex-row lg:justify-center lg:gap-4 xl:gap-8">
-          <div className="flex flex-col gap-5 mb-10 px-8 md:px-0 md:mt-[8rem] md:w-[36.81013rem]">
+      <section className="w-full">
+        <div className="flex flex-col gap-x-72 md:gap-0 items-center md:flex-row lg:justify-center">
+          <div className="flex flex-col gap-5 mb-10 px-8 md:px-20 lg:px-28 xl:px-32">
             <h1 className="text-center mt-[1.5rem] md:mt-0 md:text-start text-[1rem] text-[#0074D9]">
               OUR CORE COMPONENTS
             </h1>
@@ -84,11 +84,11 @@ const TechnologyPage = () => {
             </div>
           </div>
 
-          <div className="px-14 md:px-0 md:ms-[6rem] lg:ms-[15rem]">
+          <div className="px-14 md:px-0 md:ms-12 lg:ms-10 xl:ms-5">
             <Image
               src={TechnologyHeroIllustration}
               alt="Hero Image"
-              className="w-[20rem] h-[20rem] md:w-[32.5rem] md:h-[32.5rem]"
+              width={1000}
             />
           </div>
         </div>
