@@ -22,7 +22,7 @@ const ProposalCard = ({
   return (
     <article
       className={
-        `w-[20.9375rem] h-[13.5625rem] lg:w-[26.9375rem] lg:h-[15rem] flex flex-col my-5 p-5 mx-5 shadow-lg` +
+        `lg:w-[25rem] lg:h-[15rem] xl:h-[17rem] flex flex-col my-5 p-5 mx-5 shadow-lg` +
         extraStyles
       }
     >

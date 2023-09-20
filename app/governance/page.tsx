@@ -47,7 +47,7 @@ const GovernancePage = () => {
         </div>
       </section>
 
-      <section className="flex w-full min-h-screen justify-center items-center p-8 md:hidden">
+      <section className="flex w-full min-h-screen justify-center items-center p-8 lg:hidden">
         <div className="flex flex-col gap-x-32">
           <div className="flex-col space-y-8 md:space-y-4">
             <h1 className="font-bold text-[1.5625rem] text-center">
@@ -67,7 +67,7 @@ const GovernancePage = () => {
 
             <div className="flex flex-wrap justify-center gap-5">
               <div className="flex my-2 w-full">
-                <div className="flex items-center space-x-2 me-10">
+                <div className="flex items-center justify-center space-x-2 md:max-lg:me-40 me-10 md:max-lg:ms-20">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
                     Decentralized Authority
@@ -81,13 +81,13 @@ const GovernancePage = () => {
                 </div>
               </div>
               <div className="flex my-2 w-full">
-                <div className="flex items-center space-x-2 me-24">
+                <div className="flex items-center space-x-2 md:max-lg:me-40 sm:max-md:me-24 me-16 md:max-lg:ms-20">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
                     Transparency
                   </p>
                 </div>
-                <div className="flex items-center space-x-2 me-2">
+                <div className="flex items-center space-x-2 md:max-lg:ms-20">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
                     Community-Driven
@@ -95,7 +95,7 @@ const GovernancePage = () => {
                 </div>
               </div>
               <div className="flex my-2 w-full">
-                <div className="flex items-center space-x-2 me-12">
+                <div className="flex items-center space-x-2 md:max-lg:me-40 me-10 md:max-lg:ms-20">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
                     Inclusive Decision-Making
@@ -113,14 +113,15 @@ const GovernancePage = () => {
         </div>
       </section>
 
-      <section className="w-full justify-center items-center px-16 hidden md:flex pb-20 bg-[#F5F5F5]">
+      <section className="w-full justify-center items-center px-16 xl:px-32 hidden lg:flex pb-20 bg-[#F5F5F5]">
         <div className="flex flex-row gap-16">
           <Image
             src={GovernanceStructureImage}
             alt="Governance Structure"
-            className="w-[33.375rem] h-[37.25rem] mt-[4rem] ms-[5rem] lg:ms-[6rem]"
+            width={1000}
+            className="mt-16"
           />
-          <div className="flex-col py-16 md:mt-20 md:ms-20 lg:ms-36 space-y-8 text-start">
+          <div className="flex-col py-16 lg:mt-20 ms-8 space-y-8 text-start">
             <h1 className="font-bold text-[2rem]">Governance Structure</h1>
             <p className=" text-[#646E73] text-[1.25rem] pr-[6.5rem]">
               At Devolved AI, we believe in a decentralized governance model
@@ -177,7 +178,7 @@ const GovernancePage = () => {
         </div>
       </section>
 
-      <section className="w-full min-h-screen p-8 md:hidden bg-[#f5f5f5] pb-10 mb-10">
+      <section className="w-full min-h-screen p-8 lg:hidden bg-[#f5f5f5] pb-10 mb-10">
         <div className="flex flex-col items-center justify-center gap-y-10">
           <div className="flex flex-col">
             <span className="text-[#0074D9] text-[1rem]">VOTING PROCESS:</span>
@@ -235,10 +236,10 @@ const GovernancePage = () => {
       </section>
 
       <section
-        className="w-full hidden md:px-16 md:flex items-center gap-5 bg-[#f5f5f5] pb-[7rem] mb-[4.5rem]"
+        className="w-full hidden lg:flex items-center gap-5 bg-[#f5f5f5] pb-[7rem] mb-[4.5rem]"
         id="curved-rectangle"
       >
-        <div className="flex flex-col gap-y-8 w-[43.25rem] lg:w-[53.25rem] lg:px-24 xl:px-28 xl:w-[63.25rem]">
+        <div className="flex flex-col gap-y-8 px-10 xl:px-28">
           <div className="flex flex-col">
             <span className="text-[#0074D9] text-[1rem]">VOTING PROCESS:</span>
             <h1 className="font-bold text-[2rem] inline">
@@ -297,7 +298,8 @@ const GovernancePage = () => {
           <Image
             src={GovernanceHeroIllustration}
             alt="Decentralized AI Governance"
-            className="w-[28.375rem] h-[32.1875rem] ms-[5rem] lg:ms-[0rem]"
+            width={700}
+            className="px-5"
           />
         </div>
       </section>
@@ -321,7 +323,7 @@ const GovernancePage = () => {
       </section>
 
       <section className="w-full md:mt-10 mb-20">
-        <div className="flex flex-col items-center md:flex-row md:justify-center gap-5 md:px-16 lg:px-32">
+        <div className="flex flex-col items-center md:flex-row md:justify-center gap-5 md:px-16 lg:px-18">
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
@@ -341,7 +343,7 @@ const GovernancePage = () => {
             extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
           />
         </div>
-        <div className="flex flex-col md:flex-row md:justify-center gap-5">
+        <div className="flex flex-col md:flex-row md:justify-center md:px-16 lg:px-18 gap-5">
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
