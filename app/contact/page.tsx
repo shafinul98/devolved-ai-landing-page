@@ -48,7 +48,7 @@ const ContactPage = () => {
           <Image
             src={ContactPageHeroImage}
             alt="Hero Image"
-            className="w-full md:h-[30rem]"
+            className="w-full md:h-[30rem] object-cover"
           />
         </div>
       </section>
@@ -101,11 +101,13 @@ const ContactPage = () => {
       <section className="w-full mt-[7.5rem] lg:mt-[5rem] bg-[#f5f5f5]">
         <div className="flex flex-col mt-[4rem] px-3">
           <h1 className="text-center text-[2rem] font-bold text-[#2D3748] mb-[1rem]">
-            Contact us
+            Get in Touch with Devolved AI
           </h1>
-          <p className="text-center text-base text-[#646E73] md:px-[25.63rem]">
-            theFront will make your product look modern and professional while
-            saving you precious time.
+          <p className="text-center text-base text-[#646E73] md:px-[15.63rem]">
+            We're eager to hear from you. Whether you have questions about our
+            PoV Protocol, AGC rewards, or how to get involved in our
+            community-driven AI initiatives, don't hesitate to reach out. Your
+            input is valuable to us.
           </p>
         </div>
 
@@ -130,13 +132,13 @@ const ContactPage = () => {
               className="shadow-lg p-2 rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
-                Can I purchase a gift certificate?
+                What is DevolvedAI?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo.
+                Devolved AI is a community-driven platform focused on developing
+                decentralized Artificial Intelligence (AI). We use our unique
+                PoV Protocol to reward contributions and allow for democratic
+                governance.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem
@@ -144,11 +146,12 @@ const ContactPage = () => {
               className="shadow-lg p-2 rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
-                What is your return policy?
+                How do I earn Argocoin (AGC)?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
-                Yes. It comes with default styles that matches the other
-                components&apos; aesthetic.
+                You can earn AGC by participating in various activities such as
+                data validation, AI training, and governance voting. Our PoV
+                Protocol ensure fair and transparent rewards.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem
@@ -156,11 +159,11 @@ const ContactPage = () => {
               className="shadow-lg p-2 rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
-                Do you sell gift cards?
+                Can I redeem AGC for other cryptocurrencies?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
-                Yes. It&apos;s animated by default, but you can disable it if
-                you prefer.
+                Yes, you can redeem your earned AGC for USDT, ETH and BNB on
+                their respective blockchains via a wrapped AGC.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem
@@ -168,11 +171,13 @@ const ContactPage = () => {
               className="shadow-lg p-2 rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
-                Can I change plans later on?
+                How does the voting process work?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
-                Yes. It&apos;s animated by default, but you can disable it if
-                you prefer.
+                Our token-weighted voting system allows AGC holders to
+                participate in governance decisions. Proposals can be submitted
+                by any community member, and voting is conducted in a
+                transparent manner.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem
@@ -180,11 +185,73 @@ const ContactPage = () => {
               className="shadow-lg p-2 rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
-                Is this a subscription service?
+                How can I contribute to AI training?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
-                Yes. It&apos;s animated by default, but you can disable it if
-                you prefer.
+                You can contribute by providing valuable data or computational
+                resources. Detailed guidelines are available in our
+                Participation Guide.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-6"
+              className="shadow-lg p-2 rounded-xl my-3"
+            >
+              <AccordionTrigger className="font-bold text-[#2D3748]">
+                Is my data secure?
+              </AccordionTrigger>
+              <AccordionContent className="text-[#646E73] font-normal text-base">
+                Yes, data privacy and security are among our top priorities. All
+                data is encrypted and stored securely.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-7"
+              className="shadow-lg p-2 rounded-xl my-3"
+            >
+              <AccordionTrigger className="font-bold text-[#2D3748]">
+                How do I get technical support?
+              </AccordionTrigger>
+              <AccordionContent className="text-[#646E73] font-normal text-base">
+                We offer 24/7 technical support. You can reach out to us via the
+                Contact page for any technical queries.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-8"
+              className="shadow-lg p-2 rounded-xl my-3"
+            >
+              <AccordionTrigger className="font-bold text-[#2D3748]">
+                Where can I find the Transparency Report?
+              </AccordionTrigger>
+              <AccordionContent className="text-[#646E73] font-normal text-base">
+                Our Transparency Report is available for download on our Rewards
+                Page, providing details on AGC distribution and community
+                contributions.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-9"
+              className="shadow-lg p-2 rounded-xl my-3"
+            >
+              <AccordionTrigger className="font-bold text-[#2D3748]">
+                How can I stay updated with Devolved AI's developments?
+              </AccordionTrigger>
+              <AccordionContent className="text-[#646E73] font-normal text-base">
+                You can subscribe to our newsletter or follow us on social media
+                to stay updated with all our latest news and developments.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-10"
+              className="shadow-lg p-2 rounded-xl my-3"
+            >
+              <AccordionTrigger className="font-bold text-[#2D3748]">
+                How can I get involved?
+              </AccordionTrigger>
+              <AccordionContent className="text-[#646E73] font-normal text-base">
+                Getting involved is easy. Simply follow the steps in our
+                Participation Guide to start contributing and earning rewards.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

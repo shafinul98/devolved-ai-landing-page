@@ -23,7 +23,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
 }: BlogCardProps) => {
   return (
     <article
-      className={`w-[20.0625rem] h-[25.8125rem] md:w-[23.75rem] md:h-[30.23rem] lg:w-[28.75rem] ${extraStyles} rounded-[0.75rem] flex flex-col my-5 p-5 shadow-lg transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-105`}
+      className={`w-[20.0625rem] h-[25.8125rem] md:w-[23.75rem] md:h-[30.23rem] lg:w-[28.75rem] ${extraStyles} rounded-[0.75rem] flex flex-col my-5 p-5 shadow-lg`}
     >
       {/* Image */}
       <Image
@@ -41,7 +41,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
       <p className="text-gray-600 text-sm text-start mb-5">{blogDescription}</p>
       {/* Blog Link */}
       <Link
-        href={blogLink}
+        href="#"
         rel="noopener noreferrer"
         target="_blank"
         className="text-blue-500 text-end "

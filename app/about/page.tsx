@@ -13,6 +13,7 @@ import BlogsThreePicture from "../../public/Blogs Three Picture.webp";
 
 import Nathan from "../../public/Nathan.jpeg";
 import Nazmul from "../../public/Nazmul.jpg";
+import Justin from "../../public/Justin.jpeg";
 import Tahlil from "../../public/tahlil.png";
 import Lamima from "../../public/Lamima.jpg";
 import Samir from "../../public/Samir.jpg";
@@ -52,7 +53,7 @@ const About = () => {
           <Image
             src={AboutHeroImage}
             alt="Hero Image"
-            className="w-full md:h-[30rem]"
+            className="w-full md:h-[30rem] object-cover"
           />
         </div>
       </section>
@@ -84,8 +85,8 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full mt-10 mb-[4.5rem] place-items-center hidden md:flex md:items-center lg:justify-center">
-        <div className="flex flex-col w-[36.75rem] h-[24.875rem] px-20 md:px-16 md:me-[3rem] lg:px-0 lg:me-[17.5rem]">
+      <section className="w-full mt-10 mb-[4.5rem] hidden md:flex md:items-center lg:justify-center lg:mx-[5rem]">
+        <div className="flex flex-col w-[36.75rem] h-[24.875rem] px-20 md:px-16 md:me-[2rem] lg:px-0 lg:me-[0rem] xl:me-[10rem]">
           <h1 className="text-[2rem] font-bold text-[#2D3748] mb-3">
             Our Story
           </h1>
@@ -107,7 +108,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="my-5 md:ms-[7rem]">
+        <div className="my-5 md:ms-[5.5rem] lg:ms-[7rem] xl:ms-[5rem] 2xl:">
           <Image
             src={AboutHeroIllustration}
             alt="Hero Illustration"
@@ -116,9 +117,9 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full px-3 md:mb-[4.5rem]">
-        <div className="flex flex-col gap-10 md:flex md:flex-row md:m-8 lg:justify-center lg:gap-10 lg:mx-12">
-          <div className="flex flex-col shadow-lg md:pl-[1.19rem] p-3 rounded-md md:w-[36.5625rem] lg:w-full md:h-[11.6875rem] lg:h-[12.6875rem] lg:p-5 pb-[5rem]">
+      <section className="w-full px-3 md:mb-[4.5rem] mb-[2.5rem]">
+        <div className="flex flex-col gap-10 md:flex md:flex-row md:my-8 md:mx-[3rem] lg:justify-center lg:gap-10 lg:mx-[8rem] xl:mx-[10rem]">
+          <div className="flex flex-col shadow-lg md:pl-[1.19rem] p-5 text-center md:text-start rounded-md md:w-[36.5625rem] lg:w-full md:h-[11.6875rem] lg:h-[12.6875rem] lg:p-5 sm:max-md:pb-[5rem]">
             <h1 className="text-[2rem] font-bold text-[#2D3748] mb-5">
               Mission
             </h1>
@@ -130,7 +131,7 @@ const About = () => {
               aspirations of those who interact with it.
             </p>
           </div>
-          <div className="flex flex-col shadow-lg pl-[1.19rem] p-5 rounded-md md:w-[36.5625rem] lg:w-full md:h-[11.6875rem] lg:h-[12.6875rem] lg:p-5 pb-[5rem]">
+          <div className="flex flex-col shadow-lg pl-[1.19rem] p-5 text-center md:text-start rounded-md h-[15rem] md:w-[36.5625rem] lg:w-full md:h-[11.6875rem] lg:h-[12.6875rem] lg:p-5 sm:max-md:pb-[5rem]">
             <h1 className="text-[2rem] font-bold text-[#2D3748] mb-5">
               Vision
             </h1>
@@ -145,24 +146,24 @@ const About = () => {
       </section>
 
       <section className="w-full px-3 mx-auto bg-[#f5f5f5]">
-        <div className="mt-[2rem]">
+        <div className="mt-[1rem] md:mt-[4rem]">
           <h1 className="text-[#0074D9] md:text-[1rem] text-center">
             OUR TEAM
           </h1>
           <h1 className="text-[#2D3748] md:text-[2rem] text-center font-bold">
-            Trust the professionals
+            Your Devolved Squad
           </h1>
           <div className="md:hidden">
             <Carousel extraStyles="h-56 md:my-10" bottomStyle="">
               <TeamMemberCard
                 cardImage={Nathan}
-                cardDescription="CEO"
+                cardDescription="CEO & Founder"
                 cardFooter={[
                   "https://github.com/tahlil",
                   "https://www.linkedin.com/in/tahlil/",
                   "https://twitter.com/TahlilBsse0803",
                 ]}
-                cardTitle="Nathan"
+                cardTitle="Nathan Peterson"
               />
               <TeamMemberCard
                 cardImage={Nazmul}
@@ -173,6 +174,16 @@ const About = () => {
                   "https://twitter.com/TahlilBsse0803",
                 ]}
                 cardTitle="Md. Nazmul Hossain"
+              />
+              <TeamMemberCard
+                cardImage={Justin}
+                cardDescription="Board Member"
+                cardFooter={[
+                  "https://github.com/tahlil",
+                  "https://www.linkedin.com/in/tahlil/",
+                  "https://twitter.com/TahlilBsse0803",
+                ]}
+                cardTitle="Justin Seyl"
               />
               <TeamMemberCard
                 cardImage={Tahlil}
@@ -186,7 +197,7 @@ const About = () => {
               />
               <TeamMemberCard
                 cardImage={Lamima}
-                cardDescription="Lead Machine Learning Engineer"
+                cardDescription="Machine Learning Engineer"
                 cardFooter={[
                   "https://github.com/Ava7i",
                   "https://www.linkedin.com/in/lamima-tabassum-ava",
@@ -216,16 +227,16 @@ const About = () => {
               />
             </Carousel>
           </div>
-          <div className="md:flex md:flex-wrap md:justify-evenly md:my-10 md:px-10 md:gap-x-10 hidden">
+          <div className="md:flex md:flex-wrap md:justify-evenly md:my-10 md:px-10 md:gap-x-10 lg:px-18 xl:px-24 hidden">
             <TeamMemberCard
               cardImage={Nathan}
-              cardDescription="CEO"
+              cardDescription="CEO & Founder"
               cardFooter={[
                 "https://github.com/tahlil",
                 "https://www.linkedin.com/in/tahlil/",
                 "https://twitter.com/TahlilBsse0803",
               ]}
-              cardTitle="Nathan Lee Peterson"
+              cardTitle="Nathan Peterson"
             />
             <TeamMemberCard
               cardImage={Nazmul}
@@ -236,6 +247,16 @@ const About = () => {
                 "https://twitter.com/TahlilBsse0803",
               ]}
               cardTitle="Md. Nazmul Hossain"
+            />
+            <TeamMemberCard
+              cardImage={Justin}
+              cardDescription="Board Member"
+              cardFooter={[
+                "https://github.com/tahlil",
+                "https://www.linkedin.com/in/tahlil/",
+                "https://twitter.com/TahlilBsse0803",
+              ]}
+              cardTitle="Justin Seyl"
             />
             <TeamMemberCard
               cardImage={Tahlil}
@@ -249,7 +270,7 @@ const About = () => {
             />
             <TeamMemberCard
               cardImage={Lamima}
-              cardDescription="Machine Learning engineer"
+              cardDescription="Machine Learning Engineer"
               cardFooter={[
                 "https://github.com/Ava7i",
                 "https://www.linkedin.com/in/lamima-tabassum-ava",
@@ -282,7 +303,7 @@ const About = () => {
       </section>
 
       <section className="w-full mt-16 pt-5 place-items-center md:hidden">
-        <h1 className="text-[#0074D9] text-center">Timeline</h1>
+        <h1 className="text-[#0074D9] text-center">TIMELINE</h1>
         <h1 className="text-[#2D3748] text-center font-bold text-2xl">
           Milestones and Future Plans
         </h1>
@@ -307,7 +328,7 @@ const About = () => {
         <article className="rounded-2xl shadow-lg flex flex-col items-center justify-center my-10 gap-5">
           <Image src={FuturePlansImage} alt="" />
           <div className="flex flex-col gap-3 p-5">
-            <h1 className="text-[#0074D9] text-start text-sm">Future Plans</h1>
+            <h1 className="text-[#0074D9] text-start text-sm">FUTURE PLANS</h1>
             <h1 className="text-[#2D3748] text-start text-lg">
               Advancing Toward a Decentralized AI Ecosystem: Our Roadmap for
               Continued Growth and Community Engagement
@@ -323,11 +344,11 @@ const About = () => {
       </section>
 
       <section className="w-full mt-[5rem] px-5 place-items-center hidden md:flex md:flex-col">
-        <h6 className="text-[#0074D9] md:text-[1rem] text-center">Timeline</h6>
+        <h6 className="text-[#0074D9] md:text-[1rem] text-center">TIMELINE</h6>
         <h1 className="text-[#2D3748] md:mt-[0.5rem] md:text-[2rem] text-center font-bold text-2xl">
           Milestones and Future Plans
         </h1>
-        <div className="flex items-center justify-center px-10 gap-5">
+        <div className="flex items-center justify-center px-10 lg:px-20 xl:px-40 gap-5">
           <MilestoneCard
             date="Q3-2023"
             milestone="Development of our Minimum Viable Product (MVP) commences, focusing initially on robust Natural Language Processing capabilities."
@@ -345,7 +366,7 @@ const About = () => {
             milestone="We initiate the development and implementation of new AI modules, as we aim to extend the platform's applicability and reach."
           />
         </div>
-        <article className="mx-10 rounded-2xl shadow-xl flex flex-row-reverse items-center justify-center my-10 gap-5">
+        <article className="mx-10 lg:mx-20 xl:mx-40 rounded-2xl shadow-xl flex flex-row-reverse items-center justify-center my-10 gap-5">
           <Image
             src={FuturePlansImageCurved}
             alt=""
@@ -353,7 +374,7 @@ const About = () => {
             width={500}
           />
           <div className="flex flex-col gap-3 p-5 md:p-10 pr-36">
-            <h1 className="text-[#0074D9] text-start text-sm">Future Plans</h1>
+            <h1 className="text-[#0074D9] text-start text-sm">FUTURE PLANS</h1>
             <h1 className="text-[#2D3748] text-start text-lg">
               Advancing Toward a Decentralized AI Ecosystem: Our Roadmap for
               Continued Growth and Community Engagement
@@ -393,7 +414,6 @@ const About = () => {
           <Button
             title="View all"
             extraStyles=" bg-blue-500 text-white mt-10"
-            hasRightArrowIcon={true}
           />
         </div>
       </section>
@@ -404,8 +424,8 @@ const About = () => {
           <h1 className="text-[#2D3748] text-center font-bold text-2xl">
             Press & Media
           </h1>
-          <Carousel extraStyles="h-72" bottomStyle="bottom-1">
-            <div className="flex gap-[1.9375rem] px-5 justify-center items-center">
+          <Carousel extraStyles="h-72 " bottomStyle="bottom-1">
+            <div className="flex gap-[0.9375rem] px-5 justify-center items-center">
               <BlogCard
                 blogTitle="Increasing Prosperity With Positive Thinking"
                 blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
@@ -425,7 +445,7 @@ const About = () => {
                 blogLink="/blogs/2"
               />
             </div>
-            <div className="flex gap-5 px-5 justify-center items-center">
+            <div className="flex gap-[0.9375rem] px-5 justify-center items-center">
               <BlogCard
                 blogTitle="Increasing Prosperity With Positive Thinking"
                 blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."

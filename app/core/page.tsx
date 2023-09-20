@@ -23,7 +23,7 @@ import CheckIconWhite from "../../public/Check Icon White.svg";
 
 import Image from "next/image";
 import Button from "@/components/Custom Components/Button";
-import BlogCard from "@/components/Custom Components/BlogCard";
+import CoreDetailsCard from "@/components/Custom Components/CoreDetailsCard";
 import Carousel from "@/components/Custom Components/Carousel";
 
 const TechnologyPage = () => {
@@ -53,13 +53,13 @@ const TechnologyPage = () => {
           <Image
             src={TechnologyHeroImage}
             alt="Hero Image"
-            className="w-full md:h-[30rem]"
+            className="w-full md:h-[30rem] object-cover"
           />
         </div>
       </section>
 
-      <section className="w-full md:px-16 lg:px-0">
-        <div className="flex flex-col gap-x-72 md:gap-0 items-center md:flex-row lg:justify-center lg:gap-36">
+      <section className="w-full md:px-20 lg:px-36 xl:px-32">
+        <div className="flex flex-col gap-x-72 md:gap-0 items-center md:flex-row lg:justify-center lg:gap-4 xl:gap-8">
           <div className="flex flex-col gap-5 mb-10 px-8 md:px-0 md:mt-[8rem] md:w-[36.81013rem]">
             <h1 className="text-center mt-[1.5rem] md:mt-0 md:text-start text-[1rem] text-[#0074D9]">
               OUR CORE COMPONENTS
@@ -98,95 +98,83 @@ const TechnologyPage = () => {
         <div className="flex flex-col justify-center items-center">
           <Carousel extraStyles="h-72" bottomStyle="bottom-1">
             <div className="flex flex-col gap-5 px-5">
-              <BlogCard
-                blogTitle="Decentralization"
-                blogDescription="The very fabric of our architecture that ensures no single point of control or failure."
-                blogImage={TechBlogPictureOne}
-                imageStyles="mx-auto my-2"
-                blogLink="/blogs/1"
+              <CoreDetailsCard
+                title="Decentralization"
+                description="The very essence of Devolved AI lies in its decentralized architecture. Unlike traditional centralized systems, our platform is designed to operate without a single point of control or failure. This ensures that power, decision-making, and data are distributed across the network, enhancing resilience and reducing systemic risks."
+                image={TechBlogPictureOne}
+                imageStyles="mx-auto my-2 "
               />
-              <BlogCard
-                blogTitle="Proof of Value (PoV) Protocol"
-                blogDescription="A novel mechanism that quantifies and rewards value contributions to the ecosystem."
-                blogImage={TechBlogPictureTwo}
-                imageStyles="mx-auto my-2"
-                blogLink="/blogs/2"
+              <CoreDetailsCard
+                title="Proof of Value (PoV) Protocol"
+                description="Our unique PoV Protocol goes beyond mere transaction validation. It quantifies the value each participant contributes to the ecosystem and rewards them accordingly. This mechanism encourages active participation and fosters a sense of shared ownership and community."
+                image={TechBlogPictureTwo}
+                imageStyles="mx-auto my-2 "
               />
-              <BlogCard
-                blogTitle="Substrate Blockchain"
-                blogDescription="A custom-built blockchain providing the ultimate in transparency, security, and ownership."
-                blogImage={TechBlogPictureThree}
-                imageStyles="mx-auto my-2"
-                blogLink="/blogs/2"
+              <CoreDetailsCard
+                title="Substrate Blockchain"
+                description="Built on a custom substrate blockchain, Devolved AI offers unparalleled transparency, security, and user ownership. Our blockchain is not just a ledger but a foundation that supports advanced features like smart contracts, token-weighted voting, and more."
+                image={TechBlogPictureThree}
+                imageStyles="mx-auto my-2 "
               />
             </div>
             <div className="flex flex-col gap-5 px-5">
-              <BlogCard
-                blogTitle="Argocoin (AGC)"
-                blogDescription="Our native token, designed to incentivize and empower community participation."
-                blogImage={TechBlogPictureFour}
-                imageStyles="mx-auto my-2"
-                blogLink="/blogs/1"
+              <CoreDetailsCard
+                title="Argocoin (AGC)"
+                description="AGC is not just a cryptocurrency; it's the lifeblood of the Devolved AI ecosystem. Designed to incentivize and empower community participation, AGC holders enjoy benefits like governance rights, staking rewards, and access to exclusive community events."
+                image={TechBlogPictureFour}
+                imageStyles="mx-auto my-2 "
               />
-              <BlogCard
-                blogTitle="CommUnity Module"
-                blogDescription="An innovative governance system that employs tiered roles, incentivization, and sanctions."
-                blogImage={TechBlogPictureFive}
-                imageStyles="mx-auto my-2"
-                blogLink="/blogs/2"
+              <CoreDetailsCard
+                title="CommUnity Module"
+                description="Our CommUnity Module revolutionizes governance by introducing tiered roles, incentivization schemes, and sanctions. This ensures that governance is not just token-weighted but also meritocratic, creating a balanced and fair ecosystem."
+                image={TechBlogPictureFive}
+                imageStyles="mx-auto my-2 "
               />
-              <BlogCard
-                blogTitle="Token-Weighted Voting"
-                blogDescription="Our democratized decision-making framework that respects the voice and stake of each member."
-                blogImage={TechBlogPictureSix}
-                imageStyles="mx-auto my-2"
-                blogLink="/blogs/2"
+              <CoreDetailsCard
+                title="Token-Weighted Voting"
+                description="Democracy is at the heart of Devolved AI. Our token-weighted voting system ensures that every voice is heard and every stake is respected. It allows for inclusive decision-making, where the weight of your vote is directly proportional to your stake in AGC."
+                image={TechBlogPictureSix}
+                imageStyles="mx-auto my-2 "
               />
             </div>
             <div className="flex flex-col gap-5 px-5">
-              <BlogCard
-                blogTitle="Security Infrastructure"
-                blogDescription="Innovative, state-of-the-art measures for ensuring utmost data privacy and network integrity."
-                blogImage={TechBlogPictureSeven}
-                imageStyles="mx-auto my-2"
-                blogLink="/blogs/1"
+              <CoreDetailsCard
+                title="Security Infrastructure"
+                description="We take data privacy and network integrity very seriously. Our state-of-the-art security measures include advanced encryption algorithms, multi-signature wallets, and regular security audits to ensure that your data is always safe."
+                image={TechBlogPictureSeven}
+                imageStyles="mx-auto my-2 "
               />
-              <BlogCard
-                blogTitle="Advanced NLP"
-                blogDescription="The cornerstone for user interaction, designed to create a seamless, natural user experience."
-                blogImage={TechBlogPictureEight}
-                imageStyles="mx-auto my-2"
-                blogLink="/blogs/2"
+              <CoreDetailsCard
+                title="Advanced NLP"
+                description="Our focus on Natural Language Processing (NLP) aims to make interactions with the platform as seamless and natural as possible. Advanced algorithms understand user queries and provide accurate, context-aware responses, enhancing the overall user experience."
+                image={TechBlogPictureEight}
+                imageStyles="mx-auto my-2 "
               />
-              <BlogCard
-                blogTitle="Financial Pool"
-                blogDescription="A decentralized treasury fueled by Argocoin, aimed at community-sanctioned innovation and growth."
-                blogImage={TechBlogPictureNine}
-                imageStyles="mx-auto my-2"
-                blogLink="/blogs/2"
+              <CoreDetailsCard
+                title="Financial Pool"
+                description="Our decentralized treasury, fueled by Argocoin, is aimed at fostering community-sanctioned innovation and growth. Members can propose projects, vote on them, and even receive funding, all in a transparent and democratic manner."
+                image={TechBlogPictureNine}
+                imageStyles="mx-auto my-2 "
               />
             </div>
             <div className="flex flex-col gap-5 px-5">
-              <BlogCard
-                blogTitle="Smart Contracts"
-                blogDescription="Self-executing contracts that facilitate, verify, and enforce credible transactions without intermediaries."
-                blogImage={TechBlogPictureTen}
-                imageStyles="mx-auto my-2"
-                blogLink="/blogs/1"
+              <CoreDetailsCard
+                title="Smart Contracts"
+                description="Our platform supports self-executing smart contracts that facilitate, verify, and enforce credible transactions without the need for intermediaries. This not only speeds up processes but also reduces costs and risks associated with manual interventions."
+                image={TechBlogPictureTen}
+                imageStyles="mx-auto my-2 "
               />
-              <BlogCard
-                blogTitle="Interoperability"
-                blogDescription="Seamless communication between different blockchain networks and modules, ensuring flexibility and future-readiness."
-                blogImage={TechBlogPictureEleven}
-                imageStyles="mx-auto my-2"
-                blogLink="/blogs/2"
+              <CoreDetailsCard
+                title="Interoperability"
+                description="Devolved AI is designed for the future. Our platform can seamlessly communicate with different blockchain networks and modules, ensuring that as the technology evolves, we are ready to integrate and expand."
+                image={TechBlogPictureEleven}
+                imageStyles="mx-auto my-2 "
               />
-              <BlogCard
-                blogTitle="Transparency Reports"
-                blogDescription="A commitment to openness through regular reporting on ecosystem health, governance, and finances."
-                blogImage={TechBlogPictureTwelve}
-                imageStyles="mx-auto my-2"
-                blogLink="/blogs/2"
+              <CoreDetailsCard
+                title="Transparency Reports"
+                description="Transparency is not just a buzzword for us; it's a commitment. We regularly publish reports on ecosystem health, governance decisions, and financial statuses to keep our community informed and engaged."
+                image={TechBlogPictureTwelve}
+                imageStyles="mx-auto my-2 "
               />
             </div>
           </Carousel>
@@ -194,114 +182,108 @@ const TechnologyPage = () => {
       </section>
 
       <section className="w-full px-5 lg:px-0 place-items-center hidden md:flex md:flex-col md:mb-[5rem]">
-        <div className="flex flex-col justify-center items-center">
-          <div className="flex gap-10 px-5 justify-center items-center">
-            <BlogCard
-              blogTitle="Decentralization"
-              blogDescription="The very fabric of our architecture that ensures no single point of control or failure."
-              blogImage={TechBlogPictureOne}
+        <div className="flex flex-col justify-center items-center md:px-8 lg:px-20 xl:px-22">
+          <div className="flex gap-10 lg:gap-3 xl:gap-5 px-5 justify-center items-center">
+            <CoreDetailsCard
+              title="Decentralization"
+              description="The very essence of Devolved AI lies in its decentralized architecture. Unlike traditional centralized systems, our platform is designed to operate without a single point of control or failure. This ensures that power, decision-making, and data are distributed across the network, enhancing resilience and reducing systemic risks."
+              image={TechBlogPictureOne}
               imageStyles="mx-auto my-2 "
-              blogLink="/blogs/1"
-              titleStyles="mb-10"
+              titleStyles="mb-5"
               extraStyles="lg:h-[32.23rem]"
             />
-            <BlogCard
-              blogTitle="Proof of Value (PoV) Protocol"
-              blogDescription="A novel mechanism that quantifies and rewards value contributions to the ecosystem."
-              blogImage={TechBlogPictureTwo}
+            <CoreDetailsCard
+              title="Proof of Value (PoV) Protocol"
+              description="Our unique PoV Protocol goes beyond mere transaction validation. It quantifies the value each participant contributes to the ecosystem and rewards them accordingly. This mechanism encourages active participation and fosters a sense of shared ownership and community."
+              image={TechBlogPictureTwo}
               imageStyles="mx-auto my-2 "
-              blogLink="/blogs/2"
-              titleStyles="mb-10"
+              titleStyles="mb-5"
               extraStyles="lg:h-[32.23rem]"
             />
-            <BlogCard
-              blogTitle="Substrate Blockchain"
-              blogDescription="A custom-built blockchain providing the ultimate in transparency, security, and ownership."
-              blogImage={TechBlogPictureThree}
+            <CoreDetailsCard
+              title="Substrate Blockchain"
+              description="Built on a custom substrate blockchain, Devolved AI offers unparalleled transparency, security, and user ownership. Our blockchain is not just a ledger but a foundation that supports advanced features like smart contracts, token-weighted voting, and more."
+              image={TechBlogPictureThree}
               imageStyles="mx-auto my-2 "
-              blogLink="/blogs/2"
-              titleStyles="mb-10"
+              titleStyles="mb-5"
               extraStyles="lg:h-[32.23rem]"
             />
           </div>
-          <div className="flex gap-10 px-5 justify-center items-center">
-            <BlogCard
-              blogTitle="Argocoin (AGC)"
-              blogDescription="Our native token, designed to incentivize and empower community participation."
-              blogImage={TechBlogPictureFour}
+          <div className="flex gap-10 lg:gap-3 xl:gap-5 px-5 justify-center items-center">
+            <CoreDetailsCard
+              title="Argocoin (AGC)"
+              description="AGC is not just a cryptocurrency; it's the lifeblood of the Devolved AI ecosystem. Designed to incentivize and empower community participation, AGC holders enjoy benefits like governance rights, staking rewards, and access to exclusive community events."
+              image={TechBlogPictureFour}
               imageStyles="mx-auto my-2 "
-              blogLink="/blogs/1"
-              titleStyles="mb-10"
+              titleStyles="mb-5"
               extraStyles="lg:h-[32.23rem]"
             />
-            <BlogCard
-              blogTitle="CommUnity Module"
-              blogDescription="An innovative governance system that employs tiered roles, incentivization, and sanctions."
-              blogImage={TechBlogPictureFive}
+            <CoreDetailsCard
+              title="CommUnity Module"
+              description="Our CommUnity Module revolutionizes governance by introducing tiered roles, incentivization schemes, and sanctions. This ensures that governance is not just token-weighted but also meritocratic, creating a balanced and fair ecosystem."
+              image={TechBlogPictureFive}
               imageStyles="mx-auto my-2 "
-              blogLink="/blogs/2"
-              titleStyles="mb-10"
+              titleStyles="mb-5"
               extraStyles="lg:h-[32.23rem]"
             />
-            <BlogCard
-              blogTitle="Token-Weighted Voting"
-              blogDescription="Our democratized decision-making framework that respects the voice and stake of each member."
-              blogImage={TechBlogPictureSix}
+            <CoreDetailsCard
+              title="Token-Weighted Voting"
+              description="Democracy is at the heart of Devolved AI. Our token-weighted voting system ensures that every voice is heard and every stake is respected. It allows for inclusive decision-making, where the weight of your vote is directly proportional to your stake in AGC."
+              image={TechBlogPictureSix}
               imageStyles="mx-auto my-2 "
-              blogLink="/blogs/2"
-              titleStyles="mb-10"
+              titleStyles="mb-5"
               extraStyles="lg:h-[32.23rem]"
             />
           </div>
-          <div className="flex gap-10 px-5 justify-center items-center">
-            <BlogCard
-              blogTitle="Security Infrastructure"
-              blogDescription="Innovative, state-of-the-art measures for ensuring utmost data privacy and network integrity."
-              blogImage={TechBlogPictureSeven}
+          <div className="flex gap-10 lg:gap-3 xl:gap-5 px-5 justify-center items-center">
+            <CoreDetailsCard
+              title="Security Infrastructure"
+              description="We take data privacy and network integrity very seriously. Our state-of-the-art security measures include advanced encryption algorithms, multi-signature wallets, and regular security audits to ensure that your data is always safe."
+              image={TechBlogPictureSeven}
               imageStyles="mx-auto my-2 "
-              blogLink="/blogs/1"
+              titleStyles="mb-5"
               extraStyles="lg:h-[32.23rem]"
             />
-            <BlogCard
-              blogTitle="Advanced NLP"
-              blogDescription="The cornerstone for user interaction, designed to create a seamless, natural user experience."
-              blogImage={TechBlogPictureEight}
+            <CoreDetailsCard
+              title="Advanced NLP"
+              description="Our focus on Natural Language Processing (NLP) aims to make interactions with the platform as seamless and natural as possible. Advanced algorithms understand user queries and provide accurate, context-aware responses, enhancing the overall user experience."
+              image={TechBlogPictureEight}
               imageStyles="mx-auto my-2 "
-              blogLink="/blogs/2"
+              titleStyles="mb-5"
               extraStyles="lg:h-[32.23rem]"
             />
-            <BlogCard
-              blogTitle="Financial Pool"
-              blogDescription="A decentralized treasury fueled by Argocoin, aimed at community-sanctioned innovation and growth."
-              blogImage={TechBlogPictureNine}
+            <CoreDetailsCard
+              title="Financial Pool"
+              description="Our decentralized treasury, fueled by Argocoin, is aimed at fostering community-sanctioned innovation and growth. Members can propose projects, vote on them, and even receive funding, all in a transparent and democratic manner."
+              image={TechBlogPictureNine}
               imageStyles="mx-auto my-2 "
-              blogLink="/blogs/2"
+              titleStyles="mb-5"
               extraStyles="lg:h-[32.23rem]"
             />
           </div>
-          <div className="flex gap-5 px-5 justify-center items-center">
-            <BlogCard
-              blogTitle="Smart Contracts"
-              blogDescription="Self-executing contracts that facilitate, verify, and enforce credible transactions without intermediaries."
-              blogImage={TechBlogPictureTen}
+          <div className="flex gap-10 lg:gap-3 xl:gap-5 px-5 justify-center items-center">
+            <CoreDetailsCard
+              title="Smart Contracts"
+              description="Our platform supports self-executing smart contracts that facilitate, verify, and enforce credible transactions without the need for intermediaries. This not only speeds up processes but also reduces costs and risks associated with manual interventions."
+              image={TechBlogPictureTen}
               imageStyles="mx-auto my-2 "
-              blogLink="/blogs/1"
+              titleStyles="mb-5"
               extraStyles="lg:h-[32.23rem]"
             />
-            <BlogCard
-              blogTitle="Interoperability"
-              blogDescription="Seamless communication between different blockchain networks and modules, ensuring flexibility and future-readiness."
-              blogImage={TechBlogPictureEleven}
-              imageStyles="mx-auto my-2"
-              blogLink="/blogs/2"
+            <CoreDetailsCard
+              title="Interoperability"
+              description="Devolved AI is designed for the future. Our platform can seamlessly communicate with different blockchain networks and modules, ensuring that as the technology evolves, we are ready to integrate and expand."
+              image={TechBlogPictureEleven}
+              imageStyles="mx-auto my-2 "
+              titleStyles="mb-5"
               extraStyles="lg:h-[32.23rem]"
             />
-            <BlogCard
-              blogTitle="Transparency Reports"
-              blogDescription="A commitment to openness through regular reporting on ecosystem health, governance, and finances."
-              blogImage={TechBlogPictureTwelve}
+            <CoreDetailsCard
+              title="Transparency Reports"
+              description="Transparency is not just a buzzword for us; it's a commitment. We regularly publish reports on ecosystem health, governance decisions, and financial statuses to keep our community informed and engaged."
+              image={TechBlogPictureTwelve}
               imageStyles="mx-auto my-2 "
-              blogLink="/blogs/2"
+              titleStyles="mb-5"
               extraStyles="lg:h-[32.23rem]"
             />
           </div>

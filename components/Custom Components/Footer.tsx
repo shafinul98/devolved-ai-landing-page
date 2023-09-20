@@ -14,7 +14,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="min-w-full md:w-full">
+    <footer className="mt-4 md:mt-6 lg:mt-10">
       <div className="flex flex-col items-center md:items-baseline gap-10 md:flex-row md:justify-around mb-20">
         <div className="flex flex-col gap-5 items-center">
           <div>
@@ -38,6 +38,7 @@ const Footer = () => {
             />
           </div>
         </div>
+
         <div className="flex flex-col">
           <h1 className="mb-5 font-normal text-[1.5rem]">Quick Links</h1>
           <div className="flex flex-col items-start gap-2">

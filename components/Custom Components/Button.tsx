@@ -26,11 +26,6 @@ const Button = ({
       disabled={disabled}
     >
       {title}
-      {hasRightArrowIcon && (
-        <span className="inline">
-          <FaArrowRight />
-        </span>
-      )}
     </button>
   );
 };

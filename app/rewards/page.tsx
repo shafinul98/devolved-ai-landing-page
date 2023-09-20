@@ -11,12 +11,10 @@ import TransparencyReportIllustration from "../../public/Transparency Report Ill
 import OneIcon from "../../public/One Icon.svg";
 import TwoIcon from "../../public/Two Icon.svg";
 import ThreeIcon from "../../public/Three Icon.svg";
-import RightArrowIconBlue from "../../public/Right Arrow Blue.svg";
 import CheckIconYellow from "../../public/Check Icon Yellow.svg";
 
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/Custom Components/Button";
 
 const RewardsPage = () => {
   useEffect(() => {
@@ -45,45 +43,59 @@ const RewardsPage = () => {
           <Image
             src={RewardsPageHeroImage}
             alt="Hero Image"
-            className="w-full md:h-[30rem]"
+            className="w-full md:h-[30rem] object-cover"
           />
         </div>
       </section>
 
       <section className="w-full my-10 md:mt-20 md:mb-0 items-center">
-        <div className="flex flex-col items-center md:flex-row justify-around md:gap-20 lg:gap-20 md:mx-16">
-          <div className="flex flex-col px-6 md:mt-20 gap-5 md:w-[28.25rem] lg:me-[10rem]">
+        <div className="flex flex-col items-center md:flex-row justify-around md:gap-20 lg:gap-20 lg:px-20 xl:px-24 md:mx-16">
+          <div className="flex flex-col px-6 md:mt-20 gap-5 md:w-[28.25rem] lg:w-[40.25rem] lg:ms-[0.5rem]">
             <h1 className="text-base text-[#0074D9]">REWARD SYSTEM OVERVIEW</h1>
             <h1 className="text-[2rem] font-bold text-[#2D3748]">
               PoV Protocol
             </h1>
             <p className="text-[1.25rem] text-[#646E73]">
-              Three products that can be used independently or combined together
-              for your company's needs. Don't listen to what they say go and
-              see. Join the biggest community of people.
+              Our Proof of Value (PoV) Protocol is a revolutionary system
+              designed to reward community members for their valuable
+              contributions to the Devolved AI ecosystem. Unlike traditional
+              reward systems, the PoV Protocol quantifies the value of various
+              types of contributions-be it data validation, AI training or
+              governance participation-and allocates ArgoCoin (AGC) rewards
+              accordingly. This ensures a fair, transparent, and incentivized
+              environment where every action you take has a direct impact on the
+              development and governance of our decentralized AI platform.
             </p>
           </div>
           <Image
             src={RewardsIllustration}
             alt="Rewards Illustration"
-            className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[36.3125rem] md:h-[24.25rem]"
+            className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[36.3125rem] md:h-[24.25rem] lg:w-[40.3125rem]"
           />
         </div>
 
-        <div className="flex flex-col-reverse items-center md:flex-row justify-around md:gap-20 lg:gap-20 md:mx-16">
+        <div className="flex flex-col-reverse items-center md:flex-row justify-around md:gap-20 lg:gap-20 md:mx-16 lg:mb-20">
           <Image
             src={AGCIllustration}
             alt="ArgoCoin Distribution Illustration"
-            className="mt-5 md:mt-0 w-[22.9375rem] h-[16.375rem] md:w-[36.3125rem] md:h-[24.25rem]"
+            className="mt-5 md:mt-0 w-[22.9375rem] h-[16.375rem] md:w-[36.3125rem] md:h-[24.25rem] lg:w-[40.3125rem]"
           />
-          <div className="flex flex-col px-5 md:mt-20 gap-5 md:w-[35.1875rem]">
+          <div className="flex flex-col px-5 md:mt-16 gap-5 md:w-[35.1875rem]">
             <h1 className="text-[2rem] text-[#2D3748] font-bold">
               AGC Distribution
             </h1>
             <p className="text-[1.25rem] text-[#646E73]">
-              Three products that can be used independently or combined together
-              for your company's needs. Don't listen to what they say go and
-              see. Join the biggest community of people.
+              The Argocoin (AGC) Distribution mechanism is a carefully designed
+              system that allocates AGC tokens to community members based on
+              their level of engagement and contribution to the Devolved AI
+              ecosystem. Governed by our PoV Protocol, AGC Distribution is not
+              just a reward but a testament to your stake and influence within
+              the community. Whether you're contributing to AI training,
+              participating in governance decisions, or validating data, AGC
+              Distribution ensures that your efforts are quantified and rewarded
+              appropriately. This transparent allocation process fortifies the
+              democratic ethos of Devolved AI, empowering you to be an active
+              participant in shaping the future of decentralized AI.
             </p>
           </div>
         </div>
@@ -97,72 +109,48 @@ const RewardsPage = () => {
               Participation Guide
             </h1>
             <p className="text-[#646E73] text-[1.25rem] md:mx-[10.5rem]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
+              Our rewards system is designed to be straightforward and
+              inclusive, allowing community members to earn Argocoin (AGC)
+              through various avenues. Whether you're a developer, data
+              scientist, or simply an AI enthusiast, there are multiple ways for
+              you to contribute and earn rewards
             </p>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-8 mt-10">
-          <div className="flex flex-col px-10 gap-3">
+          <div className="flex flex-col px-10 gap-3 lg:px-24">
             <Image src={OneIcon} alt="One Icon" />
             <h1 className="text-xl font-bold text-[#2D3748]">
-              Community at the core
+              Data Validation
             </h1>
             <p className="text-[#646E73] text-sm">
-              Our mission is fueled by community collaboration. Using democratic
-              principles and blockchain, we're creating a transparent,
-              accessible AI legacy.
+              Contribute to the accuracy and reliability of our AI models by
+              participating in data validation tasks. Your efforts are rewarded
+              with AGC Tokens.
             </p>
-            <div className="flex gap-1 justify-start items-center">
-              <p className="text-[#0074D9] text-sm">Learn more</p>
-              <Image
-                src={RightArrowIconBlue}
-                alt="Right Arrow Icon"
-                width={25}
-              />
-            </div>
           </div>
 
           <div className="flex flex-col px-10 gap-3">
             <Image src={TwoIcon} alt="One Icon" />
             <h1 className="text-xl font-bold text-[#2D3748]">
-              Rewarding Contributions
+              Governance Participation
             </h1>
             <p className="text-[#646E73] text-sm">
-              Your efforts in AI training and data validation are central to our
-              success. Receive Argocoin (AGC) rewards, and let your voice be a
-              driving force in AI's future.{" "}
+              Engage in our decentralized governance model by voting on
+              proposals and submitting your own. Earn AGC tokens for your active
+              participation in shaping Devolved AI.
             </p>
-            <div className="flex gap-1 justify-start items-center">
-              <p className="text-[#0074D9] text-sm">Learn more</p>
-              <Image
-                src={RightArrowIconBlue}
-                alt="Right Arrow Icon"
-                width={25}
-              />
-            </div>
           </div>
 
           <div className="flex flex-col px-10 gap-3">
             <Image src={ThreeIcon} alt="One Icon" />
-            <h1 className="text-xl font-bold text-[#2D3748]">
-              A Nexus for Visionaries
-            </h1>
+            <h1 className="text-xl font-bold text-[#2D3748]">AI Training</h1>
             <p className="text-[#646E73] text-sm">
-              We are more than a platform; we unite innovators for an AI future
-              crafted by the people. Align with us, endorse accessibility, and
-              democratize AI's landscape
+              Help train our AI models by providing valuable data or
+              computational resources. Earn AGC tokens based on the quality and
+              quantity of your contributions.
             </p>
-            <div className="flex gap-1 justify-start items-center">
-              <p className="text-[#0074D9] text-sm">Learn more</p>
-              <Image
-                src={RightArrowIconBlue}
-                alt="Right Arrow Icon"
-                width={25}
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -176,11 +164,11 @@ const RewardsPage = () => {
           />
           <div className="flex flex-col gap-6">
             <h1 className="text-[2rem] font-bold text-[#2D3748] mb-3 px-10">
-              Transparency Report
+              Maximizing Your Rewards with Devolved AI
             </h1>
-            <p className="text-[#646E73] text-[1.25rem] pl-10 pr-32 mb-3">
-              Send one-off and automated email, push, and in-app messages to
-              people. Create better stories.
+            <p className="text-[#646E73] text-center md:text-start text-[1.25rem] md:pl-10 md:pr-32 mb-3">
+              Discover the various ways you can maximize your AGC earnings and
+              make impactful contributions to the Devolved AI ecosystem.
             </p>
             <div className="flex flex-col items-start px-10 gap-3">
               <div className="flex items-center space-x-2">
@@ -211,32 +199,32 @@ const RewardsPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center md:justify-center mx-5 mt-[5rem] mb-10">
-          <article className="w-[21.375rem] h-[15.0625rem] lg:w-[27.375rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5] transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110">
+        <div className="flex flex-col md:flex-row items-center md:justify-center mx-5 md:mx-18 mt-[5rem] mb-10">
+          <article className="w-[21.375rem] h-[15.0625rem] xl:w-[27.375rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
             <h1 className="text-[1.25rem] text-[#2D3748] font-normal text-start my-4">
-              High quality
+              Reward Tiers
             </h1>
-            <p className="text-[#646E73] text-[1rem] text-start mb-4">
-              We will always give you the opportunity to get acquainted with the
-              instrument closer.
+            <p className="text-[#646E73] text-[1rem] text-start mb-4 md:max-lg:mb-12">
+              Different levels of contributions come with varying tiers of
+              rewards, allowing you to earn more as you contribute more.
             </p>
             <Link
               href={"#"}
               rel="noopener noreferrer"
               target="_blank"
-              className="text-[#377DFF] text-end mt-12"
+              className="text-[#377DFF] text-end lg:mt-6"
             >
               Download Report
             </Link>
           </article>
-          <article className="w-[21.375rem] h-[15.0625rem] lg:w-[27.375rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5] transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110">
+          <article className="w-[21.375rem] h-[15.0625rem] xl:w-[27.375rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
             <h1 className="text-[1.25rem] text-[#2D3748] font-normal text-start my-4">
-              Musical instruments{" "}
+              Redeemable Benefits
             </h1>
-            <p className="text-[#646E73] text-[1rem] text-start mb-4">
-              Our employees are always ready to come to your aid in choosing
-              musical instruments, be it a string, keyboard, percussion or any
-              other instrument.
+            <p className="text-[#646E73] text-[1rem] text-start mb-4 md:max-lg:mb-0">
+              Your earned AGC can not only be used for various benefits within
+              the Devolved AI ecosystem but can also be redeemed for USDT, ETH
+              and BNB on their respective blockchains via a wrapped AGC.
             </p>
             <Link
               href={"#"}
@@ -247,13 +235,13 @@ const RewardsPage = () => {
               Download Report
             </Link>
           </article>
-          <article className="w-[21.375rem] h-[15.0625rem] lg:w-[27.375rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5] transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110">
+          <article className="w-[21.375rem] h-[15.0625rem] xl:w-[27.375rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
             <h1 className="text-[1.25rem] text-[#2D3748] font-normal text-start my-4">
-              Free assistance
+              Long-Term Incentives
             </h1>
-            <p className="text-[#646E73] text-[1rem] text-start mb-4">
-              You will always get professional advice on the selection of
-              musical instruments, equipment and accessories.
+            <p className="text-[#646E73] text-[1rem] text-start mb-4 md:max-lg:mb-0">
+              Consistent contributions are recognized and rewarded with
+              long-term incentives, ensuring sustained community engagement.
             </p>
             <Link
               href={"#"}
@@ -264,13 +252,6 @@ const RewardsPage = () => {
               Download Report
             </Link>
           </article>
-        </div>
-
-        <div className="flex items-center justify-center mb-[3rem]">
-          <Button
-            title="View All Reports"
-            extraStyles=" bg-[#0074D9] text-white px-10 md:w-[11.375rem] md:h-[2.625rem]"
-          />
         </div>
       </section>
     </main>

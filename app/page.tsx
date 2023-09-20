@@ -44,9 +44,9 @@ export default function Home() {
         className="w-full md:w-[85.375rem] md:h-[41.125rem] lg:w-full md:bg-[#f5f5f5]"
         id="curved-rectangle"
       >
-        <div className="flex flex-col items-center md:flex-row md:justify-center md:p-10 lg:px-16 md:mt-[2.1rem]">
-          <div className="flex flex-col gap-5 mb-10 md:w-[33.9375rem] md:me-[7.5rem] lg:me-[25rem]">
-            <h1 className="font-bold text-[2rem] text-start md:text-[3rem] md:leading-[1.15]  text-[#2D3748]">
+        <div className="flex flex-col items-center md:flex-row md:justify-center md:p-12 md:pl-[5rem] lg:px-16 lg:pl-[0rem] xl:pl-[8rem] 2xl:pl-[5rem] md:mt-[2.1rem]">
+          <div className="flex flex-col gap-5 mb-10 md:w-[33.9375rem] md:me-[6rem] lg:me-[10.5rem] xl:me-[15.5rem]">
+            <h1 className="font-bold text-[2rem] text-start md:text-[3rem] md:leading-[1.15] text-[#2D3748]">
               Empowering <span className="text-[#0074D9]">You</span> to Shape
               the Future of Artificial Intelligence
             </h1>
@@ -58,7 +58,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-5">
               <Button
                 title="Launch App"
-                extraStyles=" bg-[#FF6F00] text-white w-full text-center md:w-[7.5625rem] md:h-[2.625rem]"
+                extraStyles=" bg-[#FF6F00] text-white w-full text-center md:w-[7.5625rem] md:h-[2.625rem] font-bold"
               />
               <Button
                 title="Whitepaper"
@@ -71,7 +71,7 @@ export default function Home() {
             <Image
               src={HeroImage}
               alt="Hero Image"
-              className="w-[15.4375rem] h-[16.9375rem] md:w-[30.375rem] md:h-[33.8125rem] md:me-[5.63rem]"
+              className="w-[15.4375rem] h-[16.9375rem] md:w-[30.375rem] md:h-[33.8125rem] md:me-[5.63rem] lg:me-[3.53rem]"
             />
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function Home() {
 
       <div className="w-full h-[0.0625rem] md:hidden"></div>
 
-      <article className="flex flex-col mt-12 md:mx-[3rem] lg:gap-[8rem] lg:w-full md:flex-row lg:justify-center mb-[3.75rem]">
+      <article className="flex flex-col mt-12 md:mx-[3rem] lg:gap-[8rem] lg:w-full lg:mx-[10rem] xl:mx-[10.5rem] md:flex-row lg:justify-center mb-[3.75rem]">
         <div className="flex flex-col items-center py-[1.18675rem] md:py-0 md:items-start gap-[0.81rem] md:gap-3 md:w-[23rem]">
           <Image src={MoneyBag} alt="" />
           <h1 className="text-[1.5rem] font-bold text-[#2D3748]">
@@ -185,13 +185,13 @@ export default function Home() {
       </section>
 
       <section className="w-full md:w-[85.375rem] md:h-[41.125rem] lg:w-full hidden md:flex lg:justify-center bg-[#F5F5F5]">
-        <div className="flex flex-row  gap-20 md:p-10">
+        <div className="flex flex-row gap-20 md:p-10">
           <Image
             src={SteveJobs}
             alt="Steve Jobs"
-            className="w-[24.75rem] h-[32.75rem] mt-[2rem] ms-[6.06rem]"
+            className="w-[24.75rem] h-[32.75rem] mt-[2rem] ms-[6.06rem] xl:w-[42.75rem] xl:ms-[8rem]"
           />
-          <div className="flex-col py-16 space-y-7 text-start mt-[3rem] w-[36.9375rem] h-[24.3125rem] ms-[2rem]">
+          <div className="flex-col py-16 space-y-7 text-start mt-[3rem] w-[36.9375rem] h-[24.3125rem] ms-[2rem] xl:w-full xl:pl-[4.5rem]">
             <h1 className="font-bold text-[2rem]">
               Nurturing Faith in Innovation: Tools for
               <span className="text-[#0074D9]"> Excellence</span>
@@ -308,7 +308,7 @@ export default function Home() {
       </section>
 
       <section className="w-full md:w-[85.375rem] md:h-[41.125rem] lg:w-full px-5 mt-[4.25rem] mb-[4.5rem] hidden md:flex items-center gap-5">
-        <div className="flex flex-col gap-y-8 p-10 md:w-[40.6875rem] lg:w-[50rem]">
+        <div className="flex flex-col gap-y-8 p-10 md:w-[40.6875rem] md:pl-[6rem] lg:w-[50rem] lg:pl-[8rem] xl:pl-[10rem]">
           <div className="flex flex-col gap-y-4">
             <h1 className="font-bold text-[2rem]">
               <span className="text-[#0074D9]">Devolved AI: </span> A Communal
@@ -410,7 +410,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col md:flex-row md:flex-wrap gap-5 justify-center md:py-10">
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-105">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
               <Image src={DemocraticGovIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Democratic Governance</h6>
               <p className="text-[#646E73]">
@@ -419,7 +419,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-105">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
               <Image src={InnovationIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">
                 User Centric Innovation
@@ -430,7 +430,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-105">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
               <Image src={ProsperityIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Shared Prosperity</h6>
               <p className="text-[#646E73]">
@@ -439,7 +439,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 transition ease-in-out delay-150 hover:translate-y-3 hover:scale-105">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 ">
               <Image src={PrivacyIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Privacy and Security</h6>
               <p className="text-[#646E73]">
@@ -448,7 +448,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 transition ease-in-out delay-150 hover:translate-y-3 hover:scale-105">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 ">
               <Image src={Community} alt="" />
               <h6 className="text-xl text-[#2D3748]">Community and Outreach</h6>
               <p className="text-[#646E73]">
@@ -457,7 +457,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 transition ease-in-out delay-150 hover:translate-y-3 hover:scale-105">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 ">
               <Image src={TransparencyIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Transparency</h6>
               <p className="text-[#646E73]">

@@ -87,7 +87,7 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 flex flex-col items-center justify-center my-10 lg:mx-[22.5rem]"
+        className="space-y-8 flex flex-col items-center justify-center my-10 md:mx-[5rem] lg:mx-[12.5rem]"
       >
         <div className="flex md:flex-col lg:flex-row gap-2 md:gap-y-5 w-full lg:gap-0">
           <FormField
@@ -95,12 +95,13 @@ export function ContactForm() {
             name="firstName"
             render={({ field }) => (
               <FormItem className="w-full md:px-[15rem] lg:px-0 lg:ms-[5rem]">
-                <FormLabel className="font-bold">First Name</FormLabel>
+                <FormLabel className="font-bold">First Name*</FormLabel>
                 <FormControl>
                   <Input
                     className="h-[3.5rem]"
                     placeholder="First Name"
                     {...field}
+                    required
                   />
                 </FormControl>
                 <FormMessage />
@@ -132,12 +133,13 @@ export function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem className="w-full md:px-[15rem] lg:px-[5rem]">
-                <FormLabel className="font-bold">Email</FormLabel>
+                <FormLabel className="font-bold">Email*</FormLabel>
                 <FormControl>
                   <Input
                     className="h-[3.5rem]"
                     placeholder="Email"
                     type="email"
+                    required
                     {...field}
                   />
                 </FormControl>
@@ -153,9 +155,14 @@ export function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="font-bold">Message</FormLabel>
+                <FormLabel className="font-bold">Message*</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Message" {...field} rows={6} />
+                  <Textarea
+                    placeholder="Message"
+                    {...field}
+                    rows={6}
+                    required
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
