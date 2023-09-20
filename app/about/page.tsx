@@ -44,7 +44,7 @@ const About = () => {
   }, []);
 
   return (
-    <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between">
+    <main className="flex min-h-screen flex-col items-center justify-between">
       <section className="w-full place-items-center">
         <div className="relative">
           <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-3xl md:text-5xl">
@@ -85,8 +85,8 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full mt-10 mb-[4.5rem] hidden md:flex md:items-center lg:justify-center lg:mx-[5rem]">
-        <div className="flex flex-col w-[36.75rem] h-[24.875rem] px-20 md:px-16 md:me-[2rem] lg:px-0 lg:me-[0rem] xl:me-[10rem]">
+      <section className="w-full mt-10 mb-[4.5rem] hidden md:flex md:items-center lg:justify-center lg:mx-[5rem] xl:px-[12.5rem]">
+        <div className="flex flex-col w-[36.75rem] h-[24.875rem] px-20 md:px-16 md:me-[2rem] lg:px-0 lg:me-[0rem] xl:me-[3rem]">
           <h1 className="text-[2rem] font-bold text-[#2D3748] mb-3">
             Our Story
           </h1>

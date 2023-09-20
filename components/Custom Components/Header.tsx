@@ -18,15 +18,15 @@ const Header = () => {
     <header>
       <nav className="shadow-lg">
         <div className="flex justify-between items-center md:px-10 py-1">
-          <Link href={"/"}>
+          <Link href={"/"} className="xl:ms-16">
             <Image
               src={Logo}
               alt="Devolved AI Logo"
-              className="w-[8rem] h-[1.875rem] md:w-[12rem] lg:w-[14rem] xl:w-[16rem] ms-[0.75rem] md:ms-[1.25rem] lg:ms-[5.75rem] xl:ms-[6.5rem] 2xl:ms-[5rem]"
               quality={100}
+              className="w-full"
             />
           </Link>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger className="px-5 py-1">
                 <div className="w-10 h-10 flex border items-center justify-center rounded-sm p-1">
@@ -70,7 +70,7 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <div className="p-3 md:ms-20 xl:ms-0 justify-between items-center gap-10 hidden md:flex text-sm text-[#2D3748]">
+          <div className="p-3 xl:ms-0 lg:justify-center xl:justify-between items-center gap-1.5 lg:gap-5 hidden lg:flex text-sm text-[#2D3748]">
             <Link className="text-[1rem]" href="/">
               Home
             </Link>
@@ -89,7 +89,7 @@ const Header = () => {
             <Link className="text-[1rem]" href="/rewards">
               Rewards
             </Link>
-            <Link className="text-[1rem] pr-12" href="/contact">
+            <Link className="text-[1rem] lg:pr-6" href="/contact">
               Contact
             </Link>
             <Button

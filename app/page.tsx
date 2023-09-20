@@ -39,10 +39,10 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-6 py-8 md:p-0">
+    <main className="flex min-h-screen  flex-col items-center justify-between px-6 py-8 md:p-0">
       <section className="w-full md:bg-[#f5f5f5]" id="curved-rectangle">
-        <div className="flex flex-col items-center md:flex-row md:justify-center md:p-12 md:pl-[5rem] lg:px-16 lg:pl-[0rem] xl:pl-[8rem] 2xl:pl-[5rem] md:mt-[2.1rem]">
-          <div className="flex flex-col gap-5 mb-10 md:w-[33.9375rem] md:me-[6rem] lg:me-[10.5rem] xl:me-[15.5rem]">
+        <div className="flex flex-col items-center md:flex-row md:justify-center md:p-12 md:pl-12 lg:px-16 lg:pl-[4rem] xl:pl-28 md:mt-[2.1rem]">
+          <div className="flex flex-col gap-5 mb-10  md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
             <h1 className="font-bold text-[2rem] text-start md:text-[3rem] md:leading-[1.15] text-[#2D3748]">
               Empowering <span className="text-[#0074D9]">You</span> to Shape
               the Future of Artificial Intelligence
@@ -68,7 +68,8 @@ export default function Home() {
             <Image
               src={HeroImage}
               alt="Hero Image"
-              className="w-[15.4375rem] h-[16.9375rem] md:w-[30.375rem] md:h-[33.8125rem] md:me-[5.63rem] lg:me-[3.53rem]"
+              className="xl:pl-[1rem]"
+              width={700}
             />
           </div>
         </div>
@@ -76,10 +77,10 @@ export default function Home() {
 
       <div className="w-full h-[0.0625rem] md:hidden"></div>
 
-      <article className="flex flex-col mt-12 md:mx-[3rem] lg:gap-[8rem] lg:w-full lg:mx-[10rem] xl:mx-[10.5rem] md:flex-row lg:justify-center mb-[3.75rem]">
-        <div className="flex flex-col items-center py-[1.18675rem] md:py-0 md:items-start gap-[0.81rem] md:gap-3 md:w-[23rem]">
+      <article className="flex flex-col mt-12 md:px-10 md:gap-5 lg:gap-[5rem] lg:w-full lg:px-[3.5rem] xl:px-28 md:flex-row lg:justify-center mb-[3.75rem]">
+        <div className="flex flex-col items-center py-[1.18675rem] md:py-0 md:items-start gap-[0.81rem] md:gap-3 ">
           <Image src={MoneyBag} alt="" />
-          <h1 className="text-[1.5rem] font-bold text-[#2D3748]">
+          <h1 className="text-xl md:text-[1.5rem] font-bold text-[#2D3748]">
             Contribute and Profit
           </h1>
           <p className="text-[1rem] md:text-[1rem] text-center md:text-start font-normal text-[#646E73]">
@@ -89,9 +90,9 @@ export default function Home() {
             participation—it's a stake in shaping tomorrow's technology.
           </p>
         </div>
-        <div className="flex flex-col items-center py-[1.18675rem] md:py-0 md:items-start gap-3 md:w-[23rem]">
+        <div className="flex flex-col items-center py-[1.18675rem] md:py-0 md:items-start gap-3 ">
           <Image src={TeamWork} alt="" />
-          <h1 className="text-[1.5rem] font-bold text-[#2D3748]">
+          <h1 className="text-xl md:text-[1.5rem] font-bold text-[#2D3748]">
             Community-Led Innovation
           </h1>
           <p className="text-[1rem] md:text-[1rem] text-center md:text-start font-normal text-[#646E73]">
@@ -101,9 +102,9 @@ export default function Home() {
             voice is heard, magnified by the weight of Argocoin you hold.
           </p>
         </div>
-        <div className="flex flex-col items-center py-[1.18675rem] md:py-0 md:items-start gap-3 md:w-[23rem]">
+        <div className="flex flex-col items-center py-[1.18675rem] md:py-0 md:items-start gap-3 ">
           <Image src={Blockchain} alt="" />
-          <h1 className="text-[1.5rem] font-bold text-[#2D3748]">
+          <h1 className="text-xl md:text-[1.5rem] font-bold text-[#2D3748]">
             Trust Through Transparency
           </h1>
           <p className="text-[1rem] md:text-[1rem] text-center md:text-start font-normal text-[#646E73]">
@@ -181,12 +182,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full md:w-[85.375rem] md:h-[41.125rem] lg:w-full hidden md:flex lg:justify-center bg-[#F5F5F5]">
-        <div className="flex flex-row gap-20 md:p-10">
+      <section className="w-full min-h-screen hidden md:flex lg:justify-center bg-[#F5F5F5]">
+        <div className="flex flex-row xl:gap-5 md:p-10">
           <Image
             src={SteveJobs}
             alt="Steve Jobs"
-            className="w-[24.75rem] h-[32.75rem] mt-[2rem] ms-[6.06rem] xl:w-[42.75rem] xl:ms-[8rem]"
+            className="w-full md:w-1/2 lg:w-full mt-[2rem] ms-5 xl:ms-32 xl:h-[35rem] xl:w-[35rem]"
           />
           <div className="flex-col py-16 space-y-7 text-start mt-[3rem] w-[36.9375rem] h-[24.3125rem] ms-[2rem] xl:w-full xl:pl-[4.5rem]">
             <h1 className="font-bold text-[2rem]">
@@ -304,8 +305,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full md:w-[85.375rem] md:h-[41.125rem] lg:w-full px-5 mt-[4.25rem] mb-[4.5rem] hidden md:flex items-center gap-5">
-        <div className="flex flex-col gap-y-8 p-10 md:w-[40.6875rem] md:pl-[6rem] lg:w-[50rem] lg:pl-[8rem] xl:pl-[10rem]">
+      <section className="w-full px-5 lg:px-10 xl:px-20 mt-[4.25rem] mb-[4.5rem] hidden md:flex md:justify-center items-center gap-5">
+        <div className="flex flex-col gap-y-8 p-10">
           <div className="flex flex-col gap-y-4">
             <h1 className="font-bold text-[2rem]">
               <span className="text-[#0074D9]">Devolved AI: </span> A Communal
@@ -319,7 +320,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 rounded-sm mt-12 w-[36.625rem] h-[15.75rem]">
+          <div className="flex flex-col gap-3 rounded-sm mt-12">
             <div className="flex items-center md:items-start gap-6">
               <Image src={Community} alt="" width={50} />
               <div className="flex flex-col gap-y-2">
@@ -362,11 +363,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="md:ms-[7rem] lg:ms-[13rem]">
+        <div className="md:px-10 lg:px-20">
           <Image
             src={DevolvedAIHeroLogo}
             alt="Devolved AI Hero Logo"
-            className="w-[25.0625rem] h-[17.9375rem] lg:w-full"
+            width={700}
           />
         </div>
       </section>
@@ -379,7 +380,7 @@ export default function Home() {
           <h1 className="text-[2rem] font-bold text-[#2D3748]">
             Join a community-driven AI revolution with Devolved AI
           </h1>
-          <p className="text-[1rem] leading-6 text-center md:px-[21rem]">
+          <p className="text-[1rem] leading-6 text-center md:px-10">
             Contribute to our mission, influence our growth through voting, and
             earn rewards with Argocoin (AGC) as you partake in a transparent and
             community guided AI ecosystem.
