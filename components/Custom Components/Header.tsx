@@ -18,7 +18,7 @@ const Header = () => {
     <header>
       <nav className="shadow-lg">
         <div className="flex justify-between items-center md:px-10 py-1">
-          <Link href={"/"} className="xl:ms-16">
+          <Link href={"/"} className="xl:ms-12">
             <Image
               src={Logo}
               alt="Devolved AI Logo"

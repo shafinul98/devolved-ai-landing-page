@@ -55,11 +55,11 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-5">
               <Button
                 title="Get Early Access"
-                extraStyles=" bg-[#FF6F00] text-white w-full text-center md:w-[7.5625rem] md:h-[2.625rem] font-bold"
+                extraStyles=" bg-[#FF6F00] text-white w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-bold"
               />
               <Button
                 title="Whitepaper"
-                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[7.5625rem] md:h-[2.625rem]"
+                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem]"
               />
             </div>
           </div>
