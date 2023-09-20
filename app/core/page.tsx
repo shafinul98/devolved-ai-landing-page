@@ -181,8 +181,8 @@ const TechnologyPage = () => {
         </div>
       </section>
 
-      <section className="w-full px-5 lg:px-0 place-items-center hidden md:flex md:flex-col md:mb-[5rem]">
-        <div className="flex flex-col justify-center items-center md:px-8 lg:px-20 xl:px-22">
+      <section className="w-full px-5 lg:px-0 hidden md:flex md:flex-col md:mb-[5rem]">
+        <div className="flex flex-col justify-center items-center md:px-8 lg:px-12 xl:px-16">
           <div className="flex gap-10 lg:gap-3 xl:gap-5 px-5 justify-center items-center">
             <CoreDetailsCard
               title="Decentralization"
