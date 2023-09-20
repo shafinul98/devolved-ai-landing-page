@@ -27,14 +27,14 @@ const Footer = () => {
               />
             </Link>
           </div>
-          <div className="md:flex md:flex-row flex flex-col gap-5">
+          <div className="flex flex-col gap-5">
             <Button
               title="Get Early Access"
-              extraStyles=" p-1 bg-[#FF6F00] rounded-full text-center text-white"
+              extraStyles=" p-1 bg-[#FF6F00] rounded-full text-center text-white md:w-[8.75rem]"
             />
             <Button
               title="Whitepaper"
-              extraStyles=" p-1 bg-white text-[#0074D9] border-[#0074D9] rounded-full text-center"
+              extraStyles=" p-1 bg-white text-[#0074D9] border-[#0074D9] rounded-full text-center md:w-[8.75rem]"
             />
           </div>
         </div>
