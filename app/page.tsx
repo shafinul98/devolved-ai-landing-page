@@ -39,7 +39,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-6 py-8 md:p-0">
+    <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
       <section
         className="w-full md:w-[85.375rem] md:h-[41.125rem] lg:w-full md:bg-[#f5f5f5]"
         id="curved-rectangle"
