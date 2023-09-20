@@ -411,12 +411,12 @@ const CommunityPage = () => {
           </p>
           <div className="flex justify-center gap-x-2">
             <Button
-              title="Launch App"
-              extraStyles=" bg-[#FF6F00] w-full md:w-[7.375rem] md:h-[2.625rem] text-white"
+              title="Get Early Access"
+              extraStyles=" bg-[#FF6F00] w-full md:w-[8.75rem] md:h-[2.625rem] text-white"
             />
             <Button
               title="Whitepaper"
-              extraStyles=" w-full md:w-[7.375rem] md:h-[2.625rem] bg-white text-[#0074D9] border-[#0074D9] text-primary"
+              extraStyles=" w-full md:w-[8.75rem] md:h-[2.625rem] bg-white text-[#0074D9] border-[#0074D9] text-primary"
             />
           </div>
         </div>

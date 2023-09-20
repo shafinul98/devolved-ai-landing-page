@@ -63,7 +63,7 @@ const Header = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Button
-                    title="Launch App"
+                    title="Get Early Access"
                     extraStyles=" bg-[#FF6F00] text-white"
                   />
                 </DropdownMenuItem>
@@ -93,7 +93,7 @@ const Header = () => {
               Contact
             </Link>
             <Button
-              title="Launch App"
+              title="Get Early Access"
               extraStyles=" bg-[#FF6F00] text-white rounded-[0.3125rem] w-[8.5rem] h-[2.625rem]"
             />
           </div>

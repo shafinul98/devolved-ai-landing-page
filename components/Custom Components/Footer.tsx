@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           <div className="md:flex md:flex-row flex flex-col gap-5">
             <Button
-              title="Launch App"
+              title="Get Early Access"
               extraStyles=" p-1 bg-[#FF6F00] rounded-full text-center text-white"
             />
             <Button

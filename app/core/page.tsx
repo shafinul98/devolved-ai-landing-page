@@ -74,7 +74,7 @@ const TechnologyPage = () => {
             </p>
             <div className="flex flex-col px-10 md:px-0 md:flex-row justify-center items-center md:justify-start gap-5">
               <Button
-                title="Launch App"
+                title="Get Early Access"
                 extraStyles=" bg-[#FF6F00] text-white w-full text-center md:w-[7.4375rem] md:h-[2.625rem]"
               />
               <Button

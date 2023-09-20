@@ -54,7 +54,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-5">
               <Button
-                title="Launch App"
+                title="Get Early Access"
                 extraStyles=" bg-[#FF6F00] text-white w-full text-center md:w-[7.5625rem] md:h-[2.625rem] font-bold"
               />
               <Button
@@ -387,12 +387,12 @@ export default function Home() {
           </p>
           <div className="flex gap-x-2 md:px-72 justify-center">
             <Button
-              title="Launch App"
-              extraStyles=" bg-[#FF6F00] w-full md:w-[7.375rem] h-[2.625rem] text-white"
+              title="Get Early Access"
+              extraStyles=" bg-[#FF6F00] w-full md:w-[8.75rem] h-[2.625rem] text-white"
             />
             <Button
               title="Whitepaper"
-              extraStyles=" w-full md:w-[7.375rem] h-[2.625rem] bg-white text-[#0074D9] border-[#0074D9] text-primary"
+              extraStyles=" w-full md:w-[8.75rem] h-[2.625rem] bg-white text-[#0074D9] border-[#0074D9] text-primary"
             />
           </div>
         </div>

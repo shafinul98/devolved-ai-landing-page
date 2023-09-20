@@ -34,7 +34,7 @@ const RewardsPage = () => {
   }, []);
 
   return (
-    <main className="flex min-h-screen overflow-x-hidden flex-col items-center">
+    <main className="flex min-h-screen flex-col items-center">
       <section className="w-full place-items-center">
         <div className="relative">
           <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-3xl md:text-5xl">
@@ -49,8 +49,8 @@ const RewardsPage = () => {
       </section>
 
       <section className="w-full my-10 md:mt-20 md:mb-0 items-center">
-        <div className="flex flex-col items-center md:flex-row justify-around md:gap-20 lg:gap-20 lg:px-20 xl:px-24 md:mx-16">
-          <div className="flex flex-col px-6 md:mt-20 gap-5 md:w-[28.25rem] lg:w-[40.25rem] lg:ms-[0.5rem]">
+        <div className="flex flex-col items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16">
+          <div className="flex flex-col px-6 md:mt-20 gap-5 lg:ms-[0.5rem] xl:me-14">
             <h1 className="text-base text-[#0074D9]">REWARD SYSTEM OVERVIEW</h1>
             <h1 className="text-[2rem] font-bold text-[#2D3748]">
               PoV Protocol
@@ -70,17 +70,17 @@ const RewardsPage = () => {
           <Image
             src={RewardsIllustration}
             alt="Rewards Illustration"
-            className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[36.3125rem] md:h-[24.25rem] lg:w-[40.3125rem]"
+            className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[26.3125rem] md:h-[24.25rem] xl:w-[35rem]"
           />
         </div>
 
-        <div className="flex flex-col-reverse items-center md:flex-row justify-around md:gap-20 lg:gap-20 md:mx-16 lg:mb-20">
+        <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20">
           <Image
             src={AGCIllustration}
             alt="ArgoCoin Distribution Illustration"
-            className="mt-5 md:mt-0 w-[22.9375rem] h-[16.375rem] md:w-[36.3125rem] md:h-[24.25rem] lg:w-[40.3125rem]"
+            className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[26.3125rem] md:h-[24.25rem] xl:w-[35rem]"
           />
-          <div className="flex flex-col px-5 md:mt-16 gap-5 md:w-[35.1875rem]">
+          <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-20">
             <h1 className="text-[2rem] text-[#2D3748] font-bold">
               AGC Distribution
             </h1>
@@ -108,7 +108,7 @@ const RewardsPage = () => {
             <h1 className="text-[2rem] font-bold text-[#2D3748]">
               Participation Guide
             </h1>
-            <p className="text-[#646E73] text-[1.25rem] md:mx-[10.5rem]">
+            <p className="text-[#646E73] text-[1.25rem] md:mx-5 lg:mx-10">
               Our rewards system is designed to be straightforward and
               inclusive, allowing community members to earn Argocoin (AGC)
               through various avenues. Whether you're a developer, data
@@ -119,7 +119,7 @@ const RewardsPage = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-8 mt-10">
-          <div className="flex flex-col px-10 gap-3 lg:px-24">
+          <div className="flex flex-col px-10 gap-3 md:px-10 lg:px-16 xl:px-20">
             <Image src={OneIcon} alt="One Icon" />
             <h1 className="text-xl font-bold text-[#2D3748]">
               Data Validation
@@ -156,14 +156,14 @@ const RewardsPage = () => {
       </section>
 
       <section className="w-full my-10">
-        <div className="flex flex-col md:flex-row md:justify-center text-center md:text-start items-center gap-28">
+        <div className="flex flex-col md:flex-row md:justify-center text-center md:text-start items-center md:gap-10 lg:gap-14 xl:gap-16">
           <Image
             src={TransparencyReportIllustration}
             alt=""
-            className="lg:ms-[10rem] md:w-[31.25rem] md:h-[31.25rem]"
+            className="lg:ms-[10rem] md:w-[15rem] md:h-[15rem] xl:w-[31.25rem] xl:h-[31.25rem]"
           />
           <div className="flex flex-col gap-6">
-            <h1 className="text-[2rem] font-bold text-[#2D3748] mb-3 px-10">
+            <h1 className="text-[2rem] font-bold text-[#2D3748] mb-3 md:px-12 lg:px-10">
               Maximizing Your Rewards with Devolved AI
             </h1>
             <p className="text-[#646E73] text-center md:text-start text-[1.25rem] md:pl-10 md:pr-32 mb-3">
@@ -200,7 +200,7 @@ const RewardsPage = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center md:justify-center mx-5 md:mx-18 mt-[5rem] mb-10">
-          <article className="w-[21.375rem] h-[15.0625rem] xl:w-[27.375rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
+          <article className="w-full xl:w-[25rem] xl:h-[20rem] lg:w-[15rem] lg:h-[20rem] md:w-[12rem] md:h-[30rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
             <h1 className="text-[1.25rem] text-[#2D3748] font-normal text-start my-4">
               Reward Tiers
             </h1>
@@ -212,13 +212,13 @@ const RewardsPage = () => {
               href={"#"}
               rel="noopener noreferrer"
               target="_blank"
-              className="text-[#377DFF] text-end lg:mt-6"
+              className="text-[#377DFF] text-end md:mt-24 lg:mt-12"
             >
               Download Report
             </Link>
           </article>
-          <article className="w-[21.375rem] h-[15.0625rem] xl:w-[27.375rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
-            <h1 className="text-[1.25rem] text-[#2D3748] font-normal text-start my-4">
+          <article className="w-full xl:w-[25rem] xl:h-[20rem] lg:w-[15rem] lg:h-[20rem] md:w-[12rem] md:h-[30rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
+            <h1 className="text-[1.25rem] text-[#2D3748] font-normal text-start my-4 lg:my-1.5">
               Redeemable Benefits
             </h1>
             <p className="text-[#646E73] text-[1rem] text-start mb-4 md:max-lg:mb-0">
@@ -230,12 +230,12 @@ const RewardsPage = () => {
               href={"#"}
               rel="noopener noreferrer"
               target="_blank"
-              className="text-[#377DFF] text-end"
+              className="text-[#377DFF] text-end xl:mt-11 md:mt-5 lg:mt-0"
             >
               Download Report
             </Link>
           </article>
-          <article className="w-[21.375rem] h-[15.0625rem] xl:w-[27.375rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
+          <article className="w-full xl:w-[25rem] xl:h-[20rem] lg:w-[15rem] lg:h-[20rem] md:w-[12rem] md:h-[30rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
             <h1 className="text-[1.25rem] text-[#2D3748] font-normal text-start my-4">
               Long-Term Incentives
             </h1>
@@ -247,7 +247,7 @@ const RewardsPage = () => {
               href={"#"}
               rel="noopener noreferrer"
               target="_blank"
-              className="text-[#377DFF] text-end mt-6"
+              className="text-[#377DFF] text-end lg:mt-12 md:mt-16"
             >
               Download Report
             </Link>
