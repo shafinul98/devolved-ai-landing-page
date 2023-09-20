@@ -85,8 +85,8 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full mt-10 mb-[4.5rem] hidden md:flex md:items-center lg:justify-center lg:mx-[5rem] xl:px-[12.5rem]">
-        <div className="flex flex-col w-[36.75rem] h-[24.875rem] px-20 md:px-16 md:me-[2rem] lg:px-0 lg:me-[0rem] xl:me-[3rem]">
+      <section className="w-full mt-10 mb-[4.5rem] hidden md:flex md:items-center lg:justify-center lg:px-12 xl:px-28">
+        <div className="flex flex-col px-20 md:px-16 lg:px-0">
           <h1 className="text-[2rem] font-bold text-[#2D3748] mb-3">
             Our Story
           </h1>
@@ -112,14 +112,14 @@ const About = () => {
           <Image
             src={AboutHeroIllustration}
             alt="Hero Illustration"
-            className="w-[32.375rem] h-[33rem] mt-10"
+            className="w-full mt-10"
           />
         </div>
       </section>
 
       <section className="w-full px-3 md:mb-[4.5rem] mb-[2.5rem]">
-        <div className="flex flex-col gap-10 md:flex md:flex-row md:my-8 md:mx-[3rem] lg:justify-center lg:gap-10 lg:mx-[8rem] xl:mx-[10rem]">
-          <div className="flex flex-col shadow-lg md:pl-[1.19rem] p-5 text-center md:text-start rounded-md md:w-[36.5625rem] lg:w-full md:h-[11.6875rem] lg:h-[12.6875rem] lg:p-5 sm:max-md:pb-[5rem]">
+        <div className="flex flex-col gap-10 md:flex md:flex-row md:my-8 md:px-10 lg:justify-center xl:px-20">
+          <div className="flex flex-col shadow-lg md:pl-[1.19rem] p-5 text-center md:text-start rounded-md w-full lg:p-5 sm:max-md:pb-[5rem]">
             <h1 className="text-[2rem] font-bold text-[#2D3748] mb-5">
               Mission
             </h1>
@@ -131,7 +131,7 @@ const About = () => {
               aspirations of those who interact with it.
             </p>
           </div>
-          <div className="flex flex-col shadow-lg pl-[1.19rem] p-5 text-center md:text-start rounded-md h-[15rem] md:w-[36.5625rem] lg:w-full md:h-[11.6875rem] lg:h-[12.6875rem] lg:p-5 sm:max-md:pb-[5rem]">
+          <div className="flex flex-col shadow-lg pl-[1.19rem] p-5 text-center md:text-start rounded-md w-full lg:p-5 sm:max-md:pb-[5rem]">
             <h1 className="text-[2rem] font-bold text-[#2D3748] mb-5">
               Vision
             </h1>

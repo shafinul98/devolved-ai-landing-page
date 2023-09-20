@@ -22,12 +22,13 @@ const Footer = () => {
               <Image
                 src={FooterLogo}
                 alt=""
-                className="md:w-[15rem] md:h-[5rem] w-[11.75rem] h-[2rem]"
+                width={300}
+                className="pr-[-10rem]"
                 quality={100}
               />
             </Link>
           </div>
-          <div className="md:flex md:flex-row flex flex-col gap-5">
+          <div className="md:flex md:flex-row flex flex-col gap-5 pr-[10rem]">
             <Button
               title="Launch App"
               extraStyles=" p-1 bg-[#FF6F00] rounded-full text-center text-white"
