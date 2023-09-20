@@ -16,25 +16,25 @@ const Footer = () => {
   return (
     <footer className="mt-4 md:mt-6 lg:mt-10">
       <div className="flex flex-col items-center md:items-baseline gap-10 md:flex-row md:justify-around mb-20">
-        <div className="flex flex-col gap-5 items-center">
+        <div className="flex flex-col gap-5 items-center justify-center">
           <div>
             <Link href={"/"}>
               <Image
                 src={FooterLogo}
                 alt=""
-                className="md:w-[15rem] md:h-[5rem] w-[11.75rem] h-[2rem]"
+                className="md:w-[18.5rem] md:h-[5rem] w-[11.75rem] h-[2rem] md:ms-[-0.5rem]"
                 quality={100}
               />
             </Link>
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col md:flex-row gap-5 md:gap-1">
             <Button
               title="Get Early Access"
-              extraStyles=" p-1 bg-[#FF6F00] rounded-full text-center text-white md:w-[8.75rem]"
+              extraStyles=" p-1 bg-[#FF6F00] rounded-full text-center text-white md:w-[7.9rem]"
             />
             <Button
               title="Whitepaper"
-              extraStyles=" p-1 bg-white text-[#0074D9] border-[#0074D9] rounded-full text-center md:w-[8.75rem]"
+              extraStyles=" p-1 bg-white text-[#0074D9] border-[#0074D9] rounded-full text-center md:w-[7.9rem]"
             />
           </div>
         </div>
