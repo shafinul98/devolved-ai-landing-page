@@ -262,7 +262,7 @@ export default function Home() {
               className="w-[20.75rem] h-[14.8125rem]"
             />
           </div>
-          <p className="text-center text-[#646E73]">
+          <p className="text-start text-[#646E73]">
             We're crafting a shared journey in AI, ensuring transparency,
             inclusiveness, and rewarding your essential role with Argocoin
             (AGC). Embrace a future where artificial intelligence is

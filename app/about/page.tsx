@@ -60,14 +60,14 @@ const About = () => {
 
       <section className="w-full my-10 px-5 place-items-center lg:hidden">
         <h1 className="text-2xl font-bold text-[#2D3748] mb-5">Our Story</h1>
-        <p className="text-start my-5 text-sm text-[#646E73]">
+        <p className="text-start my-5 text-[1rem] text-[#646E73]">
           At Devolved AI, we began with a singular vision: to democratize the
           field of artificial intelligence by making it accessible, transparent,
           and community-driven. We saw a world where technological advancement
           didn't have to mean complexity and exclusivity, so we set out to build
           an ecosystem that welcomes everyone to participate.
         </p>
-        <p className="text-start my-5 text-sm text-[#646E73]">
+        <p className="text-start my-5 text-[1rem] text-[#646E73]">
           Beyond just creating algorithms or software, we are here to spark a
           movement. We've laid the foundation for an open platform that
           encourages contributions from all corners of the globe. Whether you're

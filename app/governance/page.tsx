@@ -58,7 +58,7 @@ const GovernancePage = () => {
               alt="Governance Structure"
               className="mx-auto"
             />
-            <p className="w-full text-[1.25rem] text-[#646E73]">
+            <p className="w-full text-[1rem] text-[#646E73]">
               At Devolved AI, we believe in a decentralized governance model
               that empowers our community. Our token-weighted voting system
               ensures that every voice is heard, and every decision is

@@ -55,7 +55,7 @@ const RewardsPage = () => {
             <h1 className="text-[2rem] font-bold text-[#2D3748]">
               PoV Protocol
             </h1>
-            <p className="text-[1.25rem] text-[#646E73]">
+            <p className="sm:max-md:text-[1rem] text-[#646E73]">
               Our Proof of Value (PoV) Protocol is a revolutionary system
               designed to reward community members for their valuable
               contributions to the Devolved AI ecosystem. Unlike traditional
@@ -84,7 +84,7 @@ const RewardsPage = () => {
             <h1 className="text-[2rem] text-[#2D3748] font-bold">
               AGC Distribution
             </h1>
-            <p className="text-[1.25rem] text-[#646E73]">
+            <p className="text-[1rem] text-[#646E73]">
               The Argocoin (AGC) Distribution mechanism is a carefully designed
               system that allocates AGC tokens to community members based on
               their level of engagement and contribution to the Devolved AI
@@ -108,7 +108,7 @@ const RewardsPage = () => {
             <h1 className="text-[2rem] font-bold text-[#2D3748]">
               Participation Guide
             </h1>
-            <p className="text-[#646E73] text-[1.25rem] md:mx-5 lg:mx-10">
+            <p className="text-[#646E73] text-[1rem] md:mx-5 lg:mx-10">
               Our rewards system is designed to be straightforward and
               inclusive, allowing community members to earn Argocoin (AGC)
               through various avenues. Whether you're a developer, data
@@ -166,7 +166,7 @@ const RewardsPage = () => {
             <h1 className="text-[2rem] font-bold text-[#2D3748] mb-3 md:px-12 lg:px-10">
               Maximizing Your Rewards with Devolved AI
             </h1>
-            <p className="text-[#646E73] text-center md:text-start text-[1.25rem] md:pl-10 md:pr-32 mb-3">
+            <p className="text-[#646E73] text-center md:text-start text-[1rem] md:pl-10 md:pr-32 mb-3">
               Discover the various ways you can maximize your AGC earnings and
               make impactful contributions to the Devolved AI ecosystem.
             </p>

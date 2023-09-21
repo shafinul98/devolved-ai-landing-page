@@ -59,7 +59,7 @@ const CommunityPage = () => {
           <h1 className="text-[2rem] font-bold text-[#2D3748] text-center">
             Join the Devolved AI Community
           </h1>
-          <p className="text-xl text-[#646E73] text-center">
+          <p className="text-[1rem] text-[#646E73] text-center">
             Become a part of our vibrant, decentralized community shaping the
             future of AI. Your contribution matters here.
           </p>

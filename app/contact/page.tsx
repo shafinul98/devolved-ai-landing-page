@@ -129,11 +129,11 @@ const ContactPage = () => {
           <Accordion
             type="single"
             collapsible
-            className="w-full text-base sm:max-md:text-center"
+            className="w-full text-base sm:max-md:text-start"
           >
             <AccordionItem
               value="item-1"
-              className="shadow-lg px-5 py-2  rounded-xl my-3"
+              className="shadow-lg px-5 py-2 rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 What is DevolvedAI?
@@ -160,7 +160,7 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-3"
-              className="shadow-lg px-5 py-2  rounded-xl my-3"
+              className="shadow-lg px-5 py-2 text-start rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 Can I redeem AGC for other cryptocurrencies?
