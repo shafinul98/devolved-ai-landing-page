@@ -40,7 +40,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen  flex-col items-center justify-between px-6 py-8 md:p-0">
+    <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
       <section className="w-full md:bg-[#f5f5f5]" id="curved-rectangle">
         <div className="flex flex-col items-center md:flex-row md:justify-center md:p-12 md:pl-12 lg:px-16 lg:pl-[4rem] xl:pl-28 md:mt-[2.1rem]">
           <div className="flex flex-col gap-5 mb-10  md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
@@ -54,15 +54,13 @@ export default function Home() {
               shape that transformation.
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-5">
-              <EarlyAccessForm>
-                <Button
-                  title="Get Early Access"
-                  extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[21rem] md:w-[8.5rem] md:h-[2.625rem]"
-                />
-              </EarlyAccessForm>
+              <Button
+                title="Get Early Access"
+                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.5rem] md:h-[2.625rem]"
+              />
               <Button
                 title="Whitepaper"
-                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center w-[21rem] md:w-[8.75rem] md:h-[2.625rem] font-light"
+                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-light"
               />
             </div>
           </div>
@@ -389,15 +387,13 @@ export default function Home() {
             community guided AI ecosystem.
           </p>
           <div className="flex gap-x-2 md:px-72 justify-center">
-            <EarlyAccessForm>
-              <Button
-                title="Get Early Access"
-                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[21rem] md:w-[8.5rem] md:h-[2.625rem]"
-              />
-            </EarlyAccessForm>
+            <Button
+              title="Get Early Access"
+              extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem]"
+            />
             <Button
               title="Whitepaper"
-              extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center w-[21rem] md:w-[8.75rem] md:h-[2.625rem] font-light"
+              extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-light"
             />
           </div>
         </div>

@@ -412,7 +412,7 @@ const About = () => {
           <Image
             src={FuturePlansImageCurved}
             alt=""
-            className="rounded"
+            className="rounded md:w-1/2"
             width={500}
           />
           <div className="flex flex-col gap-3 p-5 md:p-10 pr-36">
@@ -432,7 +432,7 @@ const About = () => {
         </article>
       </section>
 
-      <section className="w-full my-10 px-10 place-items-center md:hidden mb-20">
+      <section className="w-full my-10 px-10 place-items-center lg:hidden mb-20">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-[#0074D9] text-center">BLOGS</h1>
           <h1 className="text-[#2D3748] text-center font-bold text-2xl">
@@ -460,7 +460,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full my-10 md:my-14 px-5 place-items-center hidden md:flex md:flex-col bg-[#f5f5f5]">
+      <section className="w-full my-10 md:my-14 px-5 place-items-center hidden lg:flex lg:flex-col bg-[#f5f5f5]">
         <div className="flex flex-col justify-center items-center mt-[3.5rem]">
           <h1 className="text-[#0074D9] text-center">BLOGS</h1>
           <h1 className="text-[#2D3748] text-center font-bold text-2xl">

@@ -101,12 +101,10 @@ const Header = () => {
             <Link className="text-[1rem] lg:pr-6 xl:pr-16" href="/contact">
               Contact
             </Link>
-            <EarlyAccessForm>
-              <Button
-                title="Get Early Access"
-                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[8.5rem] h-[2.625rem]"
-              />
-            </EarlyAccessForm>
+            <Button
+              title="Get Early Access"
+              extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[8.5rem] h-[2.625rem]"
+            />
           </div>
         </div>
       </nav>
