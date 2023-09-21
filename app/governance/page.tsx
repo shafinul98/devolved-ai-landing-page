@@ -185,7 +185,7 @@ const GovernancePage = () => {
             <h1 className="font-bold text-3xl inline">
               Empowering Community Through Decisions
             </h1>
-            <p className="mt-5 text-xl text-[#646E73]">
+            <p className="mt-5 text-[1rem] text-[#646E73]">
               Our voting process is designed to be simple, transparent, and
               inclusive, ensuring that every community member can participate in
               shaping Devolved AI's future.
