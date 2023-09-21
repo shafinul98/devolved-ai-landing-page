@@ -12,75 +12,105 @@ import React from "react";
 import Logo from "../../public/Devolved AI Logo.svg";
 import Link from "next/link";
 import Button from "./Button";
+import { EarlyAccessForm } from "./EarlyAccessForm";
 
 const Header = () => {
   return (
-    <nav className="shadow-lg min-w-max">
-      <div className="flex justify-between items-center md:px-10 py-1 md:justify-around">
-        <Link href={"/"}>
-          <Image src={Logo} alt="Devolved AI Logo" loading="lazy" width={150} />
-        </Link>
-        <div className="md:hidden">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="px-5 py-1">
-              <div className="w-10 h-10 flex border items-center justify-center rounded-sm p-1">
-                <Image src={MenuIcon} alt="Menu Icon" />
-              </div>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>
-                {" "}
-                <Link href="/">Home</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link href="/about">About</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                {" "}
-                <Link href="/technology">Technology</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                {" "}
-                <Link href="/community">Community</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                {" "}
-                <Link href="/governance">Governance</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                {" "}
-                <Link href="/rewards">Rewards</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                {" "}
-                <Link href="/contact">Contact</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Button
-                  title="Launch App"
-                  extraStyles=" bg-[#FF6F00] text-white"
-                />
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-        <div className="p-3 md:ms-20 xl:ms-0 justify-between items-center gap-10 hidden md:flex text-sm text-[#2D3748]">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/technology">Technology</Link>
-          <Link href="/community">Community</Link>
-          <Link href="/governance">Governance</Link>
-          <Link href="/rewards">Rewards</Link>
-          <Link href="/contact" className="xl:pr-16">
-            Contact
+    <header>
+      <nav className="shadow-lg">
+        <div className="flex justify-between xl:justify-center items-center md:px-10 py-1">
+          <Link href={"/"} className="xl:pr-24">
+            <Image
+              src={Logo}
+              alt="Devolved AI Logo"
+              quality={100}
+              className="w-full"
+            />
           </Link>
-          <Button
-            title="Launch App"
-            extraStyles=" bg-[#FF6F00] text-white xl:ms-10 px-10 py-2"
-          />
+          <div className="lg:hidden">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="px-5 py-1">
+                <div className="w-10 h-10 flex border items-center justify-center rounded-sm p-1">
+                  <Image src={MenuIcon} alt="Menu Icon" />
+                </div>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem>
+                  {" "}
+                  <Link className="ms-[5px]" href="/">
+                    Home
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link className="ms-[5px]" href="/about">
+                    About
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  {" "}
+                  <Link className="ms-[5px]" href="/core">
+                    Core
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  {" "}
+                  <Link className="ms-[5px]" href="/community">
+                    Community
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  {" "}
+                  <Link className="ms-[5px]" href="/governance">
+                    Governance
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  {" "}
+                  <Link className="ms-[5px]" href="/rewards">
+                    Rewards
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  {" "}
+                  <Link className="ms-[5px]" href="/contact">
+                    Contact
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+          <div className="p-3 xl:ms-0 lg:justify-center xl:justify-between items-center xl:gap-10 lg:gap-5 hidden lg:flex text-sm text-[#2D3748]">
+            <Link className="text-[1rem]" href="/">
+              Home
+            </Link>
+            <Link className="text-[1rem]" href="/about">
+              About
+            </Link>
+            <Link className="text-[1rem]" href="/core">
+              Core
+            </Link>
+            <Link className="text-[1rem]" href="/community">
+              Community
+            </Link>
+            <Link className="text-[1rem]" href="/governance">
+              Governance
+            </Link>
+            <Link className="text-[1rem]" href="/rewards">
+              Rewards
+            </Link>
+            <Link className="text-[1rem] lg:pr-6 xl:pr-16" href="/contact">
+              Contact
+            </Link>
+            <EarlyAccessForm>
+              <Button
+                title="Get Early Access"
+                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[8.5rem] h-[2.625rem]"
+              />
+            </EarlyAccessForm>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 

@@ -8,6 +8,7 @@ type ProposalCardProps = {
   proposalDescription?: string;
   proposalLink?: string;
   imageStyles?: string;
+  extraStyles?: string;
 };
 
 const ProposalCard = ({
@@ -16,9 +17,15 @@ const ProposalCard = ({
   proposalLink,
   proposalImage,
   imageStyles,
+  extraStyles,
 }: ProposalCardProps) => {
   return (
-    <article className="w-full flex flex-col my-5 p-5 mx-5 shadow-lg">
+    <article
+      className={
+        `lg:w-[25rem] lg:h-[15rem] xl:h-[17rem] flex flex-col my-5 p-5 mx-5 shadow-lg` +
+        extraStyles
+      }
+    >
       {/* Image */}
       <Image src={proposalImage} alt="" className={imageStyles} />
       {/* Blog Title */}

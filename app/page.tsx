@@ -1,11 +1,14 @@
+"use client";
+
 import Image from "next/image";
-import HeroImage from "../public/Home Page Hero.svg";
+import HeroImage from "../public/Home Page Hero.webp";
+import SteveJobs from "../public/Steve Jobs.webp";
+import DevolvedAIHeroLogo from "../public/Devolved AI Hero Logo.svg";
+
 import MoneyBag from "../public/Money Bag.svg";
 import TeamWork from "../public/Team Work.svg";
 import Blockchain from "../public/Blockchain.svg";
-import SteveJobs from "../public/Steve Jobs.svg";
 import BlueTick from "../public/Blue Tick.svg";
-import DevolvedAIHeroLogo from "../public/Devolved AI Hero Logo.svg";
 import Community from "../public/Community and Outreach Logo.svg";
 import Rewards from "../public/Rewarding Contributions Logo.svg";
 import LinkIcon from "../public/Link Logo.svg";
@@ -16,77 +19,111 @@ import PrivacyIcon from "../public/Privacy and Security Logo.svg";
 import TransparencyIcon from "../public/Transparency Icon.svg";
 
 import Button from "@/components/Custom Components/Button";
+import { useEffect } from "react";
+import { EarlyAccessForm } from "@/components/Custom Components/EarlyAccessForm";
 
 export default function Home() {
+  useEffect(() => {
+    // Disable right-click
+    const handleContextMenu = (event: MouseEvent) => {
+      event.preventDefault();
+    };
+    document.addEventListener("contextmenu", handleContextMenu);
+
+    // Disable text selection
+    document.body.style.userSelect = "none";
+
+    // Cleanup event listeners on unmount
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+    };
+  }, []);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-6 py-8 md:p-0">
-      <section className="grid w-full rounded-b-[30px] min-h-screen place-items-center md:bg[#F5F5F5] md:px-12 md:py-8 lg:py-14 lg:px-16 mb-20 md:mb-20">
-        <div className="flex flex-col gap-x-72 items-center md:flex-row md:justify-between md:p-10">
-          <div className="flex flex-col gap-5 mb-10">
-            <h1 className="font-bold text-3xl md:text-start md:text-5xl md:text-clip text-[#2D3748]">
-              Artificial Intelligence designed by the People, for the People
+    <main className="flex min-h-screen  flex-col items-center justify-between px-6 py-8 md:p-0">
+      <section className="w-full md:bg-[#f5f5f5]" id="curved-rectangle">
+        <div className="flex flex-col items-center md:flex-row md:justify-center md:p-12 md:pl-12 lg:px-16 lg:pl-[4rem] xl:pl-28 md:mt-[2.1rem]">
+          <div className="flex flex-col gap-5 mb-10  md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
+            <h1 className="font-bold text-[2rem] text-start md:text-[3rem] md:leading-[1.15] text-[#2D3748]">
+              Empowering <span className="text-[#0074D9]">You</span> to Shape
+              the Future of Artificial Intelligence
             </h1>
-            <p className="font-normal md:text-start md:text-xl text-[#646E73]">
-              Join us in taking AI out of corporate hands. Vote on its
-              direction, contribute your insights, and earn rewards in an AI
-              ecosystem that is transparently and democratically governed by
-              you.
+            <p className="font-normal text-[1rem] md:text-start md:text-xl text-[#646E73]">
+              AI is transforming our world, and its impact will touch every life
+              on Earth. This is your chance to not just witness, but to actively
+              shape that transformation.
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-5">
-              <Button
-                title="Launch App"
-                extraStyles=" bg-[#FF6F00] text-white w-full text-center"
-              />
+              <EarlyAccessForm>
+                <Button
+                  title="Get Early Access"
+                  extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[21rem] md:w-[8.5rem] md:h-[2.625rem]"
+                />
+              </EarlyAccessForm>
               <Button
                 title="Whitepaper"
-                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center"
+                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center w-[21rem] md:w-[8.75rem] md:h-[2.625rem] font-light"
               />
             </div>
           </div>
 
           <div>
-            <Image src={HeroImage} alt="Hero Image" width={1000} />
-          </div>
-        </div>
-
-        <div className="mt-20 flex flex-col gap-10 md:px-10 md:flex-row bg[#F5F5F5] md:bg-white border-t-2 md:border-0 py-5 rounded-sm">
-          <div className="flex flex-col items-center md:items-start gap-5">
-            <Image src={MoneyBag} alt="" />
-            <h1 className="text-xl font-semibold text-[#2D3748]">
-              Contribute and Profit
-            </h1>
-            <p className="text-sm text-center md:text-start font-light text-[#646E73]">
-              Use your skills or computational power to help train AI, and earn
-              Argocoin (AGC) as a direct reward for your contributions.
-            </p>
-          </div>
-          <div className="flex flex-col items-center md:items-start gap-5">
-            <Image src={TeamWork} alt="" />
-            <h1 className="text-xl font-semibold text-[#2D3748]">
-              Community-Led Innovation
-            </h1>
-            <p className="text-sm text-center md:text-start font-light text-[#646E73]">
-              Influence the development and evolution of AI through
-              token-weighted voting, ensuring the technology serves your needs.
-            </p>
-          </div>
-          <div className="flex flex-col items-center md:items-start gap-5">
-            <Image src={Blockchain} alt="" />
-            <h1 className="text-xl font-semibold text-[#2D3748]">
-              Trust Through Transparency
-            </h1>
-            <p className="text-sm text-center md:text-start font-light text-[#646E73]">
-              Benefit from a secure and transparent environment, where
-              blockchain technology validates every transaction and decision.
-            </p>
+            <Image
+              src={HeroImage}
+              alt="Hero Image"
+              className="xl:pl-[1rem]"
+              width={700}
+            />
           </div>
         </div>
       </section>
 
-      <section className="flex w-full min-h-screen justify-center items-center p-8 mb-20 md:hidden">
+      <div className="w-full h-[0.0625rem] md:hidden"></div>
+
+      <article className="flex flex-col mt-12 md:px-10 md:gap-5 lg:gap-[5rem] lg:w-full lg:px-[3.5rem] xl:px-28 md:flex-row lg:justify-center mb-[3.75rem]">
+        <div className="flex flex-col items-center py-[1.18675rem] md:py-0 md:items-start gap-[0.81rem] md:gap-3 ">
+          <Image src={MoneyBag} alt="" />
+          <h1 className="text-xl md:text-[1.5rem] font-bold text-[#2D3748]">
+            Contribute and Profit
+          </h1>
+          <p className="text-[1rem] md:text-[1rem] text-center md:text-start font-normal text-[#646E73]">
+            Contribute your ideas, skills, or even simple feedback, and earn
+            Argocoin as a reward. With our Proof of Value system, we make sure
+            your contributions don't go unnoticed. It's more than
+            participation—it's a stake in shaping tomorrow's technology.
+          </p>
+        </div>
+        <div className="flex flex-col items-center py-[1.18675rem] md:py-0 md:items-start gap-3 ">
+          <Image src={TeamWork} alt="" />
+          <h1 className="text-xl md:text-[1.5rem] font-bold text-[#2D3748]">
+            Community-Led Innovation
+          </h1>
+          <p className="text-[1rem] md:text-[1rem] text-center md:text-start font-normal text-[#646E73]">
+            Have a say in shaping the future of technology with Devolved AI. By
+            voting on key decisions, you help direct the development of our
+            intelligent system. Our use of token-weighted voting ensures every
+            voice is heard, magnified by the weight of Argocoin you hold.
+          </p>
+        </div>
+        <div className="flex flex-col items-center py-[1.18675rem] md:py-0 md:items-start gap-3 ">
+          <Image src={Blockchain} alt="" />
+          <h1 className="text-xl md:text-[1.5rem] font-bold text-[#2D3748]">
+            Trust Through Transparency
+          </h1>
+          <p className="text-[1rem] md:text-[1rem] text-center md:text-start font-normal text-[#646E73]">
+            Your data is safe and our actions are open for you to see. Our
+            custom blockchain technology makes our AI more transparent than any
+            other platform on Earth, ensuring both security and absolute
+            clarity. This unique blend offers peace of mind in the digital
+            realm.
+          </p>
+        </div>
+      </article>
+
+      <section className="flex w-full min-h-screen justify-center items-center p-4 md:hidden">
         <div className="flex flex-col md:flex-row md:justify-center gap-x-32">
           <div className="mt-10 md:mt-24 flex-col space-y-8 md:space-y-4 md:text-start">
-            <h1 className="font-bold text-[20px] md:text-3xl">
+            <h1 className="font-bold text-[1.5625rem] md:text-3xl">
               Nurturing Faith in Innovation:
               <span className="font-bold">
                 {" "}
@@ -102,21 +139,21 @@ export default function Home() {
             <p className="break-words md:w-3/4 text-[#646E73] font-semibold">
               -Steve Jobs
             </p>
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-0 md:justify-start">
-              <div className="flex my-2 w-full justify-around">
-                <div className="flex items-center space-x-2">
+            <div className="flex flex-wrap justify-center gap-5 sm:gap-0 md:justify-start">
+              <div className="flex my-2 w-full items-center justify-center gap-12">
+                <div className="flex items-center space-x-2 me-[2rem]">
                   <Image src={BlueTick} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">Security</p>
                 </div>
-                <div className="flex items-center space-x-2 ms-2">
+                <div className="flex items-center space-x-2">
                   <Image src={BlueTick} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
                     Governance
                   </p>
                 </div>
               </div>
-              <div className="flex my-2 w-full justify-around">
-                <div className="flex items-center space-x-2 ms-1">
+              <div className="flex my-2 w-full justify-center gap-12">
+                <div className="flex items-center space-x-2 me-[1.1rem]">
                   <Image src={BlueTick} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
                     Innovation
@@ -129,8 +166,8 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="flex my-2 w-full justify-around">
-                <div className="flex items-center space-x-2 ms-2">
+              <div className="flex my-2 w-full justify-center gap-12">
+                <div className="flex items-center space-x-2 me-[0.8rem]">
                   <Image src={BlueTick} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
                     Prosperity
@@ -148,11 +185,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full min-h-screen justify-center items-center px-16 lg:px-24 lg:py-36 my-15 hidden md:flex bg-[#F5F5F5]">
-        <div className="flex flex-row gap-16 md:p-10 lg:p-0">
-          <Image src={SteveJobs} alt="Steve Jobs" className="w-1/2" />
-          <div className="flex-col py-16 space-y-8 text-start">
-            <h1 className="font-bold text-3xl">
+      <section className="w-full min-h-screen hidden md:flex lg:justify-center bg-[#F5F5F5]">
+        <div className="flex flex-row xl:gap-5 md:p-10">
+          <Image
+            src={SteveJobs}
+            alt="Steve Jobs"
+            className="w-full md:w-1/2 lg:w-full mt-[2rem] ms-5 xl:ms-32 xl:h-[35rem] xl:w-[35rem]"
+          />
+          <div className="flex-col py-16 space-y-7 text-start mt-[3rem] w-[36.9375rem] h-[24.3125rem] ms-[2rem] xl:w-full xl:pl-[4.5rem]">
+            <h1 className="font-bold text-[2rem]">
               Nurturing Faith in Innovation: Tools for
               <span className="text-[#0074D9]"> Excellence</span>
             </h1>
@@ -161,9 +202,7 @@ export default function Home() {
               in people, that they're basically good and smart, and if you give
               them tools, they'll do wonderful things with them.”
             </p>
-            <p className="break-words md:w-3/4 text-[#646E73] font-semibold">
-              -Steve Jobs
-            </p>
+            <p className="md:w-3/4 text-[#646E73] font-semibold">-Steve Jobs</p>
             <div className="flex flex-wrap gap-2 sm:gap-0 justify-start">
               <div className="flex my-2 w-full justify-start gap-40">
                 <div className="flex items-center space-x-2">
@@ -210,16 +249,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full min-h-screen p-8 mb-20 md:hidden">
+      <section className="w-full min-h-screen p-4 mb-20 md:hidden">
         <div className="flex flex-col items-center justify-center gap-y-10">
           <div>
-            <h1 className="font-bold text-[20px] text-center">
+            <h1 className="font-bold text-[1.5625rem] text-center text-[#2D3748]">
               <span className="text-[#0074D9]">Devolved AI: </span> A Communal
               Pathway to the Future of Artificial Intelligence
             </h1>
           </div>
           <div>
-            <Image src={DevolvedAIHeroLogo} alt="Robot and Human" />
+            <Image
+              src={DevolvedAIHeroLogo}
+              alt="Devolved AI Logo"
+              className="w-[20.75rem] h-[14.8125rem]"
+            />
           </div>
           <p className="text-center text-[#646E73]">
             We're crafting a shared journey in AI, ensuring transparency,
@@ -265,14 +308,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full min-h-screen md:px-12 lg:px-16 hidden md:flex items-center gap-5">
+      <section className="w-full px-5 lg:px-10 xl:px-20 mt-[4.25rem] mb-[4.5rem] hidden md:flex md:justify-center items-center gap-5">
         <div className="flex flex-col gap-y-8 p-10">
-          <div className="flex flex-col gap-y-8">
-            <h1 className="font-bold text-3xl pr-72">
+          <div className="flex flex-col gap-y-4">
+            <h1 className="font-bold text-[2rem]">
               <span className="text-[#0074D9]">Devolved AI: </span> A Communal
               Pathway to the Future of Artificial Intelligence
             </h1>
-            <p className="text-xl text-[#646E73] pr-32">
+            <p className="text-xl text-[#646E73]">
               We're crafting a shared journey in AI, ensuring transparency,
               inclusiveness, and rewarding your essential role with Argocoin
               (AGC). Embrace a future where artificial intelligence is
@@ -280,11 +323,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 rounded-sm mt-12 xl:pr-36">
-            <div className="flex items-center md:items-start gap-5">
+          <div className="flex flex-col gap-3 rounded-sm mt-12">
+            <div className="flex items-center md:items-start gap-6">
               <Image src={Community} alt="" width={50} />
               <div className="flex flex-col gap-y-2">
-                <h1 className="text-lg font-semibold text-[#2D3748]">
+                <h1 className="text-[1rem] font-regular text-[#2D3748]">
                   Community at the Core
                 </h1>
                 <p className="text-sm text-[#646E73]">
@@ -297,7 +340,7 @@ export default function Home() {
             <div className="flex items-center md:items-start gap-5">
               <Image src={Rewards} alt="" width={50} />
               <div className="flex flex-col gap-y-2">
-                <h1 className="text-lg font-semibold text-[#2D3748]">
+                <h1 className="text-lg font-regular text-[#2D3748]">
                   Rewarding Contributions{" "}
                 </h1>
                 <p className="text-sm text-[#646E73]">
@@ -310,7 +353,7 @@ export default function Home() {
             <div className="flex items-center md:items-start gap-5">
               <Image src={LinkIcon} alt="" width={50} />
               <div className="flex flex-col gap-y-2">
-                <h1 className="text-lg font-semibold text-[#2D3748]">
+                <h1 className="text-lg font-regular text-[#2D3748]">
                   A Nexus for Visionaries{" "}
                 </h1>
                 <p className="text-sm text-[#646E73]">
@@ -322,47 +365,49 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>
+
+        <div className="md:px-10 lg:px-20">
           <Image
             src={DevolvedAIHeroLogo}
-            alt="Robot and Man"
-            width={1000}
-            height={1000}
+            alt="Devolved AI Hero Logo"
+            width={700}
           />
         </div>
       </section>
 
-      <section className="w-full p-4 md:p-14 md:mb-0 mb-20 bg-[#F5F5F5]">
-        <div className="flex flex-col gap-5 text-center">
-          <h3 className="text-base font-semibold text-primary ">
+      <section className="w-full p-4 md:p-0 md:mb-0 mb-20 bg-[#F5F5F5]">
+        <div className="flex flex-col gap-5 text-center my-[3rem]">
+          <h3 className="text-base font-normal text-[#0074D9] ">
             EMPOWERING THE FUTURE OF AI TOGETHER
           </h3>
-          <h1 className="text-xl font-bold">
+          <h1 className="text-[2rem] font-bold text-[#2D3748]">
             Join a community-driven AI revolution with Devolved AI
           </h1>
-          <p>
+          <p className="text-[1rem] text-center md:px-10">
             Contribute to our mission, influence our growth through voting, and
             earn rewards with Argocoin (AGC) as you partake in a transparent and
             community guided AI ecosystem.
           </p>
           <div className="flex gap-x-2 md:px-72 justify-center">
-            <Button
-              title="Launch App"
-              extraStyles=" bg-[#FF6F00] w-full md:w-1/2 xl:w-1/3 text-white"
-            />
+            <EarlyAccessForm>
+              <Button
+                title="Get Early Access"
+                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[21rem] md:w-[8.5rem] md:h-[2.625rem]"
+              />
+            </EarlyAccessForm>
             <Button
               title="Whitepaper"
-              extraStyles=" w-full md:w-1/2 xl:w-1/3 bg-white text-[#0074D9] border-[#0074D9] text-primary"
+              extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center w-[21rem] md:w-[8.75rem] md:h-[2.625rem] font-light"
             />
           </div>
         </div>
       </section>
 
-      <section className="w-full md:py-20 mb-20">
+      <section className="w-full md:py-14">
         <div className="flex flex-col">
           <div className="flex flex-col text-center gap-3">
             <h1 className="text-3xl font-bold">Our Guiding Principles</h1>
-            <p className="text-[#646E73] text-lg font-semibold">
+            <p className="text-[#646E73] text-lg">
               Six Pillars Shaping The Future Of Decentralized AI
             </p>
           </div>
@@ -397,7 +442,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 ">
               <Image src={PrivacyIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Privacy and Security</h6>
               <p className="text-[#646E73]">
@@ -406,7 +451,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 ">
               <Image src={Community} alt="" />
               <h6 className="text-xl text-[#2D3748]">Community and Outreach</h6>
               <p className="text-[#646E73]">
@@ -415,7 +460,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
+            <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 ">
               <Image src={TransparencyIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Transparency</h6>
               <p className="text-[#646E73]">
