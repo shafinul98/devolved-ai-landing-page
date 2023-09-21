@@ -11,6 +11,7 @@ import {
   FaReddit,
   FaTelegram,
 } from "react-icons/fa";
+import { EarlyAccessForm } from "./EarlyAccessForm";
 
 const Footer = () => {
   return (
@@ -28,13 +29,15 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col md:flex-row gap-5 md:gap-1">
-            <Button
-              title="Get Early Access"
-              extraStyles=" p-1 bg-[#FF6F00] rounded-full text-center text-white md:w-[8.25rem] font-bold"
-            />
+            <EarlyAccessForm>
+              <Button
+                title="Get Early Access"
+                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[21rem] md:w-[8.5rem] md:h-[2.625rem]"
+              />
+            </EarlyAccessForm>
             <Button
               title="Whitepaper"
-              extraStyles=" p-1 bg-white text-[#0074D9] border-[#0074D9] rounded-full text-center md:w-[8.25rem]"
+              extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center w-[21rem] md:w-[8.75rem] md:h-[2.625rem] font-light"
             />
           </div>
         </div>

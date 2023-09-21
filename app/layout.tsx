@@ -4,7 +4,6 @@ import { Lato } from "next/font/google";
 import Footer from "@/components/Custom Components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { Analytics } from "@vercel/analytics/react";
-import { useEffect } from "react";
 import { Metadata } from "next";
 
 const lato = Lato({

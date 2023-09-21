@@ -20,6 +20,7 @@ import {
 } from "react-icons/fa";
 import Button from "@/components/Custom Components/Button";
 import Carousel from "@/components/Custom Components/Carousel";
+import { EarlyAccessForm } from "@/components/Custom Components/EarlyAccessForm";
 
 const CommunityPage = () => {
   useEffect(() => {
@@ -410,13 +411,15 @@ const CommunityPage = () => {
             a part of.
           </p>
           <div className="flex justify-center gap-x-2">
-            <Button
-              title="Get Early Access"
-              extraStyles=" bg-[#FF6F00] w-full md:w-[8.75rem] md:h-[2.625rem] text-white"
-            />
+            <EarlyAccessForm>
+              <Button
+                title="Get Early Access"
+                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[21rem] md:w-[8.5rem] md:h-[2.625rem]"
+              />
+            </EarlyAccessForm>
             <Button
               title="Whitepaper"
-              extraStyles=" w-full md:w-[8.75rem] md:h-[2.625rem] bg-white text-[#0074D9] border-[#0074D9] text-primary"
+              extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center w-[21rem] md:w-[8.75rem] md:h-[2.625rem] font-light"
             />
           </div>
         </div>

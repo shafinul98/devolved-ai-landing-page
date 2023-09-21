@@ -12,6 +12,7 @@ import React from "react";
 import Logo from "../../public/Devolved AI Logo.svg";
 import Link from "next/link";
 import Button from "./Button";
+import { EarlyAccessForm } from "./EarlyAccessForm";
 
 const Header = () => {
   return (
@@ -75,12 +76,6 @@ const Header = () => {
                     Contact
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Button
-                    title="Get Early Access"
-                    extraStyles=" bg-[#FF6F00] text-white"
-                  />
-                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
@@ -106,10 +101,12 @@ const Header = () => {
             <Link className="text-[1rem] lg:pr-6 xl:pr-16" href="/contact">
               Contact
             </Link>
-            <Button
-              title="Get Early Access"
-              extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[8.5rem] h-[2.625rem]"
-            />
+            <EarlyAccessForm>
+              <Button
+                title="Get Early Access"
+                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[8.5rem] h-[2.625rem]"
+              />
+            </EarlyAccessForm>
           </div>
         </div>
       </nav>
