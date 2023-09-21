@@ -81,14 +81,14 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 flex flex-col items-center justify-center my-10 md:mx-[5rem] lg:mx-[12.5rem]"
+        className="space-y-8 flex flex-col items-center justify-center my-10 md:mx-[.25rem] lg:mx-[12.5rem]"
       >
         <div className="flex md:flex-col lg:flex-row gap-2 md:gap-y-5 w-full lg:gap-0">
           <FormField
             control={form.control}
             name="firstName"
             render={({ field }) => (
-              <FormItem className="w-full md:px-[15rem] lg:px-0 lg:ms-[5rem]">
+              <FormItem className="w-full md:px-[7.5rem] lg:px-0 lg:ms-[5rem]">
                 <FormLabel className="font-bold">First Name*</FormLabel>
                 <FormControl>
                   <Input
@@ -106,7 +106,7 @@ export function ContactForm() {
             control={form.control}
             name="lastName"
             render={({ field }) => (
-              <FormItem className="w-full md:px-[15rem] lg:px-2 lg:me-[5rem]">
+              <FormItem className="w-full md:px-[7.5rem] lg:px-2 lg:me-[5rem]">
                 <FormLabel className="font-bold">Last Name</FormLabel>
                 <FormControl>
                   <Input
@@ -126,7 +126,7 @@ export function ContactForm() {
             control={form.control}
             name="email"
             render={({ field }) => (
-              <FormItem className="w-full md:px-[15rem] lg:px-[5rem]">
+              <FormItem className="w-full md:px-[7.5rem] lg:px-[5rem]">
                 <FormLabel className="font-bold">Email*</FormLabel>
                 <FormControl>
                   <Input
@@ -143,7 +143,7 @@ export function ContactForm() {
           />
         </div>
 
-        <div className="w-full md:px-[15rem] lg:px-[5rem]">
+        <div className="w-full md:px-[7.5rem] lg:px-[5rem]">
           <FormField
             control={form.control}
             name="message"

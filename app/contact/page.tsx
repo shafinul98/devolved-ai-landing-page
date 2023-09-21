@@ -103,7 +103,7 @@ const ContactPage = () => {
           <h1 className="text-center text-[2rem] font-bold text-[#2D3748] mb-[1rem]">
             Get in Touch with Devolved AI
           </h1>
-          <p className="text-center text-base text-[#646E73] md:px-[15.63rem]">
+          <p className="text-center text-base text-[#646E73] md:px-[5rem] lg:px-[15rem]">
             We're eager to hear from you. Whether you have questions about our
             PoV Protocol, AGC rewards, or how to get involved in our
             community-driven AI initiatives, don't hesitate to reach out. Your
@@ -126,10 +126,14 @@ const ContactPage = () => {
         </p>
 
         <div className="px-5 mt-10 md:w-1/2 mx-auto">
-          <Accordion type="single" collapsible className="w-full text-base">
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full text-base sm:max-md:text-center"
+          >
             <AccordionItem
               value="item-1"
-              className="shadow-lg p-2 rounded-xl my-3"
+              className="shadow-lg px-5 py-2  rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 What is DevolvedAI?
@@ -143,7 +147,7 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-2"
-              className="shadow-lg p-2 rounded-xl my-3"
+              className="shadow-lg px-5 py-2  rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 How do I earn Argocoin (AGC)?
@@ -156,7 +160,7 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-3"
-              className="shadow-lg p-2 rounded-xl my-3"
+              className="shadow-lg px-5 py-2  rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 Can I redeem AGC for other cryptocurrencies?
@@ -168,7 +172,7 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-4"
-              className="shadow-lg p-2 rounded-xl my-3"
+              className="shadow-lg px-5 py-2  rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 How does the voting process work?
@@ -182,7 +186,7 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-5"
-              className="shadow-lg p-2 rounded-xl my-3"
+              className="shadow-lg px-5 py-2  rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 How can I contribute to AI training?
@@ -195,7 +199,7 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-6"
-              className="shadow-lg p-2 rounded-xl my-3"
+              className="shadow-lg px-5 py-2  rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 Is my data secure?
@@ -207,7 +211,7 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-7"
-              className="shadow-lg p-2 rounded-xl my-3"
+              className="shadow-lg px-5 py-2  rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 How do I get technical support?
@@ -219,7 +223,7 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-8"
-              className="shadow-lg p-2 rounded-xl my-3"
+              className="shadow-lg px-5 py-2  rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 Where can I find the Transparency Report?
@@ -232,7 +236,7 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-9"
-              className="shadow-lg p-2 rounded-xl my-3"
+              className="shadow-lg px-5 py-2  rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 How can I stay updated with Devolved AI's developments?
@@ -244,7 +248,7 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-10"
-              className="shadow-lg p-2 rounded-xl my-3"
+              className="shadow-lg px-5 py-2  rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 How can I get involved?

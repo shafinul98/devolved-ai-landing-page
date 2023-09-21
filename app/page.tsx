@@ -59,7 +59,7 @@ export default function Home() {
               />
               <Button
                 title="Whitepaper"
-                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem]"
+                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-light"
               />
             </div>
           </div>
@@ -380,7 +380,7 @@ export default function Home() {
           <h1 className="text-[2rem] font-bold text-[#2D3748]">
             Join a community-driven AI revolution with Devolved AI
           </h1>
-          <p className="text-[1rem] leading-6 text-center md:px-10">
+          <p className="text-[1rem] text-center md:px-10">
             Contribute to our mission, influence our growth through voting, and
             earn rewards with Argocoin (AGC) as you partake in a transparent and
             community guided AI ecosystem.
@@ -388,7 +388,7 @@ export default function Home() {
           <div className="flex gap-x-2 md:px-72 justify-center">
             <Button
               title="Get Early Access"
-              extraStyles=" bg-[#FF6F00] w-full md:w-[8.75rem] h-[2.625rem] text-white"
+              extraStyles=" bg-[#FF6F00] w-full md:w-[8.75rem] h-[2.625rem] text-white font-bold"
             />
             <Button
               title="Whitepaper"
@@ -402,7 +402,7 @@ export default function Home() {
         <div className="flex flex-col">
           <div className="flex flex-col text-center gap-3">
             <h1 className="text-3xl font-bold">Our Guiding Principles</h1>
-            <p className="text-[#646E73] text-lg font-semibold">
+            <p className="text-[#646E73] text-lg">
               Six Pillars Shaping The Future Of Decentralized AI
             </p>
           </div>

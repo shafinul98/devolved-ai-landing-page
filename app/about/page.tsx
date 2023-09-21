@@ -44,7 +44,7 @@ const About = () => {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between">
       <section className="w-full place-items-center">
         <div className="relative">
           <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-3xl md:text-5xl">
@@ -58,7 +58,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full my-10 px-5 place-items-center md:hidden">
+      <section className="w-full my-10 px-5 place-items-center lg:hidden">
         <h1 className="text-2xl font-bold text-[#2D3748] mb-5">Our Story</h1>
         <p className="text-start my-5 text-sm text-[#646E73]">
           At Devolved AI, we began with a singular vision: to democratize the
@@ -85,7 +85,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full mt-10 mb-[4.5rem] hidden md:flex md:items-center lg:justify-center lg:px-12 xl:px-28">
+      <section className="w-full mt-10 mb-[4.5rem] hidden lg:flex md:items-center lg:justify-center lg:px-12 xl:px-28">
         <div className="flex flex-col px-20 md:px-16 lg:px-0">
           <h1 className="text-[2rem] font-bold text-[#2D3748] mb-3">
             Our Story
@@ -157,33 +157,42 @@ const About = () => {
             <Carousel extraStyles="h-56 md:my-10" bottomStyle="">
               <TeamMemberCard
                 cardImage={Nathan}
-                cardDescription="CEO & Founder"
+                cardDescription="Founder & CEO"
                 cardFooter={[
-                  "https://github.com/tahlil",
-                  "https://www.linkedin.com/in/tahlil/",
-                  "https://twitter.com/TahlilBsse0803",
+                  "",
+                  "https://www.linkedin.com/in/nathan-lee-peterson",
+                  "",
                 ]}
+                hasGitHub={false}
+                hasLinkedIn={true}
+                hasTwitter={true}
                 cardTitle="Nathan Peterson"
               />
               <TeamMemberCard
                 cardImage={Nazmul}
                 cardDescription="COO"
                 cardFooter={[
-                  "https://github.com/tahlil",
-                  "https://www.linkedin.com/in/tahlil/",
+                  "",
+                  "https://www.linkedin.com/in/md-nazmul-hossain",
                   "https://twitter.com/TahlilBsse0803",
                 ]}
                 cardTitle="Md. Nazmul Hossain"
+                hasGitHub={false}
+                hasTwitter={false}
+                hasLinkedIn={true}
               />
               <TeamMemberCard
                 cardImage={Justin}
                 cardDescription="Board Member"
                 cardFooter={[
-                  "https://github.com/tahlil",
-                  "https://www.linkedin.com/in/tahlil/",
-                  "https://twitter.com/TahlilBsse0803",
+                  "",
+                  "https://www.linkedin.com/in/justin-seyl-c-d-s-csp-cas-b76b4912",
+                  "",
                 ]}
                 cardTitle="Justin Seyl"
+                hasGitHub={false}
+                hasTwitter={false}
+                hasLinkedIn={true}
               />
               <TeamMemberCard
                 cardImage={Tahlil}
@@ -194,6 +203,9 @@ const About = () => {
                   "https://twitter.com/TahlilBsse0803",
                 ]}
                 cardTitle="Tahlil"
+                hasGitHub={true}
+                hasTwitter={true}
+                hasLinkedIn={true}
               />
               <TeamMemberCard
                 cardImage={Lamima}
@@ -204,6 +216,9 @@ const About = () => {
                   "https://twitter.com/AvaLamima17577",
                 ]}
                 cardTitle="Lamima"
+                hasGitHub={true}
+                hasTwitter={true}
+                hasLinkedIn={true}
               />
               <TeamMemberCard
                 cardImage={Samir}
@@ -214,6 +229,9 @@ const About = () => {
                   "https://x.com/rahmanmahfuzzur?s=21&t=ItQTV17i_DjsOjCmwO3JTg",
                 ]}
                 cardTitle="Mahfuzzur"
+                hasGitHub={true}
+                hasTwitter={true}
+                hasLinkedIn={true}
               />
               <TeamMemberCard
                 cardImage={Shafin}
@@ -224,6 +242,9 @@ const About = () => {
                   "https://twitter.com/ShafinulIs10648",
                 ]}
                 cardTitle="Shafinul"
+                hasGitHub={true}
+                hasTwitter={true}
+                hasLinkedIn={true}
               />
             </Carousel>
           </div>
@@ -232,31 +253,40 @@ const About = () => {
               cardImage={Nathan}
               cardDescription="CEO & Founder"
               cardFooter={[
-                "https://github.com/tahlil",
-                "https://www.linkedin.com/in/tahlil/",
+                "",
+                "https://www.linkedin.com/in/nathan-lee-peterson",
                 "https://twitter.com/TahlilBsse0803",
               ]}
               cardTitle="Nathan Peterson"
+              hasGitHub={false}
+              hasTwitter={true}
+              hasLinkedIn={true}
             />
             <TeamMemberCard
               cardImage={Nazmul}
               cardDescription="COO"
               cardFooter={[
-                "https://github.com/tahlil",
-                "https://www.linkedin.com/in/tahlil/",
+                "",
+                "https://www.linkedin.com/in/md-nazmul-hossain",
                 "https://twitter.com/TahlilBsse0803",
               ]}
               cardTitle="Md. Nazmul Hossain"
+              hasGitHub={false}
+              hasTwitter={false}
+              hasLinkedIn={true}
             />
             <TeamMemberCard
               cardImage={Justin}
               cardDescription="Board Member"
               cardFooter={[
-                "https://github.com/tahlil",
-                "https://www.linkedin.com/in/tahlil/",
-                "https://twitter.com/TahlilBsse0803",
+                "",
+                "https://www.linkedin.com/in/justin-seyl-c-d-s-csp-cas-b76b4912",
+                "",
               ]}
               cardTitle="Justin Seyl"
+              hasGitHub={false}
+              hasTwitter={false}
+              hasLinkedIn={true}
             />
             <TeamMemberCard
               cardImage={Tahlil}
@@ -267,6 +297,9 @@ const About = () => {
                 "https://twitter.com/TahlilBsse0803",
               ]}
               cardTitle="Tahlil"
+              hasGitHub={true}
+              hasTwitter={true}
+              hasLinkedIn={true}
             />
             <TeamMemberCard
               cardImage={Lamima}
@@ -277,6 +310,9 @@ const About = () => {
                 "https://twitter.com/AvaLamima17577",
               ]}
               cardTitle="Lamima Tabassum Ava"
+              hasGitHub={true}
+              hasTwitter={true}
+              hasLinkedIn={true}
             />
             <TeamMemberCard
               cardImage={Samir}
@@ -287,6 +323,9 @@ const About = () => {
                 "https://x.com/rahmanmahfuzzur?s=21&t=ItQTV17i_DjsOjCmwO3JTg",
               ]}
               cardTitle="Mahfuzzur Rahman Samir"
+              hasGitHub={true}
+              hasTwitter={true}
+              hasLinkedIn={true}
             />
             <TeamMemberCard
               cardImage={Shafin}
@@ -297,6 +336,9 @@ const About = () => {
                 "https://twitter.com/ShafinulIs10648",
               ]}
               cardTitle="Shafinul Islam"
+              hasGitHub={true}
+              hasTwitter={true}
+              hasLinkedIn={true}
             />
           </div>
         </div>

@@ -273,7 +273,7 @@ const CommunityPage = () => {
       </section>
 
       <section className="w-full justify-center px-9 mb-20 hidden md:flex">
-        <div className="flex flex-col py-10 px-10 xl:px-32 rounded-sm">
+        <div className="flex flex-col py-10 px-10 xl:px-24 rounded-sm">
           <div className="flex flex-col gap-10 rounded-sm mt-12">
             <div className="flex flex-col items-start justify-center gap-5">
               <Image src={Community} alt="" width={50} />
@@ -328,7 +328,7 @@ const CommunityPage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col items-start justify-center gap-5">
+            <div className="flex flex-col items-start justify-center gap-5 xl:mt-7 2xl:mt-0">
               <Image src={Rewards} alt="" width={50} />
               <div className="flex flex-col gap-y-2 ">
                 <h1 className="text-2xl font-bold text-[#2D3748] ">
@@ -340,7 +340,7 @@ const CommunityPage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col items-start justify-center gap-5 mt-5 2xl:mt-0">
+            <div className="flex flex-col items-start justify-center gap-5 mt-5 lg:mt-1 xl:mt-5 2xl:mt-0">
               <Image src={Rewards} alt="" width={50} />
               <div className="flex flex-col gap-y-2 ">
                 <h1 className="text-2xl font-bold text-[#2D3748] ">
@@ -356,7 +356,7 @@ const CommunityPage = () => {
         </div>
 
         <div className="flex flex-col py-10 px-10 rounded-sm">
-          <div className="flex flex-col gap-10 rounded-sm mt-12">
+          <div className="flex flex-col gap-10 rounded-sm mt-12 xl:pr-10">
             <div className="flex flex-col items-start justify-center gap-5">
               <Image src={LinkIcon} alt="" width={50} />
               <div className="flex flex-col gap-y-2 ">

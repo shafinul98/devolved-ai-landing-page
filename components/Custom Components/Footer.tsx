@@ -30,11 +30,11 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row gap-5 md:gap-1">
             <Button
               title="Get Early Access"
-              extraStyles=" p-1 bg-[#FF6F00] rounded-full text-center text-white md:w-[7.9rem]"
+              extraStyles=" p-1 bg-[#FF6F00] rounded-full text-center text-white md:w-[8.25rem] font-bold"
             />
             <Button
               title="Whitepaper"
-              extraStyles=" p-1 bg-white text-[#0074D9] border-[#0074D9] rounded-full text-center md:w-[7.9rem]"
+              extraStyles=" p-1 bg-white text-[#0074D9] border-[#0074D9] rounded-full text-center md:w-[8.25rem]"
             />
           </div>
         </div>

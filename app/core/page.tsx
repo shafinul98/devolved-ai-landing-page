@@ -5,18 +5,18 @@ import React, { useEffect } from "react";
 import TechnologyHeroImage from "../../public/Technology Page Hero Image.webp";
 import TechnologyHeroIllustration from "../../public/Technology Page Hero Illustration.webp";
 
-import TechBlogPictureOne from "../../public/Tech Page First Blog Pic.webp";
-import TechBlogPictureTwo from "../../public/Tech Page Second Blog.webp";
-import TechBlogPictureThree from "../../public/Tech Page Third Blog Pic.webp";
-import TechBlogPictureFour from "../../public/Tech Page Fourth Blog.webp";
-import TechBlogPictureFive from "../../public/Tech Page Fifth Blog.webp";
-import TechBlogPictureSix from "../../public/Tech Blog Six.webp";
-import TechBlogPictureSeven from "../../public/Tech Page Seventh Blog.webp";
+import TechBlogPictureOne from "../../public/core_page_decentralization_box.png";
+import TechBlogPictureTwo from "../../public/data_page_proof_of_value_box.png";
+import TechBlogPictureThree from "../../public/core_page_blockchain_box.png";
+import TechBlogPictureFour from "../../public/core_page_argocoin_box.png";
+import TechBlogPictureFive from "../../public/core_page_community_module_box.png";
+import TechBlogPictureSix from "../../public/core_page_token_weighted_voting_box.png";
+import TechBlogPictureSeven from "../../public/core_page_securty_infrastructure_box.png";
 import TechBlogPictureEight from "../../public/Tech Page Eighth Blog.webp";
 import TechBlogPictureNine from "../../public/Tech Page Ninth Blog.webp";
 import TechBlogPictureTen from "../../public/Tech Page Tenth Blog.webp";
-import TechBlogPictureEleven from "../../public/Tech Page Eleventh Blog.webp";
-import TechBlogPictureTwelve from "../../public/Tech Page Twelfth Blog.webp";
+import TechBlogPictureEleven from "../../public/core_page_interoperability_box.png";
+import TechBlogPictureTwelve from "../../public/core_page_transparency_reports_box.png";
 
 import TechPageMidIllustration from "../../public/Tech Page Contribute Section Illustration.svg";
 import CheckIconWhite from "../../public/Check Icon White.svg";
@@ -60,7 +60,7 @@ const TechnologyPage = () => {
 
       <section className="w-full">
         <div className="flex flex-col gap-x-72 md:gap-0 md:mt-10 items-center md:flex-row lg:justify-center">
-          <div className="flex flex-col gap-5 mb-10 px-8 md:px-20 lg:py-10 xl:px-32">
+          <div className="flex flex-col gap-5 mb-10 px-8 md:px-20 lg:py-10 xl:px-32 2xl:px-56">
             <h1 className="text-center mt-[1.5rem] md:mt-0 md:text-start text-[1rem] text-[#0074D9]">
               OUR CORE COMPONENTS
             </h1>
@@ -75,16 +75,16 @@ const TechnologyPage = () => {
             <div className="flex flex-col px-10 md:px-0 md:flex-row justify-center items-center md:justify-start gap-5">
               <Button
                 title="Get Early Access"
-                extraStyles=" bg-[#FF6F00] text-white w-full text-center md:w-[7.4375rem] md:h-[2.625rem]"
+                extraStyles=" bg-[#FF6F00] text-white w-full text-center md:w-[8.4375rem] md:h-[2.625rem]"
               />
               <Button
                 title="Whitepaper"
-                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[7.4375rem] md:h-[2.625rem]"
+                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.4375rem] md:h-[2.625rem]"
               />
             </div>
           </div>
 
-          <div className="px-14 md:px-0 md:ms-12 lg:ms-10 xl:ms-5">
+          <div className="px-14 md:px-0 md:ms-12 lg:ms-10 xl:ms-5 xl:pr-24">
             <Image
               src={TechnologyHeroIllustration}
               alt="Hero Image"
@@ -97,7 +97,7 @@ const TechnologyPage = () => {
       <section className="w-full my-10 px-10 flex flex-col items-center justify-center lg:hidden mb-20">
         <div className="flex flex-col justify-center items-center">
           <Carousel extraStyles="h-72" bottomStyle="bottom-1">
-            <div className="flex flex-col gap-5 px-5">
+            <div className="flex flex-col gap-5 px-5 md:px-10">
               <CoreDetailsCard
                 title="Decentralization"
                 description="The very essence of Devolved AI lies in its decentralized architecture. Unlike traditional centralized systems, our platform is designed to operate without a single point of control or failure. This ensures that power, decision-making, and data are distributed across the network, enhancing resilience and reducing systemic risks."
@@ -182,15 +182,15 @@ const TechnologyPage = () => {
       </section>
 
       <section className="w-full px-5 lg:px-0 hidden lg:flex lg:flex-col md:mb-[5rem]">
-        <div className="flex flex-col justify-center items-center md:px-8 lg:px-12 xl:px-16">
-          <div className="flex gap-10 lg:gap-3 xl:gap-5 px-5 justify-center items-center">
+        <div className="flex flex-col justify-center items-center md:px-8 xl:px-16">
+          <div className="flex gap-10 lg:gap-10 xl:gap-5 px-5 lg:px-0 justify-center items-center">
             <CoreDetailsCard
               title="Decentralization"
               description="The very essence of Devolved AI lies in its decentralized architecture. Unlike traditional centralized systems, our platform is designed to operate without a single point of control or failure. This ensures that power, decision-making, and data are distributed across the network, enhancing resilience and reducing systemic risks."
               image={TechBlogPictureOne}
               imageStyles="mx-auto my-2 "
               titleStyles="mb-5"
-              extraStyles="lg:h-[32.23rem]"
+              extraStyles="lg:h-[33.5rem] xl:h-[33rem]"
             />
             <CoreDetailsCard
               title="Proof of Value (PoV) Protocol"
@@ -198,7 +198,7 @@ const TechnologyPage = () => {
               image={TechBlogPictureTwo}
               imageStyles="mx-auto my-2 "
               titleStyles="mb-5"
-              extraStyles="lg:h-[32.23rem]"
+              extraStyles="lg:h-[33.5rem] xl:h-[33rem]"
             />
             <CoreDetailsCard
               title="Substrate Blockchain"
@@ -206,17 +206,17 @@ const TechnologyPage = () => {
               image={TechBlogPictureThree}
               imageStyles="mx-auto my-2 "
               titleStyles="mb-5"
-              extraStyles="lg:h-[32.23rem]"
+              extraStyles="lg:h-[33.5rem] xl:h-[33rem]"
             />
           </div>
-          <div className="flex gap-10 lg:gap-3 xl:gap-5 px-5 justify-center items-center">
+          <div className="flex gap-10 lg:gap-10 xl:gap-5 px-5 justify-center items-center">
             <CoreDetailsCard
               title="Argocoin (AGC)"
               description="AGC is not just a cryptocurrency; it's the lifeblood of the Devolved AI ecosystem. Designed to incentivize and empower community participation, AGC holders enjoy benefits like governance rights, staking rewards, and access to exclusive community events."
               image={TechBlogPictureFour}
               imageStyles="mx-auto my-2 "
               titleStyles="mb-5"
-              extraStyles="lg:h-[32.23rem]"
+              extraStyles="lg:h-[33.5rem] xl:h-[33rem]"
             />
             <CoreDetailsCard
               title="CommUnity Module"
@@ -224,7 +224,7 @@ const TechnologyPage = () => {
               image={TechBlogPictureFive}
               imageStyles="mx-auto my-2 "
               titleStyles="mb-5"
-              extraStyles="lg:h-[32.23rem]"
+              extraStyles="lg:h-[33.5rem] xl:h-[33rem]"
             />
             <CoreDetailsCard
               title="Token-Weighted Voting"
@@ -232,17 +232,17 @@ const TechnologyPage = () => {
               image={TechBlogPictureSix}
               imageStyles="mx-auto my-2 "
               titleStyles="mb-5"
-              extraStyles="lg:h-[32.23rem]"
+              extraStyles="lg:h-[33.5rem] xl:h-[33rem]"
             />
           </div>
-          <div className="flex gap-10 lg:gap-3 xl:gap-5 px-5 justify-center items-center">
+          <div className="flex gap-10 lg:gap-10 xl:gap-5 px-5 justify-center items-center">
             <CoreDetailsCard
               title="Security Infrastructure"
               description="We take data privacy and network integrity very seriously. Our state-of-the-art security measures include advanced encryption algorithms, multi-signature wallets, and regular security audits to ensure that your data is always safe."
               image={TechBlogPictureSeven}
               imageStyles="mx-auto my-2 "
               titleStyles="mb-5"
-              extraStyles="lg:h-[32.23rem]"
+              extraStyles="lg:h-[33.5rem] xl:h-[33rem]"
             />
             <CoreDetailsCard
               title="Advanced NLP"
@@ -250,7 +250,7 @@ const TechnologyPage = () => {
               image={TechBlogPictureEight}
               imageStyles="mx-auto my-2 "
               titleStyles="mb-5"
-              extraStyles="lg:h-[32.23rem]"
+              extraStyles="lg:h-[33.5rem] xl:h-[33rem]"
             />
             <CoreDetailsCard
               title="Financial Pool"
@@ -258,17 +258,17 @@ const TechnologyPage = () => {
               image={TechBlogPictureNine}
               imageStyles="mx-auto my-2 "
               titleStyles="mb-5"
-              extraStyles="lg:h-[32.23rem]"
+              extraStyles="lg:h-[33.5rem] xl:h-[33rem]"
             />
           </div>
-          <div className="flex gap-10 lg:gap-3 xl:gap-5 px-5 justify-center items-center">
+          <div className="flex gap-10 lg:gap-10 xl:gap-5 px-5 justify-center items-center">
             <CoreDetailsCard
               title="Smart Contracts"
               description="Our platform supports self-executing smart contracts that facilitate, verify, and enforce credible transactions without the need for intermediaries. This not only speeds up processes but also reduces costs and risks associated with manual interventions."
               image={TechBlogPictureTen}
               imageStyles="mx-auto my-2 "
               titleStyles="mb-5"
-              extraStyles="lg:h-[32.23rem]"
+              extraStyles="lg:h-[33.5rem] xl:h-[33rem]"
             />
             <CoreDetailsCard
               title="Interoperability"
@@ -276,7 +276,7 @@ const TechnologyPage = () => {
               image={TechBlogPictureEleven}
               imageStyles="mx-auto my-2 "
               titleStyles="mb-5"
-              extraStyles="lg:h-[32.23rem]"
+              extraStyles="lg:h-[33.5rem] xl:h-[33rem]"
             />
             <CoreDetailsCard
               title="Transparency Reports"
@@ -284,7 +284,7 @@ const TechnologyPage = () => {
               image={TechBlogPictureTwelve}
               imageStyles="mx-auto my-2 "
               titleStyles="mb-5"
-              extraStyles="lg:h-[32.23rem]"
+              extraStyles="lg:h-[33.5rem] xl:h-[33rem]"
             />
           </div>
         </div>

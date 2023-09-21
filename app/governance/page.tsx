@@ -81,7 +81,7 @@ const GovernancePage = () => {
                 </div>
               </div>
               <div className="flex my-2 w-full">
-                <div className="flex items-center space-x-2 md:max-lg:me-40 sm:max-md:me-24 me-16 md:max-lg:ms-20">
+                <div className="flex items-center space-x-2 md:max-lg:me-40 sm:max-md:me-20 me-[6rem] md:max-lg:ms-20">
                   <Image src={CheckIconYellow} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
                     Transparency
@@ -183,8 +183,7 @@ const GovernancePage = () => {
           <div className="flex flex-col">
             <span className="text-[#0074D9] text-[1rem]">VOTING PROCESS:</span>
             <h1 className="font-bold text-3xl inline">
-              <span className="text-[#0074D9]">Empowering Community </span>{" "}
-              Through Decisions
+              Empowering Community Through Decisions
             </h1>
             <p className="mt-5 text-xl text-[#646E73]">
               Our voting process is designed to be simple, transparent, and
@@ -240,11 +239,10 @@ const GovernancePage = () => {
         id="curved-rectangle"
       >
         <div className="flex flex-col gap-y-8 px-10 xl:px-28">
-          <div className="flex flex-col">
+          <div className="flex flex-col ">
             <span className="text-[#0074D9] text-[1rem]">VOTING PROCESS:</span>
             <h1 className="font-bold text-[2rem] inline">
-              <span className="text-[#0074D9]">Empowering Community </span>{" "}
-              Through Decisions
+              Empowering Community Through Decisions
             </h1>
             <p className="mt-5 text-xl text-[#646E73]">
               Our voting process is designed to be simple, transparent, and
@@ -299,7 +297,7 @@ const GovernancePage = () => {
             src={GovernanceHeroIllustration}
             alt="Decentralized AI Governance"
             width={700}
-            className="px-5"
+            className="px-5 xl:pr-24 xl:me-24"
           />
         </div>
       </section>
@@ -323,44 +321,44 @@ const GovernancePage = () => {
       </section>
 
       <section className="w-full md:mt-10 mb-20">
-        <div className="flex flex-col items-center md:flex-row md:justify-center gap-5 md:px-16 lg:px-18">
+        <div className="flex flex-col items-center md:flex-row md:justify-center gap-5 md:px-16 lg:px-18 xl:px-24">
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
-            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
+            extraStyles=" w-full md:w-[23.875rem] md:-[13.5625rem]"
           />
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
-            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
+            extraStyles=" w-full md:w-[23.875rem] md:-[13.5625rem]"
           />
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
-            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
+            extraStyles=" w-full md:w-[23.875rem] md:-[13.5625rem]"
           />
         </div>
-        <div className="flex flex-col md:flex-row md:justify-center md:px-16 lg:px-18 gap-5">
+        <div className="flex flex-col items-center md:flex-row md:justify-center gap-5 md:px-16 lg:px-18 xl:px-24">
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
-            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
+            extraStyles=" w-full md:w-[23.875rem] md:-[13.5625rem]"
           />
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
-            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
+            extraStyles=" w-full md:w-[23.875rem] md:-[13.5625rem]"
           />
           <ProposalCard
             proposalTitle="Proposal 1"
             proposalDescription="This is a sample proposal"
             proposalImage={ProposalIcon}
-            extraStyles=" transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 md:w-[23.875rem] md:-[13.5625rem]"
+            extraStyles=" w-full md:w-[23.875rem] md:-[13.5625rem]"
           />
         </div>
       </section>

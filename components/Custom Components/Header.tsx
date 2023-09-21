@@ -17,8 +17,8 @@ const Header = () => {
   return (
     <header>
       <nav className="shadow-lg">
-        <div className="flex justify-between items-center md:px-10 py-1">
-          <Link href={"/"} className="xl:ms-12">
+        <div className="flex justify-between xl:justify-center items-center md:px-10 py-1">
+          <Link href={"/"} className="xl:pr-24">
             <Image
               src={Logo}
               alt="Devolved AI Logo"
@@ -36,30 +36,44 @@ const Header = () => {
               <DropdownMenuContent>
                 <DropdownMenuItem>
                   {" "}
-                  <Link href="/">Home</Link>
+                  <Link className="ms-[5px]" href="/">
+                    Home
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Link href="/about">About</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  {" "}
-                  <Link href="/core">Core</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  {" "}
-                  <Link href="/community">Community</Link>
+                  <Link className="ms-[5px]" href="/about">
+                    About
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   {" "}
-                  <Link href="/governance">Governance</Link>
+                  <Link className="ms-[5px]" href="/core">
+                    Core
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   {" "}
-                  <Link href="/rewards">Rewards</Link>
+                  <Link className="ms-[5px]" href="/community">
+                    Community
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   {" "}
-                  <Link href="/contact">Contact</Link>
+                  <Link className="ms-[5px]" href="/governance">
+                    Governance
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  {" "}
+                  <Link className="ms-[5px]" href="/rewards">
+                    Rewards
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  {" "}
+                  <Link className="ms-[5px]" href="/contact">
+                    Contact
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Button
@@ -70,7 +84,7 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <div className="p-3 xl:ms-0 lg:justify-center xl:justify-between items-center gap-1.5 lg:gap-5 hidden lg:flex text-sm text-[#2D3748]">
+          <div className="p-3 xl:ms-0 lg:justify-center xl:justify-between items-center xl:gap-10 lg:gap-5 hidden lg:flex text-sm text-[#2D3748]">
             <Link className="text-[1rem]" href="/">
               Home
             </Link>
@@ -89,12 +103,12 @@ const Header = () => {
             <Link className="text-[1rem]" href="/rewards">
               Rewards
             </Link>
-            <Link className="text-[1rem] lg:pr-6" href="/contact">
+            <Link className="text-[1rem] lg:pr-6 xl:pr-16" href="/contact">
               Contact
             </Link>
             <Button
               title="Get Early Access"
-              extraStyles=" bg-[#FF6F00] text-white rounded-[0.3125rem] w-[8.5rem] h-[2.625rem]"
+              extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[8.5rem] h-[2.625rem]"
             />
           </div>
         </div>

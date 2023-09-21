@@ -104,7 +104,7 @@ const RewardsPage = () => {
       <section className="w-full flex flex-col gap-5 my-10 md:my-0 bg-[#f5f5f5] py-16 md:px-20 md:pb-20 md:pt-4">
         <div className="flex flex-col">
           <div className="flex flex-col px-5 md:mt-20 gap-4 text-center">
-            <h6 className="text-[1rem] text-[#0074D9]">How to Earn Rewards </h6>
+            <h6 className="text-[1rem] text-[#0074D9]">HOW TO EARN REWARDS </h6>
             <h1 className="text-[2rem] font-bold text-[#2D3748]">
               Participation Guide
             </h1>
