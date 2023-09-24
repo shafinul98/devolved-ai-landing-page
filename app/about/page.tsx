@@ -108,7 +108,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="my-5 md:ms-[5.5rem] lg:ms-[7rem] xl:ms-[5rem] 2xl:">
+        <div className="my-5 md:ms-[5.5rem] lg:ms-[7rem] xl:ms-[5rem] 2xl:pr-[2rem]">
           <Image
             src={AboutHeroIllustration}
             alt="Hero Illustration"

@@ -57,7 +57,7 @@ export default function Home() {
               <EarlyAccessForm>
                 <Button
                   title="Get Early Access"
-                  extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.5rem] md:h-[2.625rem]"
+                  extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem]"
                 />
               </EarlyAccessForm>
               <Button

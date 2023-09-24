@@ -238,7 +238,7 @@ const GovernancePage = () => {
         className="w-full hidden lg:flex items-center gap-5 bg-[#f5f5f5] pb-[7rem] mb-[4.5rem]"
         id="curved-rectangle"
       >
-        <div className="flex flex-col gap-y-8 px-10 xl:px-28">
+        <div className="flex flex-col gap-y-8 px-10 lg:px-14 xl:px-28">
           <div className="flex flex-col ">
             <span className="text-[#0074D9] text-[1rem]">VOTING PROCESS:</span>
             <h1 className="font-bold text-[2rem] inline">
@@ -297,7 +297,7 @@ const GovernancePage = () => {
             src={GovernanceHeroIllustration}
             alt="Decentralized AI Governance"
             width={700}
-            className="px-5 xl:pr-24 xl:me-24"
+            className="px-5 lg:pr-8 lg:me-12 xl:pr-28 xl:me-28"
           />
         </div>
       </section>

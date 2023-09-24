@@ -68,7 +68,7 @@ const TechnologyPage = () => {
             <h1 className="font-bold text-[1.5625rem] md:text-[2rem] text-center md:text-start">
               Powering the Future of Decentralized Intelligence
             </h1>
-            <p className="font-normal px-2 md:px-0 text-[1rem] md:text-[1.25rem] text-start text-[#646E73] md:text-center">
+            <p className="font-normal px-2 md:px-0 text-[1rem] md:text-[1.25rem] text-start text-[#646E73]">
               Discover the essence of Devolved AI at its Core—a fusion of
               innovation, community, and empowerment that drives us toward a
               decentralized, people-powered future.

@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -17,6 +16,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 import DevolvedAIHeroLogo from "../../public/Devolved AI Hero Logo.svg";
+import { Button } from "../ui/button";
 
 export function EarlyAccessForm({ children }: { children: React.ReactNode }) {
   const [email, setEmail] = useState("");
@@ -72,9 +72,7 @@ export function EarlyAccessForm({ children }: { children: React.ReactNode }) {
         </Dialog>
       ) : (
         <Dialog>
-          <DialogTrigger className="sm:max-md:w-full sm:max-md:flex sm:max-md:justify-center">
-            {children}
-          </DialogTrigger>
+          <DialogTrigger className="w-full md:w-fit">{children}</DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
             <DialogHeader>
               <Image

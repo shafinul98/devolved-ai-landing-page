@@ -49,8 +49,8 @@ const RewardsPage = () => {
       </section>
 
       <section className="w-full my-10 md:mt-20 md:mb-0 items-center">
-        <div className="flex flex-col items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16">
-          <div className="flex flex-col px-6 md:mt-20 gap-5 lg:ms-[0.5rem] xl:me-14">
+        <div className="flex flex-col items-center lg:flex-row justify-around xl:px-8 md:mx-16 lg:max-xl:mx-10">
+          <div className="flex flex-col px-6 md:mt-20 gap-5 lg:max-xl:gap-10 lg:max-xl:mx-0 lg:ms-[0.5rem] xl:me-14">
             <h1 className="text-base text-[#0074D9]">REWARD SYSTEM OVERVIEW</h1>
             <h1 className="text-[2rem] font-bold text-[#2D3748]">
               PoV Protocol
