@@ -48,9 +48,7 @@ export function EarlyAccessForm({ children }: { children: React.ReactNode }) {
     <>
       {isSignedUp ? (
         <Dialog>
-          <DialogTrigger className="sm:max-md:w-full sm:max-md:flex sm:max-md:justify-center">
-            {children}
-          </DialogTrigger>
+          <DialogTrigger className="w-full md:w-fit">{children}</DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
             <DialogHeader>
               <Image
