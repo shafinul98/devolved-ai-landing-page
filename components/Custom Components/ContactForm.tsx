@@ -18,6 +18,7 @@ import {
 
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
+import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 
 const FormSchema = z.object({
   firstName: z.string({
@@ -72,8 +73,10 @@ export function ContactForm() {
 
   useEffect(() => {
     if (isMessageSent && formRef) {
-      form.reset();
-      setMessageSent(false);
+      setTimeout(() => {
+        form.reset();
+        setMessageSent(false);
+      }, 2000);
     }
   }, [isMessageSent]);
 
@@ -164,12 +167,20 @@ export function ContactForm() {
           />
         </div>
 
-        <Button
-          type="submit"
-          title="Submit"
-          extraStyles=" bg-[#0074D9] w-1/2 lg:w-1/4 mx-auto text-white"
-          disabled={formState.isValidating}
-        />
+        {isMessageSent === true ? (
+          <Alert className="w-1/2 bg-green-500 text-white">
+            <AlertTitle>Your Message Has Been Sent</AlertTitle>
+          </Alert>
+        ) : (
+          <>
+            <Button
+              type="submit"
+              title="Submit"
+              extraStyles=" bg-[#0074D9] w-1/2 lg:w-1/4 mx-auto text-white"
+              disabled={formState.isValidating}
+            />
+          </>
+        )}
       </form>
     </Form>
   );
