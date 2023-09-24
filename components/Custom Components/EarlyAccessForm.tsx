@@ -62,7 +62,7 @@ export function EarlyAccessForm({
               <Image
                 src={DevolvedAIHeroLogo}
                 alt="Devolved AI Logo"
-                width={100}
+                width={125}
                 className="mx-auto my-8"
               />
               <DialogTitle className="text-center text-[1.25rem] leading-6 text-[#2D3748]">
@@ -86,7 +86,7 @@ export function EarlyAccessForm({
               <Image
                 src={DevolvedAIHeroLogo}
                 alt="Devolved AI Logo"
-                width={100}
+                width={125}
                 className="mx-auto my-8"
               />
               <DialogTitle className="text-center text-[1.25rem] leading-6 text-[#2D3748]">
