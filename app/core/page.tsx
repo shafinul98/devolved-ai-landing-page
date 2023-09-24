@@ -74,10 +74,12 @@ const TechnologyPage = () => {
               decentralized, people-powered future.
             </p>
             <div className="flex flex-col px-10 md:px-0 md:flex-row justify-center items-center md:justify-start gap-5">
-              <Button
-                title="Get Early Access"
-                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem]"
-              />
+              <EarlyAccessForm>
+                <Button
+                  title="Get Early Access"
+                  extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem]"
+                />
+              </EarlyAccessForm>
               <Button
                 title="Whitepaper"
                 extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-light"

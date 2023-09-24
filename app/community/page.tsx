@@ -8,7 +8,8 @@ import CommunityHeroImage from "../../public/Community Page Hero Image.webp";
 
 import Community from "../../public/Community and Outreach Logo.svg";
 import Rewards from "../../public/Rewarding Contributions Logo.svg";
-import LinkIcon from "../../public/Link Logo.svg";
+import TeamWork from "../../public/Team Work.svg";
+
 import RightArrowIconBlue from "../../public/Right Arrow Blue.svg";
 
 import {
@@ -146,7 +147,7 @@ const CommunityPage = () => {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center gap-5">
-                <Image src={LinkIcon} alt="" width={50} />
+                <Image src={TeamWork} alt="" width={50} />
                 <div className="flex flex-col gap-y-2 ">
                   <h1 className="text-2xl font-bold text-[#2D3748] text-center">
                     Adventure Awaits
@@ -199,7 +200,7 @@ const CommunityPage = () => {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center gap-5">
-                <Image src={LinkIcon} alt="" width={50} />
+                <Image src={TeamWork} alt="" width={50} />
                 <div className="flex flex-col gap-y-2 ">
                   <h1 className="text-2xl font-bold text-[#2D3748] text-center">
                     The Power of Community
@@ -253,7 +254,7 @@ const CommunityPage = () => {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center gap-5">
-                <Image src={LinkIcon} alt="" width={50} />
+                <Image src={TeamWork} alt="" width={50} />
                 <div className="flex flex-col gap-y-2 ">
                   <h1 className="text-2xl font-bold text-[#2D3748] text-center">
                     Speak Your Mind
@@ -359,7 +360,7 @@ const CommunityPage = () => {
         <div className="flex flex-col py-10 px-10 rounded-sm">
           <div className="flex flex-col gap-10 rounded-sm mt-12 xl:pr-10">
             <div className="flex flex-col items-start justify-center gap-5">
-              <Image src={LinkIcon} alt="" width={50} />
+              <Image src={TeamWork} alt="" width={50} />
               <div className="flex flex-col gap-y-2 ">
                 <h1 className="text-2xl font-bold text-[#2D3748] ">
                   Adventure Awaits
@@ -371,7 +372,7 @@ const CommunityPage = () => {
               </div>
             </div>
             <div className="flex flex-col items-start justify-center gap-5">
-              <Image src={LinkIcon} alt="" width={50} />
+              <Image src={TeamWork} alt="" width={50} />
               <div className="flex flex-col gap-y-2 ">
                 <h1 className="text-2xl font-bold text-[#2D3748] ">
                   The Power of Community
@@ -383,7 +384,7 @@ const CommunityPage = () => {
               </div>
             </div>
             <div className="flex flex-col justify-center gap-5">
-              <Image src={LinkIcon} alt="" width={50} />
+              <Image src={TeamWork} alt="" width={50} />
               <div className="flex flex-col gap-y-2 ">
                 <h1 className="text-2xl font-bold text-[#2D3748] ">
                   Speak Your Mind
@@ -411,10 +412,12 @@ const CommunityPage = () => {
             a part of.
           </p>
           <div className="flex justify-center gap-x-2">
-            <Button
-              title="Get Early Access"
-              extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem]"
-            />
+            <EarlyAccessForm>
+              <Button
+                title="Get Early Access"
+                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem]"
+              />
+            </EarlyAccessForm>
             <Button
               title="Whitepaper"
               extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-light"

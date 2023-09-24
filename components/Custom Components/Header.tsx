@@ -19,7 +19,7 @@ const Header = () => {
     <header>
       <nav className="shadow-lg">
         <div className="flex justify-between xl:justify-center items-center md:px-10 py-1">
-          <Link href={"/"} className="xl:pr-28 2xl:me-auto 2xl:pl-6">
+          <Link href={"/"} className="xl:pr-28 2xl:me-auto 2xl:pl-12">
             <Image
               src={Logo}
               alt="Devolved AI Logo"
@@ -101,10 +101,12 @@ const Header = () => {
             <Link className="text-[1rem] lg:pr-6 xl:pr-16" href="/contact">
               Contact
             </Link>
-            <Button
-              title="Get Early Access"
-              extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-[8.5rem] h-[2.625rem]"
-            />
+            <EarlyAccessForm>
+              <Button
+                title="Get Early Access"
+                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem]"
+              />
+            </EarlyAccessForm>
           </div>
         </div>
       </nav>

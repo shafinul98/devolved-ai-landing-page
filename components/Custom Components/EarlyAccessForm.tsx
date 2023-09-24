@@ -18,7 +18,13 @@ import { useState } from "react";
 import DevolvedAIHeroLogo from "../../public/Devolved AI Hero Logo.svg";
 import { Button } from "../ui/button";
 
-export function EarlyAccessForm({ children }: { children: React.ReactNode }) {
+export function EarlyAccessForm({
+  children,
+  extraStyles,
+}: {
+  children: React.ReactNode;
+  extraStyles?: string;
+}) {
   const [email, setEmail] = useState("");
 
   const [isSignedUp, setIsSignedUp] = useState(false);
@@ -48,7 +54,9 @@ export function EarlyAccessForm({ children }: { children: React.ReactNode }) {
     <>
       {isSignedUp ? (
         <Dialog>
-          <DialogTrigger className="w-full md:w-fit">{children}</DialogTrigger>
+          <DialogTrigger className={`w-full md:w-fit`}>
+            {children}
+          </DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
             <DialogHeader>
               <Image

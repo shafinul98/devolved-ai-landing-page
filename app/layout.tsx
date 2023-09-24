@@ -14,6 +14,22 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: "Devolved AI",
   description: "The next step towards Decentralized AI",
+  keywords: [
+    "federated learning",
+    " decentralized ai",
+    " future of AI",
+    " transparent AI",
+    " community driven AI",
+    " proof of value (PoV) protocol",
+    " substrate blockchain",
+    " argocoin (AGC)",
+    " commUnity module",
+    " token weighted voting",
+    " smart contracts",
+    " advanced nlp",
+    " transparency reports",
+    " decentralized governance model",
+  ],
 };
 
 export default function RootLayout({
