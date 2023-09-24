@@ -12,8 +12,6 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 
-import axios from "axios";
-
 import Image from "next/image";
 
 import { useState } from "react";
@@ -27,46 +25,21 @@ export function EarlyAccessForm({ children }: { children: React.ReactNode }) {
 
   const submitHandler = async () => {
     try {
-      const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID;
-      const API_KEY = process.env.MAILCHIMP_API_KEY;
-      const DATA_CENTER = process.env.MAILCHIMP_API_SERVER;
-      const data = {
-        email_address: email,
-        status: "pending",
-      };
-
-      const config = {
+      const res = await fetch("/api/mailchimp", {
+        method: "POST",
         headers: {
-          Authorization: `apiKey ${API_KEY}`,
           "Content-Type": "application/json",
         },
-      };
+        body: JSON.stringify({
+          email_address: email,
+          status: "pending",
+        }),
+      });
 
-      const response = await axios.post(
-        `https://${DATA_CENTER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`,
-        data,
-        config
-      );
-
-      // const response = await fetch(
-      //   `https://us21.api.mailchimp.com/3.0/lists/5e6935d43c/members`,
-      //   {
-      //     body: JSON.stringify(data),
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     method: "POST",
-
-      //     mode: "no-cors",
-      //   }
-      // );
-
-      if (response.status === 201) {
-        setEmail("");
+      if (res.status === 200) {
         setIsSignedUp(true);
       }
     } catch (error) {
-      setEmail("");
       setIsSignedUp(false);
     }
   };
