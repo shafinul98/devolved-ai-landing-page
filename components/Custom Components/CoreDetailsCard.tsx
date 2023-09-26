@@ -20,7 +20,7 @@ const CoreDetailsCard: React.FC<CoreDetailsCardProps> = ({
 }: CoreDetailsCardProps) => {
   return (
     <article
-      className={`${extraStyles} rounded-[0.75rem] flex flex-col my-5 p-5 shadow-lg lg:w-[17rem] lg:h-[15rem] xl:h-[35rem] xl:w-[25rem] 2xl:w-[27.5rem]`}
+      className={`${extraStyles} rounded-[0.75rem] flex flex-col my-5 p-5 shadow-lg lg:w-[17rem] lg:h-[15rem] xl:h-[35rem] xl:w-[25rem] 2xl:w-[27.5rem] 3xl:w-[32.5rem]`}
     >
       {/* Image */}
       <Image

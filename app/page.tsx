@@ -42,8 +42,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
       <section className="w-full md:bg-[#f5f5f5]" id="curved-rectangle">
-        <div className="flex flex-col items-center md:flex-row md:justify-center md:p-12 md:pl-12 lg:px-16 lg:pl-[4rem] xl:pl-28 md:mt-[2.1rem]">
-          <div className="flex flex-col gap-5 mb-10  md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
+        <div className="flex flex-col items-center md:flex-row md:justify-center md:p-12 md:pl-12 lg:px-16 lg:pl-[4rem] xl:px-28 xl:pl-32 2xl:pl-[7.5rem] 3xl:container md:mt-[2.1rem]">
+          <div className="flex flex-col gap-5 mb-10 md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
             <h1 className="font-bold text-[2rem] text-start md:text-[3rem] md:leading-[1.15] text-[#2D3748]">
               Empowering <span className="text-[#0074D9]">You</span> to Shape
               the Future of Artificial Intelligence
@@ -80,7 +80,7 @@ export default function Home() {
 
       <div className="w-full h-[0.0625rem] md:hidden"></div>
 
-      <article className="flex flex-col mt-12 md:px-10 md:gap-5 lg:gap-[5rem] lg:w-full lg:px-[3.5rem] xl:px-28 md:flex-row lg:justify-center mb-[3.75rem]">
+      <article className="flex flex-col mt-12 md:px-10 md:gap-5 lg:gap-[5rem] lg:w-full lg:px-[3.5rem] xl:px-28 2xl:pl-[7.5rem] 3xl:container md:flex-row lg:justify-center mb-[3.75rem]">
         <div className="flex flex-col items-center py-[1.18675rem] md:py-0 md:items-start gap-[0.81rem] md:gap-3 ">
           <Image src={MoneyBag} alt="" />
           <h1 className="text-xl md:text-[1.5rem] font-bold text-[#2D3748]">
@@ -185,14 +185,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full min-h-screen hidden md:flex lg:justify-center bg-[#F5F5F5]">
+      <section className="w-full min-h-screen 3xl:items-center 3xl:py-0 3xl:h-44 hidden md:flex lg:justify-center bg-[#F5F5F5]">
         <div className="flex flex-row xl:gap-5 md:p-10">
           <Image
             src={SteveJobs}
             alt="Steve Jobs"
-            className="w-full md:w-1/2 lg:w-full mt-[2rem] ms-5 xl:ms-32 xl:h-[35rem] xl:w-[35rem]"
+            className="w-full md:w-1/2 lg:w-full mt-[2rem] ms-5 xl:ms-16 2xl:ms-0 xl:h-[35rem] xl:w-[32.5rem]"
           />
-          <div className="flex-col py-16 space-y-7 text-start mt-[3rem] w-[36.9375rem] h-[24.3125rem] ms-[2rem] xl:w-full xl:pl-[4.5rem]">
+          <div className="flex-col py-16 space-y-7 text-start mt-[3rem] w-[36.9375rem] h-[24.3125rem] 2xl:w-[50rem] ms-[2rem] xl:w-full xl:pl-[1.5rem] 2xl:pl-[3.5rem]">
             <h1 className="font-bold text-[2rem]">
               Nurturing Faith in Innovation: Tools for
               <span className="text-[#0074D9]"> Excellence</span>
@@ -308,7 +308,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full px-5 lg:px-10 xl:px-20 mt-[4.25rem] mb-[4.5rem] hidden md:flex md:justify-center items-center gap-5">
+      <section className="w-full px-5 lg:px-10 xl:px-20 3xl:container mt-[4.25rem] mb-[4.5rem] hidden md:flex md:justify-center items-center gap-5">
         <div className="flex flex-col gap-y-8 p-10">
           <div className="flex flex-col gap-y-4">
             <h1 className="font-bold text-[2rem]">
@@ -412,7 +412,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row md:flex-wrap gap-5 justify-center md:py-10">
+          <div className="flex flex-col md:flex-row md:flex-wrap gap-5 justify-center md:py-10 3xl:container">
             <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
               <Image src={DemocraticGovIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Democratic Governance</h6>

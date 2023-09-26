@@ -60,8 +60,8 @@ const TechnologyPage = () => {
       </section>
 
       <section className="w-full">
-        <div className="flex flex-col gap-x-72 md:gap-0 md:mt-10 items-center md:flex-row lg:justify-center">
-          <div className="flex flex-col gap-5 mb-10 px-8 md:px-20 lg:py-10 xl:px-32 2xl:px-56">
+        <div className="flex flex-col gap-x-72 md:gap-0 md:mt-10 items-center md:flex-row lg:justify-center 3xl:container">
+          <div className="flex flex-col gap-5 mb-10 px-8 md:px-20 lg:py-10 xl:px-32 2xl:px-56 3xl:px-24">
             <h1 className="text-center mt-[1.5rem] md:mt-0 md:text-start text-[1rem] text-[#0074D9]">
               OUR CORE COMPONENTS
             </h1>
@@ -351,7 +351,7 @@ const TechnologyPage = () => {
       </section>
 
       <section className="w-full hidden lg:flex bg-[#0074D9] my-10 lg:pt-20 lg:mb-24">
-        <div className="flex my-[1.5rem] lg:px-0 xl:px-20">
+        <div className="flex my-[1.5rem] lg:px-0 xl:px-20 3xl:container">
           <Image src={TechPageMidIllustration} width={400} alt="" />
           <div className="flex flex-col text-white pl-[2rem]">
             <h6 className="text-[1rem] font-normal mb-[1.2rem]">

@@ -85,8 +85,8 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full mt-10 mb-[4.5rem] hidden lg:flex md:items-center lg:justify-center lg:px-12 xl:px-28">
-        <div className="flex flex-col px-20 md:px-16 lg:px-0">
+      <section className="w-full mt-10 mb-[4.5rem] hidden lg:flex md:items-center lg:justify-center lg:px-12 xl:px-28 2xl:px-32 3xl:container">
+        <div className="flex flex-col px-20 md:px-16 lg:px-0 xl:max-2xl:px-10">
           <h1 className="text-[2rem] font-bold text-[#2D3748] mb-3">
             Our Story
           </h1>
@@ -118,7 +118,7 @@ const About = () => {
       </section>
 
       <section className="w-full px-3 md:mb-[4.5rem] mb-[2.5rem]">
-        <div className="flex flex-col gap-10 md:flex md:flex-row md:my-8 md:px-10 lg:justify-center xl:px-20">
+        <div className="flex flex-col gap-10 md:flex md:flex-row md:my-8 md:px-10 lg:justify-center xl:max-2xl:px-28 2xl:px-28 3xl:container">
           <div className="flex flex-col shadow-lg md:pl-[1.19rem] p-5 text-center md:text-start rounded-md w-full lg:p-5 sm:max-md:pb-[5rem]">
             <h1 className="text-[2rem] font-bold text-[#2D3748] mb-5">
               Mission
@@ -165,7 +165,7 @@ const About = () => {
                 ]}
                 hasGitHub={false}
                 hasLinkedIn={true}
-                hasTwitter={true}
+                hasTwitter={false}
                 cardTitle="Nathan Peterson"
               />
               <TeamMemberCard
@@ -248,7 +248,7 @@ const About = () => {
               />
             </Carousel>
           </div>
-          <div className="md:flex md:flex-wrap md:justify-evenly md:my-10 md:px-10 md:gap-x-10 lg:px-18 xl:px-24 hidden">
+          <div className="md:flex md:flex-wrap md:justify-evenly md:my-10 md:px-10 md:gap-x-10 lg:px-18 xl:px-24 2xl:px-14 3xl:container hidden">
             <TeamMemberCard
               cardImage={Nathan}
               cardDescription="CEO & Founder"
@@ -259,7 +259,7 @@ const About = () => {
               ]}
               cardTitle="Nathan Peterson"
               hasGitHub={false}
-              hasTwitter={true}
+              hasTwitter={false}
               hasLinkedIn={true}
             />
             <TeamMemberCard
@@ -390,7 +390,7 @@ const About = () => {
         <h1 className="text-[#2D3748] md:mt-[0.5rem] md:text-[2rem] text-center font-bold text-2xl">
           Milestones and Future Plans
         </h1>
-        <div className="flex items-center justify-center px-10 lg:px-20 xl:px-40 gap-5">
+        <div className="flex items-center justify-center px-10 lg:px-20 xl:px-40 2xl:px-32 3xl:container gap-5">
           <MilestoneCard
             date="Q3-2023"
             milestone="Development of our Minimum Viable Product (MVP) commences, focusing initially on robust Natural Language Processing capabilities."
@@ -408,7 +408,7 @@ const About = () => {
             milestone="We initiate the development and implementation of new AI modules, as we aim to extend the platform's applicability and reach."
           />
         </div>
-        <article className="mx-10 lg:mx-20 xl:mx-40 rounded-2xl shadow-xl flex flex-row-reverse items-center justify-center my-10 gap-5">
+        <article className="mx-10 lg:mx-20 xl:mx-40 2xl:mx-32 3xl:container rounded-2xl shadow-xl flex flex-row-reverse items-center justify-center my-10 gap-5">
           <Image
             src={FuturePlansImageCurved}
             alt=""

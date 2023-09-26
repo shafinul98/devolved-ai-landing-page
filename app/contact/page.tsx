@@ -125,7 +125,7 @@ const ContactPage = () => {
           Search our FAQ for answers to anything you might ask.
         </p>
 
-        <div className="px-5 mt-10 md:w-1/2 mx-auto">
+        <div className="px-5 mt-10 md:w-1/2 3xl:container 3xl:w-full 3xl:px-28 mx-auto">
           <Accordion
             type="single"
             collapsible

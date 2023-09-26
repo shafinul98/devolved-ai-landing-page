@@ -48,9 +48,9 @@ const RewardsPage = () => {
         </div>
       </section>
 
-      <section className="w-full my-10 md:mt-20 md:mb-0 items-center">
-        <div className="flex flex-col items-center lg:flex-row justify-around xl:px-8 md:mx-16 lg:max-xl:mx-10">
-          <div className="flex flex-col px-6 md:mt-20 gap-5 lg:max-xl:gap-10 lg:max-xl:mx-0 lg:ms-[0.5rem] xl:me-14">
+      <section className="w-full my-10 md:mt-20 md:mb-0 items-center 3xl:container">
+        <div className="flex flex-col items-center lg:flex-row justify-around xl:px-8 md:mx-16 lg:max-xl:mx-10 ">
+          <div className="flex flex-col px-6 md:mt-20 gap-5 lg:max-xl:gap-10 lg:max-xl:mx-0 lg:ms-[0.5rem] xl:me-14 3xl:container">
             <h1 className="text-base text-[#0074D9]">REWARD SYSTEM OVERVIEW</h1>
             <h1 className="text-[2rem] font-bold text-[#2D3748]">
               PoV Protocol
@@ -103,12 +103,12 @@ const RewardsPage = () => {
 
       <section className="w-full flex flex-col gap-5 my-10 md:my-0 bg-[#f5f5f5] py-16 md:px-20 md:pb-20 md:pt-4">
         <div className="flex flex-col">
-          <div className="flex flex-col px-5 md:mt-20 gap-4 text-center">
+          <div className="flex flex-col px-5 md:mt-20 gap-4 text-center 3xl:container">
             <h6 className="text-[1rem] text-[#0074D9]">HOW TO EARN REWARDS </h6>
             <h1 className="text-[2rem] font-bold text-[#2D3748]">
               Participation Guide
             </h1>
-            <p className="text-[#646E73] text-[1rem] md:mx-5 lg:mx-10">
+            <p className="text-[#646E73] text-[1rem] md:mx-5 lg:mx-10 3xl:px-20">
               Our rewards system is designed to be straightforward and
               inclusive, allowing community members to earn Argocoin (AGC)
               through various avenues. Whether you're a developer, data
@@ -118,7 +118,7 @@ const RewardsPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 mt-10">
+        <div className="flex flex-col md:flex-row gap-8 mt-10 3xl:container 3xl:px-24">
           <div className="flex flex-col px-10 gap-3 md:px-10 lg:px-16 xl:px-20">
             <Image src={OneIcon} alt="One Icon" />
             <h1 className="text-xl font-bold text-[#2D3748]">

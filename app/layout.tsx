@@ -12,10 +12,11 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Devolved AI",
-  description: "The next step towards Decentralized AI",
+  title: "Devolved AI - Democratizing the Future of AI",
+  description:
+    "Elevate AI governance and innovation with our decentralized ecosystem. Token-weighted voting, user-friendly tools, and rewarding community engagement—powered by Argocoin.",
   keywords: [
-    "federated learning",
+    " federated learning",
     " decentralized ai",
     " future of AI",
     " transparent AI",

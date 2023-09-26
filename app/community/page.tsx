@@ -274,7 +274,7 @@ const CommunityPage = () => {
         </Carousel>
       </section>
 
-      <section className="w-full justify-center px-9 mb-20 hidden md:flex">
+      <section className="w-full justify-center px-9 mb-20 hidden md:flex 3xl:container">
         <div className="flex flex-col py-10 px-10 xl:px-24 rounded-sm">
           <div className="flex flex-col gap-10 rounded-sm mt-12">
             <div className="flex flex-col items-start justify-center gap-5">
@@ -342,7 +342,7 @@ const CommunityPage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col items-start justify-center gap-5 mt-5 lg:mt-1 xl:mt-5 2xl:mt-0">
+            <div className="flex flex-col items-start justify-center gap-5 mt-5 lg:mt-0 xl:max-2xl-mt-0 2xl:mt-0">
               <Image src={Rewards} alt="" width={50} />
               <div className="flex flex-col gap-y-2 ">
                 <h1 className="text-2xl font-bold text-[#2D3748] ">
@@ -358,7 +358,7 @@ const CommunityPage = () => {
         </div>
 
         <div className="flex flex-col py-10 px-10 rounded-sm">
-          <div className="flex flex-col gap-10 rounded-sm mt-12 xl:pr-10">
+          <div className="flex flex-col gap-10 xl:gap-8 2xl:gap-10 rounded-sm mt-12 xl:pr-10">
             <div className="flex flex-col items-start justify-center gap-5">
               <Image src={TeamWork} alt="" width={50} />
               <div className="flex flex-col gap-y-2 ">
@@ -404,7 +404,7 @@ const CommunityPage = () => {
           <h3 className="text-[1.5625rem] md:text-3xl font-bold text-[#2D3748]">
             Why Devolved AI Community is Unique
           </h3>
-          <p className="text-[1rem] md text-[#646E73] text-start lg:text-center lg:px-44">
+          <p className="text-[1rem] md text-[#646E73] text-start lg:text-center lg:px-44 3xl:px-96">
             The Devolved AI community is not just a user base; it's a
             collaborative force propelling us toward AI's next frontier. Our
             innovative PoV protocol ensures that everyone's contributions are

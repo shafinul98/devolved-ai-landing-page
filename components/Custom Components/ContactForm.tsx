@@ -86,7 +86,7 @@ export function ContactForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-8 flex flex-col items-center justify-center my-10 md:mx-[.25rem] lg:mx-[12.5rem]"
       >
-        <div className="flex md:flex-col lg:flex-row gap-2 md:gap-y-5 w-full lg:gap-0">
+        <div className="flex md:flex-col lg:flex-row gap-2 md:gap-y-5 w-full lg:gap-0 3xl:container">
           <FormField
             control={form.control}
             name="firstName"
@@ -124,7 +124,7 @@ export function ContactForm() {
           />
         </div>
 
-        <div className="w-full">
+        <div className="w-full 3xl:container">
           <FormField
             control={form.control}
             name="email"
@@ -146,7 +146,7 @@ export function ContactForm() {
           />
         </div>
 
-        <div className="w-full md:px-[7.5rem] lg:px-[5rem]">
+        <div className="w-full md:px-[7.5rem] lg:px-[5rem] 3xl:container 3xl:px-28">
           <FormField
             control={form.control}
             name="message"

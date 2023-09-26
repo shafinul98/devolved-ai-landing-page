@@ -15,7 +15,7 @@ import { EarlyAccessForm } from "./EarlyAccessForm";
 
 const Footer = () => {
   return (
-    <footer className="mt-4 md:mt-6 lg:mt-10">
+    <footer className="mt-4 md:mt-6 lg:mt-10 3xl:container">
       <div className="flex flex-col items-center md:items-baseline gap-10 md:flex-row md:justify-around mb-20">
         <div className="flex flex-col gap-5 items-center justify-center">
           <div>

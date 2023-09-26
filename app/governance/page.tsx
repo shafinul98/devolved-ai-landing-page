@@ -114,7 +114,7 @@ const GovernancePage = () => {
       </section>
 
       <section className="w-full justify-center items-center px-16 xl:px-32 hidden lg:flex pb-20 bg-[#F5F5F5]">
-        <div className="flex flex-row gap-16">
+        <div className="flex flex-row gap-16 3xl:container">
           <Image
             src={GovernanceStructureImage}
             alt="Governance Structure"
@@ -235,70 +235,75 @@ const GovernancePage = () => {
       </section>
 
       <section
-        className="w-full hidden lg:flex items-center gap-5 bg-[#f5f5f5] pb-[7rem] mb-[4.5rem]"
+        className="w-full hidden lg:flex items-center 3xl:justify-center gap-5 bg-[#f5f5f5] pb-[7rem] mb-[4.5rem]"
         id="curved-rectangle"
       >
-        <div className="flex flex-col gap-y-8 px-10 lg:px-14 xl:px-28">
-          <div className="flex flex-col ">
-            <span className="text-[#0074D9] text-[1rem]">VOTING PROCESS:</span>
-            <h1 className="font-bold text-[2rem] inline">
-              Empowering Community Through Decisions
-            </h1>
-            <p className="mt-5 text-xl text-[#646E73]">
-              Our voting process is designed to be simple, transparent, and
-              inclusive, ensuring that every community member can participate in
-              shaping Devolved AI's future.
-            </p>
-          </div>
+        <div className="flex items-center justify-center 3xl:container">
+          <div className="flex flex-col gap-y-8 px-10 lg:px-14 xl:px-28">
+            <div className="flex flex-col ">
+              <span className="text-[#0074D9] text-[1rem]">
+                VOTING PROCESS:
+              </span>
+              <h1 className="font-bold text-[2rem] inline">
+                Empowering Community Through Decisions
+              </h1>
+              <p className="mt-5 text-xl text-[#646E73]">
+                Our voting process is designed to be simple, transparent, and
+                inclusive, ensuring that every community member can participate
+                in shaping Devolved AI's future.
+              </p>
+            </div>
 
-          <div className="flex flex-col gap-3 rounded-sm mt-8">
-            <div className="flex items-center md:items-start gap-5">
-              <Image src={MouseClickIcon} alt="" width={50} />
-              <div className="flex flex-col gap-y-2">
-                <h1 className="text-lg font-semibold text-[#2D3748]">
-                  Open Proposals
-                </h1>
-                <p className="text-sm text-[#646E73]">
-                  Any community member has the opportunity to submit governance
-                  proposals, encouraging a diverse range of ideas and solutions.
-                </p>
+            <div className="flex flex-col gap-3 rounded-sm mt-8">
+              <div className="flex items-center md:items-start gap-5">
+                <Image src={MouseClickIcon} alt="" width={50} />
+                <div className="flex flex-col gap-y-2">
+                  <h1 className="text-lg font-semibold text-[#2D3748]">
+                    Open Proposals
+                  </h1>
+                  <p className="text-sm text-[#646E73]">
+                    Any community member has the opportunity to submit
+                    governance proposals, encouraging a diverse range of ideas
+                    and solutions.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="flex items-center md:items-start gap-5">
-              <Image src={StackedCards} alt="" width={50} />
-              <div className="flex flex-col gap-y-2">
-                <h1 className="text-lg font-semibold text-[#2D3748]">
-                  Democratic Voting
-                </h1>
-                <p className="text-sm text-[#646E73]">
-                  Stakeholders can use their Argocoin (AGC) holdings to cast
-                  weighted votes, ensuring a fair and democratic decision-making
-                  process.
-                </p>
+              <div className="flex items-center md:items-start gap-5">
+                <Image src={StackedCards} alt="" width={50} />
+                <div className="flex flex-col gap-y-2">
+                  <h1 className="text-lg font-semibold text-[#2D3748]">
+                    Democratic Voting
+                  </h1>
+                  <p className="text-sm text-[#646E73]">
+                    Stakeholders can use their Argocoin (AGC) holdings to cast
+                    weighted votes, ensuring a fair and democratic
+                    decision-making process.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="flex items-center md:items-start gap-5">
-              <Image src={CodeIcon} alt="" width={50} />
-              <div className="flex flex-col gap-y-2">
-                <h1 className="text-lg font-semibold text-[#2D3748]">
-                  Public Outcomes{" "}
-                </h1>
-                <p className="text-sm text-[#646E73]">
-                  The results of each voting cycle are publicly recorded on the
-                  blockchain, providing complete transparency and
-                  accountability.
-                </p>
+              <div className="flex items-center md:items-start gap-5">
+                <Image src={CodeIcon} alt="" width={50} />
+                <div className="flex flex-col gap-y-2">
+                  <h1 className="text-lg font-semibold text-[#2D3748]">
+                    Public Outcomes{" "}
+                  </h1>
+                  <p className="text-sm text-[#646E73]">
+                    The results of each voting cycle are publicly recorded on
+                    the blockchain, providing complete transparency and
+                    accountability.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <Image
-            src={GovernanceHeroIllustration}
-            alt="Decentralized AI Governance"
-            width={700}
-            className="px-5 lg:pr-8 lg:me-12 xl:pr-28 xl:me-28"
-          />
+          <div className="3xl:container">
+            <Image
+              src={GovernanceHeroIllustration}
+              alt="Decentralized AI Governance"
+              width={700}
+              className="px-5 lg:pr-8 lg:me-12 xl:pr-28 xl:me-28"
+            />
+          </div>
         </div>
       </section>
 
