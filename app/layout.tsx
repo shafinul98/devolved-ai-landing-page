@@ -32,8 +32,7 @@ export const metadata: Metadata = {
     " decentralized governance model",
   ],
   openGraph: {
-    images:
-      "https://drive.google.com/file/d/1u-Exh17L_6PN7_GtaNQE3sCBZxmZ91c-/view?usp=sharing",
+    images: "https://ibb.co/0yHJY5x",
   },
 };
 
