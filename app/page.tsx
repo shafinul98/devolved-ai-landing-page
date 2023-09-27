@@ -273,7 +273,7 @@ export default function Home() {
           <div className="mt-10 flex flex-col gap-10 border-t-2 md:border-0 py-10 rounded-sm">
             <div className="flex flex-col items-center md:items-start gap-5">
               <Image src={Community} alt="" />
-              <h1 className="text-lg font-semibold text-[#2D3748]">
+              <h1 className="text-xl font-semibold text-[#2D3748]">
                 Community at the Core
               </h1>
               <p className="text-sm text-center text-[#646E73]">
@@ -340,7 +340,7 @@ export default function Home() {
             <div className="flex items-center md:items-start gap-5">
               <Image src={Rewards} alt="" width={50} />
               <div className="flex flex-col gap-y-2">
-                <h1 className="text-lg font-regular text-[#2D3748]">
+                <h1 className="text-[1rem] font-regular text-[#2D3748]">
                   Rewarding Contributions{" "}
                 </h1>
                 <p className="text-sm text-[#646E73]">
@@ -353,7 +353,7 @@ export default function Home() {
             <div className="flex items-center md:items-start gap-5">
               <Image src={LinkIcon} alt="" width={50} />
               <div className="flex flex-col gap-y-2">
-                <h1 className="text-lg font-regular text-[#2D3748]">
+                <h1 className="text-[1rem] font-regular text-[#2D3748]">
                   A Nexus for Visionaries{" "}
                 </h1>
                 <p className="text-sm text-[#646E73]">

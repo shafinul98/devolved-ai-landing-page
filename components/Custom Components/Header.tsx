@@ -52,7 +52,7 @@ const Header = () => {
               </div>
               <nav
                 id="sidenav-2"
-                className="fixed right-0 top-0 z-[1035] h-screen w-80 -translate-x-full overflow-hidden bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)] data-[te-sidenav-hidden='false']:translate-x-0 dark:bg-zinc-800"
+                className="fixed right-0 top-0 z-[1035] h-screen w-80 transition duration-500 -translate-x-full overflow-hidden bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)] data-[te-sidenav-hidden='false']:translate-x-0 dark:bg-zinc-800"
                 data-te-sidenav-init
                 data-te-sidenav-hidden="false"
                 data-te-sidenav-mode="side"
@@ -154,58 +154,8 @@ const Header = () => {
                 </ul>
               </nav>
             </div>
-
-            {/* <DropdownMenu>
-              <DropdownMenuTrigger className="px-5 py-1">
-                <div className="w-10 h-10 flex border items-center justify-center rounded-sm p-1">
-                  <Image src={MenuIcon} alt="Menu Icon" />
-                </div>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="min-h-screen">
-                <DropdownMenuItem>
-                  {" "}
-                  <Link className="ms-[5px]" href="/">
-                    Home
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link className="ms-[5px]" href="/about">
-                    About
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  {" "}
-                  <Link className="ms-[5px]" href="/core">
-                    Core
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  {" "}
-                  <Link className="ms-[5px]" href="/community">
-                    Community
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  {" "}
-                  <Link className="ms-[5px]" href="/governance">
-                    Governance
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  {" "}
-                  <Link className="ms-[5px]" href="/rewards">
-                    Rewards
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  {" "}
-                  <Link className="ms-[5px]" href="/contact">
-                    Contact
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu> */}
           </div>
+          {/* Mobile and Above NavBar */}
           <div className="p-3 xl:ms-0 lg:justify-center xl:justify-between items-center xl:gap-10 lg:gap-5 hidden lg:flex text-sm text-[#2D3748]">
             <Link className="text-[1rem]" href="/">
               Home
@@ -225,13 +175,13 @@ const Header = () => {
             <Link className="text-[1rem]" href="/rewards">
               Rewards
             </Link>
-            <Link className="text-[1rem] lg:pr-6 xl:pr-16" href="/contact">
+            <Link className="text-[1rem] lg:pr-6 xl:pr-8" href="/contact">
               Contact
             </Link>
             <EarlyAccessForm>
               <Button
                 title="Get Early Access"
-                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem]"
+                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem] xl:me-16"
               />
             </EarlyAccessForm>
           </div>

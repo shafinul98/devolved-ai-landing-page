@@ -73,10 +73,7 @@ export function ContactForm() {
 
   useEffect(() => {
     if (isMessageSent && formRef) {
-      setTimeout(() => {
-        form.reset();
-        setMessageSent(false);
-      }, 2000);
+      form.reset();
     }
   }, [isMessageSent]);
 
@@ -167,7 +164,7 @@ export function ContactForm() {
           />
         </div>
 
-        {isMessageSent === true ? (
+        {isMessageSent ? (
           <Alert className="w-1/2 bg-green-500 text-white">
             <AlertTitle>Your Message Has Been Sent</AlertTitle>
           </Alert>

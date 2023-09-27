@@ -38,7 +38,7 @@ export function EarlyAccessForm({
         },
         body: JSON.stringify({
           email_address: email,
-          status: "pending",
+          status: "subscribed",
         }),
       });
 
@@ -69,11 +69,9 @@ export function EarlyAccessForm({
                 Almost There!
               </DialogTitle>
               <DialogDescription className="text-start text-[1rem] my-2 text-[#646E73]">
-                Thank you for signing up for early access to Devolved AI's web
-                app! We're excited to have you join our community. To complete
-                your registration and confirm your early access spot, please
-                check your email and click the link we've sent you. Don't see
-                the email? Be sure to check your spam folder.
+                Thanks for signing up for early access! Please check your email
+                to confirm your subscription. If you don't see the email, be
+                sure to check your spam folder.
               </DialogDescription>
             </DialogHeader>
           </DialogContent>
@@ -103,9 +101,11 @@ export function EarlyAccessForm({
                 <Input
                   placeholder="Enter your email"
                   type="email"
-                  className="col-span-3"
+                  className="col-span-3 focus:outline-none"
                   required
                   onChange={(e) => setEmail(e.target.value)}
+                  onFocus={() => blur()}
+                  style={{ fontSize: "16px" }}
                 />
               </div>
             </div>

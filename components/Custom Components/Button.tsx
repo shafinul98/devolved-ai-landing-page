@@ -19,7 +19,7 @@ const Button = ({
     <button
       type={type}
       className={
-        `border rounded-md p-3 text-sm flex items-center justify-center gap-2 transition ease-in-out delay-150 hover:scale-105` +
+        `border rounded-md p-3 text-sm flex items-center justify-center gap-2 transition ease-in-out hover:scale-105` +
         extraStyles
       }
       disabled={disabled}
