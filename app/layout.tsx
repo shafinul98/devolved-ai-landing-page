@@ -31,6 +31,10 @@ export const metadata: Metadata = {
     " transparency reports",
     " decentralized governance model",
   ],
+  openGraph: {
+    images:
+      "https://drive.google.com/file/d/1u-Exh17L_6PN7_GtaNQE3sCBZxmZ91c-/view?usp=sharing",
+  },
 };
 
 export default function RootLayout({
