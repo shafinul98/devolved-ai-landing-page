@@ -31,9 +31,6 @@ export const metadata: Metadata = {
     " transparency reports",
     " decentralized governance model",
   ],
-  openGraph: {
-    images: "https://ibb.co/0yHJY5x",
-  },
 };
 
 export default function RootLayout({
@@ -43,6 +40,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:image" content="https://ibb.co/0yHJY5x" />
+      </head>
       <body className={`${lato.className} grid`} style={{ userSelect: "none" }}>
         <Header />
         {children}
