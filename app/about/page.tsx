@@ -18,6 +18,7 @@ import Tahlil from "../../public/tahlil.png";
 import Lamima from "../../public/Lamima.jpg";
 import Samir from "../../public/Samir.jpg";
 import Shafin from "../../public/Shafinul.png";
+import Ariful from "../../public/Ariful.jpg";
 
 import Image from "next/image";
 import TeamMemberCard from "@/components/Custom Components/Team Member Card";
@@ -145,7 +146,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full px-3 mx-auto bg-[#f5f5f5]">
+      <section className="w-full px-3 mx-aut0 bg-[#f5f5f5]">
         <div className="mt-[1rem] md:mt-[4rem]">
           <h1 className="text-[#0074D9] md:text-[1rem] text-center">
             OUR TEAM
@@ -215,7 +216,7 @@ const About = () => {
                   "https://www.linkedin.com/in/lamima-tabassum-ava",
                   "https://twitter.com/AvaLamima17577",
                 ]}
-                cardTitle="Lamima"
+                cardTitle="Lamima Tabassum Ava"
                 hasGitHub={true}
                 hasTwitter={true}
                 hasLinkedIn={true}
@@ -228,7 +229,7 @@ const About = () => {
                   "https://www.linkedin.com/in/mahfuzzur-rahman-samir/",
                   "https://x.com/rahmanmahfuzzur?s=21&t=ItQTV17i_DjsOjCmwO3JTg",
                 ]}
-                cardTitle="Mahfuzzur"
+                cardTitle="Mahfuzzur Rahman Samir"
                 hasGitHub={true}
                 hasTwitter={true}
                 hasLinkedIn={true}
@@ -241,7 +242,20 @@ const About = () => {
                   "https://www.linkedin.com/in/shafinulislam/",
                   "https://twitter.com/ShafinulIs10648",
                 ]}
-                cardTitle="Shafinul"
+                cardTitle="Shafinul Islam"
+                hasGitHub={true}
+                hasTwitter={true}
+                hasLinkedIn={true}
+              />
+              <TeamMemberCard
+                cardImage={Ariful}
+                cardDescription="Junior Blockchain Developer"
+                cardFooter={[
+                  "https://github.com/shafoo98",
+                  "https://www.linkedin.com/in/shafinulislam/",
+                  "https://twitter.com/ShafinulIs10648",
+                ]}
+                cardTitle="Md. Ariful Islam"
                 hasGitHub={true}
                 hasTwitter={true}
                 hasLinkedIn={true}
@@ -340,6 +354,19 @@ const About = () => {
               hasTwitter={true}
               hasLinkedIn={true}
             />
+            <TeamMemberCard
+              cardImage={Ariful}
+              cardDescription="Junior Blockchain Developer"
+              cardFooter={[
+                "https://github.com/shafoo98",
+                "https://www.linkedin.com/in/shafinulislam/",
+                "https://twitter.com/ShafinulIs10648",
+              ]}
+              cardTitle="Md. Ariful Islam"
+              hasGitHub={true}
+              hasTwitter={true}
+              hasLinkedIn={true}
+            />
           </div>
         </div>
       </section>
@@ -432,7 +459,7 @@ const About = () => {
         </article>
       </section>
 
-      <section className="w-full my-10 px-10 place-items-center lg:hidden mb-20">
+      <section className="w-full my-10 px-2 place-items-center lg:hidden mb-20">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-[#0074D9] text-center">BLOGS</h1>
           <h1 className="text-[#2D3748] text-center font-bold text-2xl">
