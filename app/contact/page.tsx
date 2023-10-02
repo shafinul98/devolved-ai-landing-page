@@ -126,16 +126,12 @@ const ContactPage = () => {
         </p>
 
         <div className="px-5 mt-10 md:w-1/2 3xl:container 3xl:w-full 3xl:px-28 mx-auto">
-          <Accordion
-            type="single"
-            collapsible
-            className="w-full text-base sm:max-md:text-start"
-          >
+          <Accordion type="single" collapsible className="w-full">
             <AccordionItem
               value="item-1"
-              className="shadow-lg px-5 py-2 rounded-xl my-3"
+              className="shadow-md px-5 rounded-xl my-3"
             >
-              <AccordionTrigger className="font-bold text-[#2D3748]">
+              <AccordionTrigger className="font-bold text-[#2D3748] text-start">
                 What is DevolvedAI?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
@@ -147,7 +143,7 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-2"
-              className="shadow-lg px-5 py-2  rounded-xl my-3"
+              className="shadow-md px-5 rounded-xl my-3"
             >
               <AccordionTrigger className="font-bold text-[#2D3748]">
                 How do I earn Argocoin (AGC)?
@@ -160,9 +156,9 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-3"
-              className="shadow-lg px-5 py-2 text-start rounded-xl my-3"
+              className="shadow-md px-5 text-start rounded-xl my-3"
             >
-              <AccordionTrigger className="font-bold text-[#2D3748]">
+              <AccordionTrigger className="font-bold text-[#2D3748] text-start">
                 Can I redeem AGC for other cryptocurrencies?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
@@ -172,9 +168,9 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-4"
-              className="shadow-lg px-5 py-2  rounded-xl my-3"
+              className="shadow-md px-5  rounded-xl my-3"
             >
-              <AccordionTrigger className="font-bold text-[#2D3748]">
+              <AccordionTrigger className="font-bold text-[#2D3748] text-start">
                 How does the voting process work?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
@@ -186,9 +182,9 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-5"
-              className="shadow-lg px-5 py-2  rounded-xl my-3"
+              className="shadow-md px-5  rounded-xl my-3"
             >
-              <AccordionTrigger className="font-bold text-[#2D3748]">
+              <AccordionTrigger className="font-bold text-[#2D3748] text-start">
                 How can I contribute to AI training?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
@@ -199,9 +195,9 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-6"
-              className="shadow-lg px-5 py-2  rounded-xl my-3"
+              className="shadow-md px-5  rounded-xl my-3"
             >
-              <AccordionTrigger className="font-bold text-[#2D3748]">
+              <AccordionTrigger className="font-bold text-[#2D3748] text-start">
                 Is my data secure?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
@@ -211,9 +207,9 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-7"
-              className="shadow-lg px-5 py-2  rounded-xl my-3"
+              className="shadow-md px-5  rounded-xl my-3"
             >
-              <AccordionTrigger className="font-bold text-[#2D3748]">
+              <AccordionTrigger className="font-bold text-[#2D3748] text-start">
                 How do I get technical support?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
@@ -223,9 +219,9 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-8"
-              className="shadow-lg px-5 py-2  rounded-xl my-3"
+              className="shadow-md px-5  rounded-xl my-3"
             >
-              <AccordionTrigger className="font-bold text-[#2D3748]">
+              <AccordionTrigger className="font-bold text-[#2D3748] text-start">
                 Where can I find the Transparency Report?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
@@ -236,9 +232,9 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-9"
-              className="shadow-lg px-5 py-2  rounded-xl my-3"
+              className="shadow-md px-5  rounded-xl my-3"
             >
-              <AccordionTrigger className="font-bold text-[#2D3748]">
+              <AccordionTrigger className="font-bold text-[#2D3748] text-start">
                 How can I stay updated with Devolved AI's developments?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">
@@ -248,9 +244,9 @@ const ContactPage = () => {
             </AccordionItem>
             <AccordionItem
               value="item-10"
-              className="shadow-lg px-5 py-2  rounded-xl my-3"
+              className="shadow-md px-5  rounded-xl my-3"
             >
-              <AccordionTrigger className="font-bold text-[#2D3748]">
+              <AccordionTrigger className="font-bold text-[#2D3748] text-start">
                 How can I get involved?
               </AccordionTrigger>
               <AccordionContent className="text-[#646E73] font-normal text-base">

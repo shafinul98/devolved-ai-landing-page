@@ -9,6 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+
 import { Input } from "@/components/ui/input";
 
 import Image from "next/image";
@@ -16,6 +17,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 import DevolvedAIHeroLogo from "../../public/Devolved AI Hero Logo.svg";
+
 import { Button } from "../ui/button";
 
 export function EarlyAccessForm({
