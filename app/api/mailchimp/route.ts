@@ -6,8 +6,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
   const { email_address, status } = data;
 
-  console.log(email_address, status);
-
   mailchimp.setConfig({
     apiKey: process.env.MAILCHIMP_API_KEY,
     server: process.env.MAILCHIMP_API_SERVER,
@@ -22,8 +20,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
         tags: ["early access"],
       }
     );
-    return NextResponse.json({ message: res });
-  } catch (err) {
-    return NextResponse.json({ error: err });
+    return NextResponse.json({ message: res, status: 200 });
+  } catch (error) {
+    return NextResponse.json({ error, status: 400 });
   }
 }

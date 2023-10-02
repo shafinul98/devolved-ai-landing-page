@@ -19,6 +19,7 @@ import { useState } from "react";
 import DevolvedAIHeroLogo from "../../public/Devolved AI Hero Logo.svg";
 
 import { Button } from "../ui/button";
+import { Alert } from "../ui/alert";
 
 export function EarlyAccessForm({
   children,
@@ -31,6 +32,10 @@ export function EarlyAccessForm({
 
   const [isEmailValid, setIsEmailValid] = useState(true);
 
+  const [isError, setIsError] = useState(false);
+
+  const [error, setError] = useState("");
+
   const validateEmail = (input: any) => {
     const isValid = /\S+@\S+\.\S+/.test(input);
     setIsEmailValid(isValid);
@@ -39,23 +44,26 @@ export function EarlyAccessForm({
   const [isSignedUp, setIsSignedUp] = useState(false);
 
   const submitHandler = async () => {
-    try {
-      const res = await fetch("/api/mailchimp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email_address: email,
-          status: "subscribed",
-        }),
-      });
+    const res = await fetch("/api/mailchimp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email_address: email,
+        status: "subscribed",
+      }),
+    });
 
-      if (res.status === 200) {
-        setIsSignedUp(true);
-      }
-    } catch (error) {
-      setIsSignedUp(false);
+    const { error, status } = await res.json();
+
+    if (status === 200) {
+      setIsSignedUp(true);
+    }
+
+    if (status === 400) {
+      setError(JSON.parse(error?.response?.text).detail);
+      setIsError(true);
     }
   };
 
@@ -123,13 +131,19 @@ export function EarlyAccessForm({
               </div>
             </div>
             <DialogFooter>
-              <Button
-                onClick={submitHandler}
-                disabled={email === "" || !isEmailValid}
-                className="mx-auto bg-[#377DFF] font-bold text-white"
-              >
-                Get Early Access
-              </Button>
+              {isError ? (
+                <Alert className="mx-auto bg-[#ff3737] font-bold text-sm text-white">
+                  Error in Signing Up: {error}
+                </Alert>
+              ) : (
+                <Button
+                  onClick={submitHandler}
+                  disabled={email === "" || !isEmailValid}
+                  className="mx-auto bg-[#377DFF] font-bold text-white"
+                >
+                  Get Early Access
+                </Button>
+              )}
             </DialogFooter>
           </DialogContent>
         </Dialog>
