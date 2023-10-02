@@ -29,6 +29,13 @@ export function EarlyAccessForm({
 }) {
   const [email, setEmail] = useState("");
 
+  const [isEmailValid, setIsEmailValid] = useState(true);
+
+  const validateEmail = (input: any) => {
+    const isValid = /\S+@\S+\.\S+/.test(input);
+    setIsEmailValid(isValid);
+  };
+
   const [isSignedUp, setIsSignedUp] = useState(false);
 
   const submitHandler = async () => {
@@ -105,7 +112,10 @@ export function EarlyAccessForm({
                   type="email"
                   className="col-span-3 focus:outline-none"
                   required
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    validateEmail(e.target.value);
+                  }}
                   onFocus={() => blur}
                   tabIndex={-1}
                   style={{ fontSize: "16px" }}
@@ -115,7 +125,7 @@ export function EarlyAccessForm({
             <DialogFooter>
               <Button
                 onClick={submitHandler}
-                disabled={email === ""}
+                disabled={email === "" || !isEmailValid}
                 className="mx-auto bg-[#377DFF] font-bold text-white"
               >
                 Get Early Access
