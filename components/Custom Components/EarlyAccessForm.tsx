@@ -106,7 +106,8 @@ export function EarlyAccessForm({
                   className="col-span-3 focus:outline-none"
                   required
                   onChange={(e) => setEmail(e.target.value)}
-                  onFocus={() => blur()}
+                  onFocus={() => blur}
+                  tabIndex={-1}
                   style={{ fontSize: "16px" }}
                 />
               </div>
