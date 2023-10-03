@@ -83,6 +83,23 @@ const TeamMemberCard = ({
               <FaTwitter />
             </Link>
           </div>
+        ) : hasGitHub && hasLinkedIn ? (
+          <div className="flex gap-x-5">
+            <Link
+              href={`${cardFooter[0]}`}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FaGithub />
+            </Link>
+            <Link
+              href={`${cardFooter[1]}`}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FaLinkedin />
+            </Link>
+          </div>
         ) : (
           hasLinkedIn && (
             <div className="flex gap-x-5">

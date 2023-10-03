@@ -36,106 +36,96 @@ const Header = () => {
               <Image src={MenuIcon} alt="Menu Icon" />
             </div>
 
-            <div className={!isMenuOpen ? "hidden" : "flex w-full"}>
-              <div
-                className={
-                  isMenuOpen
-                    ? "fixed z-50 right-0 top-0 w-[60%] h-full border-r border-r-gray-400 bg-[#FFF] transition ease-in duration-1000"
-                    : "fixed transition right-[-100%] ease-out duration-1000"
-                }
-              >
-                <div className="flex items-center md:justify-between justify-center pt-1 px-2">
-                  <Link href={"/"} className="xl:pr-28 2xl:me-auto 2xl:pl-12">
-                    <Image
-                      src={Logo}
-                      alt="Devolved AI Logo"
-                      quality={100}
-                      className="w-full"
-                    />
-                  </Link>
-                  <div
-                    className="w-10 h-10 flex items-center justify-center rounded-sm p-1"
-                    onClick={() => {
-                      setIsMenuOpen(!isMenuOpen);
-                    }}
-                  >
-                    <AiOutlineClose />
-                  </div>
+            <div
+              className={
+                isMenuOpen
+                  ? "fixed z-50 right-0 top-0 w-[40%] h-full bg-[#FFF] ease-in duration-500"
+                  : "fixed z-50 right-[-100%] ease-in duration-500"
+              }
+            >
+              <div className="flex items-center md:justify-between justify-end pt-1 px-2">
+                <div
+                  className="w-10 h-10 flex items-center justify-end rounded-sm p-1"
+                  onClick={() => {
+                    setIsMenuOpen(!isMenuOpen);
+                  }}
+                >
+                  <AiOutlineClose />
                 </div>
-
-                <ul className="uppercase pt-5 min-h-screen flex flex-col gap-5 items-start pl-5">
-                  <li
-                    className="relative"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <Link className="ms-[5px]" href="/">
-                      Home
-                    </Link>
-                  </li>
-                  <li
-                    className="relative"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <Link className="ms-[5px]" href="/about">
-                      About
-                    </Link>
-                  </li>
-                  <li
-                    className="relative"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <Link className="ms-[5px]" href="/core">
-                      Core
-                    </Link>
-                  </li>
-                  <li
-                    className="relative"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <Link className="ms-[5px]" href="/community">
-                      Community
-                    </Link>
-                  </li>
-                  <li
-                    className="relative"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <Link className="ms-[5px]" href="/governance">
-                      Governance
-                    </Link>
-                  </li>
-                  <li
-                    className="relative"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <Link className="ms-[5px]" href="/rewards">
-                      Rewards
-                    </Link>
-                  </li>
-                  <li
-                    className="relative"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <Link className="ms-[5px]" href="/contact">
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
               </div>
+
+              <ul className="uppercase pt-5 min-h-screen flex flex-col gap-5 items-start pl-5">
+                <li
+                  className="relative"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <Link className="ms-[5px]" href="/">
+                    Home
+                  </Link>
+                </li>
+                <li
+                  className="relative"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <Link className="ms-[5px]" href="/about">
+                    About
+                  </Link>
+                </li>
+                <li
+                  className="relative"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <Link className="ms-[5px]" href="/core">
+                    Core
+                  </Link>
+                </li>
+                <li
+                  className="relative"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <Link className="ms-[5px]" href="/community">
+                    Community
+                  </Link>
+                </li>
+                <li
+                  className="relative"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <Link className="ms-[5px]" href="/governance">
+                    Governance
+                  </Link>
+                </li>
+                <li
+                  className="relative"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <Link className="ms-[5px]" href="/rewards">
+                    Rewards
+                  </Link>
+                </li>
+                <li
+                  className="relative"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <Link className="ms-[5px]" href="/contact">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
 

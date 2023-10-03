@@ -17,6 +17,7 @@ import Justin from "../../public/Justin.jpeg";
 import Tahlil from "../../public/tahlil.png";
 import Lamima from "../../public/Lamima.jpg";
 import Samir from "../../public/Samir.jpg";
+import Mahfuzzur from "../../public/Mahfuzzur.jpg";
 import Shafin from "../../public/Shafinul.png";
 import Ariful from "../../public/Ariful.jpg";
 
@@ -222,7 +223,7 @@ const About = () => {
                 hasLinkedIn={true}
               />
               <TeamMemberCard
-                cardImage={Samir}
+                cardImage={Mahfuzzur}
                 cardDescription="Associate Machine Learning Engineer"
                 cardFooter={[
                   "https://github.com/Mahfuzzur-Rahman",
@@ -251,13 +252,13 @@ const About = () => {
                 cardImage={Ariful}
                 cardDescription="Junior Blockchain Developer"
                 cardFooter={[
-                  "https://github.com/shafoo98",
-                  "https://www.linkedin.com/in/shafinulislam/",
-                  "https://twitter.com/ShafinulIs10648",
+                  "https://github.com/arifulislam99",
+                  "https://www.linkedin.com/in/marifulislam099/",
+                  "",
                 ]}
                 cardTitle="Md. Ariful Islam"
                 hasGitHub={true}
-                hasTwitter={true}
+                hasTwitter={false}
                 hasLinkedIn={true}
               />
             </Carousel>
@@ -329,7 +330,7 @@ const About = () => {
               hasLinkedIn={true}
             />
             <TeamMemberCard
-              cardImage={Samir}
+              cardImage={Mahfuzzur}
               cardDescription="Associate ML Engineer"
               cardFooter={[
                 "https://github.com/Mahfuzzur-Rahman",
@@ -358,13 +359,13 @@ const About = () => {
               cardImage={Ariful}
               cardDescription="Junior Blockchain Developer"
               cardFooter={[
-                "https://github.com/shafoo98",
-                "https://www.linkedin.com/in/shafinulislam/",
-                "https://twitter.com/ShafinulIs10648",
+                "https://github.com/arifulislam99",
+                "https://www.linkedin.com/in/marifulislam099/",
+                "",
               ]}
               cardTitle="Md. Ariful Islam"
               hasGitHub={true}
-              hasTwitter={true}
+              hasTwitter={false}
               hasLinkedIn={true}
             />
           </div>

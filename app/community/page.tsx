@@ -411,17 +411,24 @@ const CommunityPage = () => {
             valued, creating a rewarding and dynamic ecosystem you'll want to be
             a part of.
           </p>
-          <div className="flex justify-center gap-x-2">
+          <div className="flex justify-center mx-auto gap-x-2">
             <EarlyAccessForm>
               <Button
                 title="Get Early Access"
                 extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem]"
               />
             </EarlyAccessForm>
-            <Button
-              title="Whitepaper"
-              extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-light"
-            />
+            <a
+              target="_blank"
+              href="https://devolved-ai.gitbook.io/devolved-ai-whitepaper/"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              <Button
+                title="Whitepaper"
+                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full h-16 text-center md:w-[8.75rem] md:h-[2.625rem] font-light"
+              />
+            </a>
           </div>
         </div>
       </section>

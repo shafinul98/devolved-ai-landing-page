@@ -200,7 +200,7 @@ const RewardsPage = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center md:justify-center mx-5 md:mx-18 mt-[5rem] mb-10">
-          <article className="w-full xl:w-[25rem] xl:h-[20rem] lg:w-[15rem] lg:h-[20rem] md:w-[12rem] md:h-[30rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
+          <article className="w-full xl:w-[25rem] xl:h-[15rem] lg:w-[15rem] lg:h-[20rem] md:w-[12rem] md:h-[30rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
             <h1 className="text-[1.25rem] text-[#2D3748] font-normal text-start my-4">
               Reward Tiers
             </h1>
@@ -208,16 +208,8 @@ const RewardsPage = () => {
               Different levels of contributions come with varying tiers of
               rewards, allowing you to earn more as you contribute more.
             </p>
-            <Link
-              href={"#"}
-              rel="noopener noreferrer"
-              target="_blank"
-              className="text-[#377DFF] text-end md:mt-24 lg:mt-12"
-            >
-              Download Report
-            </Link>
           </article>
-          <article className="w-full xl:w-[25rem] xl:h-[20rem] lg:w-[15rem] lg:h-[20rem] md:w-[12rem] md:h-[30rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
+          <article className="w-full xl:w-[25rem] xl:h-[15rem] lg:w-[15rem] lg:h-[20rem] md:w-[12rem] md:h-[30rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
             <h1 className="text-[1.25rem] text-[#2D3748] font-normal text-start my-4 lg:my-1.5">
               Redeemable Benefits
             </h1>
@@ -226,16 +218,8 @@ const RewardsPage = () => {
               the Devolved AI ecosystem but can also be redeemed for USDT, ETH
               and BNB on their respective blockchains via a wrapped AGC.
             </p>
-            <Link
-              href={"#"}
-              rel="noopener noreferrer"
-              target="_blank"
-              className="text-[#377DFF] text-end xl:mt-11 md:mt-5 lg:mt-0"
-            >
-              Download Report
-            </Link>
           </article>
-          <article className="w-full xl:w-[25rem] xl:h-[20rem] lg:w-[15rem] lg:h-[20rem] md:w-[12rem] md:h-[30rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
+          <article className="w-full xl:w-[25rem] xl:h-[15rem] lg:w-[15rem] lg:h-[20rem] md:w-[12rem] md:h-[30rem] flex flex-col my-5 p-5 mx-5 shadow-lg rounded-lg bg-[#f5f5f5]">
             <h1 className="text-[1.25rem] text-[#2D3748] font-normal text-start my-4">
               Long-Term Incentives
             </h1>
@@ -243,14 +227,6 @@ const RewardsPage = () => {
               Consistent contributions are recognized and rewarded with
               long-term incentives, ensuring sustained community engagement.
             </p>
-            <Link
-              href={"#"}
-              rel="noopener noreferrer"
-              target="_blank"
-              className="text-[#377DFF] text-end lg:mt-12 md:mt-16"
-            >
-              Download Report
-            </Link>
           </article>
         </div>
       </section>
