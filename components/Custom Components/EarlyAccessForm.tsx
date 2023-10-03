@@ -59,6 +59,15 @@ export function EarlyAccessForm({
 
     if (status === 200) {
       setIsSignedUp(true);
+      const response = await fetch("/api/mailchimp/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+        }),
+      });
     }
 
     if (status === 400) {
