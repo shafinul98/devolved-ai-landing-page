@@ -4,7 +4,7 @@ import Image from "next/image";
 
 type BlogCardProps = {
   blogTitle: string;
-  blogImage: any;
+  blogImage: string;
   blogDescription: string;
   blogLink: string;
   extraStyles?: string;
@@ -27,8 +27,10 @@ const BlogCard: React.FC<BlogCardProps> = ({
     >
       {/* Image */}
       <Image
-        src={blogImage}
+        src={`${blogImage}`}
         alt={blogTitle}
+        width={500}
+        height={500}
         className={imageStyles + "md:w-[150rem] md:h-[18.5rem]"}
       />
       {/* Blog Title */}
@@ -41,7 +43,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
       <p className="text-gray-600 text-sm text-start mb-5">{blogDescription}</p>
       {/* Blog Link */}
       <Link
-        href="#"
+        href={blogLink}
         rel="noopener noreferrer"
         target="_blank"
         className="text-blue-500 text-end "

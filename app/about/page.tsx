@@ -1,15 +1,11 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import AboutHeroImage from "../../public/About Page Hero Image.webp";
 import AboutHeroIllustration from "../../public/About Page Hero Illustration.webp";
 import FuturePlansImage from "../../public/Future Plans Image.webp";
 import FuturePlansImageCurved from "../../public/Future Plans Curved Image.webp";
-
-import BlogsOnePicture from "../../public/Blogs One Picture.webp";
-import BlogsTwoPicture from "../../public/Blogs Two Picture.webp";
-import BlogsThreePicture from "../../public/Blogs Three Picture.webp";
 
 import Nathan from "../../public/Nathan.jpeg";
 import Nazmul from "../../public/Nazmul.jpg";
@@ -24,11 +20,37 @@ import Ariful from "../../public/Ariful.jpg";
 import Image from "next/image";
 import TeamMemberCard from "@/components/Custom Components/Team Member Card";
 import Carousel from "@/components/Custom Components/Carousel";
+import BlogCarousel from "@/components/Custom Components/BlogCarousel";
 import MilestoneCard from "@/components/Custom Components/MilestoneCard";
 import BlogCard from "@/components/Custom Components/BlogCard";
 import Button from "@/components/Custom Components/Button";
 
 const About = () => {
+  type Blog = {
+    _id: string;
+    title: string;
+    slug: string;
+    description: string;
+    image: string;
+  }[];
+
+  const [blogs, setBlogs] = useState<Blog>([]);
+
+  const fetchBlogs = async () => {
+    const response = await fetch("/api/blogs", {
+      method: "GET",
+    });
+
+    return await response.json();
+  };
+
+  useEffect(() => {
+    fetchBlogs().then(({ data }) => {
+      setBlogs(data);
+      console.log(blogs);
+    });
+  }, []);
+
   useEffect(() => {
     // Disable right-click
     const handleContextMenu = (event: MouseEvent) => {
@@ -466,21 +488,22 @@ const About = () => {
           <h1 className="text-[#2D3748] text-center font-bold text-2xl">
             Press & Media
           </h1>
-          <Carousel extraStyles="h-72" bottomStyle="bottom-1">
-            <BlogCard
-              blogTitle="Increasing Prosperity With Positive Thinking"
-              blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-              blogImage={BlogsOnePicture}
-              blogLink="/blogs/1"
-            />
-            <BlogCard
-              blogTitle="Increasing Prosperity With Positive Thinking"
-              blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-              blogImage={BlogsTwoPicture}
-              blogLink="/blogs/2"
-            />
-          </Carousel>
-
+          {blogs.length > 0 ? (
+            <Carousel extraStyles="h-72" bottomStyle="bottom-1">
+              {blogs.map((data) => {
+                return (
+                  <BlogCard
+                    blogTitle={data.title}
+                    blogDescription={data.description}
+                    blogImage={data.image}
+                    blogLink={`/blog/${data.slug}`}
+                  />
+                );
+              })}
+            </Carousel>
+          ) : (
+            <p>No blogs found</p>
+          )}
           <Button
             title="View all"
             extraStyles=" bg-blue-500 text-white mt-10"
@@ -494,52 +517,28 @@ const About = () => {
           <h1 className="text-[#2D3748] text-center font-bold text-2xl">
             Press & Media
           </h1>
-          <Carousel extraStyles="h-72 " bottomStyle="bottom-1">
-            <div className="flex gap-[0.9375rem] px-5 justify-center items-center">
-              <BlogCard
-                blogTitle="Increasing Prosperity With Positive Thinking"
-                blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-                blogImage={BlogsOnePicture}
-                blogLink="/blogs/1"
-              />
-              <BlogCard
-                blogTitle="Increasing Prosperity With Positive Thinking"
-                blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-                blogImage={BlogsTwoPicture}
-                blogLink="/blogs/2"
-              />
-              <BlogCard
-                blogTitle="Increasing Prosperity With Positive Thinking"
-                blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-                blogImage={BlogsThreePicture}
-                blogLink="/blogs/2"
-              />
+          {blogs.length > 0 ? (
+            <div className="w-10/12">
+              <BlogCarousel bottomStyle="1">
+                {blogs.map((blog) => {
+                  return (
+                    <BlogCard
+                      blogTitle={blog.title}
+                      blogDescription={blog.description}
+                      blogImage={blog.image}
+                      blogLink={`/blog/${blog.slug}`}
+                    />
+                  );
+                })}
+              </BlogCarousel>
             </div>
-            <div className="flex gap-[0.9375rem] px-5 justify-center items-center">
-              <BlogCard
-                blogTitle="Increasing Prosperity With Positive Thinking"
-                blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-                blogImage={BlogsOnePicture}
-                blogLink="/blogs/1"
-              />
-              <BlogCard
-                blogTitle="Increasing Prosperity With Positive Thinking"
-                blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-                blogImage={BlogsTwoPicture}
-                blogLink="/blogs/2"
-              />
-              <BlogCard
-                blogTitle="Increasing Prosperity With Positive Thinking"
-                blogDescription="Much more than a bank, fastest and most convenient financial and administrative co-driver to work with."
-                blogImage={BlogsThreePicture}
-                blogLink="/blogs/2"
-              />
-            </div>
-          </Carousel>
+          ) : (
+            <p>No blogs found</p>
+          )}
 
           <Button
             title="View all"
-            extraStyles=" bg-blue-500 mt-10 w-[8.625rem] h-[2.625rem] mb-[3.5rem] border-[#0074D9] bg-white text-[#0074D9]"
+            extraStyles=" bg-blue-500 mt-20 w-[8.625rem] h-[2.625rem] mb-[3.5rem] border-[#0074D9] bg-white text-[#0074D9]"
             hasRightArrowIcon={true}
           />
         </div>

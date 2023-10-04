@@ -39,7 +39,7 @@ const Footer = () => {
               target="_blank"
               href="https://devolved-ai.gitbook.io/devolved-ai-whitepaper/"
               rel="noopener noreferrer"
-              className="w-full"
+              className="w-full 3xl:w-[8.75rem]"
             >
               <Button
                 title="Whitepaper"
