@@ -522,12 +522,14 @@ const About = () => {
               <BlogCarousel bottomStyle="1">
                 {blogs.map((blog) => {
                   return (
-                    <BlogCard
-                      blogTitle={blog.title}
-                      blogDescription={blog.description}
-                      blogImage={blog.image}
-                      blogLink={`/blog/${blog.slug}`}
-                    />
+                    <div key={blog._id}>
+                      <BlogCard
+                        blogTitle={blog.title}
+                        blogDescription={blog.description}
+                        blogImage={blog.image}
+                        blogLink={`/blog/${blog.slug}`}
+                      />
+                    </div>
                   );
                 })}
               </BlogCarousel>
