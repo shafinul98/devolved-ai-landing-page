@@ -65,7 +65,14 @@ const Header = () => {
               }
             >
               <div className="flex items-center md:justify-between justify-start pt-1 px-2">
-                <div className="w-10 h-10 flex items-center justify-end rounded-sm p-1"></div>
+                <div
+                  className="w-10 h-10 flex items-center justify-end rounded-sm p-1"
+                  onClick={() => {
+                    setIsMenuOpen(!isMenuOpen);
+                  }}
+                >
+                  <AiOutlineClose />
+                </div>
               </div>
 
               <ul className="uppercase pt-5 min-h-screen flex flex-col gap-5 items-start pl-5">
