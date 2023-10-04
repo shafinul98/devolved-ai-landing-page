@@ -492,12 +492,14 @@ const About = () => {
             <Carousel extraStyles="h-72" bottomStyle="bottom-1">
               {blogs.map((data) => {
                 return (
-                  <BlogCard
-                    blogTitle={data.title}
-                    blogDescription={data.description}
-                    blogImage={data.image}
-                    blogLink={`/blog/${data.slug}`}
-                  />
+                  <div key={data._id}>
+                    <BlogCard
+                      blogTitle={data.title}
+                      blogDescription={data.description}
+                      blogImage={data.image}
+                      blogLink={`/blog/${data.slug}`}
+                    />
+                  </div>
                 );
               })}
             </Carousel>
