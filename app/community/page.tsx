@@ -399,7 +399,7 @@ const CommunityPage = () => {
         </div>
       </section>
 
-      <section className="w-full p-7 md:p-20 mb-20 bg-[#F5F5F5]">
+      <section className="w-full p-6 md:p-20 mb-20 bg-[#F5F5F5]">
         <div className="flex flex-col gap-3 md:gap-6 text-center">
           <h3 className="text-[1.5625rem] md:text-3xl font-bold text-[#2D3748]">
             Why Devolved AI Community is Unique
@@ -411,7 +411,7 @@ const CommunityPage = () => {
             valued, creating a rewarding and dynamic ecosystem you'll want to be
             a part of.
           </p>
-          <div className="flex justify-center mx-auto gap-x-2">
+          <div className="flex justify-center md:mx-auto gap-x-1.5">
             <EarlyAccessForm>
               <Button
                 title="Get Early Access"
@@ -426,7 +426,7 @@ const CommunityPage = () => {
             >
               <Button
                 title="Whitepaper"
-                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full h-16 text-center md:w-[8.75rem] md:h-[2.625rem] font-light"
+                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-light"
               />
             </a>
           </div>

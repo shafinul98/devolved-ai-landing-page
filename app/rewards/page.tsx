@@ -173,25 +173,25 @@ const RewardsPage = () => {
             <div className="flex flex-col items-start px-10 gap-3">
               <div className="flex items-center space-x-2">
                 <Image src={CheckIconYellow} alt="Blue tick" />
-                <p className="text-[#2D3748] text-[1rem] font-normal">
+                <p className="text-[#2D3748] text-[1rem] font-normal text-start">
                   Lifetime Updates & Introduction and Working
                 </p>
               </div>
               <div className="flex items-center space-x-2">
                 <Image src={CheckIconYellow} alt="Blue tick" />
-                <p className="text-[#2D3748] text-[1rem] font-normal">
+                <p className="text-[#2D3748] text-[1rem] font-normal text-start">
                   Tech support & Mutual Funds
                 </p>
               </div>
               <div className="flex items-center space-x-2">
                 <Image src={CheckIconYellow} alt="Blue tick" />
-                <p className="text-[#2D3748] text-[1rem] font-normal">
+                <p className="text-[#2D3748] text-[1rem] font-normal text-start">
                   Tons of assets & Lifetime Updates
                 </p>
               </div>
               <div className="flex items-center space-x-2">
                 <Image src={CheckIconYellow} alt="Blue tick" />
-                <p className="text-[#2D3748] text-[1rem] font-normal">
+                <p className="text-[#2D3748] text-[1rem] font-normal text-start">
                   Integration ready & Tech support
                 </p>
               </div>

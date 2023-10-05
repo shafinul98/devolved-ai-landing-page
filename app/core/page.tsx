@@ -126,7 +126,7 @@ const TechnologyPage = () => {
               imageStyles="mx-auto my-2 "
             />
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 md:px-10">
             <CoreDetailsCard
               title="Argocoin (AGC)"
               description="AGC is not just a cryptocurrency; it's the lifeblood of the Devolved AI ecosystem. Designed to incentivize and empower community participation, AGC holders enjoy benefits like governance rights, staking rewards, and access to exclusive community events."
@@ -146,7 +146,7 @@ const TechnologyPage = () => {
               imageStyles="mx-auto my-2 "
             />
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 md:px-10">
             <CoreDetailsCard
               title="Security Infrastructure"
               description="We take data privacy and network integrity very seriously. Our state-of-the-art security measures include advanced encryption algorithms, multi-signature wallets, and regular security audits to ensure that your data is always safe."
@@ -166,7 +166,7 @@ const TechnologyPage = () => {
               imageStyles="mx-auto my-2 "
             />
           </div>
-          <div className="flex flex-col gap-5 px-5">
+          <div className="flex flex-col gap-5 md:px-10">
             <CoreDetailsCard
               title="Smart Contracts"
               description="Our platform supports self-executing smart contracts that facilitate, verify, and enforce credible transactions without the need for intermediaries. This not only speeds up processes but also reduces costs and risks associated with manual interventions."

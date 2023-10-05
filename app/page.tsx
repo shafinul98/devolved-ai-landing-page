@@ -43,7 +43,7 @@ export default function Home() {
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
       <section className="w-full md:bg-[#f5f5f5]" id="curved-rectangle">
         <div className="flex flex-col items-center md:flex-row md:justify-center md:p-12 md:pl-12 lg:px-16 lg:pl-[4rem] xl:px-28 xl:pl-32 2xl:pl-[7.5rem] 3xl:container md:mt-[2.1rem]">
-          <div className="flex flex-col mb-10 md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
+          <div className="flex flex-col md:gap-5 mb-10 md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
             <h1 className="font-bold text-[2rem] text-start md:text-[3rem] md:leading-[1.15] text-[#2D3748]">
               Empowering <span className="text-[#0074D9]">You</span> to Shape
               the Future of Artificial Intelligence
@@ -53,7 +53,7 @@ export default function Home() {
               on Earth. This is your chance to not just witness, but to actively
               shape that transformation.
             </p>
-            <div className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-5 mt-2.5">
+            <div className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-5 mt-2.5 md:mt-5">
               <EarlyAccessForm>
                 <Button
                   title="Get Early Access"
@@ -200,7 +200,7 @@ export default function Home() {
             alt="Steve Jobs"
             className="w-full md:w-1/2 lg:w-full mt-[2rem] ms-5 xl:ms-16 2xl:ms-0 xl:h-[35rem] xl:w-[32.5rem]"
           />
-          <div className="flex-col py-16 space-y-7 text-start mt-[3rem] w-[36.9375rem] h-[24.3125rem] 2xl:w-[50rem] ms-[2rem] xl:w-full xl:pl-[1.5rem] 2xl:pl-[3.5rem]">
+          <div className="flex-col md:max-lg:py-5 py-16 md:max-lg:space-y-3 space-y-7 text-start mt-[3rem] w-[36.9375rem] h-[24.3125rem] 2xl:w-[50rem] ms-[2rem] xl:w-full xl:pl-[1.5rem] 2xl:pl-[3.5rem]">
             <h1 className="font-bold text-[2rem]">
               Nurturing Faith in Innovation: Tools for
               <span className="text-[#0074D9]"> Excellence</span>
@@ -212,7 +212,7 @@ export default function Home() {
             </p>
             <p className="md:w-3/4 text-[#646E73] font-semibold">-Steve Jobs</p>
             <div className="flex flex-wrap gap-2 sm:gap-0 justify-start">
-              <div className="flex my-2 w-full justify-start gap-40">
+              <div className="flex my-2 w-full justify-start md:max-lg:gap-20 gap-40">
                 <div className="flex items-center space-x-2">
                   <Image src={BlueTick} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">Security</p>
@@ -224,7 +224,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="flex my-2 w-full justify-start gap-40">
+              <div className="flex my-2 w-full justify-start md:max-lg:gap-20 gap-40">
                 <div className="flex items-center space-x-2">
                   <Image src={BlueTick} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
@@ -238,7 +238,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="flex my-2 w-full justify-start gap-40">
+              <div className="flex my-2 w-full justify-start md:max-lg:gap-20 gap-40">
                 <div className="flex items-center space-x-2">
                   <Image src={BlueTick} alt="Blue tick" />
                   <p className="text-[#2D3748] text-sm font-normal">
@@ -396,7 +396,7 @@ export default function Home() {
             earn rewards with Argocoin (AGC) as you partake in a transparent and
             community guided AI ecosystem.
           </p>
-          <div className="flex gap-x-2 md:px-72 justify-center">
+          <div className="flex gap-x-2 md:px-72 justify-center lg:mx-auto">
             <EarlyAccessForm>
               <Button
                 title="Get Early Access"
