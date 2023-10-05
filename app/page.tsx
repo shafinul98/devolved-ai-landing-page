@@ -44,7 +44,7 @@ export default function Home() {
       <section className="w-full md:bg-[#f5f5f5]" id="curved-rectangle">
         <div className="flex flex-col items-center md:flex-row md:justify-center md:p-12 md:pl-12 lg:px-16 lg:pl-[4rem] xl:px-28 xl:pl-32 2xl:pl-[7.5rem] 3xl:container md:mt-[2.1rem]">
           <div className="flex flex-col md:gap-5 mb-10 md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
-            <h1 className="font-bold text-[2rem] text-start md:text-[3rem] leading-[15px] md:leading-[1.15] mb-3 md:mb-0 text-[#2D3748]">
+            <h1 className="font-bold text-[2rem] text-start md:text-[3rem] leading-[44px] md:leading-[1.15] mb-3 md:mb-0 text-[#2D3748]">
               Empowering <span className="text-[#0074D9]">You</span> to Shape
               the Future of Artificial Intelligence
             </h1>
@@ -57,7 +57,7 @@ export default function Home() {
               <EarlyAccessForm>
                 <Button
                   title="Get Early Access"
-                  extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem]"
+                  extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem] text-[14px]"
                 />
               </EarlyAccessForm>
 
@@ -69,7 +69,7 @@ export default function Home() {
               >
                 <Button
                   title="Whitepaper"
-                  extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-light"
+                  extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-light text-[14px]"
                 />
               </a>
             </div>
@@ -139,7 +139,7 @@ export default function Home() {
               </span>
             </h1>
             <Image src={SteveJobs} alt="Steve Jobs" className="mx-auto" />
-            <p className="md:break-words w-full md:w-3/4 text-[#646E73]">
+            <p className="md:break-words w-full md:w-3/4 text-[1rem] text-[#646E73]">
               “Technology is nothing. What's important is that you have a faith
               in people, that they're basically good and smart, and if you give
               them tools, they'll do wonderful things with them.”
@@ -272,7 +272,7 @@ export default function Home() {
               className="w-[20.75rem] h-[14.8125rem]"
             />
           </div>
-          <p className="text-start text-[#646E73]">
+          <p className="text-start text-[#646E73] text-[1rem]">
             We're crafting a shared journey in AI, ensuring transparency,
             inclusiveness, and rewarding your essential role with Argocoin
             (AGC). Embrace a future where artificial intelligence is
@@ -284,7 +284,7 @@ export default function Home() {
               <h1 className="text-xl font-semibold text-[#2D3748]">
                 Community at the Core
               </h1>
-              <p className="text-sm text-center text-[#646E73]">
+              <p className="text-[1rem] text-center text-[#646E73]">
                 Our mission is fueled by community collaboration. Using
                 democratic principles and blockchain, we're creating a
                 transparent, accessible AI legacy.{" "}
@@ -295,7 +295,7 @@ export default function Home() {
               <h1 className="text-xl font-semibold text-[#2D3748]">
                 Rewarding Contributions{" "}
               </h1>
-              <p className="text-sm text-center md:text-start font-light text-[#646E73]">
+              <p className="text-[1rem] text-center md:text-start text-[#646E73]">
                 Your efforts in AI training and data validation are central to
                 our success. Receive Argocoin (AGC) rewards, and let your voice
                 be a driving force in AI's future.
@@ -306,7 +306,7 @@ export default function Home() {
               <h1 className="text-xl font-semibold text-[#2D3748]">
                 A Nexus for Visionaries{" "}
               </h1>
-              <p className="text-sm text-center md:text-start font-light text-[#646E73]">
+              <p className="text-[1rem] text-center md:text-start text-[#646E73]">
                 We are more than a platform; we unite innovators for an AI
                 future crafted by the people. Align with us, endorse
                 accessibility, and democratize AI's landscape
@@ -400,7 +400,7 @@ export default function Home() {
             <EarlyAccessForm>
               <Button
                 title="Get Early Access"
-                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem]"
+                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem] text-[1rem]"
               />
             </EarlyAccessForm>
             <a
@@ -411,7 +411,7 @@ export default function Home() {
             >
               <Button
                 title="Whitepaper"
-                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-light"
+                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-light text-[1rem]"
               />
             </a>
           </div>
@@ -431,7 +431,7 @@ export default function Home() {
             <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
               <Image src={DemocraticGovIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Democratic Governance</h6>
-              <p className="text-[#646E73]">
+              <p className="text-[#646E73] text-[1rem]">
                 Ensuring every voice matters through token weighted voting and
                 transparency
               </p>
@@ -442,7 +442,7 @@ export default function Home() {
               <h6 className="text-xl text-[#2D3748]">
                 User Centric Innovation
               </h6>
-              <p className="text-[#646E73]">
+              <p className="text-[#646E73] text-[1rem]">
                 Focused on developer friendly, seamless AI integration and UI/UX
                 excellence
               </p>
@@ -451,7 +451,7 @@ export default function Home() {
             <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4">
               <Image src={ProsperityIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Shared Prosperity</h6>
-              <p className="text-[#646E73]">
+              <p className="text-[#646E73] text-[1rem]">
                 Creating a culture of mutual growth through contributions and
                 rewards
               </p>
@@ -460,7 +460,7 @@ export default function Home() {
             <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 ">
               <Image src={PrivacyIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Privacy and Security</h6>
-              <p className="text-[#646E73]">
+              <p className="text-[#646E73] text-[1rem]">
                 Committed to safeguarding privacy and security in all
                 operations.
               </p>
@@ -469,7 +469,7 @@ export default function Home() {
             <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 ">
               <Image src={Community} alt="" />
               <h6 className="text-xl text-[#2D3748]">Community and Outreach</h6>
-              <p className="text-[#646E73]">
+              <p className="text-[#646E73] text-[1rem]">
                 Building a vibrant community through diverse engagement and
                 support
               </p>
@@ -478,7 +478,7 @@ export default function Home() {
             <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md md:w-1/4 ">
               <Image src={TransparencyIcon} alt="" />
               <h6 className="text-xl text-[#2D3748]">Transparency</h6>
-              <p className="text-[#646E73]">
+              <p className="text-[#646E73] text-[1rem]">
                 Upholding transparency and trust as core values in our ecosystem
               </p>
             </div>

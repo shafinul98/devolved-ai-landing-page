@@ -425,7 +425,7 @@ const About = () => {
               Advancing Toward a Decentralized AI Ecosystem: Our Roadmap for
               Continued Growth and Community Engagement
             </h1>
-            <p className="text-[#646E73]">
+            <p className="text-[#646E73] text-[1rem]">
               We will continue to grow and refine our platform, inviting more
               contributions in other realms of AI, including computer vision and
               predictive analytics. With rigorous testing and audits, we aim to

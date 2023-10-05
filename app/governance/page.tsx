@@ -204,7 +204,7 @@ const GovernancePage = () => {
               <h1 className="text-[1rem] font-normal text-[#2D3748]">
                 Open Proposals
               </h1>
-              <p className="text-sm text-[#646E73]">
+              <p className="text-[1rem] text-[#646E73]">
                 Any community member has the opportunity to submit governance
                 proposals, encouraging a diverse range of ideas and solutions.
               </p>
@@ -214,7 +214,7 @@ const GovernancePage = () => {
               <h1 className="text-[1rem] font-normal text-[#2D3748]">
                 Democratic Voting
               </h1>
-              <p className="text-sm text-[#646E73]">
+              <p className="text-[1rem] text-[#646E73]">
                 Stakeholders can use their Argocoin (AGC) holdings to cast
                 weighted votes, ensuring a fair and democratic decision-making
                 process.
@@ -225,7 +225,7 @@ const GovernancePage = () => {
               <h1 className="text-[1rem] font-normal text-[#2D3748]">
                 Public Outcomes
               </h1>
-              <p className="text-sm text-[#646E73]">
+              <p className="text-[1rem] text-[#646E73]">
                 The results of each voting cycle are publicly recorded on the
                 blockchain, providing complete transparency and accountability.
               </p>

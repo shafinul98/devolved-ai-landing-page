@@ -13,7 +13,7 @@ const MilestoneCard = ({ date, milestone }: PropTypes) => {
       </div>
       <div className="border-l border-[#0074D9] h-10"></div>
       <div className="rounded-2xl p-5 shadow-lg">
-        <p>{milestone}</p>
+        <p className="text-[1rem]">{milestone}</p>
       </div>
     </div>
   );

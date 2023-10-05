@@ -124,7 +124,7 @@ const RewardsPage = () => {
             <h1 className="text-xl font-bold text-[#2D3748]">
               Data Validation
             </h1>
-            <p className="text-[#646E73] text-sm">
+            <p className="text-[#646E73] text-[1rem]">
               Contribute to the accuracy and reliability of our AI models by
               participating in data validation tasks. Your efforts are rewarded
               with AGC Tokens.
@@ -136,7 +136,7 @@ const RewardsPage = () => {
             <h1 className="text-xl font-bold text-[#2D3748]">
               Governance Participation
             </h1>
-            <p className="text-[#646E73] text-sm">
+            <p className="text-[#646E73] text-[1rem]">
               Engage in our decentralized governance model by voting on
               proposals and submitting your own. Earn AGC tokens for your active
               participation in shaping Devolved AI.
@@ -146,7 +146,7 @@ const RewardsPage = () => {
           <div className="flex flex-col px-10 gap-3">
             <Image src={ThreeIcon} alt="One Icon" />
             <h1 className="text-xl font-bold text-[#2D3748]">AI Training</h1>
-            <p className="text-[#646E73] text-sm">
+            <p className="text-[#646E73] text-[1rem]">
               Help train our AI models by providing valuable data or
               computational resources. Earn AGC tokens based on the quality and
               quantity of your contributions.
