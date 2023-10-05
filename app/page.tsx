@@ -44,7 +44,7 @@ export default function Home() {
       <section className="w-full md:bg-[#f5f5f5]" id="curved-rectangle">
         <div className="flex flex-col items-center md:flex-row md:justify-center md:p-12 md:pl-12 lg:px-16 lg:pl-[4rem] xl:px-28 xl:pl-32 2xl:pl-[7.5rem] 3xl:container md:mt-[2.1rem]">
           <div className="flex flex-col md:gap-5 mb-10 md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
-            <h1 className="font-bold text-[2rem] text-start md:text-[3rem] md:leading-[1.15] mb-3 md:mb-0 text-[#2D3748]">
+            <h1 className="font-bold text-[2rem] text-start md:text-[3rem] leading-[15px] md:leading-[1.15] mb-3 md:mb-0 text-[#2D3748]">
               Empowering <span className="text-[#0074D9]">You</span> to Shape
               the Future of Artificial Intelligence
             </h1>
