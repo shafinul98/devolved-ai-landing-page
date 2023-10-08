@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
+// This function handles the logic of making a request to EmailOctopus to sign up a user for our newsletter
 export async function POST(req: NextRequest, res: NextResponse) {
   const data = await req.json();
 
