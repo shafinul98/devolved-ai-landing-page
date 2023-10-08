@@ -44,14 +44,14 @@ export function EarlyAccessForm({
   const [isSignedUp, setIsSignedUp] = useState(false);
 
   const submitHandler = async () => {
-    const res = await fetch("/api/mailchimp", {
+    const res = await fetch("/api/emailOctopus", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         email_address: email,
-        status: "subscribed",
+        status: "SUBSCRIBED",
       }),
     });
 
@@ -59,15 +59,6 @@ export function EarlyAccessForm({
 
     if (status === 200) {
       setIsSignedUp(true);
-      const response = await fetch("/api/mailchimp/messages", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-        }),
-      });
     }
 
     if (status === 400) {

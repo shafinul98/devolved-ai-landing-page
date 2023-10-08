@@ -48,10 +48,12 @@ export default function Home() {
               Empowering <span className="text-[#0074D9]">You</span> to Shape
               the Future of Artificial Intelligence
             </h1>
-            <p className="font-normal text-[1rem] mb-6 md:mb-0 md:text-start md:text-xl text-[#646E73]">
-              AI is transforming our world, and its impact will touch every life
-              on Earth. This is your chance to not just witness, but to actively
-              shape that transformation.
+            <p className="font-normal text-[1rem] mb-6 md:mb-0 md:text-start md:text-xl text-[#646E73] md:pr-36">
+              Join the Devolved AI Community where your actions shape AI's
+              evolution. Earn rewards in Argocoin (AGC) by voting on key
+              decisions, training our AI, and more. All within our transparent,
+              blockchain-based ecosystem. Whether you're a newcomer or a tech
+              professional, there's a place for you.
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-5 mt-2.5 md:mt-5">
               <EarlyAccessForm>
@@ -198,7 +200,7 @@ export default function Home() {
           <Image
             src={SteveJobs}
             alt="Steve Jobs"
-            className="w-full md:w-1/2 lg:w-full mt-[2rem] ms-5 xl:ms-16 2xl:ms-0 xl:h-[35rem] xl:w-[32.5rem]"
+            className="w-full md:w-1/2 lg:w-full mt-[2rem] ms-5 xl:ms-16 2xl:ms-0 xl:h-[35rem] xl:w-[27.5rem]"
           />
           <div className="flex-col md:max-lg:py-5 py-16 md:max-lg:space-y-3 space-y-7 text-start mt-[3rem] w-[36.9375rem] h-[24.3125rem] 2xl:w-[50rem] ms-[2rem] xl:w-full xl:pl-[1.5rem] 2xl:pl-[3.5rem]">
             <h1 className="font-bold text-[2rem]">
