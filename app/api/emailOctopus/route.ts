@@ -9,6 +9,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
   const apiKey = process.env.EMAIL_OCTOPUS_API_KEY as string;
   const listId = process.env.EMAIL_OCTOPUS_LIST_ID as string;
 
+  // This is the post data to be sent as the request body
   let postData = {
     api_key: apiKey,
     email_address: email_address,
