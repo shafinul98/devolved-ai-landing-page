@@ -10,6 +10,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
+import { useRouter } from "next/navigation";
+
 import { Input } from "@/components/ui/input";
 
 import Image from "next/image";
@@ -43,6 +45,8 @@ export function EarlyAccessForm({
 
   const [isSignedUp, setIsSignedUp] = useState(false);
 
+  const router = useRouter();
+
   const submitHandler = async () => {
     const res = await fetch("/api/emailOctopus", {
       method: "POST",
@@ -59,95 +63,70 @@ export function EarlyAccessForm({
 
     if (status === 200) {
       setIsSignedUp(true);
+      window.open(`earlyAccessSuccess?isSignedUp=`, "_blank");
     }
 
     if (status === 400) {
-      setError(JSON.parse(error?.response?.text).detail);
+      setError(error?.message);
       setIsError(true);
     }
   };
 
   return (
     <>
-      {isSignedUp ? (
-        <Dialog>
-          <DialogTrigger className={`w-full md:w-fit`}>
-            {children}
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px]">
-            <DialogHeader>
-              <Image
-                src={DevolvedAIHeroLogo}
-                alt="Devolved AI Logo"
-                width={125}
-                className="mx-auto my-8"
+      <Dialog>
+        <DialogTrigger className="w-full md:w-fit">{children}</DialogTrigger>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <Image
+              src={DevolvedAIHeroLogo}
+              alt="Devolved AI Logo"
+              width={125}
+              className="mx-auto my-8"
+            />
+            <DialogTitle className="text-center text-[1.25rem] leading-6 text-[#2D3748]">
+              Be the First to Experience the Future of Decentralized AI!
+            </DialogTitle>
+            <DialogDescription className="text-start text-[1rem] my-2 text-[#646E73]">
+              Devolved AI is redefining the AI landscape with community-driven
+              development and governance. Sign up now for exclusive early access
+              to our web app, launching on December 5, 2023!
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            <div className="grid grid-cols-1 items-center gap-4">
+              <Input
+                placeholder="Enter your email"
+                type="email"
+                className="col-span-3 focus:outline-none"
+                required
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  validateEmail(e.target.value);
+                }}
+                onFocus={() => blur}
+                tabIndex={-1}
+                style={{ fontSize: "16px" }}
               />
-              <DialogTitle className="text-center text-[1.25rem] leading-6 text-[#2D3748]">
-                Almost There!
-              </DialogTitle>
-              <DialogDescription className="text-start text-[1rem] my-2 text-[#646E73]">
-                Thanks for signing up for early access! Please check your email
-                to confirm your subscription. If you don't see the email, be
-                sure to check your spam folder.
-              </DialogDescription>
-            </DialogHeader>
-          </DialogContent>
-        </Dialog>
-      ) : (
-        <Dialog>
-          <DialogTrigger className="w-full md:w-fit">{children}</DialogTrigger>
-          <DialogContent className="sm:max-w-[425px]">
-            <DialogHeader>
-              <Image
-                src={DevolvedAIHeroLogo}
-                alt="Devolved AI Logo"
-                width={125}
-                className="mx-auto my-8"
-              />
-              <DialogTitle className="text-center text-[1.25rem] leading-6 text-[#2D3748]">
-                Be the First to Experience the Future of Decentralized AI!
-              </DialogTitle>
-              <DialogDescription className="text-start text-[1rem] my-2 text-[#646E73]">
-                Devolved AI is redefining the AI landscape with community-driven
-                development and governance. Sign up now for exclusive early
-                access to our web app, launching on December 5, 2023!
-              </DialogDescription>
-            </DialogHeader>
-            <div className="grid gap-4 py-4">
-              <div className="grid grid-cols-1 items-center gap-4">
-                <Input
-                  placeholder="Enter your email"
-                  type="email"
-                  className="col-span-3 focus:outline-none"
-                  required
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    validateEmail(e.target.value);
-                  }}
-                  onFocus={() => blur}
-                  tabIndex={-1}
-                  style={{ fontSize: "16px" }}
-                />
-              </div>
             </div>
-            <DialogFooter>
-              {isError ? (
-                <Alert className="mx-auto bg-[#ff3737] font-bold text-sm text-white">
-                  Error in Signing Up: {error}
-                </Alert>
-              ) : (
-                <Button
-                  onClick={submitHandler}
-                  disabled={email === "" || !isEmailValid}
-                  className="mx-auto bg-[#377DFF] font-bold text-white"
-                >
-                  Get Early Access
-                </Button>
-              )}
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-      )}
+          </div>
+          <DialogFooter>
+            {isError ? (
+              <Alert className="mx-auto bg-[#ff3737] font-bold text-sm text-white">
+                Error in Signing Up: {error}
+              </Alert>
+            ) : (
+              <Button
+                onClick={submitHandler}
+                disabled={email === "" || !isEmailValid}
+                className="mx-auto bg-[#377DFF] font-bold text-white"
+              >
+                Get Early Access
+              </Button>
+            )}
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
