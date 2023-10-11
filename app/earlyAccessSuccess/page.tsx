@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import DevolvedAILogoEA from "../../public/Devolved_AI_Logo_EA.svg";
 import MailIcon from "../../public/Mail Icon.svg";
@@ -29,12 +29,14 @@ import {
 import Link from "next/link";
 
 const EarlyAccessSuccess = () => {
-  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const isSignedUp = searchParams.get("isSignedUp");
 
   const router = useRouter();
 
   useEffect(() => {
-    if (!pathname.includes("?isSignedUp=")) {
+    if (!isSignedUp) {
       router.push("/");
     }
   }, []);
