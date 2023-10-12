@@ -13,7 +13,11 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
+  generator: "Devolved AI",
+  referrer: "origin-when-cross-origin",
+  category: "Technology",
   title: "Devolved AI - Democratizing the Future of AI",
+  applicationName: "Devolved AI Website",
   description:
     "Elevate AI governance and innovation with our decentralized ecosystem. Token-weighted voting, user-friendly tools, and rewarding community engagement—powered by Argocoin.",
   keywords: [
@@ -32,6 +36,19 @@ export const metadata: Metadata = {
     " transparency reports",
     " decentralized governance model",
   ],
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -41,9 +58,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta property="og:image" content="https://ibb.co/0yHJY5x" />
-      </head>
       <body className={`${lato.className} grid`} style={{ userSelect: "none" }}>
         <Header />
         <GoogleAnalytics />
