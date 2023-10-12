@@ -5,6 +5,7 @@ import Footer from "@/components/Custom Components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
+import GoogleAnalytics from "./GoogleAnalytics";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -45,9 +46,8 @@ export default function RootLayout({
       </head>
       <body className={`${lato.className} grid`} style={{ userSelect: "none" }}>
         <Header />
+        <GoogleAnalytics />
         {children}
-        <Analytics />
-        <Toaster />
         <Footer />
       </body>
     </html>
