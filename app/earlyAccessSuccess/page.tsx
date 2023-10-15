@@ -82,7 +82,7 @@ const EarlyAccessSuccess = () => {
             <div className="flex flex-col lg:grid lg:grid-cols-2 mx-auto">
               {/* Mission Icon, Title and Sub Text */}
               <div className="flex flex-col justify-center gap-5 items-center lg:items-start">
-                <div className="flex gap-2.5 lg:ms-20">
+                <div className="flex gap-2.5 lg:ms-20 mt-10 lg:mt-0">
                   <Image
                     src={TrophyIcon}
                     alt="Trophy Icon"
