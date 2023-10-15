@@ -55,7 +55,7 @@ export function EarlyAccessForm({
       },
       body: JSON.stringify({
         email_address: email,
-        status: "SUBSCRIBED",
+        status: "PENDING",
       }),
     });
 
