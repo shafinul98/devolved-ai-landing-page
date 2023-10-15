@@ -40,7 +40,7 @@ const EarlyAccessSuccess = () => {
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between p-0 3xl:container">
       <section className="w-full">
-        <div className="mx-auto lg:w-full xl:w-full rounded-[0.9375rem] flex flex-col items-center py-5">
+        <div className="mx-auto bg-[#F5F5F5] lg:w-full xl:w-full rounded-[0.9375rem] flex flex-col items-center pt-5">
           {/* Welcome Text */}
           <div className="mt-10 flex flex-col">
             <h1 className="text-[#2D3748] text-center text-[2rem] md:text-start md:text-[2.125rem] xl:text-[3.125rem] font-extrabold capitalize">
@@ -77,7 +77,7 @@ const EarlyAccessSuccess = () => {
             </p>
           </div>
           {/* Main Section */}
-          <div className="flex flex-col items-center mt-10 bg-[#FFF]">
+          <div className="flex flex-col items-center mt-10 pb-10 bg-[#FFF] min-h-screen">
             {/* Mission Section */}
             <div className="flex flex-col lg:grid lg:grid-cols-2 mx-auto">
               {/* Mission Icon, Title and Sub Text */}
