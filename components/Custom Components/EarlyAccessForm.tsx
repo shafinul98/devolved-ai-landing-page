@@ -63,7 +63,7 @@ export function EarlyAccessForm({
 
     if (status === 200) {
       setIsSignedUp(true);
-      window.open(`/earlyAccessSuccess?isSignedUp=${true}`, "_blank");
+      router.push(`/earlyAccessSuccess?isSignedUp=${true}`);
     }
 
     if (status === 400) {
