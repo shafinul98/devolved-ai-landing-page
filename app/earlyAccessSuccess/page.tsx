@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import TrophyIcon from "../../public/Trophy Icon.svg";
 import CalendarIcon from "../../public/Calendar Icon.svg";
@@ -23,6 +23,8 @@ import {
 import Link from "next/link";
 
 const EarlyAccessSuccess = () => {
+  const pathname = usePathname();
+
   const searchParams = useSearchParams();
 
   const isSignedUp = searchParams.get("isSignedUp");

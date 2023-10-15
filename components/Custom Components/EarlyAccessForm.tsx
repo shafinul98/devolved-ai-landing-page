@@ -10,8 +10,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-import { useRouter } from "next/navigation";
-
 import { Input } from "@/components/ui/input";
 
 import Image from "next/image";
@@ -45,8 +43,6 @@ export function EarlyAccessForm({
 
   const [isSignedUp, setIsSignedUp] = useState(false);
 
-  const router = useRouter();
-
   const submitHandler = async () => {
     const res = await fetch("/api/emailOctopus", {
       method: "POST",
@@ -63,7 +59,7 @@ export function EarlyAccessForm({
 
     if (status === 200) {
       setIsSignedUp(true);
-      router.push(`/earlyAccessSuccess?isSignedUp=${true}`);
+      window.location.href = `/earlyAccessSuccess?isSignedUp=true`;
     }
 
     if (status === 400) {
