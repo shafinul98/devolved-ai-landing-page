@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 
 import Image from "next/image";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import DevolvedAIHeroLogo from "../../public/Devolved AI Hero Logo.svg";
 
@@ -113,7 +113,17 @@ export function EarlyAccessForm({
           <DialogFooter>
             {isError ? (
               <Alert className="mx-auto bg-[#ff3737] font-bold text-sm text-white">
-                Error in Signing Up: {error}
+                Error in Signing Up: {error},{" "}
+                <span
+                  className="underline cursor-pointer"
+                  onClick={() => {
+                    setIsError(false);
+                    setError("");
+                    setIsEmailValid(true);
+                  }}
+                >
+                  Please Try Again
+                </span>
               </Alert>
             ) : (
               <Button
