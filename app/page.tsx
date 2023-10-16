@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import HeroImage from "../public/Home Page Hero.webp";
 import SteveJobs from "../public/Steve Jobs.webp";
@@ -19,26 +17,9 @@ import PrivacyIcon from "../public/Privacy and Security Logo.svg";
 import TransparencyIcon from "../public/Transparency Icon.svg";
 
 import Button from "@/components/Custom Components/Button";
-import { useEffect } from "react";
 import { EarlyAccessForm } from "@/components/Custom Components/EarlyAccessForm";
 
 export default function Home() {
-  useEffect(() => {
-    // Disable right-click
-    const handleContextMenu = (event: MouseEvent) => {
-      event.preventDefault();
-    };
-    document.addEventListener("contextmenu", handleContextMenu);
-
-    // Disable text selection
-    document.body.style.userSelect = "none";
-
-    // Cleanup event listeners on unmount
-    return () => {
-      document.removeEventListener("contextmenu", handleContextMenu);
-    };
-  }, []);
-
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
       <section className="w-full md:bg-[#f5f5f5]" id="curved-rectangle">

@@ -1,6 +1,5 @@
 "use client";
 
-import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
