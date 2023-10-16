@@ -2,8 +2,6 @@ import Header from "@/components/Custom Components/Header";
 import "./globals.css";
 import { Lato } from "next/font/google";
 import Footer from "@/components/Custom Components/Footer";
-import { Toaster } from "@/components/ui/toaster";
-import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import GoogleAnalytics from "./GoogleAnalytics";
 import Script from "next/script";
@@ -59,7 +57,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${lato.className} grid`} style={{ userSelect: "none" }}>
+      <head>
+        <Script id="facebookPixel" strategy="beforeInteractive">
+          {`
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '630412205842060');
+fbq('track', 'PageView');
+</script>
+<><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=630412205842060&ev=PageView&noscript=1"
+/>`}
+        </Script>
+      </head>
+      <body className={`${lato.className} grid`}>
         <Header />
         <GoogleAnalytics />
         <Script id="vwoCode" strategy="beforeInteractive">

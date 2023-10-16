@@ -47,24 +47,7 @@ const About = () => {
   useEffect(() => {
     fetchBlogs().then(({ data }) => {
       setBlogs(data);
-      console.log(blogs);
     });
-  }, []);
-
-  useEffect(() => {
-    // Disable right-click
-    const handleContextMenu = (event: MouseEvent) => {
-      event.preventDefault();
-    };
-    document.addEventListener("contextmenu", handleContextMenu);
-
-    // Disable text selection
-    document.body.style.userSelect = "none";
-
-    // Cleanup event listeners on unmount
-    return () => {
-      document.removeEventListener("contextmenu", handleContextMenu);
-    };
   }, []);
 
   return (

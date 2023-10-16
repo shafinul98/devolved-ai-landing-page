@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useEffect } from "react";
+import React from "react";
 
 import ContactPageHeroImage from "../../public/Contact Page Hero Image.webp";
 import Image from "next/image";
@@ -22,22 +20,6 @@ import {
 } from "react-icons/fa";
 
 const ContactPage = () => {
-  useEffect(() => {
-    // Disable right-click
-    const handleContextMenu = (event: MouseEvent) => {
-      event.preventDefault();
-    };
-    document.addEventListener("contextmenu", handleContextMenu);
-
-    // Disable text selection
-    document.body.style.userSelect = "none";
-
-    // Cleanup event listeners on unmount
-    return () => {
-      document.removeEventListener("contextmenu", handleContextMenu);
-    };
-  }, []);
-
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center">
       <section className="w-full place-items-center">
