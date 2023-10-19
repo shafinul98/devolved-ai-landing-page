@@ -1,5 +1,7 @@
 "use client";
 
+export const fetchCache = "force-no-store";
+
 import React, { useEffect, useState } from "react";
 
 import AboutHeroImage from "../../public/About Page Hero Image.webp";
