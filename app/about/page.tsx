@@ -38,7 +38,8 @@ const About = () => {
 
   const fetchBlogs = async () => {
     const response = await fetch("/api/blogs", {
-      method: "GET",
+      method: "POST",
+      next: { revalidate: 5 },
     });
 
     return await response.json();
@@ -503,7 +504,7 @@ const About = () => {
             Press & Media
           </h1>
           {blogs.length > 0 ? (
-            <div className="w-8/12">
+            <div className="w-6/12">
               <BlogCarousel bottomStyle="1">
                 {blogs.map((blog) => {
                   return (

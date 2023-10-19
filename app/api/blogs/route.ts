@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import Blog from "../../../models/Blog";
 import { NextResponse } from "next/server";
 
-export async function GET(request: Request) {
+export async function POST(): Promise<Response> {
   const MONGODB_URI = process.env.MONGO_DB_URI as any;
 
   let client;
@@ -24,10 +24,10 @@ export async function GET(request: Request) {
         }
       );
     } else {
-      return NextResponse.json({ error: "No blogs found" }, { status: 404 });
+      return Response.json({ error: "No blogs found" }, { status: 404 });
     }
   } catch (error) {
-    return NextResponse.json(
+    return Response.json(
       { message: "Error in retrieving blogs" },
       {
         status: 500,

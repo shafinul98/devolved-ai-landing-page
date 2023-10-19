@@ -23,7 +23,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
 }: BlogCardProps) => {
   return (
     <article
-      className={`mx-auto sm:max-md:w-full md:max-lg:w-[40.75rem] md:h-[30.23rem] lg:w-[18.75rem] xl:w-[25rem] 2xl:w-[27.5rem] ${extraStyles} rounded-[0.75rem] flex flex-col my-5 p-5 shadow-lg`}
+      className={`mx-auto sm:max-md:w-full md:max-lg:w-[40.75rem] md:h-[30.23rem] lg:w-[18.75rem] xl:w-[25rem] ${extraStyles} rounded-[0.75rem] flex flex-col my-5 p-5 shadow-lg`}
     >
       {/* Image */}
       <Image
