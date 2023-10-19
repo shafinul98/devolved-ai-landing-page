@@ -1,3 +1,5 @@
+export const fetchCache = "force-no-store";
+
 import mongoose from "mongoose";
 import Blog from "../../../models/Blog";
 import { NextResponse } from "next/server";
