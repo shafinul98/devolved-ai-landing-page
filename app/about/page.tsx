@@ -38,7 +38,7 @@ const About = () => {
 
   const fetchBlogs = async () => {
     const response = await fetch("/api/blogs", {
-      method: "GET",
+      method: "POST",
       next: { revalidate: 5 },
     });
 

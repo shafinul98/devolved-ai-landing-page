@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
 import Blog from "../../../models/Blog";
+import { NextResponse } from "next/server";
 
-export async function GET(request: Request): Promise<Response> {
+export async function POST(): Promise<Response> {
   const MONGODB_URI = process.env.MONGO_DB_URI as any;
 
   let client;
@@ -16,7 +17,7 @@ export async function GET(request: Request): Promise<Response> {
     const blogs = await Blog.find({});
 
     if (blogs) {
-      return Response.json(
+      return NextResponse.json(
         { data: blogs },
         {
           status: 200,
