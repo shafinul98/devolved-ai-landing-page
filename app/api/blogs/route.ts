@@ -1,9 +1,7 @@
-export const fetchCache = "force-no-store";
-
 import mongoose from "mongoose";
 import Blog from "../../../models/Blog";
 
-export async function GET(request: Request) {
+export async function GET(request: Request): Promise<Response> {
   const MONGODB_URI = process.env.MONGO_DB_URI as any;
 
   let client;
