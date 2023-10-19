@@ -503,7 +503,7 @@ const About = () => {
             Press & Media
           </h1>
           {blogs.length > 0 ? (
-            <div className="w-10/12">
+            <div className="w-8/12">
               <BlogCarousel bottomStyle="1">
                 {blogs.map((blog) => {
                   return (
