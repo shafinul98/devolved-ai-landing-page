@@ -31,9 +31,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
         alt={blogTitle}
         width={500}
         height={500}
-        className={
-          imageStyles + "md:w-[150rem] md:h-[18.5rem] md:max-xl:mx-auto"
-        }
+        className={imageStyles + "md:max-xl:mx-auto aspect-video"}
       />
       {/* Blog Title */}
       <h1
@@ -42,7 +40,9 @@ const BlogCard: React.FC<BlogCardProps> = ({
         {blogTitle}
       </h1>
       {/* Blog Description */}
-      <p className="text-gray-600 text-sm text-start mb-5">{blogDescription}</p>
+      <p className="text-gray-600 text-sm text-start mb-5 truncate">
+        {blogDescription}
+      </p>
       {/* Blog Link */}
       <Link
         href={blogLink}
