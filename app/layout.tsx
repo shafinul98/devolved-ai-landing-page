@@ -1,7 +1,7 @@
-import Header from "@/components/Custom Components/Header";
+import Header from "@/components/RedesignedComponents/Header";
 import "./globals.css";
 import { Lato } from "next/font/google";
-import Footer from "@/components/Custom Components/Footer";
+import Footer from "@/components/RedesignedComponents/Footer";
 import { Metadata } from "next";
 import GoogleAnalytics from "./GoogleAnalytics";
 import Script from "next/script";
