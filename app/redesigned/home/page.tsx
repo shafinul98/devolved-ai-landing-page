@@ -29,8 +29,8 @@ export default function Home() {
           <div 
           className="text-center">
             <h1 
-            className="font-bold text-3rem md:text-4rem leading-7 mb-3 text-[#192033]">
-              AI has evolved.<br/>
+            className="font-bold text-[2.25rem] md:text-4rem leading-7 mb-3 text-[#192033]">
+              AI has evolved.<br/><br/>
               So should its ownership.
             </h1>
             <p 
