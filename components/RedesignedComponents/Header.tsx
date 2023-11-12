@@ -103,7 +103,7 @@ const Header = () => {
                     setIsMenuOpen(false);
                   }}
                 >
-                  <Link className="ms-[5px]" href="#">
+                  <Link className="ms-[5px]" href="/redesigned/argoCoin">
                     $AGC
                   </Link>
                 </li>
@@ -113,7 +113,7 @@ const Header = () => {
                     setIsMenuOpen(false);
                   }}
                 >
-                  <Link className="ms-[5px]" href="#">
+                  <Link className="ms-[5px]" href="/redesigned/technology">
                     Technology
                   </Link>
                 </li>
@@ -165,12 +165,12 @@ const Header = () => {
             </Link>
             <Link 
             className="text-[1rem] text-[#1D1D1D] font-ubuntu font-normal font-weight-400 leading-normal" 
-            href="#">
-              Core
+            href="/redesigned/argoCoin">
+              $AGC
             </Link>
             <Link 
             className="text-[1rem] text-[#1D1D1D] font-ubuntu font-normal font-weight-400 leading-normal" 
-            href="#">
+            href="/redesigned/technology">
               Technology
             </Link>
             <Link 
@@ -190,7 +190,7 @@ const Header = () => {
             </Link>
             <Button
               title="JOIN THE REVOLUTION"
-              extraStyles="border border-black text-black font-bold py-2 px-4 rounded-md md:w-[12.5625rem] md:h-[3.125rem] xl:me-16 transition-all hover:bg-black hover:text-white"
+              extraStyles="border border-black text-black font-bold py-2 px-4 rounded-md md:w-[12.5625rem] md:h-[3.125rem] transition-all hover:bg-black hover:text-white"
             />
           </div>
         </div>

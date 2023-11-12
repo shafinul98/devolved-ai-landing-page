@@ -19,23 +19,26 @@ import Button from "@/components/Custom Components/Button";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
+    <main 
+    className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
       {/* hero section */}
       <section 
       className="w-full h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
       style={{ backgroundImage: `url(${HeroImage.src})`}}>
         <div 
-        className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 md:pl-12 lg:px-16 lg:pl-[4rem] xl:px-28 xl:pl-32 2xl:pl-[7.5rem] 3xl:container md:mt-[2.1rem] md:gap-5 mb-10 md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
+        className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12">
           <div 
           className="text-center">
             <h1 
-            className="font-bold text-[2.25rem] md:text-4rem leading-7 mb-3 text-[#192033]">
-              AI has evolved.<br/><br/>
+            className="font-bold text-[2.75rem] md:text-[2.75rem] leading-11 mb-5 text-[#192033]">
+              AI has evolved.<br/>
               So should its ownership.
             </h1>
             <p 
-            className="font-normal text-xl mb-6 md:mb-0 md:text-xl text-[#495167] md:pr-36">
-              Welcome to AI owned by you, the user. Built on blockchain technology, Devolved AI embodies trust, transparency, and community governance. Vote, earn rewards, and own a stake in the future of AI—all powered by Argocoin.
+            className="font-normal text-[1rem] mb-6 md:mb-0 md:text-[1rem] text-[#495167] md:pr-30">
+              Welcome to AI owned by you, the user. Built on blockchain technology, Devolved AI<br/> 
+              embodies trust, transparency, and community governance. Vote, earn rewards, and<br/> 
+              own a stake in the future of AI—all powered by Argocoin.
             </p>
           </div>
         </div>
