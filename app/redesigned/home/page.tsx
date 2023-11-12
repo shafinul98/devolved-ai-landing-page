@@ -23,18 +23,18 @@ export default function Home() {
       {/* hero section */}
       <section 
       className="w-full h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
-      style={{ backgroundImage: `url(${HeroImage.src})`, }}>
+      style={{ backgroundImage: `url(${HeroImage.src})`}}>
         <div 
-        className="flex flex-col text-center items-center justify-center md:flex-row md:justify-center md:p-12 md:pl-12 lg:px-16 lg:pl-[4rem] xl:px-28 xl:pl-32 2xl:pl-[7.5rem] 3xl:container md:mt-[2.1rem]">
+        className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 md:pl-12 lg:px-16 lg:pl-[4rem] xl:px-28 xl:pl-32 2xl:pl-[7.5rem] 3xl:container md:mt-[2.1rem] md:gap-5 mb-10 md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
           <div 
-          className="flex flex-col text-center md:gap-5 mb-10 md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
+          className="text-center">
             <h1 
-            className="font-bold text-[2rem] md:text-[3rem] leading-[44px] md:leading-[1.15] mb-3 md:mb-0 text-[#192033] md:text-left">
+            className="font-bold text-3rem md:text-4rem leading-7 mb-3 text-[#192033]">
               AI has evolved.<br/>
               So should its ownership.
             </h1>
             <p 
-            className="font-normal text-[1rem] mb-6 md:mb-0 md:text-start md:text-xl text-[#495167] md:pr-36 text-center">
+            className="font-normal text-xl mb-6 md:mb-0 md:text-xl text-[#495167] md:pr-36">
               Welcome to AI owned by you, the user. Built on blockchain technology, Devolved AI embodies trust, transparency, and community governance. Vote, earn rewards, and own a stake in the future of AI—all powered by Argocoin.
             </p>
           </div>
