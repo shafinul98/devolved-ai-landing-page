@@ -6,12 +6,13 @@ import MenuIcon from "../../public/Menu Icon.svg";
 import { AiOutlineClose } from "react-icons/ai";
 import React, { useEffect, useRef, useState } from "react";
 import Logo from "../../public/Devolved AI Logo.svg";
-import Button from "./Button";
+import Button from "../Custom Components/Button";
+import useScroll from "@/lib/hooks/use-scroll";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const [scrolling, setScrolling] = useState(false);
+  const scrolled = useScroll(50);
 
   useEffect(() => {
     // Function to handle clicks outside the menu
@@ -26,28 +27,19 @@ const Header = () => {
       window.addEventListener("click", handleClickOutside);
     }
 
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
     // Clean up the event listener when the component unmounts or the menu closes
     return () => {
       window.removeEventListener("click", handleClickOutside);
-
-      window.removeEventListener("scroll", handleScroll);
     };
   }, [isMenuOpen]);
 
   return (
     <header>
       <nav>
-        <div className="flex justify-between xl:justify-center items-center md:px-10 py-1 3xl:container">
+      <div className={`fixed top-0 w-full flex justify-between xl:justify-center items-center md:px-10 py-1 3xl:container ${
+        scrolled
+        ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
+        : "bg-white/0" } z-30 transition-all`}>
           <Link href={"/"} className="xl:pr-5 2xl:me-auto 2xl:pl-6">
             <Image
               src={Logo}
@@ -198,7 +190,7 @@ const Header = () => {
             </Link>
             <Button
               title="JOIN THE REVOLUTION"
-              extraStyles="border border-black text-black font-bold py-2 px-4 rounded-md md:w-[12.5625rem] md:h-[3.125rem] xl:me-16"
+              extraStyles="border border-black text-black font-bold py-2 px-4 rounded-md md:w-[12.5625rem] md:h-[3.125rem] xl:me-16 transition-all hover:bg-black hover:text-white"
             />
           </div>
         </div>
