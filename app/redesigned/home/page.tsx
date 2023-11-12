@@ -10,7 +10,6 @@ import SectionBg from "../../../public/home/section-bg.png"
 import SectionBg2 from "../../../public/home/section-bg-2.png"
 import SectionBg3 from "../../../public/home/section-bg-3.png"
 import SectionBg4 from "../../../public/home/section-bg-4.png"
-import SectionBg4Overlay from "../../../public/home/overlay.png"
 import SectionBg5 from "../../../public/home/section-bg-5.png"
 import CommunityGovernedIcon from "../../../public/home/community_governed.svg"
 import SharedProsperityIcon from "../../../public/home/shared_prosperity.svg"
@@ -21,6 +20,26 @@ import Button from "@/components/Custom Components/Button";
 export default function Home() {
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
+      {/* hero section */}
+      <section 
+      className="w-full h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+      style={{ backgroundImage: `url(${HeroImage.src})`, }}>
+        <div 
+        className="flex flex-col text-center items-center justify-center md:flex-row md:justify-center md:p-12 md:pl-12 lg:px-16 lg:pl-[4rem] xl:px-28 xl:pl-32 2xl:pl-[7.5rem] 3xl:container md:mt-[2.1rem]">
+          <div 
+          className="flex flex-col text-center md:gap-5 mb-10 md:me-[6rem] lg:me-[10.5rem] xl:me-[7.5rem]">
+            <h1 
+            className="font-bold text-[2rem] md:text-[3rem] leading-[44px] md:leading-[1.15] mb-3 md:mb-0 text-[#192033] md:text-left">
+              AI has evolved.<br/>
+              So should its ownership.
+            </h1>
+            <p 
+            className="font-normal text-[1rem] mb-6 md:mb-0 md:text-start md:text-xl text-[#495167] md:pr-36 text-center">
+              Welcome to AI owned by you, the user. Built on blockchain technology, Devolved AI embodies trust, transparency, and community governance. Vote, earn rewards, and own a stake in the future of AI—all powered by Argocoin.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* What Drives Devolved AI? */}
       <section className="w-full my-10 md:mt-20 md:mb-0 items-center 3xl:container">

@@ -5,7 +5,7 @@ import Link from "next/link";
 import MenuIcon from "../../public/Menu Icon.svg";
 import { AiOutlineClose } from "react-icons/ai";
 import React, { useEffect, useRef, useState } from "react";
-import Logo from "../../public/Devolved AI Logo.svg";
+import Logo from "../../public/logo.svg";
 import Button from "../Custom Components/Button";
 import useScroll from "@/lib/hooks/use-scroll";
 

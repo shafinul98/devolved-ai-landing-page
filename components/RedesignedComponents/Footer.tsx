@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import FooterLogo from "../../public/Devolved AI Image.svg";
+import FooterLogo from "../../public/logo.svg";
 import LocationIcon from "../../public/footer/location-icon.svg"
 import FooterBackground from "../../public/footer/background.png"
 import Link from "next/link";
@@ -13,7 +13,9 @@ import {
   FaDiscord,
   FaReddit,
   FaTelegram,
+  FaSearchLocation
 } from "react-icons/fa";
+import { HiLocationMarker } from "react-icons/hi";
 
 const Footer = () => {
   return (
@@ -41,12 +43,7 @@ const Footer = () => {
           <div className="flex flex-col gap-5 items-center md:items-start mt-5">
             <div className="flex items-center">
               <span className="icon">
-                <Image
-                  src={LocationIcon}
-                  alt="location_icon"
-                  className="md:w-[1.25rem] md:h-[1.125rem] w-[1rem] h-[1.125rem] md:ms-[-0.5rem]"
-                  quality={100}
-                />
+                <HiLocationMarker className="w-5 h-5 text-black-500" />
               </span>
               <span className="text" 
               style=
@@ -58,8 +55,8 @@ const Footer = () => {
                 fontWeight: 400,
                 lineHeight: '1.25rem'
                 }}>
-                1706 Chester Ave., Suite #555<br />
-                Bakersfield, CA 93309
+                <span className="block">1706 Chester Ave., Suite #555</span>
+                <span className="block">Bakersfield, CA 93309</span>
               </span>
             </div>
           </div>
