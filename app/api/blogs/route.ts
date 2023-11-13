@@ -14,7 +14,7 @@ export async function POST(): Promise<Response> {
   }
 
   try {
-    const blogs = await Blog.find({});
+    const blogs = (await Blog.find({})).reverse();
 
     if (blogs) {
       return NextResponse.json(

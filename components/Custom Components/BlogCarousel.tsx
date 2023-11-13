@@ -21,9 +21,7 @@ const BlogCarousel = ({
       data-carousel="static"
     >
       {/* Carousel wrapper */}
-      <div
-        className={`relative overflow-hidden rounded-lg mt-5 ${extraStyles}`}
-      >
+      <div className={`overflow-hidden rounded-lg mt-5 mx-auto ${extraStyles}`}>
         <div
           style={{
             display: "flex",
@@ -36,8 +34,8 @@ const BlogCarousel = ({
               key={index}
               style={{
                 flex: "1 0 33.3%",
-                gap: "0rem",
-                margin: "0 ", // Set each carousel item to occupy 33.33% of the width
+                justifyContent: "space-around",
+                // Set each carousel item to occupy 33.33% of the width
               }}
             >
               {child}

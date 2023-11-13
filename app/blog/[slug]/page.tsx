@@ -47,9 +47,8 @@ const BlogPage = ({ params }: { params: { slug: string } }) => {
           alt={blog.title}
           width={500}
           height={500}
-          className="my-5"
+          className="my-5 aspect-video"
           priority={true}
-          style={{ width: "100%", objectFit: "cover", height: "30%" }}
         />
         {/* Blog Content */}
         <article className="mt-10">
