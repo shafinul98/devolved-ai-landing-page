@@ -40,7 +40,7 @@ const Header = () => {
         scrolled
         ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
         : "bg-white/0" } z-30 transition-all`}>
-          <Link href={"/"} className="xl:pr-5 2xl:me-auto 2xl:pl-6">
+          <Link href={"/redesigned/home"} className="xl:pr-5 2xl:me-auto 2xl:pl-6">
             <Image
               src={Logo}
               alt="Devolved AI Logo"
@@ -83,7 +83,7 @@ const Header = () => {
                     setIsMenuOpen(false);
                   }}
                 >
-                  <Link className="ms-[5px]" href="#">
+                  <Link className="ms-[5px]" href="/redesigned/home">
                     Home
                   </Link>
                 </li>
@@ -155,7 +155,7 @@ const Header = () => {
           <div className="p-3 xl:ms-0 lg:justify-center xl:justify-between items-center xl:gap-10 lg:gap-5 hidden lg:flex text-sm text-[#2D3748]">
             <Link 
             className="text-[1rem] text-[#1D1D1D] font-ubuntu font-normal font-weight-400 leading-normal"
-            href="#">
+            href="/redesigned/home">
               Home
             </Link>
             <Link 
