@@ -8,10 +8,10 @@ import Image2 from "../../../public/technology/image2.png"
 import Background2 from "../../../public/technology/bg2.png"
 import StandardMode from "../../../public/technology/standard-mode.png"
 import LookingBeyond from "../../../public/technology/looking-beyond.png"
-import Background3 from "../../../public/Technology/bg3.png"
+import Background3 from "../../../public/technology/bg3.png"
 
-import Image3 from "../../../public/Technology/image3.png"
-import Background4 from "../../../public/Technology/bg4.png"
+import Image3 from "../../../public/technology/image3.png"
+import Background4 from "../../../public/technology/bg4.png"
 
 
 
