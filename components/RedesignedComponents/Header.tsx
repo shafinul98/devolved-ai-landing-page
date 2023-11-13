@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 import MenuIcon from "../../public/Menu Icon.svg";
 import { AiOutlineClose } from "react-icons/ai";
 import React, { useEffect, useRef, useState } from "react";
@@ -13,6 +14,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const scrolled = useScroll(50);
+  // Get the current route using the useRouter hook
+  const router = useRouter();
 
   useEffect(() => {
     // Function to handle clicks outside the menu
@@ -93,7 +96,7 @@ const Header = () => {
                     setIsMenuOpen(false);
                   }}
                 >
-                  <Link className="ms-[5px]" href="#">
+                  <Link className="ms-[5px]" href="/redesigned/about">
                     About
                   </Link>
                 </li>
@@ -143,7 +146,7 @@ const Header = () => {
                     setIsMenuOpen(false);
                   }}
                 >
-                  <Link className="ms-[5px]" href="#">
+                  <Link className="ms-[5px]" href="/redesigned/contact">
                     Contact
                   </Link>
                 </li>
@@ -160,7 +163,7 @@ const Header = () => {
             </Link>
             <Link 
             className="text-[1rem] text-[#1D1D1D] font-ubuntu font-normal font-weight-400 leading-normal" 
-            href="#">
+            href="/redesigned/about">
               About
             </Link>
             <Link 
@@ -185,7 +188,7 @@ const Header = () => {
             </Link>
             <Link 
             className="text-[1rem] text-[#1D1D1D] font-ubuntu font-normal font-weight-400 leading-normal lg:pr-6 xl:pr-8" 
-            href="#">
+            href="/redesigned/contact">
               Contact
             </Link>
             <Button

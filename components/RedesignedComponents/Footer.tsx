@@ -141,8 +141,7 @@ const Footer = () => {
 
       <div className="bg-slate-700 w-4/5 mx-auto border bottom-1" />
 
-      <p
-      className="text-center my-10"
+      <p className="text-center my-10"
       style={{ color: '#1D1D1D', fontSize: '1rem', fontStyle: 'normal', fontWeight: '400', lineHeight: '1.25rem'}}>
         © Devolved AI 2023. All rights reserved.
       </p>

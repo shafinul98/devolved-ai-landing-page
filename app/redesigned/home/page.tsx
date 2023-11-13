@@ -22,20 +22,15 @@ export default function Home() {
     <main 
     className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
       {/* hero section */}
-      <section 
-      className="w-full h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+      <section className="w-full h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
       style={{ backgroundImage: `url(${HeroImage.src})`}}>
-        <div 
-        className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12">
-          <div 
-          className="text-center">
-            <h1 
-            className="font-bold text-[2.75rem] md:text-[2.75rem] leading-11 mb-5 text-[#192033]">
+        <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12">
+          <div className="text-center">
+            <h1 className="font-bold text-[2.75rem] md:text-[2.75rem] leading-11 mb-5 text-[#192033]">
               AI has evolved.<br/>
               So should its ownership.
             </h1>
-            <p 
-            className="font-normal text-[1rem] mb-6 md:mb-0 md:text-[1rem] text-[#495167] md:pr-30">
+            <p className="font-normal text-[1rem] mb-6 md:mb-0 md:text-[1rem] text-[#495167] md:pr-30">
               Welcome to AI owned by you, the user. Built on blockchain technology, Devolved AI<br/> 
               embodies trust, transparency, and community governance. Vote, earn rewards, and<br/> 
               own a stake in the future of AI—all powered by Argocoin.

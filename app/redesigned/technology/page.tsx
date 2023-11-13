@@ -13,9 +13,6 @@ import Background3 from "../../../public/technology/bg3.png"
 import Image3 from "../../../public/technology/image3.png"
 import Background4 from "../../../public/technology/bg4.png"
 
-
-
-
 import Button from "@/components/Custom Components/Button";
 
 export default function Technology() {
