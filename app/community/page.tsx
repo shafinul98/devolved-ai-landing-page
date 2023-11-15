@@ -25,32 +25,13 @@ import EarningIcon from "../../public/community/earning_and_utilizing_AGC.svg"
 import Step1Icon from "../../public/community/step1.svg"
 import Step2Icon from "../../public/community/step2.svg"
 import Step3Icon from "../../public/community/step3.svg"
+import Stepper from "../../public/community/stepper.svg"
+import Steps from "../../public/community/steps.svg"
 import CoreDetailsCard from "@/components/customComponents/CoreDetailsCard";
 
+
 export default function Community() {
-    const steps = [
-        {
-            color: 'green-200',
-            icon: Step1Icon,
-            title: 'Case 1',
-            subTitle: 'Blockchain Expert Ben',
-            description: 'Ben starts a blockchain-focused CommUnity. His group’s innovative ideas and projects in blockchain technology earn it an AGC grant, enhancing its role within the Devolved AI ecosystem.',
-        },
-        {
-            color: 'green-200',
-            icon: Step2Icon,
-            title: 'Case 2',
-            subTitle: 'UI/UX Designer Uma',
-            description: 'Uma creates a CommUnity dedicated to exploring the latest trends in UI/UX design. She leads the community in workshops and collaborative projects, earning recognition and AGC grants for their contributions to the field.',
-        },
-        {
-            color: 'green-200',
-            icon: Step3Icon,
-            title: 'Case 3',
-            subTitle: 'Coding Enthusiast Carlos',
-            description: 'Carlos forms a CommUnity for coding enthusiasts, offering a space for learning, discussion, and project collaboration. The community becomes a valuable resource for coding knowledge and practice within Devolved AI, earning AGC grants for its educational impact.',
-        }
-    ];
+
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
       {/* community hero section */}
@@ -59,7 +40,7 @@ export default function Community() {
         <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12">
             <div className="text-center">
             <h1 
-            className="font-bold text-[2.75rem] md:text-[2.75rem] leading-11 mb-5 text-[#192033]">
+            className="font-black text-[2.75rem] md:text-[3.75rem] leading-11 mb-5 text-[#192033]">
                 Introduction to CommUnity
             </h1>
             </div>
@@ -72,20 +53,20 @@ export default function Community() {
                 <Image
                     src={Image1}
                     alt="Proof of Value (PoV) Protocol Illustration"
-                    className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[26.3125rem] md:h-[24.25rem] xl:w-[35rem]"
+                    className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[26.3125rem] md:h-[38rem] xl:w-[37rem]"
                 />
 
                 <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-20">
                     <div className="background-image" />
-                    <h1 className="text-[2.75rem] text-[#192033] font-ubuntu font-bold font-weight-400">
+                    <h1 className="text-[2.30rem] text-[#192033] font-ubuntu font-black font-weight-700">
                         Welcome to CommUnity
                     </h1>
-                    <p className="text-[1rem] text-[#495167] font-ubuntu font-normal font-weight-400">
+                    <p className="text-[1rem] text-[#495167] font-ubuntu font-light font-weight-300">
                         a vibrant and diverse feature of the Devolved AI platform. 
                         CommUnity is a realm of collaboration, innovation, and self-governance, 
                         where users from various fields can create, lead, and grow their own communities.
                     </p>
-                    <p className="text-[1rem] text-[#495167] font-ubuntu font-normal font-weight-400">
+                    <p className="text-[1rem] text-[#495167] font-ubuntu font-light font-weight-300">
                         It's not just about AI; whether your passion lies in blockchain, 
                         UI/UX design, or any other tech-centric area, CommUnity is your space to 
                         flourish within the Devolved AI ecosystem.
@@ -116,10 +97,10 @@ export default function Community() {
             <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
                 <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-20">
                     <div className="background-image" />
-                    <h1 className="text-[2rem] text-[#192033] font-bold">
+                    <h1 className="text-[2.50rem] text-[#192033] font-ubuntu font-black font-weight-700">
                         What is CommUnity?
                     </h1>
-                    <p className="text-[1rem] text-[#495167]">
+                    <p className="text-[1rem] text-[#495167] font-ubuntu font-light font-weight-300">
                         CommUnity is a unique aspect of the Devolved AI platform, 
                         offering users the freedom to establish and manage communities 
                         in a wide array of tech-related fields. From blockchain enthusiasts 
@@ -127,14 +108,14 @@ export default function Community() {
                         to collaborate, innovate, and influence their respective domains.
                     </p>
                     <Button title="LEARN MORE"
-                    extraStyles=" bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full md:w-[12.75rem] md:h-[3.625rem] xl:me-16"
+                    extraStyles=" bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full md:w-[9.75rem] md:h-[2.625rem] mt-5 xl:me-16"
                     />
                 </div>
 
                 <Image
                     src={Image2}
                     alt="Layer 1 Blockchain Illustration"
-                    className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[26.3125rem] md:h-[24.25rem] xl:w-[35rem]"
+                    className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[26.3125rem] md:h-[38rem] xl:w-[37rem]"
                 />
             </div>
             <style jsx>
@@ -148,8 +129,8 @@ export default function Community() {
                     bottom: 0;
                     right: 0;
                     position: absolute;
-                    width: 160%;
-                    height: 120%;
+                    width: 190%;
+                    height: 130%;
                     z-index: -1;
                 }
             `}
@@ -157,7 +138,8 @@ export default function Community() {
         </section>
 
         {/* Why Join CommUnity? */}
-        <section className="flex flex-col rounded-md shadow-lg m-20">
+        <section className="flex flex-col rounded-md m-20">
+            
             <div className="gap-5 items-center justify-center"
                 style={{
                 backgroundImage: `url(${Background3.src})`,
@@ -165,58 +147,57 @@ export default function Community() {
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
                 }}>
-
                 <div className="flex flex-col text-center gap-3 mt-10">
-                    <h1 className="text-[2rem] text-[#192033] font-bold font-ubuntu font-weight-700">
+                    <h1 className="text-[3rem] text-[#192033] font-bold font-ubuntu font-weight-700">
                         Why Join CommUnity?
                     </h1>
                 </div>
 
-                <div className="flex flex-col md:flex-row md:flex-wrap gap-[2rem] justify-center md:py-10 2xl:container">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 3xl:container p-10">
                     
                     {/* Diverse Leadership Opportunities */}
-                    <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md bg-white md:w-1/3">
-                        <Image src={DiverseLeadershipIcon} alt="community_governed_icon" />
-                        <h6 className="text-[1.25rem] text-[#29233B]">
+                    <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+                        <Image className="w-10 h-10" src={DiverseLeadershipIcon} alt="Diverse"/>
+                        <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-500 mt-5">
                             Diverse Leadership Opportunities
                         </h6>
-                        <p className="text-[1rem] text-[#495167]">
+                        <p className="text-[1rem] text-[#495167] font-light font-ubuntu font-weight-300 mt-5">
                             Create and lead a community in your area of expertise, 
                             be it blockchain, UI/UX, AI, or any tech-related field.
                         </p>
                     </div>
 
                     {/* AGC Grants for Value-Adding Communities */}
-                    <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md bg-white md:w-1/3">
-                        <Image src={AGCGrantsIcon} alt="blockchain_based_icon" />
-                        <h6 className="text-[1.25rem] text-[#29233B]">
+                    <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+                        <Image className="w-10 h-10" src={AGCGrantsIcon} alt="AGC" />
+                        <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-500 mt-5">
                             AGC Grants for Value-Adding Communities
                         </h6>
-                        <p className="text-[1rem] text-[#495167]">
+                        <p className="text-[1rem] text-[#495167] font-light font-ubuntu font-weight-300 mt-5">
                             Exceptional communities that significantly 
                             contribute to their fields can earn AGC grants for further development and impact.
                         </p>
                     </div>
 
                     {/* Autonomy in Governance */}
-                    <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md bg-white md:w-1/3">
-                        <Image src={AutonomyIcon} alt="blockchain_based_icon" />
-                        <h6 className="text-[1.25rem] text-[#29233B]">
+                    <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+                        <Image className="w-10 h-10" src={AutonomyIcon} alt="Autonomy" />
+                        <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-500 mt-5">
                             Autonomy in Governance
                         </h6>
-                        <p className="text-[1rem] text-[#495167]">
+                        <p className="text-[1rem] text-[#495167] font-light font-ubuntu font-weight-300 mt-5">
                             Establish your community's governance, guiding 
                             its growth and direction within the Devolved AI platform.
                         </p>
                     </div>
 
                     {/* Autonomy in Governance */}
-                    <div className="flex flex-col p-5 shadow-lg gap-3 rounded-md bg-white md:w-1/3">
-                        <Image src={EarnIcon} alt="blockchain_based_icon" />
-                        <h6 className="text-[1.25rem] text-[#29233B]">
+                    <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+                        <Image className="w-10 h-10" src={EarnIcon} alt="blockchain_based_icon" />
+                        <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-500 mt-5">
                             Earn and Influence Across Fields
                         </h6>
-                        <p className="text-[1rem] text-[#495167]">
+                        <p className="text-[1rem] text-[#495167] font-light font-ubuntu font-weight-300 mt-5">
                             Engage in meaningful contributions, share expertise, 
                             and earn AGC rewards for your community’s positive impact.
                         </p>
@@ -224,72 +205,117 @@ export default function Community() {
 
                 </div>
             </div>
+            <style jsx>
+                {`
+                .background-image {
+                    background-image: url(${Background2.src});
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    opacity: 1;
+                    top: 0;
+                    bottom: 0;
+                    position: absolute;
+                    width: 170%;
+                    height: 100%;
+                    z-index: -1;
+                }
+            `}
+            </style>
         </section>
 
         {/* User Case Examples */}
-        <section className="flex w-full h-[30rem] items-center justify-center bg-cover bg-center bg-no-repeat"
+        <section className="flex w-full h-screen items-center justify-center bg-cover bg-center bg-no-repeat"
             style={{ 
                 backgroundImage: `url(${BackgroundUseCase.src})` 
             }}>
             <div className="w-full">
                 <div className="flex flex-col items-center">
-                    <div className="text-center gap-3 heading text-white font-semibold text-[2rem] font-ubuntu font-weight-700 mb-10">
+                    <div className="text-center gap-3 heading text-white font-bold text-[2.75rem] font-ubuntu font-weight-700 mb-10 mt-10">
                         <h1>User Case Examples</h1>
                     </div>
 
-                    <div className="buttons flex text-white pr-20 pl-20">
-                        <ol className="relative text-gray-500 border-s border-gray-200 dark:border-gray-700 dark:text-gray-400">
-                        {steps.map((step, index) => (
-                            <li key={index} className="mb-10 ms-6">
-                                <span className={`absolute flex items-center justify-center w-8 h-8 bg-${step.color} rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-${step.color}`}>
-                                    <Image 
-                                    src={step.icon} 
-                                    alt={`Step ${index + 1}`} 
-                                    width={30} height={14} /> {/* Adjust width and height accordingly */}
-                                </span>
-                                <h3 className="font-medium leading-tight">
-                                    {step.title}
-                                </h3>
-                                <h5 className="leading-tight">
-                                    {step.subTitle}
-                                </h5>
-                                <p className="text-sm">
-                                    {step.description}
-                                </p>
+                    <div className="flex text-white ml-10 mr-20">
+                        <div className="flex items-center justify-center mb-20">
+                            <Image src={Steps} alt={"steps"} className="w-[5rem] h-[25rem]" />
+                        </div>
+                        <ol className="relative text-gray-500 dark:text-gray-400">
+                            <li className="mb-5">
+                                <div className="p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent ml-10">
+                                    <h1 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem]">
+                                        Case 1
+                                    </h1>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[1rem]">
+                                        Blockchain Expert Ben
+                                    </h5>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[1rem] leading-relaxed">
+                                        Ben starts a blockchain-focused CommUnity.
+                                        His group’s innovative ideas and projects
+                                        in blockchain technology earn it an AGC grant,
+                                        enhancing its role within the Devolved AI ecosystem.
+                                    </p>
+                                </div>
                             </li>
-                        ))}
+
+                            <li className="mb-5">
+                                <div className="p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent ml-10">
+                                    <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem]">
+                                        Case 2
+                                    </h3>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[1rem]">
+                                    UI/UX Designer Uma
+                                    </h5>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[1rem] leading-relaxed">
+                                        Uma creates a CommUnity dedicated to exploring the latest trends in UI/UX design. She leads the community in workshops and collaborative projects,<br/>
+                                        earning recognition and AGC grants for their contributions to the field.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li className="mb-5">
+                                <div className="p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent ml-10">
+                                    <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem]">
+                                        Case 3
+                                    </h3>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[1rem]">
+                                        Coding Enthusiast Carlos
+                                    </h5>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[1rem] leading-relaxed">
+                                        Carlos forms a CommUnity for coding enthusiasts, offering a space for learning, discussion, <br/>
+                                        and project collaboration. The community becomes a valuable resource for coding knowledge and practice within Devolved AI, earning AGC grants for its educational impact.
+                                    </p>
+                                </div>
+                            </li>
                         </ol>
                     </div>
+
                 </div>
             </div>
         </section>
 
         {/* Building and Governing Your CommUnity */}
         <section className="flex flex-col items-center justify-center m-20">
-                <div className="text-center mb-10">
-                    <h1 className="text-black font-semibold text-2xl font-ubuntu font-weight-700">
+                <div className="text-center mb-5">
+                    <h1 className="text-[2.50rem] text-[#192033] font-black font-ubuntu font-weight-700">
                         Building and Governing Your CommUnity
                     </h1>
                 </div>
 
                 <div className="flex gap-6 justify-center">
                     <CoreDetailsCard
-                    title="Establish Your Community"
-                    description="Within Devolved AI, create a CommUnity in your area of interest, be it tech, design, development, or any other field."
-                    image={EstablishIcon}
-                    imageStyles="object-cover w-full h-32 md:h-40"
+                        title="Establish Your Community"
+                        description="Within Devolved AI, create a CommUnity in your area of interest, be it tech, design, development, or any other field."
+                        image={EstablishIcon}
                     />
                     <CoreDetailsCard
                     title="Design Your Governance"
                     description="You hold the reins to define your community's governance, ensuring alignment with your goals and vision."
                     image={DesignIcon}
-                    imageStyles="object-cover w-full h-32 md:h-40"
                     />
                     <CoreDetailsCard
                     title="Earning and Utilizing AGC"
                     description="Guide your community to add value within the Devolved AI ecosystem and receive AGC grants to fuel your initiatives."
                     image={EarningIcon}
-                    imageStyles="object-cover w-full h-32 md:h-40"
                     />
                 </div>
         </section>
@@ -307,10 +333,10 @@ export default function Community() {
             }}>
             <div className="background-image" />
             <div className="fw-full max-w-xl text-center">
-                <h1 className="text-[2.15rem] text-[#192033] font-bold">
+                <h1 className="text-[2.50rem] text-[#192033] font-black font-ubuntu">
                     Why Create Your CommUnity?
                 </h1>
-                <p className="text-[1rem] text-[#495167]">
+                <p className="text-[1rem] text-[#495167] font-light font-ubuntu">
                     By creating a CommUnity within the Devolved AI platform, 
                     you position yourself at the forefront of your chosen field. 
                     It’s an opportunity to lead, to innovate, and to make a significant 
@@ -325,7 +351,7 @@ export default function Community() {
 
       {/* Ready to be a part of AI */}
       <section className="rounded-2xl shadow-lg flex flex-col items-center justify-center my-10 gap-5">
-          <div className="flex flex-col gap-10 p-10 items-center justify-center"
+          <div className="flex flex-col gap-10 p-10 items-center justify-center w-[50rem]"
             style={{
               backgroundImage: `url(${Image3.src})`,
               backgroundSize: 'cover',
@@ -334,18 +360,30 @@ export default function Community() {
             }}>
             <h1 className="text-[#192033] text-start text-lg" 
             style={{ textAlign: 'center',
-            fontSize: '2.5rem',
+            fontSize: '2rem',
             fontStyle: 'normal',
-            fontWeight: '500',
-            lineHeight: 'norma'}}>
-            Ready to be a part of AI's next (d)evolution?<br/>
+            fontWeight: '600',
+            lineHeight: '1.15rem'}}>
+              Ready to be a part of AI's next (d)evolution?<br/>
             <br/>
-            Sign up now.
+              Sign up now.
             </h1>
-            <Button
+            <div className="text-center mt-10 bg-white/30 backdrop-blur-md p-5 rounded-[1rem]">
+              <p className="font-ubuntu font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
+                Get $50 in crypto for signing up, Plus $50 per referral¹
+              </p>
+              <div className="flex items-center justify-center">
+                <input
+                type="email"
+                placeholder="Your email address*"
+                className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
+                />
+                <Button
                 title="JOIN THE REVOLUTION"
-                extraStyles=" bg-[#FF6F00] text-white rounded-[0.3125rem] w-full md:w-[12.75rem] md:h-[3.625rem] xl:me-16"
-              />
+                extraStyles=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
+                />
+              </div>
+            </div>
           </div>
       </section>
 

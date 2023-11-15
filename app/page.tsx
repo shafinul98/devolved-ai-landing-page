@@ -18,6 +18,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import Button from "@/components/customComponents/Button";
 import { useState } from "react";
+import GetReferral from "@/components/customComponents/GetReferral";
 
 export default function Home() {
   const [showSecondParagraph, setShowSecondParagraph] = useState(false);
@@ -26,6 +27,7 @@ export default function Home() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
+  
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
       {/* hero section */}
@@ -43,22 +45,7 @@ export default function Home() {
               community governance. Vote, earn rewards, and own a stake in<br/> 
               the future of AI—all powered by Argocoin.
             </p>
-            <div className="text-center mt-10 bg-white/30 backdrop-blur-md p-5 rounded-[1rem]">
-              <p className="font-ubuntu font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
-                Get $50 in crypto for signing up, Plus $50 per referral¹
-              </p>
-              <div className="flex items-center justify-center">
-                <input
-                type="email"
-                placeholder="Your email address*"
-                className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
-                />
-                <Button
-                title="JOIN THE REVOLUTION"
-                extraStyles=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
-                />
-              </div>
-            </div>
+            <GetReferral/>
             <div className="flex flex-col items-center justify-center mt-5">
               <motion.svg
               xmlns="http://www.w3.org/2000/svg"
@@ -72,9 +59,8 @@ export default function Home() {
                 repeat: Infinity,
                 duration: 1,
                 ease: 'easeInOut',
-              }}
-              >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              }}>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </motion.svg>
             </div>
           </div>

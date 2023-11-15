@@ -23,7 +23,7 @@ const TeamMemberCard = ({
   hasLinkedIn,
 }: PropTypes) => {
   return (
-    <article className="flex w-full md:w-[10rem] lg:w-[15rem] gap-5 my-2 p-5 transition ease-in-out hover:scale-105">
+    <article className="flex w-full md:w-[10rem] lg:w-[15rem] gap-5 my-2 p-5">
       <div className="relative bg-gray-100 overflow-hidden rounded-md shadow-md">
         <Image className="object-cover w-full"
           src={cardImage}
@@ -34,8 +34,8 @@ const TeamMemberCard = ({
         />
         <div className="p-4">
 
-        <p className="text-blue-500 mb-2">{cardDescription}</p>
-        <h2 className="text-xl font-bold mb-4">{cardTitle}</h2>
+        <p className="text-[0.75rem] text-blue-500 mb-2">{cardDescription}</p>
+        <h2 className="text-[1rem] font-bold mb-4">{cardTitle}</h2>
         <div className="flex items-center">
           <div className="text-blue-500 cursor-pointer">
             <div className="flex gap-x-5">
