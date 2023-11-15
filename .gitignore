@@ -36,4 +36,6 @@ yarn-error.log*
 *.tsbuildinfo
 *~
 *.un~
-next-env.d.ts
+
+# vim
+*.swp
