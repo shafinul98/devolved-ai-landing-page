@@ -25,7 +25,23 @@ export default function Technology() {
   };
 
   const submitHandler = async () => {
-    window.location.href = `/earlyAccessSuccess?isSignedUp=true`;
+    const res = await fetch("/api/emailOctopus", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email_address: email,
+        status: "PENDING",
+      }),
+    });
+
+    const { error, status } = await res.json();
+
+    if (status === 200) {
+      window.location.href = `/earlyAccessSuccess?isSignedUp=true`;
+    }
+
   };
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">

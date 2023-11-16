@@ -84,12 +84,10 @@ export function EarlyAccessForm({
               className="mx-auto my-8"
             />
             <DialogTitle className="text-center text-[1.25rem] leading-6 text-[#2D3748]">
-              Be the First to Experience the Future of Decentralized AI!
+              GET REFERRAL NOW!
             </DialogTitle>
             <DialogDescription className="text-start text-[1rem] my-2 text-[#646E73]">
-              Devolved AI is redefining the AI landscape with community-driven
-              development and governance. Sign up now for exclusive early access
-              to our web app, launching on December 5, 2023!
+              Get $50 in crypto for signing up, Plus $50 per referral¹
             </DialogDescription>
           </DialogHeader>
           <div className="grid gap-4 py-4">
