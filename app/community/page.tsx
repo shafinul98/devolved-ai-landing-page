@@ -8,7 +8,7 @@ import Background1 from "../../public/technology/bg1.png"
 import Image2 from "../../public/community/image2.png"
 import Background2 from "../../public/technology/bg2.png"
 import Background3 from "../../public/technology/bg3.png"
-import BackgroundUseCase from "../../public/about/bg3.png"
+import BackgroundUseCase from "../../public/about/bg3.webp"
 import Image3 from "../../public/technology/image3.png"
 import Background4 from "../../public/technology/bg4.png"
 import Button from "@/components/customComponents/Button";
@@ -22,10 +22,6 @@ import EstablishIcon from "../../public/community/establish_your_community.svg"
 import DesignIcon from "../../public/community/design_your_governance.svg"
 import EarningIcon from "../../public/community/earning_and_utilizing_AGC.svg"
 
-import Step1Icon from "../../public/community/step1.svg"
-import Step2Icon from "../../public/community/step2.svg"
-import Step3Icon from "../../public/community/step3.svg"
-import Stepper from "../../public/community/stepper.svg"
 import Steps from "../../public/community/steps.svg"
 import CoreDetailsCard from "@/components/customComponents/CoreDetailsCard";
 
@@ -236,19 +232,19 @@ export default function Community() {
                     </div>
 
                     <div className="flex text-white ml-10 mr-20">
-                        <div className="flex items-center justify-center mb-20">
+                        <div className="flex items-center justify-center mb-10">
                             <Image src={Steps} alt={"steps"} className="w-[5rem] h-[25rem]" />
                         </div>
                         <ol className="relative text-gray-500 dark:text-gray-400">
                             <li className="mb-5">
-                                <div className="p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent ml-10">
-                                    <h1 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem]">
+                                <div className="w-[25rem] h-[10rem] gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h1 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
                                         Case 1
                                     </h1>
-                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[1rem]">
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
                                         Blockchain Expert Ben
                                     </h5>
-                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[1rem] leading-relaxed">
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.70rem] leading-relaxed">
                                         Ben starts a blockchain-focused CommUnity.
                                         His group’s innovative ideas and projects
                                         in blockchain technology earn it an AGC grant,
@@ -258,30 +254,31 @@ export default function Community() {
                             </li>
 
                             <li className="mb-5">
-                                <div className="p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent ml-10">
-                                    <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem]">
+                                <div className="w-[25rem] h-[10rem] gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h1 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
                                         Case 2
-                                    </h3>
-                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[1rem]">
-                                    UI/UX Designer Uma
+                                    </h1>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                        UI/UX Designer Uma
                                     </h5>
-                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[1rem] leading-relaxed">
-                                        Uma creates a CommUnity dedicated to exploring the latest trends in UI/UX design. She leads the community in workshops and collaborative projects,<br/>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.70rem] leading-relaxed">
+                                        Uma creates a CommUnity dedicated to exploring the latest trends in UI/UX design. 
+                                        She leads the community in workshops and collaborative projects,
                                         earning recognition and AGC grants for their contributions to the field.
                                     </p>
                                 </div>
                             </li>
 
-                            <li className="mb-5">
-                                <div className="p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent ml-10">
-                                    <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem]">
+                            <li className="mb-10">
+                                <div className="w-[25rem] h-[10rem] gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h1 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
                                         Case 3
-                                    </h3>
-                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[1rem]">
+                                    </h1>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
                                         Coding Enthusiast Carlos
                                     </h5>
-                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[1rem] leading-relaxed">
-                                        Carlos forms a CommUnity for coding enthusiasts, offering a space for learning, discussion, <br/>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.70rem] leading-relaxed">
+                                        Carlos forms a CommUnity for coding enthusiasts, offering a space for learning, discussion,
                                         and project collaboration. The community becomes a valuable resource for coding knowledge and practice within Devolved AI, earning AGC grants for its educational impact.
                                     </p>
                                 </div>

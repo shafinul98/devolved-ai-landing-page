@@ -86,3 +86,7 @@
 .active {
   color: #FF6F00;
 }
+
+.stepper::-webkit-scrollbar {
+  display: none;
+}

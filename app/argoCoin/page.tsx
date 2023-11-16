@@ -11,8 +11,8 @@ import Image4 from "../../public/argoCoin/image4.png"
 import Image5 from "../../public/argoCoin/image5.png"
 import Image6 from "../../public/argoCoin/image6.png"
 import Image7 from "../../public/argoCoin/image7.png"
-import HomeImage1 from "../../public/home/1.png"
-import SectionBg3 from "../../public/home/section-bg-3.png"
+import HomeImage1 from "../../public/home/1.webp"
+import SectionBg3 from "../../public/home/section-bg-3.webp"
 import Button from "@/components/customComponents/Button";
 import GetReferral from "@/components/customComponents/GetReferral";
 import { motion } from "framer-motion";

@@ -1,79 +1,90 @@
 "use client"
 
 import Image from "next/image";
-import HeroImage from "../../public/about/hero-image.png"
-import HomeImage1 from "../../public/home/1.png" 
-import Image1 from "../../public/about/image1.png"
-import Background1 from "../../public/about/bg1.png"
-import Image2 from "../../public/about/image2.png"
-import Background2 from "../../public/about/bg2.png"
-import Background3 from "../../public/about/bg3.png"
+import HeroImage from "../../public/about/hero-image.webp"
+import HomeImage1 from "../../public/about/1.webp" 
+import Image1 from "../../public/about/image1.webp"
+import Background1 from "../../public/about/bg1.webp"
+import Image2 from "../../public/about/image2.webp"
+import Background2 from "../../public/about/bg2.webp"
+import Background3 from "../../public/about/bg3.webp"
 import IntegrityIcon from "../../public/about/integrity_icon.svg"
 import InnovationIcon from "../../public/about/innovation_icon.svg"
 import InclusivityIcon from "../../public/about/inclusivity_icon.svg"
-import SectionBg1 from "../../public/about/section-bg-1.png"
-import SectionBg2 from "../../public/about/section-bg-2.png"
+import SectionBg1 from "../../public/about/section-bg-1.webp"
+import SectionBg2 from "../../public/about/section-bg-2.webp"
 import TeamMemberCard from "@/components/customComponents/TeamMemberCard";
+
+import HorizontalStepper from "../../public/about/h-steeper.webp"
 import Nathan from "../../public/Nathan.jpeg";
 import Nazmul from "../../public/Nazmul.jpg";
+import TeamImage1 from "../../public/about/team/image1.webp";
+import TeamImage2 from "../../public/about/team/image2.webp";
+import TeamImage3 from "../../public/about/team/image3.webp";
+import TeamImage4 from "../../public/about/team/image4.webp";
+
 import { useRef, useState } from "react";
 import Button from "@/components/customComponents/Button";
 
 export default function About() {
     const teamMembers = [
         {
-            cardImage: Nathan,
+            cardImage: TeamImage1,
             cardDescription: "CEO & Founder",
             cardFooter: [
                 "",
-                "https://www.linkedin.com/in/nathan-lee-peterson",
-                "https://twitter.com/TahlilBsse0803",
+                "#",
+                "#",
+                "#",
                 "",
             ],
-            cardTitle: "Nathan Peterson",
-            hasGitHub: true,
+            cardTitle: "John Carter",
+            hasFacebook: true,
             hasTwitter: true,
             hasLinkedIn: true,
         },
         {
-            cardImage: Nazmul,
-            cardDescription: "COO",
+            cardImage: TeamImage2,
+            cardDescription: "VP of Design",
             cardFooter: [
                 "",
-                "https://www.linkedin.com/in/nathan-lee-peterson",
-                "https://twitter.com/TahlilBsse0803",
+                "#",
+                "#",
+                "#",
                 "",
             ],
-            cardTitle: "Md. Nazmul Hossain",
-            hasGitHub: true,
+            cardTitle: "Sophie Moore",
+            hasFacebook: true,
             hasTwitter: true,
             hasLinkedIn: true,
         },
         {
-            cardImage: Nazmul,
-            cardDescription: "COO",
+            cardImage: TeamImage3,
+            cardDescription: "VP of Marketing",
             cardFooter: [
                 "",
-                "https://www.linkedin.com/in/nathan-lee-peterson",
-                "https://twitter.com/TahlilBsse0803",
+                "#",
+                "#",
+                "#",
                 "",
             ],
-            cardTitle: "Md. Nazmul Hossain",
-            hasGitHub: true,
+            cardTitle: "Matt Cannon",
+            hasFacebook: true,
             hasTwitter: true,
             hasLinkedIn: true,
         },
         {
-            cardImage: Nathan,
-            cardDescription: "CEO & Founder",
+            cardImage: TeamImage4,
+            cardDescription: "VP of Product",
             cardFooter: [
                 "",
-                "https://www.linkedin.com/in/nathan-lee-peterson",
-                "https://twitter.com/TahlilBsse0803",
+                "#",
+                "#",
+                "#",
                 "",
             ],
-            cardTitle: "Nathan Peterson",
-            hasGitHub: true,
+            cardTitle: "Andy Smith",
+            hasFacebook: true,
             hasTwitter: true,
             hasLinkedIn: true,
         },
@@ -299,33 +310,154 @@ export default function About() {
         </section>
 
         {/* Roadmap At A Glance */}
-        <section className="flex w-full h-screen items-center justify-center bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: `url(${Background3.src})`}}>
-            <div className="text-white font-bold text-[2.75rem] font-ubuntu font-weight-700 mb-10 mt-10 ml-10 mr-10">
-                Roadmap At A Glance
-            </div>
+        <section className="flex w-full h-[50rem] items-center justify-center bg-cover bg-center bg-no-repeat"
+            style={{
+                backgroundImage: `url(${Background3.src})`,
+            }}>
+            <div className="w-full">
+                <div className="flex flex-row items-start justify-start p-10">
+                    {/* Heading on the left */}
+                    <div className="heading text-white font-bold text-[2rem] font-ubuntu font-weight-700">
+                        <h1>Roadmap At A Glance</h1>
+                    </div>
 
-            <div className="flex text-white ml-20">
-                <button
-                className="w-10 h-10 border-2 border-white rounded-l-lg p-1 cursor-pointer border-r-0"
-                onClick={() => alert('hi')}
-                >
-                <svg className="w-7 rounded-l-lg p-1 cursor-pointer border-r-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-                </button>
-                <button
-                className="w-10 h-10 border-2 border-white rounded-r-lg p-1 cursor-pointer"
-                onClick={() => alert('hi')}
-                >
-                <svg className="w-7 rounded-r-lg p-1 cursor-pointer border-r-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                </button>
-            </div>
+                    {/* Buttons on the right */}
+                    <div className="button flex text-white ml-auto">
+                        <button className="prev w-10 h-10 border-2 border-white rounded-l-lg p-1 cursor-pointer border-r-0"
+                        onClick={() => alert('hi')}>
+                            <svg
+                                className="w-7 rounded-l-lg p-1 cursor-pointer border-r-0"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                                />
+                            </svg>
+                        </button>
 
-            <div className="steeper overflow-hidden">
+                        <button className="next w-10 h-10 border-2 border-white rounded-r-lg p-1 cursor-pointer"
+                        onClick={() => alert('hi')}>
+                            <svg
+                                className="w-7 rounded-r-lg p-1 cursor-pointer border-r-0"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div className="stepper flex flex-col lg:flex-row items-center text-white ml-10 mr-20"
+                    style={{
+                        overflowX: 'scroll',
+                        scrollbarWidth: 'none',  // For Firefox
+                        msOverflowStyle: 'none',  // For Internet Explorer
+                        WebkitOverflowScrolling: 'touch',  // For iOS
+                    }}>
+                    <div className="lg:order-1 flex flex-col lg:ml-10 space-y-5">
+                        <div className="flex space-x-[20rem]">
+                            {/* Phase 1 content */}
+                            <div className="w-[18rem] h-[13rem] gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                <h1 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                    Phase 1
+                                </h1>
+                                <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                    Foundation and MVP Development <br/> (Q3 2023 - Q1 2024)
+                                </h5>
+                                <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                    We've laid the cornerstone by inaugurating our office and
+                                    assembling a dynamic team of visionaries. Currently, we're
+                                    channeling our efforts into the MVP, set to unveil in Q1 2024,
+                                    establishing our commitment to innovation and community
+                                    involvement.
+                                </p>
+                            </div>
+
+                            {/* Phase 3 content */}
+                            <div className="w-[18rem] h-[13rem] p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                    Phase 3
+                                </h3>
+                                <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                    AI and Protocol Enhancement <br/> (By Q3 2024)
+                                </h5>
+                                <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                    As Luna 2 enters the AI arena, we'll be bolstering our systems with
+                                    enhanced federated learning and a fortified PoV Protocol, all
+                                    while integrating substantial GPU support from our engaged
+                                    and growing community.
+                                </p>
+                            </div>
+
+                            {/* Phase 5 content */}
+                            <div className="w-[18rem] h-[13rem] p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent ml-[10rem]">
+                                <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                    Phase 3
+                                </h3>
+                                <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                    AI and Protocol Enhancement <br/> (By Q3 2024)
+                                </h5>
+                                <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                    As Luna 2 enters the AI arena, we'll be bolstering our systems with
+                                    enhanced federated learning and a fortified PoV Protocol, all
+                                    while integrating substantial GPU support from our engaged
+                                    and growing community.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center justify-center mb-0">
+                            <Image src={HorizontalStepper} alt={"steps"}/>
+                        </div>
+
+                        <div className="flex space-x-[15rem] ml-[20rem]">
+                            {/* Phase 2 content */}
+                            <div className="w-[18rem] h-[13rem] p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                    Phase 2
+                                </h3>
+                                <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                    Team and Infrastructure <br/> (By Q2 2024)
+                                </h5>
+                                <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                    With our MVP propelling us forward, the next milestone involves
+                                    expanding our talent pool and strengthening our infrastructure.
+                                    This sets the stage for both technological advancement and a
+                                    growth surge in our community, aiming to reach 25,000 members.
+                                </p>
+                            </div>
+
+                            {/* Phase 4 content */}
+                            <div className="w-[18rem] h-[13rem] p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem]">
+                                    Phase 4
+                                </h3>
+                                <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem]">
+                                    Data and Expansion <br/> (By Q1 2025)
+                                </h5>
+                                <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                    Optimizing our data management and expanding our GPU
+                                    network will be our focus, as we strive for superior efficiency
+                                    and prepare our platform for more complex AI tasks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
-
-
 
         {/* OUR TEAM */}
         <section className="w-full my-10 md:mt-20 lg:mb-0 overflow-x-auto 3xl:container">
@@ -338,9 +470,10 @@ export default function About() {
                         </p>
                         Meet <br/> the Pioneers
                     </h1>
-                    <p className="text-[1rem] text-[#495167] font-ubuntu font-light font-weight-300 mb-6">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit consequat <br/>
-                        eget morbi arcu convallis venenatis tellus neque faucibus auctor.
+                    <p className="text-[0.90rem] text-[#495167] font-ubuntu font-light font-weight-300 mb-6"
+                    style={{display: 'inline-block'}}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit consequat 
+                        eget <br/> morbi arcu convallis venenatis tellus neque faucibus auctor.
                     </p>
                     <div className="flex text-black">
                         <button
@@ -372,42 +505,42 @@ export default function About() {
         </section>
 
         {/* Ready to be a part of AI */}
-      <section className="rounded-2xl shadow-lg flex flex-col items-center justify-center my-10 gap-5">
-          <div className="flex flex-col gap-10 p-10 items-center justify-center w-[50rem]"
-            style={{
-              backgroundImage: `url(${HomeImage1.src})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }}>
-            <h1 className="text-[#192033] text-start text-lg" 
-            style={{ textAlign: 'center',
-            fontSize: '2rem',
-            fontStyle: 'normal',
-            fontWeight: '600',
-            lineHeight: '1.15rem'}}>
-              Ready to be a part of AI's next (d)evolution?<br/>
-            <br/>
-              Sign up now.
-            </h1>
-            <div className="text-center mt-10 bg-white/30 backdrop-blur-md p-5 rounded-[1rem]">
-              <p className="font-ubuntu font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
-                Get $50 in crypto for signing up, Plus $50 per referral¹
-              </p>
-              <div className="flex items-center justify-center">
-                <input
-                type="email"
-                placeholder="Your email address*"
-                className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
-                />
-                <Button
-                title="JOIN THE REVOLUTION"
-                extraStyles=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
-                />
-              </div>
+        <section className="rounded-2xl shadow-lg flex flex-col items-center justify-center my-10 gap-5">
+            <div className="flex flex-col gap-10 p-10 items-center justify-center w-[50rem]"
+                style={{
+                backgroundImage: `url(${HomeImage1.src})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                }}>
+                <h1 className="text-[#192033] text-start text-lg" 
+                style={{ textAlign: 'center',
+                fontSize: '2rem',
+                fontStyle: 'normal',
+                fontWeight: '600',
+                lineHeight: '1.15rem'}}>
+                Ready to be a part of AI's next (d)evolution?<br/>
+                <br/>
+                Sign up now.
+                </h1>
+                <div className="text-center mt-10 bg-white/30 backdrop-blur-md p-5 rounded-[1rem]">
+                <p className="font-ubuntu font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
+                    Get $50 in crypto for signing up, Plus $50 per referral¹
+                </p>
+                <div className="flex items-center justify-center">
+                    <input
+                    type="email"
+                    placeholder="Your email address*"
+                    className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
+                    />
+                    <Button
+                    title="JOIN THE REVOLUTION"
+                    extraStyles=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
+                    />
+                </div>
+                </div>
             </div>
-          </div>
-      </section>
+        </section>
 
         <div className="bg-slate-700 w-4/5 mx-auto border bottom-1" />
     </main>

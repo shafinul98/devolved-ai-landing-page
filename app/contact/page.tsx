@@ -9,7 +9,6 @@ import Link from "next/link";
 import { FaDiscord, FaFacebook, FaReddit, FaTelegram, FaTwitter } from "react-icons/fa";
 import ContactUsForm from "@/components/customComponents/ContactUsForm";
 
-
 export default function Contact() {
     return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
@@ -76,7 +75,7 @@ export default function Contact() {
                     </div>
 
                     <div>
-                    <ContactUsForm />
+                        <ContactUsForm />
                     </div>
                 </div>
 
