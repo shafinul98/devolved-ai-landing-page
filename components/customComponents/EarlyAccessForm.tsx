@@ -16,7 +16,7 @@ import Image from "next/image";
 
 import { useEffect, useState } from "react";
 
-import DevolvedAIHeroLogo from "../../public/Devolved AI Hero Logo.svg";
+import DevolvedAIHeroLogo from "../../public/logo.svg";
 
 import { Button } from "../ui/button";
 import { Alert } from "../ui/alert";

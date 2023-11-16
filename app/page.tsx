@@ -20,9 +20,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Button from "@/components/customComponents/Button";
 import { useState } from "react";
 import GetReferral from "@/components/customComponents/GetReferral";
+import { Input } from "@/components/ui/input";
 
 export default function Home() {
   const [showSecondParagraph, setShowSecondParagraph] = useState(false);
+
+  const [email, setEmail] = useState("");
+  const [isEmailValid, setIsEmailValid] = useState(true);
+  const validateEmail = (input: any) => {
+    const isValid = /\S+@\S+\.\S+/.test(input);
+    setIsEmailValid(isValid);
+  };
+
+  const submitHandler = async () => {
+    window.location.href = `/earlyAccessSuccess?isSignedUp=true`;
+  };
 
   const variants = {
     hidden: { opacity: 0, y: 20 },
@@ -46,7 +58,32 @@ export default function Home() {
               community governance. Vote, earn rewards, and own a stake in<br/> 
               the future of AI—all powered by Argocoin.
             </p>
-            <GetReferral/>
+            <div className="text-center mt-5 bg-white/30 backdrop-blur-md p-5 rounded-[1rem]">
+              <p className="font-ubuntu font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
+                  Get $50 in crypto for signing up, Plus $50 per referral¹
+              </p>
+              <div className="flex items-center justify-center">
+                <Input
+                  placeholder="Your email address*"
+                  type="email"
+                  className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
+                  required
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    validateEmail(e.target.value);
+                  }}
+                  onFocus={() => blur}
+                  tabIndex={-1}
+                  style={{ fontSize: "16px" }}
+                />
+                <button
+                onClick={submitHandler}
+                className=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
+                >
+                  JOIN THE REVOLUTION
+                </button>
+              </div>
+            </div>
             <div className="flex flex-col items-center justify-center mt-5">
               <motion.svg
               xmlns="http://www.w3.org/2000/svg"
@@ -336,15 +373,25 @@ export default function Home() {
                 Get $50 in crypto for signing up, Plus $50 per referral¹
               </p>
               <div className="flex items-center justify-center">
-                <input
-                type="email"
-                placeholder="Your email address*"
-                className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
+                <Input
+                  placeholder="Your email address*"
+                  type="email"
+                  className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
+                  required
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    validateEmail(e.target.value);
+                  }}
+                  onFocus={() => blur}
+                  tabIndex={-1}
+                  style={{ fontSize: "16px" }}
                 />
-                <Button
-                title="JOIN THE REVOLUTION"
-                extraStyles=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
-                />
+                <button
+                onClick={submitHandler}
+                className=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
+                >
+                  JOIN THE REVOLUTION
+                </button>
               </div>
             </div>
           </div>

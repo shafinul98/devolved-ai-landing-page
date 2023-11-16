@@ -25,6 +25,7 @@ import TeamImage4 from "../../public/about/team/image4.webp";
 
 import { useRef, useState } from "react";
 import Button from "@/components/customComponents/Button";
+import { Input } from "@/components/ui/input";
 
 export default function About() {
     const teamMembers = [
@@ -104,6 +105,17 @@ export default function About() {
         }
         return prevPage;
         });
+    };
+
+    const [email, setEmail] = useState("");
+    const [isEmailValid, setIsEmailValid] = useState(true);
+    const validateEmail = (input: any) => {
+        const isValid = /\S+@\S+\.\S+/.test(input);
+        setIsEmailValid(isValid);
+    };
+
+    const submitHandler = async () => {
+        window.location.href = `/earlyAccessSuccess?isSignedUp=true`;
     };
 
     return (
@@ -323,8 +335,7 @@ export default function About() {
 
                     {/* Buttons on the right */}
                     <div className="button flex text-white ml-auto">
-                        <button className="prev w-10 h-10 border-2 border-white rounded-l-lg p-1 cursor-pointer border-r-0"
-                        onClick={() => alert('hi')}>
+                        <button className="prev w-10 h-10 border-2 border-white rounded-l-lg p-1 cursor-pointer border-r-0">
                             <svg
                                 className="w-7 rounded-l-lg p-1 cursor-pointer border-r-0"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -340,8 +351,7 @@ export default function About() {
                             </svg>
                         </button>
 
-                        <button className="next w-10 h-10 border-2 border-white rounded-r-lg p-1 cursor-pointer"
-                        onClick={() => alert('hi')}>
+                        <button className="next w-10 h-10 border-2 border-white rounded-r-lg p-1 cursor-pointer">
                             <svg
                                 className="w-7 rounded-r-lg p-1 cursor-pointer border-r-0"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -528,16 +538,26 @@ export default function About() {
                     Get $50 in crypto for signing up, Plus $50 per referral¹
                 </p>
                 <div className="flex items-center justify-center">
-                    <input
-                    type="email"
+                    <Input
                     placeholder="Your email address*"
+                    type="email"
                     className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
+                    required
+                    onChange={(e) => {
+                        setEmail(e.target.value);
+                        validateEmail(e.target.value);
+                    }}
+                    onFocus={() => blur}
+                    tabIndex={-1}
+                    style={{ fontSize: "16px" }}
                     />
-                    <Button
-                    title="JOIN THE REVOLUTION"
-                    extraStyles=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
-                    />
-                </div>
+                    <button
+                    onClick={submitHandler}
+                    className=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
+                    >
+                    JOIN THE REVOLUTION
+                    </button>
+              </div>
                 </div>
             </div>
         </section>

@@ -16,8 +16,20 @@ import SectionBg3 from "../../public/home/section-bg-3.webp"
 import Button from "@/components/customComponents/Button";
 import GetReferral from "@/components/customComponents/GetReferral";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
 
 export default function ArgoCoin() {
+    const [email, setEmail] = useState("");
+  const [isEmailValid, setIsEmailValid] = useState(true);
+  const validateEmail = (input: any) => {
+    const isValid = /\S+@\S+\.\S+/.test(input);
+    setIsEmailValid(isValid);
+  };
+
+  const submitHandler = async () => {
+    window.location.href = `/earlyAccessSuccess?isSignedUp=true`;
+  };
     return (
         <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
             {/* hero section */}
@@ -39,14 +51,26 @@ export default function ArgoCoin() {
                                 Get $50 in crypto for signing up, Plus $50 per referral¹
                             </p>
                             <div className="flex items-center justify-center">
-                                <input className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
-                                type="email"
-                                placeholder="Your email address*"
-                                />
-                                <Button extraStyles=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
-                                title="JOIN THE REVOLUTION"
-                                />
-                            </div>
+                <Input
+                  placeholder="Your email address*"
+                  type="email"
+                  className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
+                  required
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    validateEmail(e.target.value);
+                  }}
+                  onFocus={() => blur}
+                  tabIndex={-1}
+                  style={{ fontSize: "16px" }}
+                />
+                <button
+                onClick={submitHandler}
+                className=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
+                >
+                  JOIN THE REVOLUTION
+                </button>
+              </div>
                         </div>
                         <div className="flex flex-col items-center justify-center mt-10">
                             <motion.svg
@@ -412,16 +436,26 @@ export default function ArgoCoin() {
                         Get $50 in crypto for signing up, Plus $50 per referral¹
                     </p>
                     <div className="flex items-center justify-center">
-                        <input
-                        type="email"
-                        placeholder="Your email address*"
-                        className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
-                        />
-                        <Button
-                        title="JOIN THE REVOLUTION"
-                        extraStyles=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
-                        />
-                    </div>
+                <Input
+                  placeholder="Your email address*"
+                  type="email"
+                  className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
+                  required
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    validateEmail(e.target.value);
+                  }}
+                  onFocus={() => blur}
+                  tabIndex={-1}
+                  style={{ fontSize: "16px" }}
+                />
+                <button
+                onClick={submitHandler}
+                className=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
+                >
+                  JOIN THE REVOLUTION
+                </button>
+              </div>
                     </div>
                 </div>
             </section>

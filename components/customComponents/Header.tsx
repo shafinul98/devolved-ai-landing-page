@@ -9,6 +9,7 @@ import Logo from "../../public/logo.svg";
 import Button from "./Button";
 import useScroll from "@/lib/hooks/use-scroll";
 import { useActivePath } from "./UseActivePath";
+import { EarlyAccessForm } from "./EarlyAccessForm";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -113,10 +114,13 @@ const Header = () => {
                     </Link>
                   </div>
               ))}
-              <Button
-                title="JOIN THE REVOLUTION"
-                extraStyles="border border-black border-2 text-[1rem] text-[1D1D1D] font-ubuntu font-bold font-weight-500 py-2 px-4 rounded-md md:w-[12.5625rem] md:h-[2.125rem] transition-all hover:bg-black hover:text-white"
-              />
+              <EarlyAccessForm>
+                  <Button
+                    title="JOIN THE REVOLUTION"
+                    extraStyles=" border border-black border-2 text-[1rem] text-[1D1D1D] font-ubuntu font-bold font-weight-500 py-2 px-4 rounded-md md:w-[12.5625rem] md:h-[2.125rem] transition-all hover:bg-black hover:text-white"
+                  />
+              </EarlyAccessForm>
+              
             </div>
         </div>
       </nav>
