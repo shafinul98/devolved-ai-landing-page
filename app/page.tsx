@@ -7,7 +7,7 @@ import HomeImage2 from "../public/home/2.webp"
 import HomeImage3 from "../public/home/3.webp"
 import HomeImage4 from "../public/home/4.webp"
 
-import SectionBg from "../public/home/section-bg.webp"
+import SectionBg from "../public/home/section-bg-1.webp"
 import SectionBg2 from "../public/home/section-bg-2.webp"
 import SectionBg3 from "../public/home/section-bg-3.webp"
 import SectionBg4 from "../public/home/section-bg-4.webp"
