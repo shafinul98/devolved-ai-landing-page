@@ -242,7 +242,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 3xl:container p-10">
 
                 {/* Integrity */}
-                <div className="p-6 md:p-8 shadow-md rounded-md bg-white">
+                <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
                     <Image className="w-10 h-10" src={IntegrityIcon} alt="community_governed_icon" />
                     <h6 className="text-lg text-[#29233B] font-bold font-ubuntu font-weight-500 mt-3">
                         Integrity
@@ -254,7 +254,7 @@ export default function About() {
                 </div>
 
                 {/* Innovation */}
-                <div className="p-6 md:p-8 shadow-md rounded-md bg-white">
+                <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
                     <Image className="w-10 h-10" src={InnovationIcon} alt="shared_prosperity_icon" />
                     <h6 className="text-lg text-[#29233B] font-bold font-ubuntu font-weight-500 mt-3">
                         Innovation
@@ -266,7 +266,7 @@ export default function About() {
                 </div>
 
                 {/* Inclusivity */}
-                <div className="p-6 md:p-8 shadow-md rounded-md bg-white">
+                <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
                     <Image className="w-10 h-10" src={InclusivityIcon} alt="blockchain_based_icon" />
                     <h6 className="text-lg text-[#29233B] font-bold font-ubuntu font-weight-500 mt-3">
                         Inclusivity

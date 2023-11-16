@@ -28,7 +28,7 @@ export default function Home() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
-  
+
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
       {/* hero section */}
@@ -155,7 +155,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 3xl:container p-10">
 
             {/* Community Governed */}
-            <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+            <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
               <Image className="w-10 h-10" src={CommunityGovernedIcon} alt="community_governed_icon" />
               <h6 className="text-lg text-[#29233B] font-bold font-ubuntu font-weight-500 mt-3">
                 Community Governed
@@ -167,7 +167,7 @@ export default function Home() {
             </div>
 
             {/* Shared Prosperity */}
-            <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+            <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
               <Image className="w-10 h-10" src={SharedProsperityIcon} alt="shared_prosperity_icon" />
               <h6 className="text-lg text-[#29233B] font-bold font-ubuntu font-weight-500 mt-3">
                 Shared Prosperity
@@ -179,7 +179,7 @@ export default function Home() {
             </div>
 
             {/* Blockchain-based */}
-            <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+            <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
               <Image className="w-10 h-10" src={BlockchainBasedIcon} alt="blockchain_based_icon" />
               <h6 className="text-lg text-[#29233B] font-bold font-ubuntu font-weight-500 mt-3">
                 Blockchain-based

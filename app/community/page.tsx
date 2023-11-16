@@ -152,7 +152,7 @@ export default function Community() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 3xl:container p-10">
                     
                     {/* Diverse Leadership Opportunities */}
-                    <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+                    <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
                         <Image className="w-10 h-10" src={DiverseLeadershipIcon} alt="Diverse"/>
                         <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-500 mt-5">
                             Diverse Leadership Opportunities
@@ -164,7 +164,7 @@ export default function Community() {
                     </div>
 
                     {/* AGC Grants for Value-Adding Communities */}
-                    <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+                    <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
                         <Image className="w-10 h-10" src={AGCGrantsIcon} alt="AGC" />
                         <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-500 mt-5">
                             AGC Grants for Value-Adding Communities
@@ -176,7 +176,7 @@ export default function Community() {
                     </div>
 
                     {/* Autonomy in Governance */}
-                    <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+                    <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
                         <Image className="w-10 h-10" src={AutonomyIcon} alt="Autonomy" />
                         <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-500 mt-5">
                             Autonomy in Governance
@@ -188,7 +188,7 @@ export default function Community() {
                     </div>
 
                     {/* Autonomy in Governance */}
-                    <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+                    <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
                         <Image className="w-10 h-10" src={EarnIcon} alt="blockchain_based_icon" />
                         <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-500 mt-5">
                             Earn and Influence Across Fields

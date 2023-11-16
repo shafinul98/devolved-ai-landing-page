@@ -143,7 +143,7 @@ export default function Technology() {
 
                 {/* In the standard mode, Luna 1 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 3xl:container p-10">
-                    <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+                    <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
                         <Image className="w-[13rem] h-[11rem]" src={StandardMode} alt="community_governed_icon" />
                         <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-300">
                             In the standard mode, Luna 1
@@ -162,7 +162,7 @@ export default function Technology() {
                     </div>
 
                     {/* Looking beyond Luna 1 */}
-                    <div className="p-6 md:p-8 shadow-lg rounded-md bg-white">
+                    <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
                         <Image className="w-[13rem] h-[11rem]" src={LookingBeyond} alt="blockchain_based_icon" />
                         <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-300">
                             Looking beyond Luna 1
