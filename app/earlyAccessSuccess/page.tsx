@@ -27,7 +27,7 @@ const EarlyAccessSuccess = () => {
 
   const searchParams = useSearchParams();
 
-  const isSignedUp = searchParams.get("isSignedUp");
+  const isSignedUp = searchParams ? searchParams.get("isSignedUp") : null;
 
   const router = useRouter();
 
