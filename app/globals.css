@@ -90,3 +90,7 @@
 .stepper::-webkit-scrollbar {
   display: none;
 }
+
+.powered-by {
+  display: none;
+}

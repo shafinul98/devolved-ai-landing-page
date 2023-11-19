@@ -6,7 +6,6 @@ import MenuIcon from "../../public/Menu Icon.svg";
 import { AiOutlineClose } from "react-icons/ai";
 import React, { useEffect, useRef, useState } from "react";
 import Logo from "../../public/logo.svg";
-import Button from "./Button";
 import useScroll from "@/lib/hooks/use-scroll";
 import { useActivePath } from "./UseActivePath";
 import { EarlyAccessForm } from "./EarlyAccessForm";
@@ -54,26 +53,29 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <div className={`fixed top-0 w-full flex justify-between xl:justify-center items-center md:px-10 py-1 3xl:container ${
-          scrolled
-          ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
-          : "bg-white/0" } z-30 transition-all`}>
+      <div className={`fixed top-0 w-full flex justify-between xl:justify-center items-center md:px-10 py-1 3xl:container ${
+  scrolled
+    ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
+    : scrolled
+    ? "border-b border-gray-200 backdrop-blur-xl"
+    : "bg-white/0"
+} z-30 transition-all`}>
             <Link href={"/"} className="xl:pr-6 2xl:me-auto 2xl:pl-5">
               <Image
                 src={Logo}
                 alt="Devolved AI Logo"
                 quality={100}
-                className="w-full"
-                style={{ width: '10rem', height: '1.25rem' }}
+                className="w-40 md:w-60 lg:w-80"
+                style={{ width: '11.25rem', height: '1.51444rem' }}
               />
             </Link>
             <div className="lg:hidden" ref={menuRef}>
               <div
-                className="w-10 h-10 flex border items-center justify-center rounded-sm p-1 me-3.5"
+                className="w-10 h-10 flex items-center justify-center rounded-sm p-1 me-3.5"
                 onClick={() => {
                   setIsMenuOpen(!isMenuOpen);
                 }}>
-                <Image src={MenuIcon} alt="Menu Icon" />
+                <Image src={MenuIcon} alt="Menu Icon"/>
               </div>
 
               <div className={
@@ -93,7 +95,7 @@ const Header = () => {
                 </div>
 
                 {/* Home Menu item */}
-                <ul className="uppercase pt-5 min-h-screen flex flex-col gap-5 items-start pl-5">
+                <ul className="pt-5 min-h-screen flex flex-col gap-5 items-start pl-5">
                   {navigation.map(({ href, name }) => (
                     <li key={name} className="relative ms-[5px]" onClick={() => {setIsMenuOpen(false);}}>
                     <Link href={href} className={checkActivePath(href) ? 'active' : ''}>
@@ -106,19 +108,18 @@ const Header = () => {
             </div>
 
             {/* Mobile and Above NavBar */}
-            <div className="p-3 xl:ms-0 lg:justify-center xl:justify-between items-center xl:gap-10 lg:gap-5 hidden lg:flex text-sm text-[#2D3748]">
+            <div className="p-3 xl:ms-0 lg:justify-center xl:justify-between items-center xl:gap-10 lg:gap-5 hidden lg:flex">
               {navigation.map(({ href, name }) => (
-                  <div key={name} className="relative ms-[5px] text-[0.75rem] text-[#1D1D1D] font-ubuntu font-normal font-weight-400 leading-normal" onClick={() => {setIsMenuOpen(false);}}>
+                  <div key={name} className="text-[1rem] text-[#1D1D1D] font-normal font-weight-400 leading-normal relative ms-[5px]" onClick={() => {setIsMenuOpen(false);}}>
                     <Link href={href} className={checkActivePath(href) ? 'active' : ''}>
                       {name}
                     </Link>
                   </div>
               ))}
               <EarlyAccessForm>
-                  <Button
-                    title="JOIN THE REVOLUTION"
-                    extraStyles=" border border-black border-2 text-[1rem] text-[1D1D1D] font-ubuntu font-bold font-weight-500 py-2 px-4 rounded-md md:w-[12.5625rem] md:h-[2.125rem] transition-all hover:bg-black hover:text-white"
-                  />
+                <button className="text-[1rem] text-[1D1D1D] font-bold font-weight-500 leading-normal border-black border-2 py-2 px-4 rounded-[0.625rem] md:w-[14.5625rem] md:h-[3.125rem] transition-all hover:bg-black hover:text-white">
+                  JOIN THE REVOLUTION
+                </button>
               </EarlyAccessForm>
               
             </div>

@@ -1,14 +1,14 @@
 import Header from "@/components/customComponents/Header";
 import "./globals.css";
-import { Lato } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 import Footer from "@/components/customComponents/Footer";
 import { Metadata } from "next";
 import GoogleAnalytics from "./GoogleAnalytics";
 import Script from "next/script";
 
-const lato = Lato({
+const ubuntu = Ubuntu({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -80,8 +80,12 @@ fbq('init', '855397502875334');
 fbq('track', 'PageView');
 `}
         </Script>
+        <Script
+          src="https://app.viral-loops.com/widgetsV2/core/loader.js"
+          strategy="lazyOnload"
+        />
       </head>
-      <body className={`${lato.className} grid`}>
+      <body className={`${ubuntu.className} grid`}>
         <Header />
         <GoogleAnalytics />
         {children}

@@ -28,12 +28,12 @@ const Footer = () => {
             height: '100px',
           }}>
 
-          <div className="logo mb-5 ml-3">
+          <div className="mb-5 ml-3">
             <Link href={"/"}>
               <Image
                 src={FooterLogo}
                 alt="footer_logo"
-                className="md:w-[12.5rem] md:h-[3rem] w-[11.75rem] h-[2rem] md:ms-[-0.5rem]"
+                className="md:w-[11.25rem] md:h-[#1D1D1D] w-[11.75rem] h-[2rem] md:ms-[-0.5rem]"
                 quality={100}
               />
             </Link>
@@ -41,18 +41,10 @@ const Footer = () => {
 
           <div className="flex flex-col gap-5 items-center md:items-start mt-2 mr-5">
             <div className="flex items-center">
-              <span className="icon mr-2 mb-4">
+              <span className="mr-2 mb-4">
                 <HiLocationMarker className="w-5 h-5 text-black-500" />
               </span>
-              <span className="text" 
-                style={{ 
-                  color: '#1D1D1D', 
-                  fontFamily: 'Ubuntu', 
-                  fontSize: '1rem', 
-                  fontStyle: 'normal', 
-                  fontWeight: 400,
-                  lineHeight: '1.25rem'
-                }}>
+              <span className="text-[#1D1D1D] text-[1rem] leading-[1.25rem] font-normal">
                 <span className="block">1706 Chester Ave., Suite #555</span>
                 <span className="block">Bakersfield, CA 93309</span>
               </span>
@@ -61,8 +53,8 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col">
-          <h1 className="mb-5 font-ubuntu font-bold text-[1rem]">Quick Links</h1>
-          <div className="flex flex-col items-start gap-2 font-ubuntu font-normal text-[.75rem]">
+          <h1 className="mb-5 font-medium text-[1.25rem] text-start leading-normal text-[#29233B]">Quick Links</h1>
+          <div className="flex flex-col items-start gap-2 font-normal leading-normal text-[1rem] text-[#1D1D1D]">
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <Link href="/argoCoin">$AGC</Link>
@@ -74,8 +66,8 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col">
-          <h1 className="mb-5 font-ubuntu font-bold text-[1rem]">Utility pages</h1>
-          <div className="flex flex-col items-start gap-2 font-ubuntu font-normal text-[.75rem]">
+          <h1 className="mb-5 font-medium text-[1.25rem] text-start leading-normal text-[#29233B]">Utility pages</h1>
+          <div className="flex flex-col items-start gap-2 text-[1rem] font-normal leading-normal text-[#1D1D1D]">
             <Link href="#">Terms and conditions</Link>
             <Link href="#">Privacy Policy</Link>
           </div>
@@ -89,11 +81,12 @@ const Footer = () => {
             backgroundRepeat: 'no-repeat',
             height: '100px',
           }}>
-          <h1 className="mb-5 font-ubuntu font-bold text-[1rem] text-start">
+          <h1 className="mb-5 font-medium text-[1.25rem] text-start leading-normal text-[#29233B]">
             Social Links
           </h1>
           <div className="flex gap-3">
             <Link
+            className="md:w-[2.82381rem] md:h-[2.82381rem]"
               href={"https://facebook.com/devolvedai"}
               rel="noopener noreferrer"
               target="_blank"
@@ -102,6 +95,7 @@ const Footer = () => {
             </Link>
 
             <Link
+            className="md:w-[2.82381rem] md:h-[2.82381rem]"
               href={"https://twitter.com/devolvedai"}
               rel="noopener noreferrer"
               target="_blank"
@@ -110,6 +104,7 @@ const Footer = () => {
             </Link>
 
             <Link
+            className="md:w-[2.82381rem] md:h-[2.82381rem]"
               href={"https://www.reddit.com/user/devolvedai"}
               rel="noopener noreferrer"
               target="_blank"
@@ -118,6 +113,7 @@ const Footer = () => {
             </Link>
 
             <Link
+            className="md:w-[2.82381rem] md:h-[2.82381rem]"
               href={"https://discord.gg/Z2avfRQ4xc"}
               rel="noopener noreferrer"
               target="_blank"
@@ -126,6 +122,7 @@ const Footer = () => {
             </Link>
 
             <Link
+            className="md:w-[2.82381rem] md:h-[2.82381rem]"
               href={"https://t.me/devolvedai"}
               rel="noopener noreferrer"
               target="_blank"
@@ -139,14 +136,7 @@ const Footer = () => {
 
       <div className="bg-slate-700 w-4/5 mx-auto border bottom-1" />
 
-      <p className="text-center my-10"
-        style={{ 
-          color: '#1D1D1D', 
-          fontSize: '0.75rem', 
-          fontStyle: 'normal', 
-          fontWeight: '400', 
-          lineHeight: '1.25rem'
-        }}>
+      <p className="text-center my-10 text-[#1D1D1D] text-[1rem] font-normal leading-[1.25rem]">
         © Devolved AI 2023. All rights reserved.
       </p>
     </footer>

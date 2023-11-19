@@ -8,7 +8,7 @@ type PropTypes = {
   cardDescription: string;
   cardImage: any;
   cardFooter: string[];
-  hasGitHub?: boolean;
+  hasFacebook?: boolean;
   hasTwitter?: boolean;
   hasLinkedIn?: boolean;
 };
@@ -18,7 +18,7 @@ const TeamMemberCard = ({
   cardImage,
   cardDescription,
   cardFooter,
-  hasGitHub,
+  hasFacebook,
   hasTwitter,
   hasLinkedIn,
 }: PropTypes) => {
@@ -34,12 +34,12 @@ const TeamMemberCard = ({
         />
         <div className="p-4">
 
-        <p className="text-[0.75rem] text-[#204FA2] font-bold mb-2">{cardDescription}</p>
-        <h2 className="text-[1rem] font-bold mb-4">{cardTitle}</h2>
+        <p className="text-[1rem] text-[#204FA2] font-bold leading-normal mb-2">{cardDescription}</p>
+        <h2 className="text-[1.50rem] font-bold leading-normal mb-4">{cardTitle}</h2>
         <div className="flex items-center">
-          <div className="text-[#204FA2] cursor-pointer">
+          <div className="text-[#0163E0] cursor-pointer">
             <div className="flex gap-x-5">
-              {hasGitHub && (
+              {hasFacebook && (
                 <Link href={cardFooter[0]} rel="noopener noreferrer" target="_blank">
                   <FaFacebook />
                 </Link>

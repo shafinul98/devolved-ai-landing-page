@@ -13,7 +13,6 @@ type PropTypes = {
 const Button = ({
   title,
   extraStyles,
-  hasRightArrowIcon,
   type,
   disabled,
 }: PropTypes) => {
