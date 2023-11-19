@@ -37,13 +37,7 @@ export default function Home() {
               professional, there's a place for you.
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-5 mt-2.5 md:mt-5">
-              <EarlyAccessForm>
-                <Button
-                  title="Get Early Access"
-                  extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem] text-[14px]"
-                />
-              </EarlyAccessForm>
-
+              <form-widget ucid="EeQTn0VkqudBHfkE9leVA0AcX70"></form-widget>
               <a
                 target="_blank"
                 href="https://devolved-ai.gitbook.io/devolved-ai-whitepaper/"
@@ -380,12 +374,7 @@ export default function Home() {
             community guided AI ecosystem.
           </p>
           <div className="flex gap-x-2 md:px-72 justify-center lg:mx-auto">
-            <EarlyAccessForm>
-              <Button
-                title="Get Early Access"
-                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem] text-[1rem]"
-              />
-            </EarlyAccessForm>
+            <form-widget ucid="EeQTn0VkqudBHfkE9leVA0AcX70"></form-widget>
             <a
               target="_blank"
               href="https://devolved-ai.gitbook.io/devolved-ai-whitepaper/"

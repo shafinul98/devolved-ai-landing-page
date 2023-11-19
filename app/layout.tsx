@@ -100,6 +100,10 @@ fbq('init', '855397502875334');
 fbq('track', 'PageView');
 `}
         </Script>
+        <Script
+          src="https://app.viral-loops.com/widgetsV2/core/loader.js"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
