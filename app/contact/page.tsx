@@ -10,7 +10,7 @@ import ContactUsForm from "@/components/customComponents/ContactUsForm";
 
 export default function Contact() {
     return (
-        <main className="flex flex-col min-h-screen overflow-x-hidden items-center justify-between">
+        <main className="flex flex-col min-h-screen overflow-x-hidden items-center justify-between p-0 md:p-0">
 
             {/* Contact hero section */}
             <section className="flex w-full md:h-[20rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[30rem] 3xl-[30rem] items-center justify-center bg-cover bg-center bg-no-repeat"
@@ -24,7 +24,7 @@ export default function Contact() {
 
             {/* Contact form */}
             <section className="w-full my-10 md:mt-20 md:mb-0 items-center">
-                <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20">
+                <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
                     <div className="flex flex-col px-5 md:mt-16 gap-8 xl:ms-5 w-full md:w-1/2 lg:w-auto text-start">
                         <div className="background-image-text" />
                         <p className="text-[2.375rem] 3xl:text-8xl text-[#192033] font-bold leading-normal">

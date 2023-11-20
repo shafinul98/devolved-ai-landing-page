@@ -51,82 +51,65 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
+    
     <header>
-      <nav>
-        <div className={`fixed top-0 w-full flex justify-between xl:justify-center items-center md:px-10 py-1 
-        ${ scrolled
-            ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
-            : scrolled
-            ? "border-b border-gray-200 backdrop-blur-xl"
-            : "bg-white/0"
-        } z-30 transition-all`}>
-          <Link href={"/"} className="xl:pr-6 2xl:me-auto 2xl:pl-5">
-            <Image
-              src={Logo}
-              alt="Devolved AI Logo"
-              quality={100}
-              className="w-40 md:w-60 lg:w-80"
-              style={{ width: "11.25rem", height: "1.51444rem" }}
-            />
-          </Link>
+  <nav>
+    <div className={`fixed top-0 w-full grid grid-cols-3 justify-between items-center md:px-10 py-1 
+      ${scrolled
+        ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
+        : scrolled
+        ? "border-b border-gray-200 backdrop-blur-xl"
+        : "bg-white/0"
+      } z-30 transition-all`}>
+      {/* Logo */}
+      <div className="col-span-1 xl:col-span-1 flex items-center">
+        <Link href={"/"} className="xl:pr-6 2xl:me-auto 2xl:pl-5">
+          <Image
+            src={Logo}
+            alt="Devolved AI Logo"
+            quality={100}
+            className="w-40 md:w-60 lg:w-80"
+            style={{ width: "11.25rem", height: "1.51444rem" }}
+          />
+        </Link>
+      </div>
 
-          <div className="lg:hidden" ref={menuRef}>
+      {/* Menu (Hidden on LG and above) */}
+      <div className="col-span-1 lg:hidden fixed top-0 right-0" ref={menuRef}>
+        <div
+          className="w-10 h-10 flex items-center justify-center rounded-sm p-1"
+          onClick={() => {
+            setIsMenuOpen(!isMenuOpen);
+          }}
+        >
+          <Image src={MenuIcon} alt="Menu Icon" />
+        </div>
+
+        <div
+          className={
+            isMenuOpen
+              ? "fixed z-50 right-0 top-0 w-[100%] lg:w-[40%] h-full bg-[#FFF] ease-in duration-500"
+              : "fixed z-50 right-[-100%] ease-in duration-500"
+          }
+        >
+          {/* Mobile menu close icon */}
+          <div className="flex items-center md:justify-between justify-start pt-1 px-2">
             <div
-              className="w-10 h-10 flex items-center justify-center rounded-sm p-1 me-3.5"
+              className="w-10 h-10 flex items-center justify-end rounded-sm p-1"
               onClick={() => {
                 setIsMenuOpen(!isMenuOpen);
               }}
             >
-              <Image src={MenuIcon} alt="Menu Icon" />
-            </div>
-
-            <div
-              className={
-                isMenuOpen
-                  ? "fixed z-50 right-0 top-0 w-[100%] lg:w-[40%] h-full bg-[#FFF] ease-in duration-500"
-                  : "fixed z-50 right-[-100%] ease-in duration-500"
-              }
-            >
-              {/* Mobile menu close icon */}
-              <div className="flex items-center md:justify-between justify-start pt-1 px-2">
-                <div
-                  className="w-10 h-10 flex items-center justify-end rounded-sm p-1"
-                  onClick={() => {
-                    setIsMenuOpen(!isMenuOpen);
-                  }}
-                >
-                  <AiOutlineClose />
-                </div>
-              </div>
-
-              {/* Home Menu item */}
-              <ul className="pt-5 min-h-screen flex flex-col gap-5 items-start pl-5">
-                {navigation.map(({ href, name }) => (
-                  <li
-                    key={name}
-                    className="relative ms-[5px]"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <Link
-                      href={href}
-                      className={checkActivePath(href) ? "active" : ""}
-                    >
-                      {name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <AiOutlineClose />
             </div>
           </div>
 
-          {/* Mobile and Above NavBar */}
-          <div className="p-3 xl:ms-0 lg:justify-center xl:justify-between items-center xl:gap-10 lg:gap-5 hidden lg:flex">
+          {/* Home Menu item */}
+          <ul className="pt-5 min-h-screen flex flex-col gap-5 items-start pl-5">
             {navigation.map(({ href, name }) => (
-              <div
+              <li
                 key={name}
-                className="text-[1rem] text-[#1D1D1D] font-normal font-weight-400 leading-normal relative ms-[5px]"
+                className="relative ms-[5px]"
                 onClick={() => {
                   setIsMenuOpen(false);
                 }}
@@ -137,17 +120,44 @@ const Header = () => {
                 >
                   {name}
                 </Link>
-              </div>
+              </li>
             ))}
-            <EarlyAccessForm>
-              <button className="text-[1rem] text-[1D1D1D] font-bold font-weight-500 leading-normal border-black border-2 py-2 px-4 rounded-[0.625rem] md:w-[14.5625rem] md:h-[3.125rem] transition-all hover:bg-black hover:text-white">
-                JOIN THE REVOLUTION
-              </button>
-            </EarlyAccessForm>
-          </div>
+          </ul>
         </div>
-      </nav>
-    </header>
+      </div>
+
+      {/* Menu and Join Button (Hidden on MD and below) */}
+      <div className="col-span-1 hidden md:flex p-3 xl:ms-0 lg:justify-center xl:justify-between items-center xl:gap-5 lg:gap-5">
+        {navigation.map(({ href, name }) => (
+          <div
+            key={name}
+            className="text-[1rem] text-[#1D1D1D] font-normal font-weight-400 leading-normal relative ms-[5px]"
+            onClick={() => {
+              setIsMenuOpen(false);
+            }}
+          >
+            <Link
+              href={href}
+              className={checkActivePath(href) ? "active" : ""}
+            >
+              {name}
+            </Link>
+          </div>
+        ))}
+      </div>
+
+      <div className="hidden lg:flex lg:col-span-1 lg:items-center lg:justify-end m-5">
+        <EarlyAccessForm>
+          <button className=" text-[1rem] text-[1D1D1D] font-bold font-weight-500 leading-normal border-black border-2 py-2 px-4 rounded-[0.625rem] md:w-[14.5625rem] md:h-[3.125rem] transition-all hover:bg-black hover:text-white">
+            JOIN THE REVOLUTION
+          </button>
+        </EarlyAccessForm>
+      </div>
+      
+    </div>
+  </nav>
+</header>
+
   );
 };
 
