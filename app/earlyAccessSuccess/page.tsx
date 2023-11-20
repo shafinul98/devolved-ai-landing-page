@@ -5,13 +5,13 @@ import React, { useEffect } from "react";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-import TrophyIcon from "../../public/Trophy Icon.svg";
-import CalendarIcon from "../../public/Calendar Icon.svg";
-import StayConnectedIcon from "../../public/Stay Connected Icon.svg";
+import TrophyIcon from "../../public/TrophyIcon.svg";
+import CalendarIcon from "../../public/CalendarIcon.svg";
+import StayConnectedIcon from "../../public/StayConnectedIcon.svg";
 
-import MissionImageNew from "../../public/Mission Image New.png";
-import CalendarImage from "../../public/Calendar Image.png";
-import ConnectedWorldImage from "../../public/Connected World Image.png";
+import MissionImageNew from "../../public/MissionImageNew.webp";
+import CalendarImage from "../../public/CalendarImage.webp";
+import ConnectedWorldImage from "../../public/ConnectedWorldImage.webp";
 
 import {
   FaDiscord,

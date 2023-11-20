@@ -82,3 +82,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+.active {
+  color: #FF6F00;
+}
+
+.stepper::-webkit-scrollbar {
+  display: none;
+}
+
+.powered-by {
+  display: none;
+}

@@ -1,538 +1,568 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
-
-import AboutHeroImage from "../../public/About Page Hero Image.webp";
-import AboutHeroIllustration from "../../public/About Page Hero Illustration.webp";
-import FuturePlansImage from "../../public/Future Plans Image.webp";
-import FuturePlansImageCurved from "../../public/Future Plans Curved Image.webp";
-
-import Nathan from "../../public/Nathan.jpeg";
-import Nazmul from "../../public/Nazmul.jpg";
-import Justin from "../../public/Justin.jpeg";
-import Tahlil from "../../public/tahlil.png";
-import Lamima from "../../public/Lamima.jpg";
-import Samir from "../../public/Samir.jpg";
-import Mahfuzzur from "../../public/Mahfuzzur.jpg";
-import Shafin from "../../public/Shafinul.png";
-import Ariful from "../../public/Ariful.jpg";
+"use client"
 
 import Image from "next/image";
-import TeamMemberCard from "@/components/Custom Components/Team Member Card";
-import Carousel from "@/components/Custom Components/Carousel";
-import BlogCarousel from "@/components/Custom Components/BlogCarousel";
-import MilestoneCard from "@/components/Custom Components/MilestoneCard";
-import BlogCard from "@/components/Custom Components/BlogCard";
-import Button from "@/components/Custom Components/Button";
+import HeroImage from "../../public/about/hero-image.webp"
+import HomeImage1 from "../../public/about/1.webp" 
+import Image1 from "../../public/about/image1.webp"
+import Background1 from "../../public/about/bg1.webp"
+import Image2 from "../../public/about/image2.webp"
+import Background2 from "../../public/about/bg2.webp"
+import Background3 from "../../public/about/bg3.webp"
+import IntegrityIcon from "../../public/about/integrity_icon.svg"
+import InnovationIcon from "../../public/about/innovation_icon.svg"
+import InclusivityIcon from "../../public/about/inclusivity_icon.svg"
+import SectionBg1 from "../../public/about/section-bg-1.webp"
+import SectionBg2 from "../../public/about/section-bg-2.webp"
+import TeamMemberCard from "@/components/customComponents/TeamMemberCard";
 
-const About = () => {
-  type Blog = {
-    _id: string;
-    title: string;
-    slug: string;
-    description: string;
-    image: string;
-  }[];
+import HorizontalStepper from "../../public/about/h-steeper.webp"
+import TeamImage1 from "../../public/about/team/image1.webp";
+import TeamImage2 from "../../public/about/team/image2.webp";
+import TeamImage3 from "../../public/about/team/image3.webp";
+import TeamImage4 from "../../public/about/team/image4.webp";
 
-  const [blogs, setBlogs] = useState<Blog>([]);
+import { useState } from "react";
 
-  const fetchBlogs = async () => {
-    const response = await fetch("/api/blogs", {
-      method: "POST",
-      next: { revalidate: 5 },
-    });
+import { motion, useAnimation } from 'framer-motion';
 
-    return await response.json();
-  };
-
-  useEffect(() => {
-    fetchBlogs().then(({ data }) => {
-      setBlogs(data);
-    });
-  }, []);
-
-  return (
-    <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between">
-      <section className="w-full place-items-center">
-        <div className="relative">
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-3xl md:text-5xl">
-            ABOUT
-          </h1>
-          <Image
-            src={AboutHeroImage}
-            alt="Hero Image"
-            className="w-full md:h-[30rem] object-cover"
-          />
-        </div>
-      </section>
-
-      <section className="w-full my-10 px-5 place-items-center lg:hidden">
-        <h1 className="text-2xl font-bold text-[#2D3748] mb-5">Our Story</h1>
-        <p className="text-start my-5 text-[1rem] text-[#646E73]">
-          At Devolved AI, we began with a singular vision: to democratize the
-          field of artificial intelligence by making it accessible, transparent,
-          and community-driven. We saw a world where technological advancement
-          didn't have to mean complexity and exclusivity, so we set out to build
-          an ecosystem that welcomes everyone to participate.
-        </p>
-        <p className="text-start my-5 text-[1rem] text-[#646E73]">
-          Beyond just creating algorithms or software, we are here to spark a
-          movement. We've laid the foundation for an open platform that
-          encourages contributions from all corners of the globe. Whether you're
-          a data scientist, a student, or simply curious about AI, you have a
-          place in this community. Together, we're not just developing
-          technology; we're building a future that belongs to all of us.
-        </p>
-        <div className="my-5 flex justify-center">
-          <Image
-            src={AboutHeroIllustration}
-            alt="Futuristic World Illustration"
-            loading="eager"
-            className="w-[25rem] h-[25rem]"
-          />
-        </div>
-      </section>
-
-      <section className="w-full mt-10 mb-[4.5rem] hidden lg:flex md:items-center lg:justify-center lg:px-12 xl:px-28 2xl:px-32 3xl:container">
-        <div className="flex flex-col px-20 md:px-16 lg:px-0 xl:max-2xl:px-10">
-          <h1 className="text-[2rem] font-bold text-[#2D3748] mb-3">
-            Our Story
-          </h1>
-          <p className="text-start my-5 text-[1.25rem] text-[#646E73]">
-            At Devolved AI, we began with a singular vision: to democratize the
-            field of artificial intelligence by making it accessible,
-            transparent, and community-driven. We saw a world where
-            technological advancement didn't have to mean complexity and
-            exclusivity, so we set out to build an ecosystem that welcomes
-            everyone to participate.
-          </p>
-          <p className="text-start my-5 text-[1.25rem] text-[#646E73]">
-            Beyond just creating algorithms or software, we are here to spark a
-            movement. We've laid the foundation for an open platform that
-            encourages contributions from all corners of the globe. Whether
-            you're a data scientist, a student, or simply curious about AI, you
-            have a place in this community. Together, we're not just developing
-            technology; we're building a future that belongs to all of us.
-          </p>
-        </div>
-
-        <div className="my-5 md:ms-[5.5rem] lg:ms-[7rem] xl:ms-[5rem] 2xl:pr-[2rem]">
-          <Image
-            src={AboutHeroIllustration}
-            alt="Hero Illustration"
-            className="w-full mt-10"
-          />
-        </div>
-      </section>
-
-      <section className="w-full px-3 md:mb-[4.5rem] mb-[2.5rem]">
-        <div className="flex flex-col gap-10 md:flex md:flex-row md:my-8 md:px-10 lg:justify-center xl:max-2xl:px-28 2xl:px-28 3xl:container">
-          <div className="flex flex-col shadow-lg md:pl-[1.19rem] p-5 text-center md:text-start rounded-md w-full lg:p-5 sm:max-md:pb-[5rem]">
-            <h1 className="text-[2rem] font-bold text-[#2D3748] mb-5">
-              Mission
-            </h1>
-            <p className="text-start text-[1rem] text-[#646E73]">
-              Our mission goes beyond just building a platform; it's about
-              fostering a community-driven landscape that is guided and
-              controlled by its users. We are committed to ensuring that our AI
-              ecosystem evolves in a way that serves the interests and
-              aspirations of those who interact with it.
-            </p>
-          </div>
-          <div className="flex flex-col shadow-lg pl-[1.19rem] p-5 text-center md:text-start rounded-md w-full lg:p-5 sm:max-md:pb-[5rem]">
-            <h1 className="text-[2rem] font-bold text-[#2D3748] mb-5">
-              Vision
-            </h1>
-            <p className="text-start text-[1rem] text-[#646E73]">
-              Our ultimate vision is nothing less than achieving Artificial
-              General Intelligence (AGI). We aim to extend the boundaries of
-              what is currently possible by encouraging wide-ranging community
-              contributions in AI training, data validation, and other fields.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full px-3 mx-aut0 bg-[#f5f5f5]">
-        <div className="mt-[1rem] md:mt-[4rem]">
-          <h1 className="text-[#0074D9] md:text-[1rem] text-center">
-            OUR TEAM
-          </h1>
-          <h1 className="text-[#2D3748] md:text-[2rem] text-center font-bold">
-            Your Devolved Squad
-          </h1>
-          <div className="md:hidden">
-            <Carousel extraStyles="h-56 md:my-10" bottomStyle="">
-              <TeamMemberCard
-                cardImage={Nathan}
-                cardDescription="Founder & CEO"
-                cardFooter={[
-                  "",
-                  "https://www.linkedin.com/in/nathan-lee-peterson",
-                  "",
-                ]}
-                hasGitHub={false}
-                hasLinkedIn={true}
-                hasTwitter={false}
-                cardTitle="Nathan Peterson"
-              />
-              <TeamMemberCard
-                cardImage={Nazmul}
-                cardDescription="COO"
-                cardFooter={[
-                  "",
-                  "https://www.linkedin.com/in/md-nazmul-hossain",
-                  "https://twitter.com/TahlilBsse0803",
-                ]}
-                cardTitle="Md. Nazmul Hossain"
-                hasGitHub={false}
-                hasTwitter={false}
-                hasLinkedIn={true}
-              />
-              <TeamMemberCard
-                cardImage={Justin}
-                cardDescription="Board Member"
-                cardFooter={[
-                  "",
-                  "https://www.linkedin.com/in/justin-seyl-c-d-s-csp-cas-b76b4912",
-                  "",
-                ]}
-                cardTitle="Justin Seyl"
-                hasGitHub={false}
-                hasTwitter={false}
-                hasLinkedIn={true}
-              />
-              <TeamMemberCard
-                cardImage={Tahlil}
-                cardDescription="Lead Blockchain Engineer"
-                cardFooter={[
-                  "https://github.com/tahlil",
-                  "https://www.linkedin.com/in/tahlil/",
-                  "https://twitter.com/TahlilBsse0803",
-                ]}
-                cardTitle="Tahlil"
-                hasGitHub={true}
-                hasTwitter={true}
-                hasLinkedIn={true}
-              />
-              <TeamMemberCard
-                cardImage={Lamima}
-                cardDescription="Machine Learning Engineer"
-                cardFooter={[
-                  "https://github.com/Ava7i",
-                  "https://www.linkedin.com/in/lamima-tabassum-ava",
-                  "https://twitter.com/AvaLamima17577",
-                ]}
-                cardTitle="Lamima Tabassum Ava"
-                hasGitHub={true}
-                hasTwitter={true}
-                hasLinkedIn={true}
-              />
-              <TeamMemberCard
-                cardImage={Mahfuzzur}
-                cardDescription="Associate Machine Learning Engineer"
-                cardFooter={[
-                  "https://github.com/Mahfuzzur-Rahman",
-                  "https://www.linkedin.com/in/mahfuzzur-rahman-samir/",
-                  "https://x.com/rahmanmahfuzzur?s=21&t=ItQTV17i_DjsOjCmwO3JTg",
-                ]}
-                cardTitle="Mahfuzzur Rahman Samir"
-                hasGitHub={true}
-                hasTwitter={true}
-                hasLinkedIn={true}
-              />
-              <TeamMemberCard
-                cardImage={Shafin}
-                cardDescription="Full Stack Engineer"
-                cardFooter={[
-                  "https://github.com/shafoo98",
-                  "https://www.linkedin.com/in/shafinulislam/",
-                  "https://twitter.com/ShafinulIs10648",
-                ]}
-                cardTitle="Shafinul Islam"
-                hasGitHub={true}
-                hasTwitter={true}
-                hasLinkedIn={true}
-              />
-              <TeamMemberCard
-                cardImage={Ariful}
-                cardDescription="Junior Blockchain Developer"
-                cardFooter={[
-                  "https://github.com/arifulislam99",
-                  "https://www.linkedin.com/in/marifulislam099/",
-                  "",
-                ]}
-                cardTitle="Md. Ariful Islam"
-                hasGitHub={true}
-                hasTwitter={false}
-                hasLinkedIn={true}
-              />
-            </Carousel>
-          </div>
-          <div className="md:flex md:flex-wrap md:justify-evenly md:my-10 md:px-10 md:gap-x-10 lg:px-18 xl:px-24 2xl:px-14 3xl:container hidden">
-            <TeamMemberCard
-              cardImage={Nathan}
-              cardDescription="CEO & Founder"
-              cardFooter={[
+export default function About() {
+    const teamMembers = [
+        {
+            cardImage: TeamImage1,
+            cardDescription: "CEO & Founder",
+            cardFooter: [
                 "",
-                "https://www.linkedin.com/in/nathan-lee-peterson",
-                "https://twitter.com/TahlilBsse0803",
-              ]}
-              cardTitle="Nathan Peterson"
-              hasGitHub={false}
-              hasTwitter={false}
-              hasLinkedIn={true}
-            />
-            <TeamMemberCard
-              cardImage={Nazmul}
-              cardDescription="COO"
-              cardFooter={[
+                "#",
+                "#",
+                "#",
                 "",
-                "https://www.linkedin.com/in/md-nazmul-hossain",
-                "https://twitter.com/TahlilBsse0803",
-              ]}
-              cardTitle="Md. Nazmul Hossain"
-              hasGitHub={false}
-              hasTwitter={false}
-              hasLinkedIn={true}
-            />
-            <TeamMemberCard
-              cardImage={Justin}
-              cardDescription="Board Member"
-              cardFooter={[
+            ],
+            cardTitle: "John Carter",
+            hasFacebook: true,
+            hasTwitter: true,
+            hasLinkedIn: true,
+        },
+        {
+            cardImage: TeamImage2,
+            cardDescription: "VP of Design",
+            cardFooter: [
                 "",
-                "https://www.linkedin.com/in/justin-seyl-c-d-s-csp-cas-b76b4912",
+                "#",
+                "#",
+                "#",
                 "",
-              ]}
-              cardTitle="Justin Seyl"
-              hasGitHub={false}
-              hasTwitter={false}
-              hasLinkedIn={true}
-            />
-            <TeamMemberCard
-              cardImage={Tahlil}
-              cardDescription="Lead Blockchain Developer"
-              cardFooter={[
-                "https://github.com/tahlil",
-                "https://www.linkedin.com/in/tahlil/",
-                "https://twitter.com/TahlilBsse0803",
-              ]}
-              cardTitle="Tahlil"
-              hasGitHub={true}
-              hasTwitter={true}
-              hasLinkedIn={true}
-            />
-            <TeamMemberCard
-              cardImage={Lamima}
-              cardDescription="Machine Learning Engineer"
-              cardFooter={[
-                "https://github.com/Ava7i",
-                "https://www.linkedin.com/in/lamima-tabassum-ava",
-                "https://twitter.com/AvaLamima17577",
-              ]}
-              cardTitle="Lamima Tabassum Ava"
-              hasGitHub={true}
-              hasTwitter={true}
-              hasLinkedIn={true}
-            />
-            <TeamMemberCard
-              cardImage={Mahfuzzur}
-              cardDescription="Associate ML Engineer"
-              cardFooter={[
-                "https://github.com/Mahfuzzur-Rahman",
-                "https://www.linkedin.com/in/mahfuzzur-rahman-samir/",
-                "https://x.com/rahmanmahfuzzur?s=21&t=ItQTV17i_DjsOjCmwO3JTg",
-              ]}
-              cardTitle="Mahfuzzur Rahman Samir"
-              hasGitHub={true}
-              hasTwitter={true}
-              hasLinkedIn={true}
-            />
-            <TeamMemberCard
-              cardImage={Shafin}
-              cardDescription="Full Stack Web Developer"
-              cardFooter={[
-                "https://github.com/shafoo98",
-                "https://www.linkedin.com/in/shafinulislam/",
-                "https://twitter.com/ShafinulIs10648",
-              ]}
-              cardTitle="Shafinul Islam"
-              hasGitHub={true}
-              hasTwitter={true}
-              hasLinkedIn={true}
-            />
-            <TeamMemberCard
-              cardImage={Ariful}
-              cardDescription="Junior Blockchain Developer"
-              cardFooter={[
-                "https://github.com/arifulislam99",
-                "https://www.linkedin.com/in/marifulislam099/",
+            ],
+            cardTitle: "Sophie Moore",
+            hasFacebook: true,
+            hasTwitter: true,
+            hasLinkedIn: true,
+        },
+        {
+            cardImage: TeamImage3,
+            cardDescription: "VP of Marketing",
+            cardFooter: [
                 "",
-              ]}
-              cardTitle="Md. Ariful Islam"
-              hasGitHub={true}
-              hasTwitter={false}
-              hasLinkedIn={true}
-            />
-          </div>
-        </div>
-      </section>
+                "#",
+                "#",
+                "#",
+                "",
+            ],
+            cardTitle: "Matt Cannon",
+            hasFacebook: true,
+            hasTwitter: true,
+            hasLinkedIn: true,
+        },
+        {
+            cardImage: TeamImage4,
+            cardDescription: "VP of Product",
+            cardFooter: [
+                "",
+                "#",
+                "#",
+                "#",
+                "",
+            ],
+            cardTitle: "Andy Smith",
+            hasFacebook: true,
+            hasTwitter: true,
+            hasLinkedIn: true,
+        },
+    ];
+    const totalCards = 4;
+    const cardsPerPage = 3;
+    const totalPages = Math.ceil(totalCards / cardsPerPage);
+    const [currentPage, setCurrentPage] = useState(1);
 
-      <section className="w-full mt-16 pt-5 place-items-center md:hidden">
-        <h1 className="text-[#0074D9] text-center">TIMELINE</h1>
-        <h1 className="text-[#2D3748] text-center font-bold text-2xl">
-          Milestones and Future Plans
-        </h1>
-        <div className="flex flex-col items-center justify-center">
-          <MilestoneCard
-            date="Q3-2023"
-            milestone="Development of our Minimum Viable Product (MVP) commences, focusing initially on robust Natural Language Processing capabilities."
-          />
-          <MilestoneCard
-            date="Q4 2023"
-            milestone="Beta testing becomes available to the public, allowing for community input and the initial distribution of Argocoin (AGC)."
-          />
-          <MilestoneCard
-            date="Q1-Q2 2024"
-            milestone="Core features such as governance systems, token rewards, and community-driven AI training are officially launched."
-          />
-          <MilestoneCard
-            date="Q3 2024"
-            milestone="We initiate the development and implementation of new AI modules, as we aim to extend the platform's applicability and reach."
-          />
-        </div>
-        <article className="rounded-2xl shadow-lg flex flex-col items-center justify-center my-10 gap-5">
-          <Image src={FuturePlansImage} alt="" />
-          <div className="flex flex-col gap-3 p-5">
-            <h1 className="text-[#0074D9] text-start text-sm">FUTURE PLANS</h1>
-            <h1 className="text-[#2D3748] text-start text-lg">
-              Advancing Toward a Decentralized AI Ecosystem: Our Roadmap for
-              Continued Growth and Community Engagement
-            </h1>
-            <p className="text-[#646E73] text-[1rem]">
-              We will continue to grow and refine our platform, inviting more
-              contributions in other realms of AI, including computer vision and
-              predictive analytics. With rigorous testing and audits, we aim to
-              be the gold standard in AI transparency and governance.
-            </p>
-          </div>
-        </article>
-      </section>
+    // Function to handle pagination
+    const handlePagination = (direction: string) => {
+        setCurrentPage((prevPage) => {
+        if (direction === 'next' && prevPage < totalPages) {
+            return prevPage + 1;
+        } else if (direction === 'prev' && prevPage > 1) {
+            return prevPage - 1;
+        }
+        return prevPage;
+        });
+    };
 
-      <section className="w-full mt-[5rem] px-5 place-items-center hidden md:flex md:flex-col">
-        <h6 className="text-[#0074D9] md:text-[1rem] text-center">TIMELINE</h6>
-        <h1 className="text-[#2D3748] md:mt-[0.5rem] md:text-[2rem] text-center font-bold text-2xl">
-          Milestones and Future Plans
-        </h1>
-        <div className="flex items-center justify-center px-10 lg:px-20 xl:px-40 2xl:px-32 3xl:container gap-5">
-          <MilestoneCard
-            date="Q3-2023"
-            milestone="Development of our Minimum Viable Product (MVP) commences, focusing initially on robust Natural Language Processing capabilities."
-          />
-          <MilestoneCard
-            date="Q4 2023"
-            milestone="Beta testing becomes available to the public, allowing for community input and the initial distribution of Argocoin (AGC)."
-          />
-          <MilestoneCard
-            date="Q1-Q2 2024"
-            milestone="Core features such as governance systems, token rewards, and community-driven AI training are officially launched."
-          />
-          <MilestoneCard
-            date="Q3 2024"
-            milestone="We initiate the development and implementation of new AI modules, as we aim to extend the platform's applicability and reach."
-          />
-        </div>
-        <article className="mx-10 lg:mx-20 xl:mx-40 2xl:mx-32 3xl:container rounded-2xl shadow-xl flex flex-row-reverse items-center justify-center my-10 gap-5">
-          <Image
-            src={FuturePlansImageCurved}
-            alt=""
-            className="rounded md:w-1/2"
-            width={500}
-          />
-          <div className="flex flex-col gap-3 p-5 md:p-10 pr-36">
-            <h1 className="text-[#0074D9] text-start text-sm">FUTURE PLANS</h1>
-            <h1 className="text-[#2D3748] text-start text-lg">
-              Advancing Toward a Decentralized AI Ecosystem: Our Roadmap for
-              Continued Growth and Community Engagement
-            </h1>
-            <p className="text-[#646E73]">
-              We will continue to grow and refine our platform, inviting more
-              contributions in other realms of AI, including computer vision and
-              predictive analytics. With rigorous testing and audits, we aim to
-              be the gold standard in AI transparency and governance.
-            </p>
-            <div className="border border-[#BDBDBD] mt-5"></div>
-          </div>
-        </article>
-      </section>
+    const [email, setEmail] = useState("");
+    const [isEmailValid, setIsEmailValid] = useState(true);
 
-      <section className="w-full my-10 px-2 place-items-center lg:hidden mb-20">
-        <div className="flex flex-col justify-center items-center">
-          <h1 className="text-[#0074D9] text-center">BLOGS</h1>
-          <h1 className="text-[#2D3748] text-center font-bold text-2xl">
-            Press & Media
-          </h1>
-          {blogs.length > 0 ? (
-            <Carousel extraStyles="h-72" bottomStyle="bottom-1">
-              {blogs.map((data) => {
-                return (
-                  <div key={data._id}>
-                    <BlogCard
-                      blogTitle={data.title}
-                      blogDescription={data.description}
-                      blogImage={data.image}
-                      blogLink={`/blog/${data.slug}`}
-                    />
-                  </div>
-                );
-              })}
-            </Carousel>
-          ) : (
-            <p>No blogs found</p>
-          )}
-          <Button
-            title="View all"
-            extraStyles=" bg-blue-500 text-white mt-10"
-          />
-        </div>
-      </section>
+    const validateEmail = (input: any) => {
+        const isValid = /\S+@\S+\.\S+/.test(input);
+        setIsEmailValid(isValid);
+    };
 
-      <section className="w-full my-10 md:my-14 px-5 place-items-center hidden lg:flex lg:flex-col bg-[#f5f5f5]">
-        <div className="flex flex-col justify-center items-center mt-[3.5rem]">
-          <h1 className="text-[#0074D9] text-center">BLOGS</h1>
-          <h1 className="text-[#2D3748] text-center font-bold text-2xl">
-            Press & Media
-          </h1>
-          {blogs.length > 0 ? (
-            <div className="w-6/12">
-              <BlogCarousel bottomStyle="1">
-                {blogs.map((blog) => {
-                  return (
-                    <div key={blog._id}>
-                      <BlogCard
-                        blogTitle={blog.title}
-                        blogDescription={blog.description}
-                        blogImage={blog.image}
-                        blogLink={`/blog/${blog.slug}`}
-                      />
-                    </div>
-                  );
-                })}
-              </BlogCarousel>
+    const submitHandler = async () => {
+        const res = await fetch("/api/emailOctopus", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+            email_address: email,
+            status: "PENDING",
+            }),
+        });
+
+        const { error, status } = await res.json();
+
+        if (status === 200) {
+            window.location.href = `/earlyAccessSuccess?isSignedUp=true`;
+        }
+    };
+
+    const controls = useAnimation();
+    const moveLeft = () => {
+        controls.start({ x: 300 }); // Adjust the distance as needed
+    };
+    const moveRight = () => {
+        controls.start({ x: -300 }); // Adjust the distance as needed
+    };
+
+    return (
+    <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
+        {/* About hero section */}
+        <section className="w-full md:h-[29.25rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+        style={{ backgroundImage: `url(${HeroImage.src})`}}>
+            <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12">
+                <div className="text-center">
+                    <h1 className="text-[4.8125rem] md:text-[4.8125rem;] leading-normal text-[#192033] font-bold">
+                        About Us
+                    </h1>
+                </div>
             </div>
-          ) : (
-            <p>No blogs found</p>
-          )}
+        </section>
 
-          <Button
-            title="View all"
-            extraStyles=" bg-blue-500 mt-20 w-[8.625rem] h-[2.625rem] mb-[3.5rem] border-[#0074D9] bg-white text-[#0074D9]"
-            hasRightArrowIcon={true}
-          />
-        </div>
-      </section>
+        {/* Empowering Community, Democratizing AI */}
+        <section className="w-full my-10 md:mt-20 md:mb-0 items-center 3xl:container">
+            <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
+                <Image className="mt-5 w-[30rem] h-[30rem] md:mt-0 md:w-[30rem] md:h-[40rem] xl:w-[40rem]"
+                    src={Image1}
+                    alt="Empowering Community, Democratizing AI"
+                    />
+                <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-20">
+                    <div className="background-image" />
+                    <h1 className="text-[2.50rem] text-[#192033] font-bold leading-normal">
+                        <p className="text-[1rem] text-[#204FA2]">
+                            Our Mission
+                        </p>
+                        Empowering Community,
+                        Democratizing AI
+                    </h1>
+                    <p className="text-[1rem] text-[#495167] font-light leading-[1.875rem]">
+                        We stand at the forefront of a revolution. Devolved AI is not merely a 
+                        tech entity; it is a beacon for a future where Artificial Intelligence 
+                        is democratically powered by a diverse, global community. Our mission is 
+                        to dismantle the centralization of AI technology, ensuring it serves the 
+                        many instead of the few.
+                    </p>
+                    <p className="text-[1rem] text-[#495167] font-light leading-[1.875rem]">
+                        With our innovative Proof of Value (PoV) protocol, we encourage and reward 
+                        each member's contributions, creating a thriving ecosystem where every voice 
+                        can be heard, and every effort is acknowledged. Our platform is a testament to 
+                        the philosophy that everyone should have a stake in the AI that shapes our 
+                        world.
+                    </p>
+                </div>
+            </div>
+            <style jsx>
+            {`
+                .background-image {
+                    background-image: url(${Background1.src});
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    opacity: 1;
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 170%;
+                    height: 100%;
+                    z-index: -1;
+                }
+            `}
+            </style>
+        </section>
+
+        {/* Shaping a Decentralized Future */}
+        <section className="w-full my-10 md:mt-20 md:mb-0 items-center 3xl:container">
+            <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
+                <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-20">
+                    <div className="background-image" />
+                    <h1 className="text-[2.50rem] text-[#192033] font-bold leading-normal">
+                        <p className="text-[1rem] text-[#204FA2]">
+                            Our Vision
+                        </p>
+                        Shaping a Decentralized Future
+                    </h1>
+                    <p className="text-[1rem] text-[#495167] font-light leading-[1.875rem]">
+                        Imagine an age where Artificial General Intelligence (AGI) is as widespread 
+                        and participatory as the internet itself. This is the future Devolved AI is 
+                        committed to creating. A horizon where AGI is a community-managed resource, 
+                        offering unparalleled accessibility and collaborative growth.
+                    </p>
+                    <p className="text-[1rem] text-[#495167] font-light leading-[1.875rem]">
+                        We are expanding the boundaries of what's possible, moving from NLP to the 
+                        vast potential of computer vision and predictive analytics. Our vision 
+                        encapsulates an AGI ecosystem that is as inclusive as it is intelligent, 
+                        fostering innovation that mirrors the rich tapestry of its contributors.
+                    </p>
+                </div>
+                <Image
+                    src={Image2}
+                    alt="Forge Value, Earn AGC Illustration"
+                    className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[30rem] md:h-[40rem] xl:w-[40rem]"
+                />
+            </div>
+            <style jsx>
+                {`
+                    .background-image {
+                        background-image: url(${Background2.src});
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        opacity: 1;
+                        bottom: 0;
+                        right: 0;
+                        position: absolute;
+                        width: 180%;
+                        height: 120%;
+                        z-index: -1;
+                    }
+                `}
+            </style>
+        </section>
+
+        {/* Our values guide every decision, every development, and every interaction */}
+        <section className="flex flex-col rounded-[1rem] shadow-md m-10">
+            <div className="gap-5 items-center justify-center"
+                style={{
+                    backgroundImage: `url(${SectionBg1.src})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                }}>
+
+            <div className="flex flex-col text-center gap-3 mt-10">
+                <h1 className="text-[2.75rem] text-[#192033] font-bold leading-normal">
+                    <p className="text-[1.25rem] text-[#204FA2]">
+                        Our Values
+                    </p>
+                    Our values guide every decision, <br/>
+                    every development, and every interaction
+                </h1>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 3xl:container p-10">
+
+                {/* Integrity */}
+                <div className="p-6 md:p-8 rounded-[1.24rem] bg-white hover:shadow-lg transition-all duration-300">
+                    <Image className="w-[3.75rem] h-[3.75rem]" src={IntegrityIcon} alt="community_governed_icon" />
+                    <h6 className="text-[1.875rem] text-[#29233B] font-medium leading-normal mt-3">
+                        Integrity
+                    </h6>
+                    <p className="text-[1.125rem] text-[#495167] font-light leading-[1.875rem] mt-2">
+                        We pledge unwavering commitment to transparency and honesty, 
+                        anchored by our custom layer 1 blockchain.
+                    </p>
+                </div>
+
+                {/* Innovation */}
+                <div className="p-6 md:p-8 rounded-[1.24rem] bg-white hover:shadow-lg transition-all duration-300">
+                    <Image className="w-[3.75rem] h-[3.75rem]" src={InnovationIcon} alt="shared_prosperity_icon" />
+                    <h6 className="text-[1.875rem] text-[#29233B] font-medium leading-normal mt-3">
+                        Innovation
+                    </h6>
+                    <p className="text-[1.125rem] text-[#495167] font-light leading-[1.875rem] mt-2">
+                        We believe in pushing boundaries, challenging the status quo, and embracing the 
+                        journey to AGI.
+                    </p>
+                </div>
+
+                {/* Inclusivity */}
+                <div className="p-6 md:p-8 rounded-[1.24rem] bg-white hover:shadow-lg transition-all duration-300">
+                    <Image className="w-[3.75rem] h-[3.75rem]" src={InclusivityIcon} alt="blockchain_based_icon" />
+                    <h6 className="text-[1.875rem] text-[#29233B] font-medium leading-normal mt-3">
+                        Inclusivity
+                    </h6>
+                    <p className="text-[1.125rem] text-[#495167] font-light leading-[1.875rem] mt-2">
+                        Our ecosystem thrives on diverse perspectives, 
+                        ensuring everyone has the opportunity to shape the future of AI.
+                    </p>
+                </div>
+
+            </div>
+            </div>
+        </section>
+
+        {/* Collaborative, Transparent, Rewarding */}
+        <section className="w-full my-10 md:mt-20 md:mb-20 3xl:container">
+            <div className="lg:px-4 xl:px-8 md:mx-16 lg:mb-20 flex flex-col items-center px-5 md:mt-16 gap-5 xl:ms-20" 
+            style={{
+            backgroundImage: `url(${SectionBg2.src})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            height: '300px',
+            }}>
+                <div className="background-image" />
+                <div className="w-full max-w-xl text-center" style={{ maxWidth: '67.8125rem' }}>
+                    <p className="text-[1.25rem] text-[#204FA2] font-bold leading-normal">
+                        Our Approach
+                    </p>
+                    <h1 className="text-[3rem] text-[#192033] font-bold leading-normal">
+                        Collaborative, Transparent, Rewarding
+                    </h1>
+                    <p className="text-[1.375rem] text-[#495167] font-light leading-[1.875rem]">
+                        Our approach is rooted in the belief that the best AI should be forged in the 
+                        fires of diverse global intellect. We leverage blockchain to ensure transparency 
+                        and instill trust, while our PoV protocol rewards every user for their invaluable 
+                        contributions to our collective intelligence.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        {/* Roadmap At A Glance */}
+        <section className="flex w-full h-[50rem] items-center justify-center bg-cover bg-center bg-no-repeat"
+            style={{
+                backgroundImage: `url(${Background3.src})`,
+            }}>
+            <div className="w-full">
+                <div className="flex flex-row items-start justify-start p-10">
+                    {/* Heading on the left */}
+                    <div className="text-[#fff] font-bold text-[3.75rem] leading-normal">
+                        <h1>Roadmap At A Glance</h1>
+                    </div>
+
+                    {/* Buttons on the right */}
+                    <div className="flex text-[#fff] ml-auto">
+                        <button className="w-10 h-10 border-2 border-[#fff] rounded-l-lg p-1 cursor-pointer border-r-0"
+                        onClick={moveLeft}>
+                            <svg
+                                className="w-7 rounded-l-lg p-1 cursor-pointer border-r-0"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                                />
+                            </svg>
+                        </button>
+
+                        <button className="w-10 h-10 border-2 border-[#fff] rounded-r-lg p-1 cursor-pointer"
+                        onClick={moveRight}>
+                            <svg
+                                className="w-7 rounded-r-lg p-1 cursor-pointer border-r-0"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div className="stepper flex flex-col lg:flex-row items-center text-white ml-10 mr-20"
+                    style={{
+                        overflowX: 'scroll',
+                        scrollbarWidth: 'none',  // For Firefox
+                        msOverflowStyle: 'none',  // For Internet Explorer
+                        WebkitOverflowScrolling: 'touch',  // For iOS
+                    }}>
+                    <motion.div
+                        animate={controls}
+                        transition={{ type: 'tween', duration: 0.5 }}>
+                        <div className="lg:order-1 flex flex-col lg:ml-10 space-y-5">
+                            <div className="flex space-x-[20rem]">
+                                {/* Phase 1 content */}
+                                <div className="w-[18rem] h-[13rem] gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h1 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                        Phase 1
+                                    </h1>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                        Foundation and MVP Development <br/> (Q3 2023 - Q1 2024)
+                                    </h5>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                        We've laid the cornerstone by inaugurating our office and
+                                        assembling a dynamic team of visionaries. Currently, we're
+                                        channeling our efforts into the MVP, set to unveil in Q1 2024,
+                                        establishing our commitment to innovation and community
+                                        involvement.
+                                    </p>
+                                </div>
+
+                                {/* Phase 3 content */}
+                                <div className="w-[18rem] h-[13rem] p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                        Phase 3
+                                    </h3>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                        AI and Protocol Enhancement <br/> (By Q3 2024)
+                                    </h5>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                        As Luna 2 enters the AI arena, we'll be bolstering our systems with
+                                        enhanced federated learning and a fortified PoV Protocol, all
+                                        while integrating substantial GPU support from our engaged
+                                        and growing community.
+                                    </p>
+                                </div>
+
+                                {/* Phase 5 content */}
+                                <div className="w-[18rem] h-[13rem] p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent ml-[10rem]">
+                                    <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                        Phase 3
+                                    </h3>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                        AI and Protocol Enhancement <br/> (By Q3 2024)
+                                    </h5>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                        As Luna 2 enters the AI arena, we'll be bolstering our systems with
+                                        enhanced federated learning and a fortified PoV Protocol, all
+                                        while integrating substantial GPU support from our engaged
+                                        and growing community.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center justify-center mb-0">
+                                <Image src={HorizontalStepper} alt={"steps"}/>
+                            </div>
+
+                            <div className="flex space-x-[15rem] ml-[20rem]">
+                                {/* Phase 2 content */}
+                                <div className="w-[18rem] h-[13rem] p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                        Phase 2
+                                    </h3>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                        Team and Infrastructure <br/> (By Q2 2024)
+                                    </h5>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                        With our MVP propelling us forward, the next milestone involves
+                                        expanding our talent pool and strengthening our infrastructure.
+                                        This sets the stage for both technological advancement and a
+                                        growth surge in our community, aiming to reach 25,000 members.
+                                    </p>
+                                </div>
+
+                                {/* Phase 4 content */}
+                                <div className="w-[18rem] h-[13rem] p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem]">
+                                        Phase 4
+                                    </h3>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem]">
+                                        Data and Expansion <br/> (By Q1 2025)
+                                    </h5>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                        Optimizing our data management and expanding our GPU
+                                        network will be our focus, as we strive for superior efficiency
+                                        and prepare our platform for more complex AI tasks.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </motion.div>
+                </div>
+            </div>
+        </section>
+
+        {/* OUR TEAM */}
+        <section className="w-full my-10 md:mt-20 lg:mb-20 overflow-x-auto 3xl:container">
+            <div className="flex flex-col md:flex-row items-center md:px-8 lg:px-16 xl:px-20">
+                {/* Left Section */}
+                <div className="md:mr-8 mb-8 md:mb-0">
+                    <h1 className="text-[3.75rem] text-[#192033] font-bold leading-normal mb-5">
+                        <p className="text-[1.25rem] text-[#204FA2]">
+                            OUR TEAM
+                        </p>
+                        Meet <br/> the Pioneers
+                    </h1>
+                    <p className="text-[1.375rem] text-[#495167] font-light leading-[1.875rem] mb-5"
+                    style={{display: 'inline-block'}}>
+                        Lorem ipsum dolor sit amet, <br/>
+                        consectetur adipiscing elit consequat <br/>
+                        eget morbi arcu convallis venenatis <br/> 
+                        tellus neque faucibus auctor.
+                    </p>
+                    <div className="flex text-black">
+                        <button
+                            className="w-10 h-10 border-2 border-black rounded-l-lg p-1 cursor-pointer border-r-0"
+                            onClick={() => handlePagination('prev')}
+                        >
+                            <svg className="w-7 rounded-l-lg p-1 cursor-pointer border-r-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                        </button>
+                        <button
+                            className="w-10 h-10 border-2 border-black rounded-r-lg p-1 cursor-pointer"
+                            onClick={() => handlePagination('next')}
+                        >
+                            <svg className="w-7 rounded-r-lg p-1 cursor-pointer border-r-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                        </button>
+                    </div>
+                </div>
+
+                {/* Right Section */}
+                <div className="w-full md:w-auto md:overflow-x-auto md:flex-grow">
+                    <div className="md:flex md:gap-x-4 xl:px-10 overflow-x-auto">
+                        {teamMembers
+                            .slice((currentPage - 1) * cardsPerPage, currentPage * cardsPerPage)
+                            .map((member, index) => (
+                                <TeamMemberCard key={index} {...member} />
+                            ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Ready to be a part of AI */}
+        <section className="rounded-2xl shadow-lg flex flex-col items-center justify-center my-10 gap-5">
+            <div className="flex flex-col gap-10 p-10 items-center justify-center w-[66.875rem] h-[25.625rem]"
+            style={{
+                backgroundImage: `url(${HomeImage1.src})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+            }}>
+            <h1 className="text-[#192033] text-[2.5rem] font-medium leading-normal text-center">
+                Ready to be a part of AI's next (d)evolution?
+            <br/>
+                Sign up now.
+            </h1>
+            </div>
+        </section>
+
+        <div className="bg-slate-700 w-4/5 mx-auto border bottom-1" />
     </main>
-  );
-};
-
-export default About;
+    );
+}

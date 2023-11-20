@@ -1,421 +1,428 @@
-import React from "react";
+"use client"
+
 import Image from "next/image";
-import Link from "next/link";
+import HeroImage from "../../public/technology/hero-image.webp"
 
-import CommunityHeroImage from "../../public/Community Page Hero Image.webp";
+import Image1 from "../../public/community/image1.webp"
+import Background1 from "../../public/technology/bg1.webp"
+import Image2 from "../../public/community/image2.webp"
+import Background2 from "../../public/technology/bg2.webp"
+import Background3 from "../../public/technology/bg3.webp"
+import BackgroundUseCase from "../../public/about/bg3.webp"
+import Image3 from "../../public/technology/image3.webp"
+import Background4 from "../../public/technology/bg4.webp"
+import Button from "@/components/customComponents/Button";
 
-import Community from "../../public/Community and Outreach Logo.svg";
-import Rewards from "../../public/Rewarding Contributions Logo.svg";
-import TeamWork from "../../public/Team Work.svg";
+import DiverseLeadershipIcon from "../../public/community/diverse_leadership_opportunities_icon.svg"
+import AGCGrantsIcon from "../../public/community/agc_grants_for_value_adding_communities_icon.svg"
+import AutonomyIcon from "../../public/community/autonomy_in_governance_icon.svg"
+import EarnIcon from "../../public/community/earn_and_influence_across_fields_icon.svg"
 
-import RightArrowIconBlue from "../../public/Right Arrow Blue.svg";
+import EstablishIcon from "../../public/community/establish_your_community.svg"
+import DesignIcon from "../../public/community/design_your_governance.svg"
+import EarningIcon from "../../public/community/earning_and_utilizing_AGC.svg"
 
-import {
-  FaDiscord,
-  FaFacebook,
-  FaReddit,
-  FaTelegram,
-  FaTwitter,
-} from "react-icons/fa";
-import Button from "@/components/Custom Components/Button";
-import Carousel from "@/components/Custom Components/Carousel";
-import { EarlyAccessForm } from "@/components/Custom Components/EarlyAccessForm";
+import Steps from "../../public/community/steps.svg"
+import CoreDetailsCard from "@/components/customComponents/CoreDetailsCard";
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
 
-const CommunityPage = () => {
+
+export default function Community() {
+    const [email, setEmail] = useState("");
+  const [isEmailValid, setIsEmailValid] = useState(true);
+  const validateEmail = (input: any) => {
+    const isValid = /\S+@\S+\.\S+/.test(input);
+    setIsEmailValid(isValid);
+  };
+
+  const submitHandler = async () => {
+    const res = await fetch("/api/emailOctopus", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email_address: email,
+        status: "PENDING",
+      }),
+    });
+
+    const { error, status } = await res.json();
+
+    if (status === 200) {
+      window.location.href = `/earlyAccessSuccess?isSignedUp=true`;
+    }
+
+  };
   return (
-    <main className="flex min-h-screen overflow-x-hidden flex-col items-center">
-      <section className="w-full place-items-center">
-        <div className="relative">
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-3xl md:text-5xl">
-            COMMUNITY
-          </h1>
-          <Image
-            src={CommunityHeroImage}
-            alt="Hero Image"
-            className="w-full md:h-[30rem] object-cover"
-          />
+    <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
+      {/* community hero section */}
+        <section className="w-full h-[25rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+        style={{ backgroundImage: `url(${HeroImage.src})`}}>
+        <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12">
+            <div className="text-center">
+            <h1 
+            className="font-black text-[2.75rem] md:text-[3.75rem] leading-11 mb-5 text-[#192033]">
+                Introduction to CommUnity
+            </h1>
+            </div>
         </div>
+        </section>
+
+        {/* Welcome to CommUnity */}
+        <section className="w-full my-10 md:mt-20 md:mb-0 items-center 3xl:container">
+            <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
+                <Image
+                    src={Image1}
+                    alt="Proof of Value (PoV) Protocol Illustration"
+                    className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[26.3125rem] md:h-[38rem] xl:w-[37rem]"
+                />
+
+                <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-20">
+                    <div className="background-image" />
+                    <h1 className="text-[2.30rem] text-[#192033] font-ubuntu font-black font-weight-700">
+                        Welcome to CommUnity
+                    </h1>
+                    <p className="text-[1rem] text-[#495167] font-ubuntu font-light font-weight-300">
+                        a vibrant and diverse feature of the Devolved AI platform. 
+                        CommUnity is a realm of collaboration, innovation, and self-governance, 
+                        where users from various fields can create, lead, and grow their own communities.
+                    </p>
+                    <p className="text-[1rem] text-[#495167] font-ubuntu font-light font-weight-300">
+                        It's not just about AI; whether your passion lies in blockchain, 
+                        UI/UX design, or any other tech-centric area, CommUnity is your space to 
+                        flourish within the Devolved AI ecosystem.
+                    </p>
+                </div>
+            </div>
+            <style jsx>
+                {`
+                .background-image {
+                    background-image: url(${Background1.src});
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    opacity: 1;
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 170%;
+                    height: 120%;
+                    z-index: -1;
+                }
+            `}
+            </style>
+        </section>
+
+        {/* What is CommUnity? */}
+        <section className="w-full my-10 md:mt-20 md:mb-0 items-center 3xl:container">
+            <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
+                <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-20">
+                    <div className="background-image" />
+                    <h1 className="text-[2.50rem] text-[#192033] font-ubuntu font-black font-weight-700">
+                        What is CommUnity?
+                    </h1>
+                    <p className="text-[1rem] text-[#495167] font-ubuntu font-light font-weight-300">
+                        CommUnity is a unique aspect of the Devolved AI platform, 
+                        offering users the freedom to establish and manage communities 
+                        in a wide array of tech-related fields. From blockchain enthusiasts 
+                        to UI/UX designers, each CommUnity is a hub for like-minded individuals 
+                        to collaborate, innovate, and influence their respective domains.
+                    </p>
+                    <Button title="LEARN MORE"
+                    extraStyles=" bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full md:w-[9.75rem] md:h-[2.625rem] mt-5 xl:me-16"
+                    />
+                </div>
+
+                <Image
+                    src={Image2}
+                    alt="Layer 1 Blockchain Illustration"
+                    className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[26.3125rem] md:h-[38rem] xl:w-[37rem]"
+                />
+            </div>
+            <style jsx>
+                {`
+                .background-image {
+                    background-image: url(${Background2.src});
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    opacity: 1;
+                    bottom: 0;
+                    right: 0;
+                    position: absolute;
+                    width: 190%;
+                    height: 130%;
+                    z-index: -1;
+                }
+            `}
+            </style>
+        </section>
+
+        {/* Why Join CommUnity? */}
+        <section className="flex flex-col rounded-md m-20">
+            
+            <div className="gap-5 items-center justify-center"
+                style={{
+                backgroundImage: `url(${Background3.src})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+                }}>
+                <div className="flex flex-col text-center gap-3 mt-10">
+                    <h1 className="text-[3rem] text-[#192033] font-bold font-ubuntu font-weight-700">
+                        Why Join CommUnity?
+                    </h1>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 3xl:container p-10">
+                    
+                    {/* Diverse Leadership Opportunities */}
+                    <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
+                        <Image className="w-10 h-10" src={DiverseLeadershipIcon} alt="Diverse"/>
+                        <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-500 mt-5">
+                            Diverse Leadership Opportunities
+                        </h6>
+                        <p className="text-[1rem] text-[#495167] font-light font-ubuntu font-weight-300 mt-5">
+                            Create and lead a community in your area of expertise, 
+                            be it blockchain, UI/UX, AI, or any tech-related field.
+                        </p>
+                    </div>
+
+                    {/* AGC Grants for Value-Adding Communities */}
+                    <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
+                        <Image className="w-10 h-10" src={AGCGrantsIcon} alt="AGC" />
+                        <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-500 mt-5">
+                            AGC Grants for Value-Adding Communities
+                        </h6>
+                        <p className="text-[1rem] text-[#495167] font-light font-ubuntu font-weight-300 mt-5">
+                            Exceptional communities that significantly 
+                            contribute to their fields can earn AGC grants for further development and impact.
+                        </p>
+                    </div>
+
+                    {/* Autonomy in Governance */}
+                    <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
+                        <Image className="w-10 h-10" src={AutonomyIcon} alt="Autonomy" />
+                        <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-500 mt-5">
+                            Autonomy in Governance
+                        </h6>
+                        <p className="text-[1rem] text-[#495167] font-light font-ubuntu font-weight-300 mt-5">
+                            Establish your community's governance, guiding 
+                            its growth and direction within the Devolved AI platform.
+                        </p>
+                    </div>
+
+                    {/* Autonomy in Governance */}
+                    <div className="p-6 md:p-8 rounded-md bg-white hover:shadow-lg transition-all duration-300">
+                        <Image className="w-10 h-10" src={EarnIcon} alt="blockchain_based_icon" />
+                        <h6 className="text-[1.25rem] text-[#29233B] font-normal font-ubuntu font-weight-500 mt-5">
+                            Earn and Influence Across Fields
+                        </h6>
+                        <p className="text-[1rem] text-[#495167] font-light font-ubuntu font-weight-300 mt-5">
+                            Engage in meaningful contributions, share expertise, 
+                            and earn AGC rewards for your community’s positive impact.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <style jsx>
+                {`
+                .background-image {
+                    background-image: url(${Background2.src});
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    opacity: 1;
+                    top: 0;
+                    bottom: 0;
+                    position: absolute;
+                    width: 170%;
+                    height: 100%;
+                    z-index: -1;
+                }
+            `}
+            </style>
+        </section>
+
+        {/* User Case Examples */}
+        <section className="flex w-full h-screen items-center justify-center bg-cover bg-center bg-no-repeat"
+            style={{ 
+                backgroundImage: `url(${BackgroundUseCase.src})` 
+            }}>
+            <div className="w-full">
+                <div className="flex flex-col items-center">
+                    <div className="text-center gap-3 heading text-white font-bold text-[2.75rem] font-ubuntu font-weight-700 mb-10 mt-10">
+                        <h1>User Case Examples</h1>
+                    </div>
+
+                    <div className="flex text-white ml-10 mr-20">
+                        <div className="flex items-center justify-center mb-10">
+                            <Image src={Steps} alt={"steps"} className="w-[5rem] h-[25rem]" />
+                        </div>
+                        <ol className="relative text-gray-500 dark:text-gray-400">
+                            <li className="mb-5">
+                                <div className="w-[25rem] h-[10rem] gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h1 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                        Case 1
+                                    </h1>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                        Blockchain Expert Ben
+                                    </h5>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.70rem] leading-relaxed">
+                                        Ben starts a blockchain-focused CommUnity.
+                                        His group’s innovative ideas and projects
+                                        in blockchain technology earn it an AGC grant,
+                                        enhancing its role within the Devolved AI ecosystem.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li className="mb-5">
+                                <div className="w-[25rem] h-[10rem] gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h1 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                        Case 2
+                                    </h1>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                        UI/UX Designer Uma
+                                    </h5>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.70rem] leading-relaxed">
+                                        Uma creates a CommUnity dedicated to exploring the latest trends in UI/UX design. 
+                                        She leads the community in workshops and collaborative projects,
+                                        earning recognition and AGC grants for their contributions to the field.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li className="mb-10">
+                                <div className="w-[25rem] h-[10rem] gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h1 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                        Case 3
+                                    </h1>
+                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                        Coding Enthusiast Carlos
+                                    </h5>
+                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.70rem] leading-relaxed">
+                                        Carlos forms a CommUnity for coding enthusiasts, offering a space for learning, discussion,
+                                        and project collaboration. The community becomes a valuable resource for coding knowledge and practice within Devolved AI, earning AGC grants for its educational impact.
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        {/* Building and Governing Your CommUnity */}
+        <section className="flex flex-col items-center justify-center m-20">
+                <div className="text-center mb-5">
+                    <h1 className="text-[2.50rem] text-[#192033] font-black font-ubuntu font-weight-700">
+                        Building and Governing Your CommUnity
+                    </h1>
+                </div>
+
+                <div className="flex gap-6 justify-center">
+                    <CoreDetailsCard
+                        title="Establish Your Community"
+                        description="Within Devolved AI, create a CommUnity in your area of interest, be it tech, design, development, or any other field."
+                        image={EstablishIcon}
+                    />
+                    <CoreDetailsCard
+                    title="Design Your Governance"
+                    description="You hold the reins to define your community's governance, ensuring alignment with your goals and vision."
+                    image={DesignIcon}
+                    />
+                    <CoreDetailsCard
+                    title="Earning and Utilizing AGC"
+                    description="Guide your community to add value within the Devolved AI ecosystem and receive AGC grants to fuel your initiatives."
+                    image={EarningIcon}
+                    />
+                </div>
+        </section>
+
+
+        {/* Why Create Your CommUnity? */}
+        <section className="w-full my-10 md:mt-20 md:mb-0 3xl:container">
+            <div className="lg:px-4 xl:px-8 md:mx-16 lg:mb-20 flex flex-col items-center px-5 md:mt-16 gap-5 xl:ms-20" 
+            style={{
+            backgroundImage: `url(${Background4.src})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            height: '300px',
+            }}>
+            <div className="background-image" />
+            <div className="fw-full max-w-xl text-center">
+                <h1 className="text-[2.50rem] text-[#192033] font-black font-ubuntu">
+                    Why Create Your CommUnity?
+                </h1>
+                <p className="text-[1rem] text-[#495167] font-light font-ubuntu">
+                    By creating a CommUnity within the Devolved AI platform, 
+                    you position yourself at the forefront of your chosen field. 
+                    It’s an opportunity to lead, to innovate, and to make a significant 
+                    impact in your area of expertise. Your community can shape discussions, 
+                    drive advancements, and be rewarded for its contributions to the broader 
+                    tech landscape.
+                </p>
+            </div>
+            </div>
+        </section>
+
+
+      {/* Ready to be a part of AI */}
+      <section className="rounded-2xl shadow-lg flex flex-col items-center justify-center my-10 gap-5">
+          <div className="flex flex-col gap-10 p-10 items-center justify-center w-[50rem]"
+            style={{
+              backgroundImage: `url(${Image3.src})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}>
+            <h1 className="text-[#192033] text-start text-lg" 
+            style={{ textAlign: 'center',
+            fontSize: '2rem',
+            fontStyle: 'normal',
+            fontWeight: '600',
+            lineHeight: '1.15rem'}}>
+              Ready to be a part of AI's next (d)evolution?<br/>
+            <br/>
+              Sign up now.
+            </h1>
+            <div className="text-center mt-10 bg-white/30 backdrop-blur-md p-5 rounded-[1rem]">
+              <p className="font-ubuntu font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
+                Get $50 in crypto for signing up, Plus $50 per referral¹
+              </p>
+              <div className="flex items-center justify-center">
+                <Input
+                  placeholder="Your email address*"
+                  type="email"
+                  className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
+                  required
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    validateEmail(e.target.value);
+                  }}
+                  onFocus={() => blur}
+                  tabIndex={-1}
+                  style={{ fontSize: "16px" }}
+                />
+                <button
+                onClick={submitHandler}
+                className=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
+                >
+                  JOIN THE REVOLUTION
+                </button>
+              </div>
+            </div>
+          </div>
       </section>
 
-      <section className="w-full place-items-center md:my-20">
-        <article className="flex flex-col items-center justify-center p-5 gap-3">
-          <h1 className="text-[2rem] font-bold text-[#2D3748] text-center">
-            Join the Devolved AI Community
-          </h1>
-          <p className="text-[1rem] text-[#646E73] text-center">
-            Become a part of our vibrant, decentralized community shaping the
-            future of AI. Your contribution matters here.
-          </p>
-        </article>
-        <div className="flex flex-col items-center justify-center my-10 md:mt-5">
-          <div className="flex gap-3 md:gap-10">
-            <Link
-              href={"https://facebook.com/devolvedai"}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <FaFacebook size={30} />
-            </Link>
-
-            <Link
-              href={"https://twitter.com/devolvedai"}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <FaTwitter size={30} />
-            </Link>
-
-            <Link
-              href={"https://www.reddit.com/user/devolvedai"}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <FaReddit size={30} />
-            </Link>
-
-            <Link
-              href={"https://discord.gg/Z2avfRQ4xc"}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <FaDiscord size={30} />
-            </Link>
-
-            <Link
-              href={"https://t.me/devolvedai"}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <FaTelegram size={30} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full place-items-center mb-20 md:hidden">
-        <Carousel>
-          <div className="flex flex-col py-10 px-10 rounded-sm">
-            <div className="flex flex-col gap-10 rounded-sm mt-12 md:mt-6">
-              <div className="flex flex-col items-center justify-center gap-5">
-                <Image src={Community} alt="" width={50} />
-                <div className="flex flex-col gap-y-2 ">
-                  <h1 className="text-2xl font-bold text-[#2D3748] text-center">
-                    Be a Game-Changer
-                  </h1>
-                  <p className="text-[1rem] text-[#646E73] mt-2">
-                    Turn your ideas into reality. Here, even the wildest
-                    thoughts can become the next big thing.
-                  </p>
-                  <div className="flex gap-2 justify-start items-center">
-                    <p className="text-[#0074D9]">Learn more</p>
-                    <Image src={RightArrowIconBlue} alt="Right Arrow Icon" />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center justify-center gap-5">
-                <Image src={Rewards} alt="" width={50} />
-                <div className="flex flex-col gap-y-2 ">
-                  <h1 className="text-2xl font-bold text-[#2D3748] text-center">
-                    Exclusive Perks
-                  </h1>
-                  <p className="text-[1rem] text-[#646E73] mt-2">
-                    Early access to updates, unique Argocoin rewards, and
-                    community-only events.
-                  </p>
-                  <div className="flex gap-2 justify-start items-center">
-                    <p className="text-[#0074D9]">Learn more</p>
-                    <Image src={RightArrowIconBlue} alt="Right Arrow Icon" />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center justify-center gap-5">
-                <Image src={TeamWork} alt="" width={50} />
-                <div className="flex flex-col gap-y-2 ">
-                  <h1 className="text-2xl font-bold text-[#2D3748] text-center">
-                    Adventure Awaits
-                  </h1>
-                  <p className="text-[1rem] text-[#646E73] mt-2">
-                    Never a dull moment with challenges, hackathons, and
-                    treasure hunts designed to entertain and educate.
-                  </p>
-                  <div className="flex gap-2 justify-start items-center">
-                    <p className="text-[#0074D9]">Learn more</p>
-                    <Image src={RightArrowIconBlue} alt="Right Arrow Icon" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col py-10 px-10 rounded-sm">
-            <div className="flex flex-col gap-10 rounded-sm mt-12">
-              <div className="flex flex-col items-center justify-center gap-5">
-                <Image src={Community} alt="" width={50} />
-                <div className="flex flex-col gap-y-2 ">
-                  <h1 className="text-2xl font-bold text-[#2D3748] text-center">
-                    Unleash Your Creativity
-                  </h1>
-                  <p className="text-[1rem] text-[#646E73] mt-2">
-                    Work with like-minded individuals who will appreciate and
-                    elevate your artistic flair or coding genius.
-                  </p>
-                  <div className="flex gap-2 justify-start items-center">
-                    <p className="text-[#0074D9]">Learn more</p>
-                    <Image src={RightArrowIconBlue} alt="Right Arrow Icon" />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center justify-center gap-5">
-                <Image src={Rewards} alt="" width={50} />
-                <div className="flex flex-col gap-y-2 ">
-                  <h1 className="text-2xl font-bold text-[#2D3748] text-center">
-                    Unlock Your Potential
-                  </h1>
-                  <p className="text-[1rem] text-[#646E73] mt-2">
-                    Join us and thrive in an environment that fosters growth,
-                    innovation, and leadership.
-                  </p>
-                  <div className="flex gap-2 justify-start items-center">
-                    <p className="text-[#0074D9]">Learn more</p>
-                    <Image src={RightArrowIconBlue} alt="Right Arrow Icon" />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center justify-center gap-5">
-                <Image src={TeamWork} alt="" width={50} />
-                <div className="flex flex-col gap-y-2 ">
-                  <h1 className="text-2xl font-bold text-[#2D3748] text-center">
-                    The Power of Community
-                  </h1>
-                  <p className="text-[1rem] text-[#646E73] mt-2">
-                    Be part of something bigger than yourself. Together, we're
-                    not just shaping this platform; we're shaping the future of
-                    AI.
-                  </p>
-                  <div className="flex gap-2 justify-start items-center">
-                    <p className="text-[#0074D9]">Learn more</p>
-                    <Image src={RightArrowIconBlue} alt="Right Arrow Icon" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col py-10 px-10 rounded-sm">
-            <div className="flex flex-col gap-10 rounded-sm mt-12">
-              <div className="flex flex-col items-center justify-center gap-5">
-                <Image src={Community} alt="" width={50} />
-                <div className="flex flex-col gap-y-2 ">
-                  <h1 className="text-2xl font-bold text-[#2D3748] text-center">
-                    Access to the Best Minds
-                  </h1>
-                  <p className="text-[1rem] text-[#646E73] mt-2">
-                    Learn from the experts. Regular AMAs, webinars, and panel
-                    discussions with leaders in the tech industry.
-                  </p>
-                  <div className="flex gap-2 justify-start items-center">
-                    <p className="text-[#0074D9]">Learn more</p>
-                    <Image src={RightArrowIconBlue} alt="Right Arrow Icon" />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center justify-center gap-5">
-                <Image src={Rewards} alt="" width={50} />
-                <div className="flex flex-col gap-y-2 ">
-                  <h1 className="text-2xl font-bold text-[#2D3748] text-center">
-                    Friends Around the Globe
-                  </h1>
-                  <p className="text-[1rem] text-[#646E73] mt-2">
-                    Connect, collaborate, and build lasting friendships with
-                    people from different cultures and disciplines.
-                  </p>
-                  <div className="flex gap-2 justify-start items-center">
-                    <p className="text-[#0074D9]">Learn more</p>
-                    <Image src={RightArrowIconBlue} alt="Right Arrow Icon" />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center justify-center gap-5">
-                <Image src={TeamWork} alt="" width={50} />
-                <div className="flex flex-col gap-y-2 ">
-                  <h1 className="text-2xl font-bold text-[#2D3748] text-center">
-                    Speak Your Mind
-                  </h1>
-                  <p className="text-[1rem] text-[#646E73] mt-2">
-                    Transparency allows every voice to be heard. Your opinions
-                    matter, and they can make a real impact.
-                  </p>
-                  <div className="flex gap-2 justify-start items-center">
-                    <p className="text-[#0074D9]">Learn more</p>
-                    <Image src={RightArrowIconBlue} alt="Right Arrow Icon" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Carousel>
-      </section>
-
-      <section className="w-full justify-center px-9 mb-20 hidden md:flex 3xl:container">
-        <div className="flex flex-col py-10 px-10 xl:px-24 rounded-sm">
-          <div className="flex flex-col gap-10 rounded-sm mt-12">
-            <div className="flex flex-col items-start justify-center gap-5">
-              <Image src={Community} alt="" width={50} />
-              <div className="flex flex-col gap-y-2 ">
-                <h1 className="text-2xl font-bold text-[#2D3748]">
-                  Be a Game-Changer
-                </h1>
-                <p className="text-[1rem] text-[#646E73] mt-2">
-                  Turn your ideas into reality. Here, even the wildest thoughts
-                  can become the next big thing.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col items-start justify-center gap-5">
-              <Image src={Community} alt="" width={50} />
-              <div className="flex flex-col gap-y-2 ">
-                <h1 className="text-2xl font-bold text-[#2D3748] ">
-                  Unleash Your Creativity
-                </h1>
-                <p className="text-[1rem] text-[#646E73] mt-2">
-                  Work with like-minded individuals who will appreciate and
-                  elevate your artistic flair or coding genius.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col justify-center gap-5">
-              <Image src={Community} alt="" width={50} />
-              <div className="flex flex-col gap-y-2 ">
-                <h1 className="text-2xl font-bold text-[#2D3748] ">
-                  Access to the Best Minds
-                </h1>
-                <p className="text-[1rem] text-[#646E73] mt-2">
-                  Learn from the experts. Regular AMAs, webinars, and panel
-                  discussions with leaders in the tech industry.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col py-10 px-10 rounded-sm">
-          <div className="flex flex-col gap-10 rounded-sm mt-12">
-            <div className="flex flex-col items-start justify-center gap-5">
-              <Image src={Rewards} alt="" width={50} />
-              <div className="flex flex-col gap-y-2 ">
-                <h1 className="text-2xl font-bold text-[#2D3748] ">
-                  Exclusive Perks
-                </h1>
-                <p className="text-[1rem] text-[#646E73] mt-2">
-                  Early access to updates, unique Argocoin rewards, and
-                  community-only events.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col items-start justify-center gap-5 xl:mt-7 2xl:mt-0">
-              <Image src={Rewards} alt="" width={50} />
-              <div className="flex flex-col gap-y-2 ">
-                <h1 className="text-2xl font-bold text-[#2D3748] ">
-                  Unlock Your Potential
-                </h1>
-                <p className="text-[1rem] text-[#646E73] mt-2">
-                  Join us and thrive in an environment that fosters growth,
-                  innovation, and leadership.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col items-start justify-center gap-5 mt-5 lg:mt-0 xl:max-2xl-mt-0 2xl:mt-0">
-              <Image src={Rewards} alt="" width={50} />
-              <div className="flex flex-col gap-y-2 ">
-                <h1 className="text-2xl font-bold text-[#2D3748] ">
-                  Friends Around the Globe
-                </h1>
-                <p className="text-[1rem] text-[#646E73] mt-2">
-                  Connect, collaborate, and build lasting friendships with
-                  people from different cultures and disciplines.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col py-10 px-10 rounded-sm">
-          <div className="flex flex-col gap-10 xl:gap-8 2xl:gap-10 rounded-sm mt-12 xl:pr-10">
-            <div className="flex flex-col items-start justify-center gap-5">
-              <Image src={TeamWork} alt="" width={50} />
-              <div className="flex flex-col gap-y-2 ">
-                <h1 className="text-2xl font-bold text-[#2D3748] ">
-                  Adventure Awaits
-                </h1>
-                <p className="text-[1rem] text-[#646E73] mt-2">
-                  Never a dull moment with challenges, hackathons, and treasure
-                  hunts designed to entertain and educate.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col items-start justify-center gap-5">
-              <Image src={TeamWork} alt="" width={50} />
-              <div className="flex flex-col gap-y-2 ">
-                <h1 className="text-2xl font-bold text-[#2D3748] ">
-                  The Power of Community
-                </h1>
-                <p className="text-[1rem] text-[#646E73] mt-2">
-                  Be part of something bigger than yourself. Together, we're not
-                  just shaping this platform; we're shaping the future of AI.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col justify-center gap-5">
-              <Image src={TeamWork} alt="" width={50} />
-              <div className="flex flex-col gap-y-2 ">
-                <h1 className="text-2xl font-bold text-[#2D3748] ">
-                  Speak Your Mind
-                </h1>
-                <p className="text-[1rem] text-[#646E73] mt-2">
-                  Transparency allows every voice to be heard. Your opinions
-                  matter, and they can make a real impact.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full p-6 md:p-20 mb-20 bg-[#F5F5F5]">
-        <div className="flex flex-col gap-3 md:gap-6 text-center">
-          <h3 className="text-[1.5625rem] md:text-3xl font-bold text-[#2D3748]">
-            Why Devolved AI Community is Unique
-          </h3>
-          <p className="text-[1rem] md text-[#646E73] text-start lg:text-center lg:px-44 3xl:px-96">
-            The Devolved AI community is not just a user base; it's a
-            collaborative force propelling us toward AI's next frontier. Our
-            innovative PoV protocol ensures that everyone's contributions are
-            valued, creating a rewarding and dynamic ecosystem you'll want to be
-            a part of.
-          </p>
-          <div className="flex justify-center md:mx-auto gap-x-1.5">
-            <EarlyAccessForm>
-              <Button
-                title="Get Early Access"
-                extraStyles=" bg-[#FF6F00] text-white font-bold rounded-[0.3125rem] w-full md:w-[8.75rem] md:h-[2.625rem] text-[1rem]"
-              />
-            </EarlyAccessForm>
-            <a
-              target="_blank"
-              href="https://devolved-ai.gitbook.io/devolved-ai-whitepaper/"
-              rel="noopener noreferrer"
-              className="w-full"
-            >
-              <Button
-                title="Whitepaper"
-                extraStyles=" bg-white text-[#0074D9] border-[#0074D9] w-full text-center md:w-[8.75rem] md:h-[2.625rem] font-light text-[1rem]"
-              />
-            </a>
-          </div>
-        </div>
-      </section>
+      <div className="bg-slate-700 w-4/5 mx-auto border bottom-1" />
+      
     </main>
   );
-};
-
-export default CommunityPage;
+}
