@@ -14,7 +14,7 @@ import Background4 from "../../public/technology/bg4.webp"
 
 import Button from "@/components/customComponents/Button";
 import { useState } from "react";
-import { Input } from "@/components/ui/input";
+import GetReferral from "@/components/customComponents/GetReferral";
 
 export default function Technology() {
     const [email, setEmail] = useState("");
@@ -257,28 +257,9 @@ export default function Technology() {
                     <br/>
                     Sign up now.
                 </h1>
-                {/* <div className="text-center mt-10 bg-white/30 backdrop-blur-md p-5 rounded-[1rem]"> */}
-                <div className="flex items-center justify-center">
-                <Input
-                  placeholder="Your email address*"
-                  type="email"
-                  className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
-                  required
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    validateEmail(e.target.value);
-                  }}
-                  onFocus={() => blur}
-                  tabIndex={-1}
-                  style={{ fontSize: "16px" }}
-                />
-                <button
-                onClick={submitHandler}
-                className=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
-                >
-                  JOIN THE REVOLUTION
-                </button>
-              </div>
+                <div className="hidden md:flex">
+                    <GetReferral />
+                </div>
             </div>
         </section>
 

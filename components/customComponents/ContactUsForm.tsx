@@ -18,8 +18,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
 
-import { useForm, SubmitHandler } from 'react-hook-form';
-import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
+import { useForm } from 'react-hook-form';
+import { Alert, AlertTitle } from "../ui/alert";
 
 const FormSchema = z.object({
   firstName: z.string({

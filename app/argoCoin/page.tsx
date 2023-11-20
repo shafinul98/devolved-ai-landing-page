@@ -15,9 +15,7 @@ import HomeImage1 from "../../public/home/1.webp"
 import SectionBg3 from "../../public/home/section-bg-3.webp"
 import Button from "@/components/customComponents/Button";
 import GetReferral from "@/components/customComponents/GetReferral";
-import { motion } from "framer-motion";
 import { useState } from "react";
-import { Input } from "@/components/ui/input";
 
 export default function ArgoCoin() {
     const [email, setEmail] = useState("");
@@ -47,7 +45,7 @@ export default function ArgoCoin() {
 
   };
     return (
-        <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-6 py-8 md:p-0">
+        <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
             {/* hero section */}
             <section className="w-full h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
             style={{ backgroundImage: `url(${HeroImage.src})`}}>
@@ -62,48 +60,8 @@ export default function ArgoCoin() {
                             the native token on our Layer 1 blockchain, AGC isn’t just a digital currency – it's the <br/>
                             driving force behind a new era of AI-powered breakthroughs.
                         </p>
-                        <div className="text-center mt-5 bg-white/30 backdrop-blur-md p-5 rounded-[1rem]">
-                            <p className="font-ubuntu font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
-                                Get $50 in crypto for signing up, Plus $50 per referral¹
-                            </p>
-                            <div className="flex items-center justify-center">
-                <Input
-                  placeholder="Your email address*"
-                  type="email"
-                  className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
-                  required
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    validateEmail(e.target.value);
-                  }}
-                  onFocus={() => blur}
-                  tabIndex={-1}
-                  style={{ fontSize: "16px" }}
-                />
-                <button
-                onClick={submitHandler}
-                className=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
-                >
-                  JOIN THE REVOLUTION
-                </button>
-              </div>
-                        </div>
-                        <div className="flex flex-col items-center justify-center mt-10">
-                            <motion.svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            className="animate-bounce w-6 h-6 text-black"
-                            initial={{ y: 0 }}
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{
-                            repeat: Infinity,
-                            duration: 1,
-                            ease: 'easeInOut',
-                            }}>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                            </motion.svg>
+                        <div className="justify-center hidden md:flex">
+                            <GetReferral />
                         </div>
                     </div>
                 </div>
@@ -447,31 +405,8 @@ export default function ArgoCoin() {
                     <br/>
                         Sign up now.
                     </h1>
-                    <div className="text-center mt-10 bg-white/30 backdrop-blur-md p-5 rounded-[1rem]">
-                    <p className="font-ubuntu font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
-                        Get $50 in crypto for signing up, Plus $50 per referral¹
-                    </p>
-                    <div className="flex items-center justify-center">
-                <Input
-                  placeholder="Your email address*"
-                  type="email"
-                  className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
-                  required
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    validateEmail(e.target.value);
-                  }}
-                  onFocus={() => blur}
-                  tabIndex={-1}
-                  style={{ fontSize: "16px" }}
-                />
-                <button
-                onClick={submitHandler}
-                className=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-full md:w-[15rem] md:h-[3rem]"
-                >
-                  JOIN THE REVOLUTION
-                </button>
-              </div>
+                    <div className="hidden md:flex">
+                        <GetReferral />
                     </div>
                 </div>
             </section>

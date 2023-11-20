@@ -233,7 +233,7 @@ export default function Home() {
                 It's not just a digital asset; <br/>
                 it's your voting ticket, your reward, and your stake in the community.
               </p>
-              <div className="flex mt-4">
+              <div className="flex justify-center mt-4">
                 <button className="bg-[#A9A3B2] text-white font-medium text-base md:text-lg rounded-md w-full md:w-64 h-12">
                   LEARN MORE
                 </button>

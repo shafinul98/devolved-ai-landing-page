@@ -24,6 +24,7 @@ import TeamImage4 from "../../public/about/team/image4.webp";
 import { useState } from "react";
 
 import { motion, useAnimation } from 'framer-motion';
+import GetReferral from "@/components/customComponents/GetReferral";
 
 export default function About() {
     const teamMembers = [
@@ -559,6 +560,9 @@ export default function About() {
             <br/>
                 Sign up now.
             </h1>
+            <div className="hidden md:flex">
+                <GetReferral />
+            </div>
             </div>
         </section>
 
