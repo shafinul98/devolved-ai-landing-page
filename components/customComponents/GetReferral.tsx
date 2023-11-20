@@ -17,7 +17,9 @@ export default function GetReferral() {
   return (
     <div className="mt-5 mb-5">
       {loading ? (
-        <div>Loading Campaign...</div>
+        <div className="text-blue-500 font-bold text-lg">
+          Loading Campaign...
+        </div>
       ) : (
         <form-widget ucid={UCID}></form-widget>
       )}
