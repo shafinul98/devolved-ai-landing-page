@@ -82,7 +82,7 @@ fbq('track', 'PageView');
         </Script>
         <Script
           src="https://app.viral-loops.com/widgetsV2/core/loader.js"
-          strategy="lazyOnload"
+          strategy="beforeInteractive"
         />
       </head>
       <body className={`${ubuntu.className} grid`}>
