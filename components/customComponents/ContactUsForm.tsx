@@ -80,52 +80,53 @@ const ContactUsForm = () => {
 
   return (
     <Form {...form}>
-      <form className="flex flex-col mt-6" onSubmit={form.handleSubmit(onSubmit)}>
-      <div className="flex md:flex-col lg:flex-row gap-2 md:gap-y-5 lg:gap-0 3xl:container">
-        <FormField
-              control={form.control}
-              name="firstName"
-              render={({ field }) => (
-                <FormItem className="md:px-[7.5rem] lg:px-0 lg:me-[5rem]">
-                  <FormControl>
-                    <Input
-                      className="w-[12.5rem] h-[3.5rem] p-3 border border-[#d9e2ec] rounded-md focus:outline-none focus:border-blue-500"
-                      placeholder="First Name"
-                      {...field}
-                      required
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+      <form className="flex flex-col" onSubmit={form.handleSubmit(onSubmit)}>
+
+        <div className="flex flex-col md:flex-row lg:flex-row gap-2 mt-5">
+          <FormField
+            control={form.control}
+            name="firstName"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input
+                    className="input-field w-full md:w-[14.5625rem] h-[3.75rem] rounded-[0.3125rem] border-2 border-[#D3D3D3] backdrop-blur-md text-normal text-[#495167] leading-[1.875rem] text-[1rem]"
+                    placeholder="First Name"
+                    {...field}
+                    required
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
           />
           <FormField
-              control={form.control}
-              name="lastName"
-              render={({ field }) => (
-                <FormItem className="md:px-[7.5rem] lg:px-2 lg:me-[5rem]">
-                  <FormControl>
-                    <Input
-                      className="w-[12.5rem] h-[3.5rem] p-3 border border-[#d9e2ec] rounded-md focus:outline-none focus:border-blue-500"
-                      placeholder="Last Name"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+            control={form.control}
+            name="lastName"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input
+                    className="input-field w-full md:w-[14.5625rem] h-[3.75rem] rounded-[0.3125rem] border-2 border-[#D3D3D3] backdrop-blur-md text-normal text-[#495167] leading-[1.875rem] text-[1rem]"
+                    placeholder="Last Name"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
           />
-      </div>
+        </div>
 
-      <div className="flex md:flex-col lg:flex-row gap-2 md:gap-y-5 lg:gap-0 3xl:container mt-5">
+        <div className="flex flex-col md:flex-row lg:flex-row gap-2 mt-5">
           <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
-              <FormItem className="md:px-[7.5rem] lg:px-[0rem]">
+              <FormItem>
                 <FormControl>
                   <Input
-                    className="w-[30.5rem] h-[3.5rem] p-3 border border-[#d9e2ec] rounded-md focus:outline-none focus:border-blue-500"
+                    className="input-field w-full md:w-[30rem] h-[3.75rem] rounded-[0.3125rem] border-2 border-[#D3D3D3] backdrop-blur-md text-normal text-[#495167] leading-[1.875rem] text-[1rem]"
                     placeholder="Email*"
                     type="email"
                     required
@@ -136,17 +137,17 @@ const ContactUsForm = () => {
               </FormItem>
             )}
           />
-      </div>
+        </div>
 
-      <div className="flex md:flex-col lg:flex-row gap-2 md:gap-y-5 lg:gap-0 3xl:container mt-5 mb-5">
+        <div className="flex flex-col md:flex-row lg:flex-row gap-2 mt-5 mb-5">
           <FormField
             control={form.control}
             name="message"
             render={({ field }) => (
-              <FormItem className="md:px-[7.5rem] lg:px-[0rem]">
+              <FormItem>
                 <FormControl>
                   <Textarea
-                  className="w-[30.5rem] h-[3.5rem] p-3 border border-[#d9e2ec] rounded-md focus:outline-none focus:border-blue-500"
+                    className="input-field w-full md:w-[30rem] h-[10.125rem] rounded-[0.3125rem] border-2 border-[#D3D3D3] backdrop-blur-md text-normal text-[#495167] leading-[1.875rem] text-[1rem]"
                     placeholder="Comments"
                     {...field}
                     rows={6}
@@ -157,24 +158,26 @@ const ContactUsForm = () => {
               </FormItem>
             )}
           />
-      </div>
+        </div>
 
-      {isMessageSent ? (
-          <Alert className="w-1/2 bg-green-500 text-white">
-            <AlertTitle>Your Message Has Been Sent</AlertTitle>
+        {isMessageSent ? (
+          <Alert className="w-full bg-green-500 text-white">
+            <AlertTitle>Your Comment Has Been Sent</AlertTitle>
           </Alert>
         ) : (
           <>
             <Button
               type="submit"
               title="Submit"
-              extraStyles=" bg-[#FF6F00] text-white font-normal rounded-[0.3125rem] w-[25rem] md:w-[30.5rem] md:h-[3rem]"
+              extraStyles=" text-white text-[1.125rem] bg-[#FF6F00] font-medium rounded-[0.3125rem] w-full md:w-[30rem] md:h-[3rem]"
               disabled={formState.isValidating}
             />
           </>
         )}
       </form>
     </Form>
+
+
   );
 };
 

@@ -9,9 +9,9 @@ import TrophyIcon from "../../public/TrophyIcon.svg";
 import CalendarIcon from "../../public/CalendarIcon.svg";
 import StayConnectedIcon from "../../public/StayConnectedIcon.svg";
 
-import MissionImageNew from "../../public/MissionImageNew.png";
-import CalendarImage from "../../public/CalendarImage.png";
-import ConnectedWorldImage from "../../public/ConnectedWorldImage.png";
+import MissionImageNew from "../../public/MissionImageNew.webp";
+import CalendarImage from "../../public/CalendarImage.webp";
+import ConnectedWorldImage from "../../public/ConnectedWorldImage.webp";
 
 import {
   FaDiscord,

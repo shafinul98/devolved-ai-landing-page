@@ -16,8 +16,6 @@ import SectionBg2 from "../../public/about/section-bg-2.webp"
 import TeamMemberCard from "@/components/customComponents/TeamMemberCard";
 
 import HorizontalStepper from "../../public/about/h-steeper.webp"
-import Nathan from "../../public/Nathan.jpeg";
-import Nazmul from "../../public/Nazmul.jpg";
 import TeamImage1 from "../../public/about/team/image1.webp";
 import TeamImage2 from "../../public/about/team/image2.webp";
 import TeamImage3 from "../../public/about/team/image3.webp";

@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import FooterLogo from "../../public/logo.svg";
-import FooterBackground from "../../public/footer/background.png"
+import FooterBackground from "../../public/footer/background.webp"
 
 import {
   FaFacebook,
@@ -17,7 +17,8 @@ import { HiLocationMarker } from "react-icons/hi";
 
 const Footer = () => {
   return (
-    <footer className="mt-10 md:mt-16 lg:mt-20 3xl:container">
+    <footer className="flex flex-col overflow-x-hidden justify-between mt-10 md:mt-16 lg:mt-20">
+
       <div className="flex flex-col items-center md:items-start gap-10 md:flex-row md:justify-around mb-12">
         <div className="flex flex-col items-center md:items-start"
           style={{
@@ -134,7 +135,7 @@ const Footer = () => {
 
       </div>
 
-      <div className="bg-slate-700 w-4/5 mx-auto border bottom-1" />
+      <div className="bg-[#E5E7EB] w-4/5 mx-auto border bottom-1" />
 
       <p className="text-center my-10 text-[#1D1D1D] text-[1rem] font-normal leading-[1.25rem]">
         © Devolved AI 2023. All rights reserved.

@@ -1,16 +1,16 @@
 "use client"
 
 import Image from "next/image";
-import HeroImage from "../../public/technology/hero-image.png"
-import Image1 from "../../public/technology/image1.png"
-import Background1 from "../../public/technology/bg1.png"
-import Image2 from "../../public/technology/image2.png"
-import Background2 from "../../public/technology/bg2.png"
-import StandardMode from "../../public/technology/standard-mode.png"
-import LookingBeyond from "../../public/technology/looking-beyond.png"
-import Background3 from "../../public/technology/bg3.png"
-import Image3 from "../../public/technology/image3.png"
-import Background4 from "../../public/technology/bg4.png"
+import HeroImage from "../../public/technology/hero-image.webp"
+import Image1 from "../../public/technology/image1.webp"
+import Background1 from "../../public/technology/bg1.webp"
+import Image2 from "../../public/technology/image2.webp"
+import Background2 from "../../public/technology/bg2.webp"
+import StandardMode from "../../public/technology/standard-mode.webp"
+import LookingBeyond from "../../public/technology/looking-beyond.webp"
+import Background3 from "../../public/technology/bg3.webp"
+import Image3 from "../../public/technology/image3.webp"
+import Background4 from "../../public/technology/bg4.webp"
 
 import Button from "@/components/customComponents/Button";
 import { useState } from "react";

@@ -1,16 +1,16 @@
 "use client"
 
 import Image from "next/image";
-import HeroImage from "../../public/technology/hero-image.png"
+import HeroImage from "../../public/technology/hero-image.webp"
 
-import Image1 from "../../public/community/image1.png"
-import Background1 from "../../public/technology/bg1.png"
-import Image2 from "../../public/community/image2.png"
-import Background2 from "../../public/technology/bg2.png"
-import Background3 from "../../public/technology/bg3.png"
+import Image1 from "../../public/community/image1.webp"
+import Background1 from "../../public/technology/bg1.webp"
+import Image2 from "../../public/community/image2.webp"
+import Background2 from "../../public/technology/bg2.webp"
+import Background3 from "../../public/technology/bg3.webp"
 import BackgroundUseCase from "../../public/about/bg3.webp"
-import Image3 from "../../public/technology/image3.png"
-import Background4 from "../../public/technology/bg4.png"
+import Image3 from "../../public/technology/image3.webp"
+import Background4 from "../../public/technology/bg4.webp"
 import Button from "@/components/customComponents/Button";
 
 import DiverseLeadershipIcon from "../../public/community/diverse_leadership_opportunities_icon.svg"
