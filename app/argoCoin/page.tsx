@@ -49,13 +49,13 @@ export default function ArgoCoin() {
             {/* hero section */}
             <section className="w-full h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
             style={{ backgroundImage: `url(${HeroImage.src})`}}>
-                <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12">
+                <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
                     <div className="text-center">
-                        <h1 className="font-bold text-[2.8125rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">
+                        <h1 className="font-bold text-[2.8125rem] md:text-2xl lg:text-3xl xl:text-6xl leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">
                             Argocoin:<br/>
                             Fueling the AI Revolution
                         </h1>
-                        <p className="font-normal text-[1.275rem] md:text-2xl lg:text-3xl xl:text-3xl text-[#495167] mb-5 xl:mb-5 max-w-[71.375rem]">
+                        <p className="font-normal text-[1.275rem] md:text-2xl lg:text-3xl xl:text-3xl text-[#495167] m-5 xl:m-5 max-w-[71.375rem]">
                             Step into the future with Argocoin:  The Cornerstone of Devolved AI. Anchored as
                             the native token on our Layer 1 blockchain, AGC isn’t just a digital currency – it's the
                             driving force behind a new era of AI-powered breakthroughs.
@@ -430,7 +430,6 @@ export default function ArgoCoin() {
             </div>
 
             {/* Ready to be a part of AI */}
-  
             <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5">
                 <div className="flex flex-col gap-5 p-3 md:p-6 rounded-md shadow-md items-center justify-center w-[20.875rem] xl:w-[66.875rem] max-h-[30rem] xl:h-[45rem]"
                 style={{
