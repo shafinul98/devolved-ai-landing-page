@@ -66,12 +66,12 @@ export default function Home() {
               So should its ownership.
             </h1>
             <p className="font-normal text-[1.875rem;] md:text-[1.875rem;] lg:text-[1.875rem;] xl:text-[1.875rem;] text-[#495167] leading-[2.375rem] mb-6 md:mb-0">
-              Welcome to AI owned by you, the user. Built on blockchain <br/> 
-              technology, Devolved AI embodies trust, transparency, and <br/>
-              community governance. Vote, earn rewards, and own a stake in <br/>
+              Welcome to AI owned by you, the user. Built on blockchain
+              technology, Devolved AI embodies trust, transparency, and
+              community governance. Vote, earn rewards, and own a stake in
               the future of AI—all powered by Argocoin.
             </p>
-            <div className="hidden md:block">
+            <div className="referral">
               <GetReferral />
             </div>
           </div>
@@ -367,7 +367,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-slate-700 w-4/5 mx-auto border bottom-1" />
+      <div className="bg-[#E5E7EB] w-4/5 mx-auto border bottom-1" />
     </main>
   );
 }

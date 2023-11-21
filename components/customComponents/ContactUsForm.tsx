@@ -76,7 +76,7 @@ const ContactUsForm = () => {
     if (isMessageSent && formRef) {
       form.reset();
     }
-  }, [isMessageSent]);
+  }, [isMessageSent, form]);
 
   return (
     <Form {...form}>
