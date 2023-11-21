@@ -51,11 +51,11 @@ export default function ArgoCoin() {
             style={{ backgroundImage: `url(${HeroImage.src})`}}>
                 <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12">
                     <div className="text-center">
-                        <h1 className="font-bold text-[2.8125rem] xl:text-8xl leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">
+                        <h1 className="font-bold text-[2.8125rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">
                             Argocoin:<br/>
                             Fueling the AI Revolution
                         </h1>
-                        <p className="font-normal text-[1.275rem] xl:text-4xl text-[#495167] mb-5 xl:mb-5 max-w-[71.375rem]">
+                        <p className="font-normal text-[1.275rem] md:text-2xl lg:text-3xl xl:text-3xl text-[#495167] mb-5 xl:mb-5 max-w-[71.375rem]">
                             Step into the future with Argocoin:  The Cornerstone of Devolved AI. Anchored as
                             the native token on our Layer 1 blockchain, AGC isn’t just a digital currency – it's the
                             driving force behind a new era of AI-powered breakthroughs.
@@ -73,7 +73,7 @@ export default function ArgoCoin() {
                     <div className="m-5 xl:m-0">
                         <Image
                         priority
-                        className="xl:w-[50rem] xl:h-[50rem] rounded-[1.25rem]"
+                        className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
                             src={Image1}
                             alt="A Revolutionary Native Cryptocurrency Illustration"
                             />
@@ -81,10 +81,10 @@ export default function ArgoCoin() {
                     
                     <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
                         <div className="background-image" />
-                        <p className="font-bold text-[1.25rem] leading-normal text-[#204FA2]">
+                        <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
                             Argocoin Unveiled
                         </p>
-                        <p className="font-bold text-[1.75rem] xl:text-5xl leading-normal text-[#192033]">
+                        <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
                             A Revolutionary Native <br />
                             Cryptocurrency
                         </p>
@@ -127,10 +127,10 @@ export default function ArgoCoin() {
                 <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
                     <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
                         <div className="background-image" />
-                        <p className="font-bold text-[1.25rem] leading-normal text-[#204FA2]">
+                        <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
                             Earning Mechanisms of Argocoin
                         </p>
-                        <p className="font-bold text-[1.75rem] xl:text-5xl leading-normal text-[#192033]">
+                        <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
                             Forge Value, Earn AGC
                         </p>
                         <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
@@ -145,7 +145,7 @@ export default function ArgoCoin() {
                             priority
                             src={Image2}
                             alt="Forge Value, Earn AGC Illustration"
-                            className="xl:w-[50rem] xl:h-[50rem] rounded-[1.25rem]"
+                            className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
                         />
                     </div>
                 </div>
@@ -174,17 +174,17 @@ export default function ArgoCoin() {
                     <div className="m-5 xl:m-0">
                         <Image
                         priority
-                        className="xl:w-[50rem] xl:h-[50rem] rounded-[1.25rem]"
+                        className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
                             src={Image3}
                             alt="Your Stake, Your Voice Illustration"
                             />
                     </div>
                     <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
                         <div className="background-image" />
-                        <p className="font-bold text-[1.25rem] leading-normal text-[#204FA2]">
+                        <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
                             Argocoin and Its Role in Governance
                         </p>
-                        <p className="font-bold text-[1.75rem] xl:text-5xl leading-normal text-[#192033]">
+                        <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
                             Your Stake, Your Voice
                         </p>
                         <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
@@ -220,10 +220,10 @@ export default function ArgoCoin() {
                 <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
                     <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
                         <div className="background-image" />
-                        <p className="font-bold text-[1.25rem] leading-normal text-[#204FA2]">
+                        <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
                             Tokenomics and Utility
                         </p>
-                        <p className="font-bold text-[1.75rem] xl:text-5xl leading-normal text-[#192033]">
+                        <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
                             Designed for Sustainability and Growth
                         </p>
                         <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
@@ -238,7 +238,7 @@ export default function ArgoCoin() {
                             priority
                             src={Image4}
                             alt="Designed for Sustainability and Growth Illustration"
-                            className="xl:w-[50rem] xl:h-[50rem] rounded-[1.25rem]"
+                            className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
                         />
                     </div>
                 </div>
@@ -272,15 +272,14 @@ export default function ArgoCoin() {
                     height: '300px',
                 }}>
                     <div className="background-image" />
-                     
                     <div className="flex flex-col max-w-xxl gap-5 text-center">
-                        <p className="font-bold text-[1rem] xl:text-[1.25rem] leading-normal text-[#204FA2]">
+                        <p className="font-bold text-[1rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
                             Joining the Argocoin Ecosystem
                         </p>
-                        <p className="font-bold text-[1.75rem] xl:text-5xl leading-normal text-[#192033]">
+                        <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
                             Joining the Argocoin Ecosystem
                         </p>
-                        <p className="text-[0.90rem] xl:text-3xl text-[#495167] font-light max-w-[86.0625rem]">
+                        <p className="text-[0.90rem] md:text-xl lg:text-2xl xl:text-2xl text-[#495167] font-light max-w-[86.0625rem]">
                             Join us on the ground floor of this revolutionary project. 
                             By becoming an early AGC holder, you not only stand to benefit from 
                             the ecosystem's growth but also become part of a movement to democratize AI, 
@@ -291,23 +290,24 @@ export default function ArgoCoin() {
             </section>
 
             <div className="bg-gradient-to-t from-[#F1F2F5] via-transparent to-[#fff]">
+                
                 {/* Future Vision and Expansion */}
                 <section className="w-full my-10 md:mt-20 md:mb-0 items-center xl:container">
                     <div className="flex flex-col items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
                         <div className="m-5 xl:m-0">
                             <Image
                             priority
-                            className="xl:w-[50rem] xl:h-[50rem] rounded-[1.25rem]"
+                            className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
                                 src={Image5}
                                 alt="Future Vision and Expansion Illustration"
                                 />
                         </div>
                         <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-20">
                             <div className="background-image" />
-                            <p className="font-bold text-[1.25rem] leading-normal text-[#204FA2]">
+                            <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
                                 Future Vision and Expansion
                             </p>
-                            <p className="font-bold text-[1.75rem] xl:text-5xl leading-normal text-[#192033]">
+                            <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
                                 Future Vision and Expansion
                             </p>
                             <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
@@ -342,10 +342,10 @@ export default function ArgoCoin() {
                     <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
                         <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-20">
                             <div className="background-image" />
-                            <p className="font-bold text-[1.25rem] leading-normal text-[#204FA2]">
+                            <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
                                 Security and Stability Measures
                             </p>
-                            <p className="font-bold text-[1.75rem] xl:text-5xl leading-normal text-[#192033]">
+                            <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
                                 Security and Stability Measures
                             </p>
                             <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
@@ -358,7 +358,7 @@ export default function ArgoCoin() {
                             priority
                             src={Image6}
                             alt="Security and Stability Measures Illustration"
-                            className="xl:w-[50rem] xl:h-[50rem] rounded-[1.25rem]"
+                            className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
                             />
                         </div>
                     </div>
@@ -387,17 +387,17 @@ export default function ArgoCoin() {
                         <div className="m-5 xl:m-0">
                             <Image 
                             priority
-                            className="xl:w-[70rem] xl:h-[50rem] rounded-[1.25rem]"
+                            className="w-[70rem] h-auto md:w-[70rem] md:h-auto lg:w-[70rem] lg:h-auto xl:w-[70rem] xl:h-auto rounded-[1.25rem]"
                             src={Image7}
                             alt="Your Pathway to Being a Part of the AI Evolution Illustration"
                             />
                         </div>
                         <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-20">
                             <div className="background-image" />
-                            <p className="font-bold text-[1.25rem] leading-normal text-[#204FA2]">
+                            <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
                                 Take Action
                             </p>
-                            <p className="font-bold text-[1.75rem] xl:text-5xl leading-normal text-[#192033]">
+                            <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
                                 Your Pathway to Being a Part of the AI Evolution
                             </p>
                             <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">

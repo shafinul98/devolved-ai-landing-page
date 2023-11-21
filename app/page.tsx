@@ -65,13 +65,13 @@ export default function Home() {
               AI has evolved.<br />
               So should its ownership.
             </h1>
-            <p className="font-normal text-[1.875rem;] md:text-[1.875rem;] lg:text-[1.875rem;] xl:text-[1.875rem;] text-[#495167] leading-[2.375rem] mb-6 md:mb-0">
+            <p className="font-normal text-[1.875rem] md:text-[1.875rem] lg:text-[1.875rem] xl:text-[1.875rem] text-[#495167] leading-[2.375rem] mb-6 md:mb-0">
               Welcome to AI owned by you, the user. Built on blockchain
               technology, Devolved AI embodies trust, transparency, and
               community governance. Vote, earn rewards, and own a stake in
               the future of AI—all powered by Argocoin.
             </p>
-            <div className="referral">
+            <div className="justify-center hidden md:flex">
               <GetReferral />
             </div>
           </div>
