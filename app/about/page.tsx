@@ -16,10 +16,9 @@ import SectionBg2 from "../../public/about/section-bg-2.webp"
 import TeamMemberCard from "@/components/customComponents/TeamMemberCard";
 
 import HorizontalStepper from "../../public/about/h-steeper.webp"
-import TeamImage1 from "../../public/about/team/image1.webp";
-import TeamImage2 from "../../public/about/team/image2.webp";
-import TeamImage3 from "../../public/about/team/image3.webp";
-import TeamImage4 from "../../public/about/team/image4.webp";
+import Nathan from "../../public/about/team/nathan.webp";
+import Nazmul from "../../public/about/team/nazmul.webp";
+import Justin from "../../public/about/team/justin.webp";
 
 import { useState } from "react";
 
@@ -29,63 +28,55 @@ import GetReferral from "@/components/customComponents/GetReferral";
 export default function About() {
     const teamMembers = [
         {
-            cardImage: TeamImage1,
+            cardImage: Nathan,
             cardDescription: "CEO & Founder",
             cardFooter: [
-                "",
                 "#",
                 "#",
-                "#",
-                "",
+                "https://www.linkedin.com/in/nathan-lee-peterson",
             ],
-            cardTitle: "John Carter",
-            hasFacebook: true,
-            hasTwitter: true,
+            cardTitle: "Nathan Peterson",
+            hasFacebook: false,
+            hasTwitter: false,
             hasLinkedIn: true,
         },
         {
-            cardImage: TeamImage2,
-            cardDescription: "VP of Design",
+            cardImage: Nazmul,
+            cardDescription: "COO",
             cardFooter: [
-                "",
                 "#",
                 "#",
-                "#",
-                "",
+                "https://www.linkedin.com/in/md-nazmul-hossain",
             ],
-            cardTitle: "Sophie Moore",
-            hasFacebook: true,
-            hasTwitter: true,
+            cardTitle: "Md. Nazmul Hossain",
+            hasFacebook: false,
+            hasTwitter: false,
             hasLinkedIn: true,
         },
         {
-            cardImage: TeamImage3,
-            cardDescription: "VP of Marketing",
+            cardImage: Justin,
+            cardDescription: "Board Member",
             cardFooter: [
-                "",
                 "#",
                 "#",
-                "#",
-                "",
+                "https://www.linkedin.com/in/justin-seyl-c-d-s-csp-cas-b76b4912",
             ],
-            cardTitle: "Matt Cannon",
-            hasFacebook: true,
-            hasTwitter: true,
+            cardTitle: "Justin Seyl",
+            hasFacebook: false,
+            hasTwitter: false,
             hasLinkedIn: true,
         },
         {
-            cardImage: TeamImage4,
-            cardDescription: "VP of Product",
+            cardImage: Nazmul,
+            cardDescription: "COO",
             cardFooter: [
-                "",
                 "#",
                 "#",
-                "#",
-                "",
+                "https://www.linkedin.com/in/md-nazmul-hossain",
             ],
-            cardTitle: "Andy Smith",
-            hasFacebook: true,
-            hasTwitter: true,
+            cardTitle: "Md. Nazmul Hossain",
+            hasFacebook: false,
+            hasTwitter: false,
             hasLinkedIn: true,
         },
     ];
@@ -106,33 +97,6 @@ export default function About() {
         });
     };
 
-    const [email, setEmail] = useState("");
-    const [isEmailValid, setIsEmailValid] = useState(true);
-
-    const validateEmail = (input: any) => {
-        const isValid = /\S+@\S+\.\S+/.test(input);
-        setIsEmailValid(isValid);
-    };
-
-    const submitHandler = async () => {
-        const res = await fetch("/api/emailOctopus", {
-            method: "POST",
-            headers: {
-            "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-            email_address: email,
-            status: "PENDING",
-            }),
-        });
-
-        const { error, status } = await res.json();
-
-        if (status === 200) {
-            window.location.href = `/earlyAccessSuccess?isSignedUp=true`;
-        }
-    };
-
     const controls = useAnimation();
     const moveLeft = () => {
         controls.start({ x: 300 }); // Adjust the distance as needed
@@ -144,11 +108,11 @@ export default function About() {
     return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
         {/* About hero section */}
-        <section className="w-full md:h-[29.25rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+        <section className="w-full h-[25rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
         style={{ backgroundImage: `url(${HeroImage.src})`}}>
-            <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12">
+            <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
                 <div className="text-center">
-                    <h1 className="text-[4.8125rem] md:text-[4.8125rem;] leading-normal text-[#192033] font-bold">
+                    <h1 className="font-bold text-[2.75rem] md:text-2xl lg:text-3xl xl:text-6xl leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">
                         About Us
                     </h1>
                 </div>
@@ -156,29 +120,32 @@ export default function About() {
         </section>
 
         {/* Empowering Community, Democratizing AI */}
-        <section className="w-full my-10 md:mt-20 md:mb-0 items-center 3xl:container">
-            <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
-                <Image className="mt-5 w-[30rem] h-[30rem] md:mt-0 md:w-[30rem] md:h-[40rem] xl:w-[40rem]"
-                    src={Image1}
-                    alt="Empowering Community, Democratizing AI"
-                    />
-                <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-20">
+        <section className="w-full my-10 items-center 3xl:container">
+            <div className="flex flex-col items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
+                <div className="m-5 xl:m-0">
+                    <Image
+                    priority
+                    className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                        src={Image1}
+                        alt="Empowering Community, Democratizing AI"
+                        />
+                </div>
+                <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
                     <div className="background-image" />
-                    <h1 className="text-[2.50rem] text-[#192033] font-bold leading-normal">
-                        <p className="text-[1rem] text-[#204FA2]">
-                            Our Mission
-                        </p>
-                        Empowering Community,
-                        Democratizing AI
-                    </h1>
-                    <p className="text-[1rem] text-[#495167] font-light leading-[1.875rem]">
+                    <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
+                        Our Mission
+                    </p>
+                    <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
+                        Empowering Community, Democratizing AI
+                    </p>
+                    <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
                         We stand at the forefront of a revolution. Devolved AI is not merely a 
                         tech entity; it is a beacon for a future where Artificial Intelligence 
                         is democratically powered by a diverse, global community. Our mission is 
                         to dismantle the centralization of AI technology, ensuring it serves the 
                         many instead of the few.
                     </p>
-                    <p className="text-[1rem] text-[#495167] font-light leading-[1.875rem]">
+                    <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
                         With our innovative Proof of Value (PoV) protocol, we encourage and reward 
                         each member's contributions, creating a thriving ecosystem where every voice 
                         can be heard, and every effort is acknowledged. Our platform is a testament to 
@@ -207,34 +174,36 @@ export default function About() {
         </section>
 
         {/* Shaping a Decentralized Future */}
-        <section className="w-full my-10 md:mt-20 md:mb-0 items-center 3xl:container">
+        <section className="w-full my-10 items-center 3xl:container">
             <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
-                <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-20">
+                <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
                     <div className="background-image" />
-                    <h1 className="text-[2.50rem] text-[#192033] font-bold leading-normal">
-                        <p className="text-[1rem] text-[#204FA2]">
-                            Our Vision
-                        </p>
+                    <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
+                        Our Vision
+                    </p>
+                    <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
                         Shaping a Decentralized Future
-                    </h1>
-                    <p className="text-[1rem] text-[#495167] font-light leading-[1.875rem]">
+                    </p>
+                    <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
                         Imagine an age where Artificial General Intelligence (AGI) is as widespread 
                         and participatory as the internet itself. This is the future Devolved AI is 
                         committed to creating. A horizon where AGI is a community-managed resource, 
                         offering unparalleled accessibility and collaborative growth.
                     </p>
-                    <p className="text-[1rem] text-[#495167] font-light leading-[1.875rem]">
+                    <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
                         We are expanding the boundaries of what's possible, moving from NLP to the 
                         vast potential of computer vision and predictive analytics. Our vision 
                         encapsulates an AGI ecosystem that is as inclusive as it is intelligent, 
                         fostering innovation that mirrors the rich tapestry of its contributors.
                     </p>
                 </div>
-                <Image
-                    src={Image2}
-                    alt="Forge Value, Earn AGC Illustration"
-                    className="mt-5 w-[22.5rem] h-[20.25rem] md:mt-0 md:w-[30rem] md:h-[40rem] xl:w-[40rem]"
-                />
+                <div className="m-5 xl:m-0">
+                    <Image
+                        src={Image2}
+                        alt="Shaping a Decentralized Future Illustration"
+                        className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                    />
+                </div>
             </div>
             <style jsx>
                 {`
@@ -247,8 +216,8 @@ export default function About() {
                         bottom: 0;
                         right: 0;
                         position: absolute;
-                        width: 180%;
-                        height: 120%;
+                        width: 170%;
+                        height: 100%;
                         z-index: -1;
                     }
                 `}
@@ -256,93 +225,109 @@ export default function About() {
         </section>
 
         {/* Our values guide every decision, every development, and every interaction */}
-        <section className="flex flex-col rounded-[1rem] shadow-md m-10">
-            <div className="gap-5 items-center justify-center"
+        <section className="flex flex-col my-10 m-5">
+            <div className="flex flex-col rounded-[1rem] shadow-md gap-5 items-center justify-center"
                 style={{
-                    backgroundImage: `url(${SectionBg1.src})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat'
+                backgroundImage: `url(${SectionBg1.src})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
                 }}>
 
-            <div className="flex flex-col text-center gap-3 mt-10">
-                <h1 className="text-[2.75rem] text-[#192033] font-bold leading-normal">
-                    <p className="text-[1.25rem] text-[#204FA2]">
+                <div className="flex flex-col text-center max-w-xxl gap-5 m-5">
+                    <p className="text-[1.25rem] font-bold text-[#204FA2]">
                         Our Values
                     </p>
-                    Our values guide every decision, <br/>
-                    every development, and every interaction
-                </h1>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 3xl:container p-10">
-
-                {/* Integrity */}
-                <div className="p-6 md:p-8 rounded-[1.24rem] bg-white hover:shadow-lg transition-all duration-300">
-                    <Image className="w-[3.75rem] h-[3.75rem]" src={IntegrityIcon} alt="community_governed_icon" />
-                    <h6 className="text-[1.875rem] text-[#29233B] font-medium leading-normal mt-3">
-                        Integrity
-                    </h6>
-                    <p className="text-[1.125rem] text-[#495167] font-light leading-[1.875rem] mt-2">
-                        We pledge unwavering commitment to transparency and honesty, 
-                        anchored by our custom layer 1 blockchain.
+                    <p className="text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033] font-bold">
+                        Our values guide every decision, <br/>
+                        every development, and every interaction
                     </p>
                 </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 3xl:container p-5">
+                    
+                    {/* Integrity */}
+                    <div className="p-5 md:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
+                        <Image priority className="w-[3.75rem] h-[3.75rem]" src={IntegrityIcon} alt="IntegrityIcon"/>
+                        <p className="text-[1.25rem] text-[#29233B] font-medium mt-3">
+                            Integrity
+                        </p>
+                        <p className="text-[1.125rem] md:text-xl lg:text-xl xl:text-xl leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
+                            We pledge unwavering commitment to transparency and honesty, 
+                            anchored by our custom layer 1 blockchain.
+                        </p>
+                    </div>
 
-                {/* Innovation */}
-                <div className="p-6 md:p-8 rounded-[1.24rem] bg-white hover:shadow-lg transition-all duration-300">
-                    <Image className="w-[3.75rem] h-[3.75rem]" src={InnovationIcon} alt="shared_prosperity_icon" />
-                    <h6 className="text-[1.875rem] text-[#29233B] font-medium leading-normal mt-3">
-                        Innovation
-                    </h6>
-                    <p className="text-[1.125rem] text-[#495167] font-light leading-[1.875rem] mt-2">
-                        We believe in pushing boundaries, challenging the status quo, and embracing the 
-                        journey to AGI.
-                    </p>
+                    {/* Innovation */}
+                    <div className="p-5 md:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
+                        <Image priority className="w-[3.75rem] h-[3.75rem]" src={InnovationIcon} alt="InnovationIcon" />
+                        <p className="text-[1.25rem] text-[#29233B] font-medium mt-3">
+                            Innovation
+                        </p>
+                        <p className="text-[1.125rem] md:text-xl lg:text-xl xl:text-xl leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
+                            We believe in pushing boundaries, challenging the status quo, and embracing the 
+                            journey to AGI.
+                        </p>
+                    </div>
+
+                    {/* Inclusivity */}
+                    <div className="p-5 md:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
+                        <Image priority className="w-[3.75rem] h-[3.75rem]" src={InclusivityIcon} alt="InclusivityIcon" />
+                        <p className="text-[1.25rem] text-[#29233B] font-medium mt-3">
+                            Inclusivity
+                        </p>
+                        <p className="text-[1.125rem] md:text-xl lg:text-xl xl:text-xl leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
+                            Our ecosystem thrives on diverse perspectives, 
+                            ensuring everyone has the opportunity to shape the future of AI.
+                        </p>
+                    </div>
+
                 </div>
-
-                {/* Inclusivity */}
-                <div className="p-6 md:p-8 rounded-[1.24rem] bg-white hover:shadow-lg transition-all duration-300">
-                    <Image className="w-[3.75rem] h-[3.75rem]" src={InclusivityIcon} alt="blockchain_based_icon" />
-                    <h6 className="text-[1.875rem] text-[#29233B] font-medium leading-normal mt-3">
-                        Inclusivity
-                    </h6>
-                    <p className="text-[1.125rem] text-[#495167] font-light leading-[1.875rem] mt-2">
-                        Our ecosystem thrives on diverse perspectives, 
-                        ensuring everyone has the opportunity to shape the future of AI.
-                    </p>
-                </div>
-
             </div>
-            </div>
+            <style jsx>
+                {`
+                .background-image {
+                    background-image: url(${Background2.src});
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    opacity: 1;
+                    top: 0;
+                    bottom: 0;
+                    position: absolute;
+                    width: 170%;
+                    height: 100%;
+                    z-index: -1;
+                }
+            `}
+            </style>
         </section>
 
         {/* Collaborative, Transparent, Rewarding */}
-        <section className="w-full my-10 md:mt-20 md:mb-20 3xl:container">
-            <div className="lg:px-4 xl:px-8 md:mx-16 lg:mb-20 flex flex-col items-center px-5 md:mt-16 gap-5 xl:ms-20" 
-            style={{
-            backgroundImage: `url(${SectionBg2.src})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            height: '300px',
-            }}>
-                <div className="background-image" />
-                <div className="w-full max-w-xl text-center" style={{ maxWidth: '67.8125rem' }}>
-                    <p className="text-[1.25rem] text-[#204FA2] font-bold leading-normal">
-                        Our Approach
-                    </p>
-                    <h1 className="text-[3rem] text-[#192033] font-bold leading-normal">
-                        Collaborative, Transparent, Rewarding
-                    </h1>
-                    <p className="text-[1.375rem] text-[#495167] font-light leading-[1.875rem]">
-                        Our approach is rooted in the belief that the best AI should be forged in the 
-                        fires of diverse global intellect. We leverage blockchain to ensure transparency 
-                        and instill trust, while our PoV protocol rewards every user for their invaluable 
-                        contributions to our collective intelligence.
-                    </p>
+        <section className="flex flex-col w-full my-10 items-center 3xl:container">
+                <div className="lg:px-4 xl:px-8 md:mx-16 lg:mb-20 flex flex-col items-center px-5 md:mt-16 gap-5 xl:ms-20" 
+                style={{
+                    backgroundImage: `url(${SectionBg2.src})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    height: '300px',
+                }}>
+                    <div className="background-image" />
+                    <div className="flex flex-col max-w-xxl gap-5 text-center">
+                        <p className="text-[1.25rem] text-[#204FA2] font-bold leading-normal">
+                            Our Approach
+                        </p>
+                        <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
+                            Collaborative, Transparent, Rewarding
+                        </p>
+                        <p className="text-[0.90rem] md:text-xl lg:text-2xl xl:text-2xl text-[#495167] font-light max-w-[86.0625rem]">
+                            Our approach is rooted in the belief that the best AI should be forged in the 
+                            fires of diverse global intellect. We leverage blockchain to ensure transparency 
+                            and instill trust, while our PoV protocol rewards every user for their invaluable 
+                            contributions to our collective intelligence.
+                        </p>
+                    </div>
                 </div>
-            </div>
         </section>
 
         {/* Roadmap At A Glance */}
@@ -500,21 +485,20 @@ export default function About() {
         </section>
 
         {/* OUR TEAM */}
-        <section className="w-full my-10 md:mt-20 lg:mb-20 overflow-x-auto 3xl:container">
+        <section className="flex flex-col w-full my-10 items-center 3xl:container">
             <div className="flex flex-col md:flex-row items-center md:px-8 lg:px-16 xl:px-20">
                 {/* Left Section */}
-                <div className="md:mr-8 mb-8 md:mb-0">
-                    <h1 className="text-[3.75rem] text-[#192033] font-bold leading-normal mb-5">
-                        <p className="text-[1.25rem] text-[#204FA2]">
+                <div className="m-5">
+                    <p className="text-[1.25rem] font-bold text-[#204FA2]">
                             OUR TEAM
-                        </p>
-                        Meet <br/> the Pioneers
+                    </p>
+                    <h1 className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
+                        Meet the Pioneers
                     </h1>
-                    <p className="text-[1.375rem] text-[#495167] font-light leading-[1.875rem] mb-5"
-                    style={{display: 'inline-block'}}>
-                        Lorem ipsum dolor sit amet, <br/>
-                        consectetur adipiscing elit consequat <br/>
-                        eget morbi arcu convallis venenatis <br/> 
+                    <p className="text-[1.25rem] xl:text-2xl text-[#495167] font-light leading-[1.875rem] mb-5 max-w-[30rem]">
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit consequat
+                        eget morbi arcu convallis venenatis
                         tellus neque faucibus auctor.
                     </p>
                     <div className="flex text-black">
@@ -535,7 +519,12 @@ export default function About() {
 
                 {/* Right Section */}
                 <div className="w-full md:w-auto md:overflow-x-auto md:flex-grow">
-                    <div className="md:flex md:gap-x-4 xl:px-10 overflow-x-auto">
+                    <div className="teammembercard md:flex md:gap-x-4 xl:px-10 overflow-x-auto"
+                    style={{
+                        scrollbarWidth: 'none',  // For Firefox
+                        msOverflowStyle: 'none',  // For Internet Explorer
+                        WebkitOverflowScrolling: 'touch',  // For iOS
+                    }}>
                         {teamMembers
                             .slice((currentPage - 1) * cardsPerPage, currentPage * cardsPerPage)
                             .map((member, index) => (
@@ -547,26 +536,26 @@ export default function About() {
         </section>
 
         {/* Ready to be a part of AI */}
-        <section className="rounded-2xl shadow-lg flex flex-col items-center justify-center my-10 gap-5">
-            <div className="flex flex-col gap-10 p-10 items-center justify-center w-[66.875rem] h-[25.625rem]"
-            style={{
-                backgroundImage: `url(${HomeImage1.src})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-            }}>
-            <h1 className="text-[#192033] text-[2.5rem] font-medium leading-normal text-center">
-                Ready to be a part of AI's next (d)evolution?
-            <br/>
-                Sign up now.
-            </h1>
-            <div className="hidden md:flex">
-                <GetReferral />
-            </div>
+        <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5 3xl:container">
+            <div className="flex flex-col gap-5 p-3 md:p-6 rounded-md shadow-md items-center justify-center w-[20.875rem] xl:w-[66.875rem] max-h-[30rem] xl:h-[45rem]"
+                style={{
+                    backgroundImage: `url(${HomeImage1.src})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                }}>
+                <p className="text-[#192033] text-[1.5rem] xl:text-[2.5rem] font-medium leading-normal text-center max-w-[50.75rem]">
+                    Ready to be a part of AI's next (d)evolution?
+                    <br />
+                    Sign up now.
+                </p>
+                <div className="hidden md:flex">
+                    <GetReferral />
+                </div>
             </div>
         </section>
 
-        <div className="bg-slate-700 w-4/5 mx-auto border bottom-1" />
+        <div className="bg-[#E5E7EB] w-4/5 mx-auto border bottom-1" />
     </main>
     );
 }

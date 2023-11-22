@@ -13,28 +13,30 @@ export default function Contact() {
         <main className="flex flex-col min-h-screen overflow-x-hidden items-center justify-between p-0 md:p-0">
 
             {/* Contact hero section */}
-            <section className="flex w-full md:h-[20rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[30rem] 3xl-[30rem] items-center justify-center bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${HeroImage.src})` }}>
-                <div className="flex flex-col items-center justify-center md:flex-row md:justify-center text-center">
-                    <h1 className="text-[2rem] 3xl:text-5xl leading-normal m-10 text-[#192033] font-bold">
-                        Contact Us
-                    </h1>
+            <section className="w-full h-[25rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+                style={{ backgroundImage: `url(${HeroImage.src})`}}>
+                <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
+                    <div className="text-center">
+                        <h1 className="font-bold text-[2.75rem] md:text-2xl lg:text-3xl xl:text-6xl leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">
+                            Contact Us
+                        </h1>
+                    </div>
                 </div>
             </section>
 
             {/* Contact form */}
-            <section className="w-full my-10 md:mt-20 md:mb-0 items-center">
+            <section className="w-full my-10 md:mt-20 md:mb-0 items-center 3xl:container">
                 <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
                     <div className="flex flex-col px-5 md:mt-16 gap-8 xl:ms-5 w-full md:w-1/2 lg:w-auto text-start">
                         <div className="background-image-text" />
-                        <p className="text-[2.375rem] 3xl:text-8xl text-[#192033] font-bold leading-normal">
+                        <p className="text-[2rem] xl:text-6xl text-[#192033] font-bold leading-normal">
                             We love to hear your <br />
                             Feedback
                         </p>
-                        <p className="text-[1.375rem] md:text-lg text-[#495167] font-light leading-[1.875rem]">
+                        <p className="text-[1.375rem] xl:text-3xl text-[#495167] font-light leading-[1.875rem]">
                             Need to get in touch? You can reach us at all our socials below, or using the contact form on this page.
                         </p>
-                        <div className="flex md:justify-start 3xl:justify-start">
+                        <div className="flex md:justify-start xl:justify-start">
                             <div className="flex gap-4">
                                 <Link href={"https://facebook.com/devolvedai"} rel="noopener noreferrer" target="_blank">
                                 <FaFacebook size={30} />
@@ -57,12 +59,14 @@ export default function Contact() {
                             <ContactUsForm />
                         </div>
                     </div>
-                    <Image
-                        src={Image1}
-                        alt="Contact form image"
-                        className="w-full h-auto md:w-auto lg:w-[50rem] xl:w-[50rem] 2xl:w-[50rem] 3xl:w-[50rem] m-10"
-                        priority
-                    />
+                    <div className="m-5 xl:m-0">
+                        <Image
+                            src={Image1}
+                            alt="Contact form image"
+                            className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                            priority
+                        />
+                    </div>
                 </div>
                 <style jsx>
                 {`

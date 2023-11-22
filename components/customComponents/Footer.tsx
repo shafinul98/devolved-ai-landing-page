@@ -17,10 +17,11 @@ import { HiLocationMarker } from "react-icons/hi";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col overflow-x-hidden justify-between mt-10 md:mt-16 lg:mt-20">
+    <footer className="flex flex-col overflow-x-hidden justify-between mt-10 md:mt-15 lg:mt-20 3xl:container">
 
-      <div className="flex flex-col items-center md:items-start gap-10 md:flex-row md:justify-around mb-12">
-        <div className="flex flex-col items-center md:items-start"
+      <div className="flex flex-col items-start xl:m-12 m-10 gap-10 xl:flex-row xl:justify-around">
+        
+        <div className="flex flex-col items-start"
           style={{
             backgroundImage: `url(${FooterBackground.src})`,
             backgroundSize: 'contain',
@@ -29,52 +30,54 @@ const Footer = () => {
             height: '100px',
           }}>
 
-          <div className="mb-5 ml-3">
-            <Link href={"/"}>
-              <Image
+            <div className="mb-5 xl:ml-3">
+              <Link href={"/"}>
+                <Image
+                priority
                 src={FooterLogo}
                 alt="footer_logo"
                 className="md:w-[11.25rem] md:h-[#1D1D1D] w-[11.75rem] h-[2rem] md:ms-[-0.5rem]"
                 quality={100}
-              />
-            </Link>
-          </div>
+                />
+              </Link>
+            </div>
 
-          <div className="flex flex-col gap-5 items-center md:items-start mt-2 mr-5">
-            <div className="flex items-center">
-              <span className="mr-2 mb-4">
-                <HiLocationMarker className="w-5 h-5 text-black-500" />
-              </span>
-              <span className="text-[#1D1D1D] text-[1rem] leading-[1.25rem] font-normal">
-                <span className="block">1706 Chester Ave., Suite #555</span>
-                <span className="block">Bakersfield, CA 93309</span>
-              </span>
+            <div className="flex flex-col gap-5 items-center md:items-start mt-2 mr-5">
+              <div className="flex items-center">
+                <span className="xl:mr-2 mb-4">
+                  <HiLocationMarker className="w-5 h-5 text-black-500" />
+                </span>
+                <span className="text-[#1D1D1D] text-[1rem] leading-[1.25rem] font-normal">
+                  <span className="block">1706 Chester Ave., Suite #555</span>
+                  <span className="block">Bakersfield, CA 93309</span>
+                </span>
+              </div>
+            </div>
+        </div>
+
+          <div className="flex flex-col items-start">
+            <p className="mb-5 font-medium text-[1.25rem] leading-normal text-[#29233B]">Quick Links</p>
+            <div className="flex flex-col gap-2 font-normal leading-normal text-[1rem] text-[#1D1D1D]">
+              <Link href="/">Home</Link>
+              <Link href="/about">About</Link>
+              <Link href="/argoCoin">$AGC</Link>
+              <Link href="/technology">Technology</Link>
+              <Link href="/community">Community</Link>
+              <Link href="#">Governance</Link>
+              <Link href="/contact">Contact</Link>
             </div>
           </div>
-        </div>
 
-        <div className="flex flex-col">
-          <h1 className="mb-5 font-medium text-[1.25rem] text-start leading-normal text-[#29233B]">Quick Links</h1>
-          <div className="flex flex-col items-start gap-2 font-normal leading-normal text-[1rem] text-[#1D1D1D]">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/argoCoin">$AGC</Link>
-            <Link href="/technology">Technology</Link>
-            <Link href="/community">Community</Link>
-            <Link href="#">Governance</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
-        </div>
 
-        <div className="flex flex-col">
-          <h1 className="mb-5 font-medium text-[1.25rem] text-start leading-normal text-[#29233B]">Utility pages</h1>
-          <div className="flex flex-col items-start gap-2 text-[1rem] font-normal leading-normal text-[#1D1D1D]">
+        <div className="flex flex-col items-start">
+          <p className="mb-5 font-medium text-[1.25rem] leading-normal text-[#29233B]">Utility pages</p>
+          <div className="flex flex-col gap-2 text-[1rem] font-normal leading-normal text-[#1D1D1D]">
             <Link href="#">Terms and conditions</Link>
             <Link href="#">Privacy Policy</Link>
           </div>
         </div>
 
-        <div className="flex flex-col items-center md:items-start"
+        <div className="flex flex-col items-start"
           style={{
             backgroundImage: `url(${FooterBackground.src})`,
             backgroundSize: 'contain',
@@ -82,9 +85,9 @@ const Footer = () => {
             backgroundRepeat: 'no-repeat',
             height: '100px',
           }}>
-          <h1 className="mb-5 font-medium text-[1.25rem] text-start leading-normal text-[#29233B]">
+          <p className="mb-5 font-medium text-[1.25rem] text-start leading-normal text-[#29233B]">
             Social Links
-          </h1>
+          </p>
           <div className="flex gap-3">
             <Link
             className="md:w-[2.82381rem] md:h-[2.82381rem]"

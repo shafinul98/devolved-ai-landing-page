@@ -13,16 +13,9 @@ import Image3 from "../../public/technology/image3.webp"
 import Background4 from "../../public/technology/bg4.webp"
 
 import Button from "@/components/customComponents/Button";
-import { useState } from "react";
 import GetReferral from "@/components/customComponents/GetReferral";
 
 export default function Technology() {
-    const [email, setEmail] = useState("");
-  const [isEmailValid, setIsEmailValid] = useState(true);
-  const validateEmail = (input: any) => {
-    const isValid = /\S+@\S+\.\S+/.test(input);
-    setIsEmailValid(isValid);
-  };
 
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
@@ -107,6 +100,7 @@ export default function Technology() {
                 </div>
                 <div className="m-5 xl:m-0">
                     <Image
+                        priority
                         src={Image2}
                         alt="Layer 1 Blockchain Illustration"
                         className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
@@ -155,10 +149,10 @@ export default function Technology() {
                     </p>
                 </div>
 
-                {/* In the standard mode, Luna 1 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 3xl:container p-5">
+                    {/* In the standard mode, Luna 1 */}
                     <div className="p-5 md:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
-                        <Image className="w-[13rem] h-[11rem]" src={StandardMode} alt="community_governed_icon" />
+                        <Image priority className="w-[13rem] h-[11rem]" src={StandardMode} alt="community_governed_icon" />
                         <p className="text-[1.25rem] text-[#29233B] font-medium">
                             In the standard mode, Luna 1
                         </p>
@@ -177,7 +171,7 @@ export default function Technology() {
 
                     {/* Looking beyond Luna 1 */}
                     <div className="p-5 md:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
-                        <Image className="w-[13rem] h-[11rem]" src={LookingBeyond} alt="blockchain_based_icon" />
+                        <Image priority className="w-[13rem] h-[11rem]" src={LookingBeyond} alt="blockchain_based_icon" />
                         <h6 className="text-[1.25rem] text-[#29233B] font-medium">
                             Looking beyond Luna 1
                         </h6>

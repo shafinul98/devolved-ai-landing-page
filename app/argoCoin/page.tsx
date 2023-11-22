@@ -18,32 +18,6 @@ import GetReferral from "@/components/customComponents/GetReferral";
 import { useState } from "react";
 
 export default function ArgoCoin() {
-    const [email, setEmail] = useState("");
-  const [isEmailValid, setIsEmailValid] = useState(true);
-  const validateEmail = (input: any) => {
-    const isValid = /\S+@\S+\.\S+/.test(input);
-    setIsEmailValid(isValid);
-  };
-
-  const submitHandler = async () => {
-    const res = await fetch("/api/emailOctopus", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email_address: email,
-        status: "PENDING",
-      }),
-    });
-
-    const { error, status } = await res.json();
-
-    if (status === 200) {
-      window.location.href = `/earlyAccessSuccess?isSignedUp=true`;
-    }
-
-  };
     return (
         <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
             {/* hero section */}
