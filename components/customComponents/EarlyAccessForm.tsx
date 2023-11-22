@@ -20,7 +20,7 @@ import DevolvedAIHeroLogo from "../../public/logo.svg";
 
 import { Button } from "../ui/button";
 import { Alert } from "../ui/alert";
-import GetReferral from "./GetReferral";
+import GetReferral from "./GetReferral/ViralLoopsForm";
 
 export function EarlyAccessForm({
   children,
@@ -85,7 +85,7 @@ export function EarlyAccessForm({
               className="mx-auto my-8"
             />
             <DialogTitle className="text-center text-[1.25rem] leading-6 text-[#2D3748]">
-              <GetReferral/>
+              <GetReferral />
             </DialogTitle>
           </DialogHeader>
         </DialogContent>
