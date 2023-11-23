@@ -11,8 +11,6 @@ import LookingBeyond from "../../public/technology/looking-beyond.webp"
 import Background3 from "../../public/technology/bg3.webp"
 import Image3 from "../../public/technology/image3.webp"
 import Background4 from "../../public/technology/bg4.webp"
-
-import Button from "@/components/customComponents/Button";
 import GetReferral from "@/components/customComponents/GetReferral";
 
 export default function Technology() {

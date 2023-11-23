@@ -1,9 +1,7 @@
 "use client";
 
 import MenuIcon from "../../public/Menu Icon.svg";
-
 import { AiOutlineClose } from "react-icons/ai";
-
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import Logo from "../../public/logo.svg";
@@ -60,13 +58,13 @@ const Header = () => {
         } z-30 transition-all`}>
 
           {/* logo */}
-          <div className="col-span-1 flex justify-end m-3">
+          <div className="col-span-1 flex justify-center m-3">
             <Link href={"/"}>
               <Image
                 src={Logo}
                 alt="Devolved AI Logo"
                 quality={100}
-                className="w-full"
+                className="w-full mx-auto"
               />
             </Link>
           </div>
@@ -100,7 +98,7 @@ const Header = () => {
               </div>
 
               {/* Home Menu item */}
-              <ul className="uppercase pt-5 min-h-screen flex flex-col gap-5 items-start pl-5">
+              <ul className="uppercase text-[0.95rem] text-[#1D1D1D] font-normal leading-normal pt-5 min-h-screen flex flex-col gap-5 items-start pl-5">
               {navigation.map(({ href, name }) => (
                 <li className="relative ms-[5px]"
                   key={name}
@@ -123,7 +121,7 @@ const Header = () => {
             {navigation.map(({ href, name }) => (
               <div
                 key={name}
-                className="text-[1rem] text-[#1D1D1D] font-normal font-weight-400 leading-normal relative ms-[5px]"
+                className="text-[1rem] xl:whitespace-nowrap xl:text-[0.90rem] text-[#1D1D1D] font-normal font-weight-400 leading-normal relative ms-[5px]"
                 onClick={() => {
                   setIsMenuOpen(false);
                 }}>
@@ -137,7 +135,7 @@ const Header = () => {
           </div>
 
           {/* Join the revolution button (Hidden on MD and below)*/}
-          <div className="col-span-1 hidden xl:flex justify-start m-5">
+          <div className="col-span-1 hidden xl:flex justify-center mr-20">
             <EarlyAccessForm>
               <button className="text-[1rem] text-[1D1D1D] font-bold font-weight-500 leading-normal border-black border-2 py-2 px-4 rounded-[0.625rem] xl:w-[14.5625rem] xl:h-[3.125rem] transition-all hover:bg-black hover:text-white">
                 JOIN THE REVOLUTION

@@ -11,7 +11,6 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 
@@ -148,6 +147,7 @@ const ContactUsForm = () => {
                 <FormControl>
                   <Textarea
                     className="input-field w-full md:w-[30rem] h-[10.125rem] rounded-[0.3125rem] border-2 border-[#D3D3D3] backdrop-blur-md text-normal text-[#495167] leading-[1.875rem] text-[1rem]"
+                    style={{ resize: 'none' }}
                     placeholder="Comments"
                     {...field}
                     rows={6}

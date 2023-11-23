@@ -14,14 +14,11 @@ import InclusivityIcon from "../../public/about/inclusivity_icon.svg"
 import SectionBg1 from "../../public/about/section-bg-1.webp"
 import SectionBg2 from "../../public/about/section-bg-2.webp"
 import TeamMemberCard from "@/components/customComponents/TeamMemberCard";
-
 import HorizontalStepper from "../../public/about/h-steeper.webp"
 import Nathan from "../../public/about/team/nathan.webp";
 import Nazmul from "../../public/about/team/nazmul.webp";
 import Justin from "../../public/about/team/justin.webp";
-
 import { useState } from "react";
-
 import { motion, useAnimation } from 'framer-motion';
 import GetReferral from "@/components/customComponents/GetReferral";
 

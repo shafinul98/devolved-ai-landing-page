@@ -6,7 +6,6 @@ import HomeImage1 from "../public/home/1.webp"
 import HomeImage2 from "../public/home/2.webp"
 import HomeImage3 from "../public/home/3.webp"
 import HomeImage4 from "../public/home/4.webp"
-
 import SectionBg from "../public/home/section-bg-1.webp"
 import SectionBg2 from "../public/home/section-bg-2.webp"
 import SectionBg3 from "../public/home/section-bg-3.webp"
@@ -15,22 +14,22 @@ import SectionBg5 from "../public/home/section-bg-5.webp"
 import CommunityGovernedIcon from "../public/home/community_governed.svg"
 import SharedProsperityIcon from "../public/home/shared_prosperity.svg"
 import BlockchainBasedIcon from "../public/home/blockchain_based.svg"
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from "react";
 import GetReferral from "@/components/customComponents/GetReferral";
 import { useRouter } from 'next/navigation';
 
 export default function Home() {
-  const [showSecondParagraph, setShowSecondParagraph] = useState(false);
   const router = useRouter();
-
-  const variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
 
   const handleButtonClick = () => {
     router.push('/community');
+  };
+
+  const handleLearnMoreClick = () => {
+    router.push('/about');
+  };
+  
+  const handleExploreTechnologyClick = () => {
+    router.push('/technology');
   };
 
   return (
@@ -74,30 +73,17 @@ export default function Home() {
               What Drives Devolved AI?
             </p>
             <div>
-              <motion.p
-                initial="hidden"
-                animate="visible"
-                variants={variants}
-                className="text-[1rem] text-[#495167] leading-[1.875rem] font-light max-w-[45.25rem]"
-              >
-                We are more than just a platform; we are a movement aimed at redefining the relationship between AI and humanity. By using a decentralized approach, we ensure that our AI ecosystem is transparent, secure, and most importantly, governed by you.
-              </motion.p>
-
-              <AnimatePresence>
-                {showSecondParagraph && (
-                  <motion.p
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    variants={variants}
-                    className="text-[1rem] text-[#495167] leading-[1.875rem] font-light max-w-[45.25rem] mt-3"
-                  >
-                    Our mission is to create an AI that is powered by the people, for the people, ensuring shared prosperity and ethical development. Be a part of this revolutionary journey.
-                  </motion.p>
-                )}
-              </AnimatePresence>
+              <p className="text-[1rem] text-[#495167] leading-[1.875rem] font-light max-w-[45.25rem]">
+                We are more than just a platform; we are a movement aimed at redefining the relationship between AI 
+                and humanity. By using a decentralized approach, we ensure that our AI ecosystem is transparent, 
+                secure, and most importantly, governed by you.
+              </p>
+              <p className="text-[1rem] text-[#495167] leading-[1.875rem] font-light max-w-[45.25rem] mt-3">
+                Our mission is to create an AI that is powered by the people, for the people, 
+                ensuring shared prosperity and ethical development. Be a part of this revolutionary journey.
+              </p>
               <button className=" bg-[#A9A3B2] text-white font-medium leading-normal rounded-[0.3125rem] w-full md:w-[10rem] h-[3.125rem] mt-5"
-                onClick={() => setShowSecondParagraph(true)}>
+                onClick={() => handleLearnMoreClick()}>
                 LEARN MORE
               </button>
             </div>
@@ -222,7 +208,8 @@ export default function Home() {
               innovations in Artificial General Intelligence, computer vision, predictive analytics, and more.
             </p>
             <div className="flex mt-4">
-              <button className="bg-[#A9A3B2] text-white font-medium text-base md:text-lg rounded-md w-full md:w-64 h-12">
+              <button className="bg-[#A9A3B2] text-white font-medium text-base md:text-lg rounded-md w-full md:w-64 h-12"
+              onClick={() => handleExploreTechnologyClick()}>
                 EXPLORE TECHNOLOGY
               </button>
             </div>

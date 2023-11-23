@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import HeroImage from "../../public/technology/hero-image.webp"
-
 import Image1 from "../../public/community/image1.webp"
 import Background1 from "../../public/technology/bg1.webp"
 import Image2 from "../../public/community/image2.webp"
@@ -13,16 +12,13 @@ import Image3 from "../../public/technology/image3.webp"
 import Background4 from "../../public/technology/bg4.webp"
 import TextBg from "../../public/about/text-bg.webp"
 import Button from "@/components/customComponents/Button";
-
 import DiverseLeadershipIcon from "../../public/community/diverse_leadership_opportunities_icon.svg"
 import AGCGrantsIcon from "../../public/community/agc_grants_for_value_adding_communities_icon.svg"
 import AutonomyIcon from "../../public/community/autonomy_in_governance_icon.svg"
 import EarnIcon from "../../public/community/earn_and_influence_across_fields_icon.svg"
-
 import EstablishIcon from "../../public/community/establish_your_community.svg"
 import DesignIcon from "../../public/community/design_your_governance.svg"
 import EarningIcon from "../../public/community/earning_and_utilizing_AGC.svg"
-
 import Step1 from "../../public/community/step1.svg"
 import Step2 from "../../public/community/step2.svg"
 import Step3 from "../../public/community/step3.svg"
