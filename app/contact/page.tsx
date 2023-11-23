@@ -18,7 +18,7 @@ export default function Contact() {
                 <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
                     <div className="text-center">
                         <h1 className="font-bold text-[2.75rem] md:text-2xl lg:text-3xl xl:text-6xl leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">
-                            Contact Us
+                            Contact
                         </h1>
                     </div>
                 </div>
@@ -30,10 +30,10 @@ export default function Contact() {
                     <div className="flex flex-col px-5 md:mt-16 gap-8 xl:ms-5 w-full md:w-1/2 lg:w-auto text-start">
                         <div className="background-image-text" />
                         <p className="text-[2rem] xl:text-6xl text-[#192033] font-bold leading-normal">
-                            We love to hear your <br />
+                            We'd love to hear your <br />
                             Feedback
                         </p>
-                        <p className="text-[1.375rem] xl:text-3xl text-[#495167] font-light leading-[1.875rem]">
+                        <p className="text-[1.375rem] xl:text-[1.375rem] text-[#495167] font-light leading-[1.875rem]">
                             Need to get in touch? You can reach us at all our socials below, or using the contact form on this page.
                         </p>
                         <div className="flex md:justify-start xl:justify-start">

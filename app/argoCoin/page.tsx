@@ -1,5 +1,6 @@
 "use client"
 
+import React from 'react';
 import Image from "next/image";
 import HeroImage from "../../public/argoCoin/hero-image.webp"
 import Image1 from "../../public/argoCoin/image1.webp"
@@ -13,11 +14,14 @@ import Image6 from "../../public/argoCoin/image6.webp"
 import Image7 from "../../public/argoCoin/image7.webp"
 import HomeImage1 from "../../public/home/1.webp"
 import SectionBg3 from "../../public/home/section-bg-3.webp"
-import Button from "@/components/customComponents/Button";
 import GetReferral from "@/components/customComponents/GetReferral";
-import { useState } from "react";
+import { EarlyAccessForm } from "@/components/customComponents/EarlyAccessForm";
 
 export default function ArgoCoin() {
+    const handleButtonClick = () => {
+        // window.location.href = 'https://devolved-ai.gitbook.io/devolved-ai-whitepaper/';
+        window.open('https://devolved-ai.gitbook.io/devolved-ai-whitepaper/', '_blank');
+    };
     return (
         <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
             {/* hero section */}
@@ -47,7 +51,7 @@ export default function ArgoCoin() {
                     <div className="m-5 xl:m-0">
                         <Image
                         priority
-                        className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                        className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
                             src={Image1}
                             alt="A Revolutionary Native Cryptocurrency Illustration"
                             />
@@ -71,10 +75,12 @@ export default function ArgoCoin() {
                             AGC stands at the forefront of a new digital economy - set for launch to empower 
                             community-driven innovation and governance.
                         </p>
-                        <Button
-                            title="WHITEPAPER"
-                            extraStyles=" bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full md:w-[10.75rem] md:h-[2.625rem] mt-5"
-                        />
+                        <button
+                            onClick={handleButtonClick}
+                            className=" bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full h-[3.75rem] xl:w-[10rem] xl:h-[3rem] mt-5"
+                        >
+                            WHITEPAPER
+                        </button>
                     </div>
                 </div>
                 <style jsx>
@@ -119,7 +125,7 @@ export default function ArgoCoin() {
                             priority
                             src={Image2}
                             alt="Forge Value, Earn AGC Illustration"
-                            className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                            className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
                         />
                     </div>
                 </div>
@@ -148,7 +154,7 @@ export default function ArgoCoin() {
                     <div className="m-5 xl:m-0">
                         <Image
                         priority
-                        className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                        className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
                             src={Image3}
                             alt="Your Stake, Your Voice Illustration"
                             />
@@ -212,7 +218,7 @@ export default function ArgoCoin() {
                             priority
                             src={Image4}
                             alt="Designed for Sustainability and Growth Illustration"
-                            className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                            className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
                         />
                     </div>
                 </div>
@@ -259,6 +265,13 @@ export default function ArgoCoin() {
                             the ecosystem's growth but also become part of a movement to democratize AI, 
                             contributing to a platform that is truly community-driven and transparent.
                         </p>
+                        <div className="hidden xl:flex justify-center">
+                            <EarlyAccessForm>
+                            <button className=" bg-[#A9A3B2] font-bold font-weight-500 leading-normal text-white text-[1rem] rounded-[0.625rem] xl:w-[14.5625rem] xl:h-[3.125rem] mt-5">
+                                JOIN THE REVOLUTION
+                            </button>
+                            </EarlyAccessForm>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -271,7 +284,7 @@ export default function ArgoCoin() {
                         <div className="m-5 xl:m-0">
                             <Image
                             priority
-                            className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                            className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
                                 src={Image5}
                                 alt="Future Vision and Expansion Illustration"
                                 />
@@ -332,7 +345,7 @@ export default function ArgoCoin() {
                             priority
                             src={Image6}
                             alt="Security and Stability Measures Illustration"
-                            className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                            className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
                             />
                         </div>
                     </div>
@@ -361,7 +374,7 @@ export default function ArgoCoin() {
                         <div className="m-5 xl:m-0">
                             <Image 
                             priority
-                            className="w-[70rem] h-auto md:w-[70rem] md:h-auto lg:w-[70rem] lg:h-auto xl:w-[70rem] xl:h-auto rounded-[1.25rem]"
+                            className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
                             src={Image7}
                             alt="Your Pathway to Being a Part of the AI Evolution Illustration"
                             />

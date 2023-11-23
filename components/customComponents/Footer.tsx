@@ -62,8 +62,7 @@ const Footer = () => {
               <Link href="/about">About</Link>
               <Link href="/argoCoin">$AGC</Link>
               <Link href="/technology">Technology</Link>
-              <Link href="/community">Community</Link>
-              <Link href="#">Governance</Link>
+              <Link href="/community">Community Governance</Link>
               <Link href="/contact">Contact</Link>
             </div>
           </div>

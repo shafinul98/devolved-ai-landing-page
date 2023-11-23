@@ -18,40 +18,19 @@ import BlockchainBasedIcon from "../public/home/blockchain_based.svg"
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from "react";
 import GetReferral from "@/components/customComponents/GetReferral";
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const [showSecondParagraph, setShowSecondParagraph] = useState(false);
-
-  const [email, setEmail] = useState("");
-  const [isEmailValid, setIsEmailValid] = useState(true);
-  const validateEmail = (input: any) => {
-    const isValid = /\S+@\S+\.\S+/.test(input);
-    setIsEmailValid(isValid);
-  };
-
-  const submitHandler = async () => {
-    const res = await fetch("/api/emailOctopus", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email_address: email,
-        status: "PENDING",
-      }),
-    });
-
-    const { error, status } = await res.json();
-
-    if (status === 200) {
-      window.location.href = `/earlyAccessSuccess?isSignedUp=true`;
-    }
-
-  };
+  const router = useRouter();
 
   const variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
+  };
+
+  const handleButtonClick = () => {
+    router.push('/community');
   };
 
   return (
@@ -86,7 +65,7 @@ export default function Home() {
               priority
               src={HomeImage4}
               alt="What Drives Devolved AI Illustration"
-              className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+              className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
             />
           </div>
           <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
@@ -253,7 +232,7 @@ export default function Home() {
               priority
               src={HomeImage3}
               alt="Be an Early Governor Illustration"
-              className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+              className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
             />
           </div>
         </div>
@@ -284,7 +263,7 @@ export default function Home() {
                 priority
                 src={HomeImage2}
                 alt="Be an Early Governor Illustration"
-                className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
               />
           </div>
           <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
@@ -298,7 +277,8 @@ export default function Home() {
                 platform features.
               </p>
               <div className="flex mt-4">
-                <button className="bg-[#A9A3B2] text-white font-medium text-base md:text-lg rounded-md w-full md:w-64 h-12">
+                <button className="bg-[#A9A3B2] text-white font-medium text-base md:text-lg rounded-md w-full md:w-64 h-12"
+                onClick={handleButtonClick}>
                   LEARN MORE
                 </button>
               </div>

@@ -23,9 +23,10 @@ import EstablishIcon from "../../public/community/establish_your_community.svg"
 import DesignIcon from "../../public/community/design_your_governance.svg"
 import EarningIcon from "../../public/community/earning_and_utilizing_AGC.svg"
 
-import Steps from "../../public/community/steps.svg"
+import Step1 from "../../public/community/step1.svg"
+import Step2 from "../../public/community/step2.svg"
+import Step3 from "../../public/community/step3.svg"
 import CoreDetailsCard from "@/components/customComponents/CoreDetailsCard";
-import { useState } from "react";
 import GetReferral from "@/components/customComponents/GetReferral";
 
 
@@ -38,7 +39,7 @@ export default function Community() {
             <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
                 <div className="text-center">
                     <h1 className="font-bold text-[2.75rem] md:text-2xl lg:text-3xl xl:text-6xl leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">
-                        Introduction to CommUnity
+                        CommUnity
                     </h1>
                 </div>
             </div>
@@ -225,7 +226,6 @@ export default function Community() {
         </section>
 
         {/* User Case Examples */}
-        
         <section className="flex flex-col w-full h-auto my-10 m-5 items-center justify-center bg-cover bg-center bg-no-repeat"
             style={{ 
                 backgroundImage: `url(${BackgroundUseCase.src})` 
@@ -233,66 +233,85 @@ export default function Community() {
             <div className="flex flex-col items-center justify-center">
                 <div className="flex flex-col items-center">
                     <div className="flex flex-col text-center max-w-xxl m-5">
-                        <p className="text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#fff] font-bold">
+                        <p className="text-[1.75rem] xl:text-[3.75rem] leading-normal text-[#fff] font-bold">
                             User Case Examples
                         </p>
                     </div>
+                    <div className="flex justify-center w-full container px-5 py-10 mx-auto">
+                        <div className="lg:w-2/5 md:w-1/2 md:pr-0 md:py-0">
 
-                    <div className="flex justify-center text-white xl:ml-0 xl:mr-10">
-                        <div className="flex items-center justify-center mb-10">
-                            <Image src={Steps} alt={"steps"} className="w-[5rem] h-[25rem]" />
-                        </div>
-                        <ol className="relative text-gray-500 dark:text-gray-400">
-                            <li className="mb-4 md:mb-6 lg:mb-8 xl:mb-10">
-                                <div className="w-[25rem] h-[10rem] gap2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
-                                    <p className="text-[0.80rem] leading-normal text-[#fff] font-bold">
+                            {/* case 1 */}
+                            <div className="flex relative pb-12">
+                                <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                                    <div className="h-full w-1 bg-gray-800 pointer-events-none"></div>
+                                </div>
+
+                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                                    <Image priority src={Step1} alt="Case 1" />
+                                </div>
+
+                                <div className="flex-grow p-5 ml-2 border border-gray-500 rounded-lg bg-transparent">
+                                    <p className="font-bold text-[1rem] xl:text-[1.875rem] text-white mb-1 tracking-wider">
                                         Case 1
                                     </p>
-                                    <p className="text-[0.80rem] text-[#fff] leading-normal font-medium">
+                                    <p className="font-medium text-[0.85rem] xl:text-[1.5rem] text-white mb-1 tracking-wider">
                                         Blockchain Expert Ben
                                     </p>
-                                    <p className="text-[0.70rem] text-[#E0E0E0] font-light leading-normal max-w-[60.625rem]">
+                                    <p className="font-light text-[0.75rem] xl:text-[1.125rem] text-[#E0E0E0] leading-[1.875rem] max-w-[60.625rem]">
                                         Ben starts a blockchain-focused CommUnity.
                                         His group’s innovative ideas and projects
                                         in blockchain technology earn it an AGC grant,
                                         enhancing its role within the Devolved AI ecosystem.
                                     </p>
                                 </div>
-                            </li>
+                            </div>
 
-                            <li className="mb-5">
-                                <div className="w-[25rem] h-[10rem] gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
-                                    <p className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                            {/* case 2 */}
+                            <div className="flex relative pb-12 ">
+                                <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                                    <div className="h-full w-1 bg-gray-800 pointer-events-none"></div>
+                                </div>
+
+                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                                    <Image priority src={Step2} alt="Case 2" />
+                                </div>
+
+                                <div className="flex-grow p-5 ml-2 border border-gray-500 rounded-lg bg-transparent">
+                                    <p className="text-white font-bold text-[1rem] xl:text-[1.875rem] mb-1 tracking-wider">
                                         Case 2
                                     </p>
-                                    <p className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                    <p className="text-white font-medium text-[0.85rem] xl:text-[1.5rem] mb-1 tracking-wider">
                                         UI/UX Designer Uma
                                     </p>
-                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.70rem] leading-relaxed">
+                                    <p className="text-[#E0E0E0] font-light text-[0.75rem] xl:text-[1.125rem] leading-[1.875rem]">
                                         Uma creates a CommUnity dedicated to exploring the latest trends in UI/UX design. 
                                         She leads the community in workshops and collaborative projects,
                                         earning recognition and AGC grants for their contributions to the field.
                                     </p>
                                 </div>
-                            </li>
+                            </div>
 
-                            <li className="mb-10">
-                                <div className="w-[25rem] h-[10rem] gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
-                                    <p className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                            {/* case 3 */}
+                            <div className="flex relative">
+                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                                    <Image priority src={Step3} alt="Case 3" />
+                                </div>
+
+                                <div className="flex-grow p-5 ml-2 border border-gray-500 rounded-lg bg-transparent">
+                                    <p className="text-white font-bold text-[1rem] xl:text-[1.875rem] mb-1 tracking-wider">
                                         Case 3
                                     </p>
-                                    <p className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                    <p className="text-white font-medium text-[0.85rem] xl:text-[1.5rem] mb-1 tracking-wider">
                                         Coding Enthusiast Carlos
                                     </p>
-                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.70rem] leading-relaxed">
+                                    <p className="text-[#E0E0E0] font-light text-[0.75rem] xl:text-[1.125rem] leading-[1.875rem]">
                                         Carlos forms a CommUnity for coding enthusiasts, offering a space for learning, discussion,
                                         and project collaboration. The community becomes a valuable resource for coding knowledge and practice within Devolved AI, earning AGC grants for its educational impact.
                                     </p>
                                 </div>
-                            </li>
-                        </ol>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </section>

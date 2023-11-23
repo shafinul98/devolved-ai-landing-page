@@ -16,6 +16,9 @@ import Button from "@/components/customComponents/Button";
 import GetReferral from "@/components/customComponents/GetReferral";
 
 export default function Technology() {
+    const handleButtonClick = () => {
+        window.open('https://devolved-ai.gitbook.io/devolved-ai-whitepaper/proof-of-value-pov-protocol/introduction', '_blank');
+    };
 
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
@@ -25,7 +28,7 @@ export default function Technology() {
             <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
                 <div className="text-center">
                     <h1 className="font-bold text-[2.75rem] md:text-2xl lg:text-3xl xl:text-6xl leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">
-                        Technology at Devolved AI
+                        Technology
                     </h1>
                 </div>
             </div>
@@ -37,7 +40,7 @@ export default function Technology() {
                 <div className="m-5 xl:m-0">
                     <Image
                     priority
-                    className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                    className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
                         src={Image1}
                         alt="Proof of Value (PoV) Protocol Illustration"
                     />
@@ -57,10 +60,12 @@ export default function Technology() {
                         and robust fault tolerance. This protocol is a key part of our governance, allowing 
                         AGC token holders to actively participate in shaping its future.
                     </p>
-                    <Button
-                        title="LEARN MORE"
-                        extraStyles=" bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full md:w-[10.75rem] md:h-[2.625rem] mt-5"
-                    />
+                    <button
+                    onClick={handleButtonClick}
+                        className=" bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full md:w-[10.75rem] md:h-[2.625rem] mt-5"
+                    >
+                        LEARN MORE
+                    </button>
                 </div>
             </div>
         <style jsx>
@@ -103,7 +108,7 @@ export default function Technology() {
                         priority
                         src={Image2}
                         alt="Layer 1 Blockchain Illustration"
-                        className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                        className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
                     />
                 </div>
             </div>
@@ -137,7 +142,7 @@ export default function Technology() {
                 }}>
 
                 {/* NLP Engine: Luna Chatbots */}
-                <div className="flex flex-col text-center max-w-xxl gap-5 m-5">
+                <div className="flex flex-col text-center max-w-xxl gap-5 mt-8">
                     <p className="text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033] font-bold">
                         NLP Engine: Luna Chatbots
                     </p>
@@ -154,10 +159,10 @@ export default function Technology() {
                     <div className="p-5 md:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
                         <Image priority className="w-[13rem] h-[11rem]" src={StandardMode} alt="community_governed_icon" />
                         <p className="text-[1.25rem] text-[#29233B] font-medium">
-                            In the standard mode, Luna 1
+                            Luna: Standard and Rewards Mode
                         </p>
                         <p className="text-[1.125rem] md:text-xl lg:text-xl xl:text-xl leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem]">
-                            operates as a typical advanced chatbot, providing users with intelligent and 
+                            In the standard mode, Luna 1 operates as a typical advanced chatbot, providing users with intelligent and 
                             responsive interactions. The rewards mode, however, introduces an innovative 
                             approach to AI training and user engagement. In this mode, users are presented 
                             with two different outputs for their queries. By selecting the best response, 
@@ -173,10 +178,10 @@ export default function Technology() {
                     <div className="p-5 md:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
                         <Image priority className="w-[13rem] h-[11rem]" src={LookingBeyond} alt="blockchain_based_icon" />
                         <h6 className="text-[1.25rem] text-[#29233B] font-medium">
-                            Looking beyond Luna 1
+                            The Future of Luna
                         </h6>
                         <p className="text-[1.125rem] md:text-xl lg:text-xl xl:text-xl leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem]">
-                            we are preparing for the launch of Luna 2 later in 2024. 
+                            Looking beyond Luna 1 we are preparing for the launch of Luna 2 later in 2024. 
                             Luna 2 represents our bold step into the competitive landscape of AI, 
                             challenging established players like OpenAI and Anthropic. 
                             This venture will be marked by the development of a chatbot using unique, 

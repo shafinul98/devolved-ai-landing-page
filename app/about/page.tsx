@@ -66,21 +66,8 @@ export default function About() {
             hasTwitter: false,
             hasLinkedIn: true,
         },
-        {
-            cardImage: Nazmul,
-            cardDescription: "COO",
-            cardFooter: [
-                "#",
-                "#",
-                "https://www.linkedin.com/in/md-nazmul-hossain",
-            ],
-            cardTitle: "Md. Nazmul Hossain",
-            hasFacebook: false,
-            hasTwitter: false,
-            hasLinkedIn: true,
-        },
     ];
-    const totalCards = 4;
+    const totalCards = 3;
     const cardsPerPage = 3;
     const totalPages = Math.ceil(totalCards / cardsPerPage);
     const [currentPage, setCurrentPage] = useState(1);
@@ -113,19 +100,19 @@ export default function About() {
             <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
                 <div className="text-center">
                     <h1 className="font-bold text-[2.75rem] md:text-2xl lg:text-3xl xl:text-6xl leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">
-                        About Us
+                        About
                     </h1>
                 </div>
             </div>
         </section>
 
         {/* Empowering Community, Democratizing AI */}
-        <section className="w-full my-10 items-center 3xl:container">
+        <section className="w-full my-10 items-center xl:container">
             <div className="flex flex-col items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
                 <div className="m-5 xl:m-0">
                     <Image
                     priority
-                    className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                    className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
                         src={Image1}
                         alt="Empowering Community, Democratizing AI"
                         />
@@ -201,7 +188,7 @@ export default function About() {
                     <Image
                         src={Image2}
                         alt="Shaping a Decentralized Future Illustration"
-                        className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                        className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
                     />
                 </div>
             </div>
@@ -251,7 +238,7 @@ export default function About() {
                         <p className="text-[1.25rem] text-[#29233B] font-medium mt-3">
                             Integrity
                         </p>
-                        <p className="text-[1.125rem] md:text-xl lg:text-xl xl:text-xl leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
+                        <p className="text-[1.125rem] md:text-[1.125rem] lg:text-[1.125rem] xl:text-[1.125rem] leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
                             We pledge unwavering commitment to transparency and honesty, 
                             anchored by our custom layer 1 blockchain.
                         </p>
@@ -263,7 +250,7 @@ export default function About() {
                         <p className="text-[1.25rem] text-[#29233B] font-medium mt-3">
                             Innovation
                         </p>
-                        <p className="text-[1.125rem] md:text-xl lg:text-xl xl:text-xl leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
+                        <p className="text-[1.125rem] md:text-[1.125rem] lg:text-[1.125rem] xl:text-[1.125rem] leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
                             We believe in pushing boundaries, challenging the status quo, and embracing the 
                             journey to AGI.
                         </p>
@@ -338,7 +325,7 @@ export default function About() {
             <div className="w-full">
                 <div className="flex flex-row items-start justify-start p-10">
                     {/* Heading on the left */}
-                    <div className="text-[#fff] font-bold text-[3.75rem] leading-normal">
+                    <div className="text-[#fff] font-bold text-[1.80rem] xl:text-[3.75rem] leading-normal">
                         <h1>Roadmap At A Glance</h1>
                     </div>
 
@@ -501,11 +488,11 @@ export default function About() {
                         eget morbi arcu convallis venenatis
                         tellus neque faucibus auctor.
                     </p>
-                    <div className="flex text-black">
+                    {/* flex instead of hidden */}
+                    <div className="text-black hidden">
                         <button
                             className="w-10 h-10 border-2 border-black rounded-l-lg p-1 cursor-pointer border-r-0"
-                            onClick={() => handlePagination('prev')}
-                        >
+                            onClick={() => handlePagination('prev')}>
                             <svg className="w-7 rounded-l-lg p-1 cursor-pointer border-r-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
                         </button>
                         <button
