@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from "react";
+import SharingStage from "./SharingStage";
 
 const CAMPAIGN_ID = "EeQTn0VkqudBHfkE9leVA0AcX70";
 
@@ -29,7 +30,7 @@ const ViralLoopsForm: React.FC = () => {
     },
     [email]
   );
-
+  // Sharing stage rendering
   const renderUI = () => {
     if (typeof window !== "undefined") {
       const storedData = localStorage.getItem(`${CAMPAIGN_ID}#userData`);
@@ -37,29 +38,11 @@ const ViralLoopsForm: React.FC = () => {
         const userData = JSON.parse(storedData);
         if (userData && userData.data) {
           // Show the sharing stage
-          return (
-            <div
-              data-vl-campaign-id={CAMPAIGN_ID}
-              data-vl-container="share-stage"
-              className="text-center mt-10 bg-white/30 backdrop-blur-md p-5 rounded-[1rem]"
-            >
-              <p className="font-ubuntu font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
-                You have successfully joined the revolution! Now share it with
-                your friends and earn more rewards.
-              </p>
-              <div
-                data-vl-share-stage-target="share-link"
-                className="w-64 h-12 px-4 mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
-              ></div>
-              <div
-                data-vl-share-stage-target="share-buttons"
-                className="flex items-center justify-center mt-4"
-              ></div>
-            </div>
-          );
+          return <SharingStage />;
         }
       }
     }
+
     // Show the join stage
     return (
       <div
