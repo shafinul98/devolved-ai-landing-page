@@ -60,9 +60,9 @@ const Footer = () => {
             <div className="flex flex-col gap-2 font-normal leading-normal text-[1rem] text-[#1D1D1D]">
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
-              <Link href="/argoCoin">$AGC</Link>
+              <Link href="/argoCoin">Argocoin</Link>
               <Link href="/technology">Technology</Link>
-              <Link href="/community">Community Governance</Link>
+              <Link href="/community">CommUnity</Link>
               <Link href="/contact">Contact</Link>
             </div>
           </div>

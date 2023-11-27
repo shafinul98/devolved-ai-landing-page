@@ -161,7 +161,7 @@ const ContactUsForm = () => {
         </div>
 
         {isMessageSent ? (
-          <Alert className="w-full bg-green-500 text-white">
+          <Alert className="w-full md:w-[30rem] md:h-[3rem] bg-green-500 text-white">
             <AlertTitle>Your Comment Has Been Sent</AlertTitle>
           </Alert>
         ) : (
@@ -169,7 +169,7 @@ const ContactUsForm = () => {
             <Button
               type="submit"
               title="Submit"
-              extraStyles=" text-white text-[1.125rem] bg-[#FF6F00] font-medium rounded-[0.3125rem] w-full md:w-[30rem] md:h-[3rem]"
+              extraStyles="uppercase text-white text-[1.125rem] bg-[#FF6F00] font-medium rounded-[0.3125rem] w-full md:w-[30rem] md:h-[3rem]"
               disabled={formState.isValidating}
             />
           </>

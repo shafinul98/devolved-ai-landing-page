@@ -24,9 +24,9 @@ const Header = () => {
   const navigation: NavigationItem[] = [
     { href: '/', name: 'Home' },
     { href: '/about', name: 'About' },
-    { href: '/argoCoin', name: '$AGC' },
+    { href: '/argoCoin', name: 'Argocoin' },
     { href: '/technology', name: 'Technology' },
-    { href: '/community', name: 'Community Governance' },
+    { href: '/community', name: 'CommUnity' },
     { href: '/contact', name: 'Contact' },
   ]
 
@@ -52,13 +52,13 @@ const Header = () => {
   return (
     <header>
       <nav className="shadow-lg">
-        <div className={`fixed top-0 w-full grid grid-cols-3 justify-between items-center md:px-20 py-5
+        <div className={`fixed w-full top-0 right-0 left-0 grid grid-cols-3 justify-between items-center md:px-20 py-5
         ${scrolled ? "border-b bg-white xl:border-gray-200 xl:bg-white/50 xl:backdrop-blur-xl"
           : "xl:bg-white/0"
         } z-30 transition-all`}>
 
           {/* logo */}
-          <div className="col-span-1 flex justify-center m-3">
+          <div className="col-span-1 flex xl:justify-end justify-end xl:mr-20 m-3">
             <Link href={"/"}>
               <Image
                 src={Logo}
@@ -98,7 +98,7 @@ const Header = () => {
               </div>
 
               {/* Home Menu item */}
-              <ul className="uppercase text-[0.95rem] text-[#1D1D1D] font-normal leading-normal pt-5 min-h-screen flex flex-col gap-5 items-start pl-5">
+              <ul className="uppercase text-[1rem] text-[#1D1D1D] font-normal leading-normal pt-5 min-h-screen flex flex-col gap-5 items-start pl-5">
               {navigation.map(({ href, name }) => (
                 <li className="relative ms-[5px]"
                   key={name}
@@ -121,7 +121,7 @@ const Header = () => {
             {navigation.map(({ href, name }) => (
               <div
                 key={name}
-                className="text-[1rem] xl:whitespace-nowrap xl:text-[0.90rem] text-[#1D1D1D] font-normal font-weight-400 leading-normal relative ms-[5px]"
+                className="text-[1rem] xl:whitespace-nowrap xl:text-[1rem] text-[#1D1D1D] font-normal leading-normal relative ms-[5px]"
                 onClick={() => {
                   setIsMenuOpen(false);
                 }}>
@@ -135,9 +135,9 @@ const Header = () => {
           </div>
 
           {/* Join the revolution button (Hidden on MD and below)*/}
-          <div className="col-span-1 hidden xl:flex justify-center mr-20">
+          <div className="col-span-1 hidden lg:hidden xl:flex justify-start xl:justify-start ml-5 xl:ml-20">
             <EarlyAccessForm>
-              <button className="text-[1rem] text-[1D1D1D] font-bold font-weight-500 leading-normal border-black border-2 py-2 px-4 rounded-[0.625rem] xl:w-[14.5625rem] xl:h-[3.125rem] transition-all hover:bg-black hover:text-white">
+              <button className="text-[1rem] text-[1D1D1D] font-bold leading-normal border-black border-2 rounded-[0.625rem] xl:w-[15.5625rem] xl:h-[3.125rem] transition-all hover:bg-black hover:text-white">
                 JOIN THE REVOLUTION
               </button>
             </EarlyAccessForm>
