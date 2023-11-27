@@ -474,16 +474,15 @@ export default function About() {
                 {/* Left Section */}
                 <div className="m-5">
                     <p className="text-[1.25rem] font-bold text-[#204FA2]">
-                            OUR TEAM
+                        OUR TEAM
                     </p>
                     <h1 className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
                         Meet the Pioneers
                     </h1>
                     <p className="text-[1.25rem] xl:text-2xl text-[#495167] font-light leading-[1.875rem] mb-5 max-w-[30rem]">
-                        Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit consequat
-                        eget morbi arcu convallis venenatis
-                        tellus neque faucibus auctor.
+                    Welcome to our skilled ensemble of innovators and thinkers. 
+                    Driven by passion and expertise, 
+                    each member contributes to a collaborative vision.
                     </p>
                     {/* flex instead of hidden */}
                     <div className="text-black hidden">

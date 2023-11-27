@@ -1,11 +1,8 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-import Button from "./Button";
 import {
   Form,
   FormControl,
@@ -13,10 +10,8 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
-
 import { useForm } from 'react-hook-form';
 import { Alert, AlertTitle } from "../ui/alert";
 
@@ -166,12 +161,13 @@ const ContactUsForm = () => {
           </Alert>
         ) : (
           <>
-            <Button
+            <button
               type="submit"
-              title="Submit"
-              extraStyles="uppercase text-white text-[1.125rem] bg-[#FF6F00] font-medium rounded-[0.3125rem] w-full md:w-[30rem] md:h-[3rem]"
+              className="uppercase text-white text-[1.125rem] bg-[#FF6F00] font-medium rounded-[0.3125rem] w-auto xl:w-[30rem] h-[3.75rem]"
               disabled={formState.isValidating}
-            />
+            >
+            Submit
+            </button>
           </>
         )}
       </form>

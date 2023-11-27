@@ -17,7 +17,7 @@ export default function Contact() {
                 style={{ backgroundImage: `url(${HeroImage.src})`}}>
                 <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
                     <div className="text-center">
-                        <h1 className="font-bold text-[2.75rem] md:text-2xl lg:text-3xl xl:text-6xl leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">
+                        <h1 className="font-bold text-[2.25rem] xl:text-[4.8125rem] leading-normal mb-5 text-[#192033]">
                             Contact
                         </h1>
                     </div>
@@ -27,13 +27,14 @@ export default function Contact() {
             {/* Contact form */}
             <section className="w-full my-10 md:mt-20 md:mb-0 items-center 3xl:container">
                 <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
-                    <div className="flex flex-col px-5 md:mt-16 gap-8 xl:ms-5 w-full md:w-1/2 lg:w-auto text-start">
+                    {/* form  */}
+                    <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-5 w-full md:w-1/2 lg:w-auto text-start">
                         <div className="background-image-text" />
-                        <p className="text-[2rem] xl:text-6xl text-[#192033] font-bold leading-normal">
+                        <p className="text-[1.625rem] xl:text-[3.75rem] text-[#192033] font-bold leading-normal">
                             We'd love to hear your <br />
                             Feedback
                         </p>
-                        <p className="text-[1.375rem] xl:text-[1.375rem] text-[#495167] font-light leading-[1.875rem]">
+                        <p className="text-[1.125rem] xl:text-[1.375rem] text-[#495167] font-light leading-[1.875rem] max-w-[24.0625rem] xl:max-w-[36.125rem]">
                             Need to get in touch? You can reach us at all our socials below, or using the contact form on this page.
                         </p>
                         <div className="flex md:justify-start xl:justify-start">
@@ -59,11 +60,13 @@ export default function Contact() {
                             <ContactUsForm />
                         </div>
                     </div>
-                    <div className="m-5 xl:m-0">
+
+                    {/* image  */}
+                    <div className="m-5 xl:m-2">
                         <Image
                             src={Image1}
                             alt="Contact form image"
-                            className="w-[50rem] h-auto md:w-[50rem] md:h-auto lg:w-[50rem] lg:h-auto xl:w-[50rem] xl:h-auto rounded-[1.25rem]"
+                            className="w-[37.5rem] h-auto md:w-[37.5rem] md:h-auto lg:w-[37.5rem] lg:h-auto xl:w-[37.5rem] xl:h-auto rounded-[1.25rem]"
                             priority
                         />
                     </div>
