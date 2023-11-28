@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Input } from "@nextui-org/react";
 import { useForm, Controller } from "react-hook-form";
-import RewardsWidget from "./RewardsWidget";
+// import RewardsWidget from "./RewardsWidget";
 import {
   FaLinkedinIn,
   FaWhatsapp,
@@ -229,8 +229,8 @@ const SharingStage = () => {
           </Button>
         </div>
       </div>
-      {/* Rewards Widget added */}
-      <RewardsWidget />
+      {/* Rewards Widget added 
+      <RewardsWidget /> */}
     </div>
   );
 };
