@@ -27,6 +27,10 @@ import GetReferral from "@/components/customComponents/GetReferral";
 
 
 export default function Community() {
+    const handleButtonClick = () => {
+        window.open('https://devolved-ai.gitbook.io/devolved-ai-whitepaper/proof-of-value-pov-protocol/introduction', '_blank');
+    };
+
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
       {/* community hero section */}
@@ -100,14 +104,15 @@ export default function Community() {
                         What is CommUnity?
                     </p>
                     <p className="text-[1.125rem] xl:text-[1.375rem] text-[#495167] leading-[1.875rem] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
-                        CommUnity is a unique aspect of the Devolved AI platform, 
-                        offering users the freedom to establish and manage communities 
-                        in a wide array of tech-related fields. From blockchain enthusiasts 
-                        to UI/UX designers, each CommUnity is a hub for like-minded individuals 
+                        CommUnity is a unique aspect of the Devolved AI platform,
+                        offering users the freedom to establish and manage communities
+                        in a wide array of tech-related fields. From blockchain enthusiasts
+                        to UI/UX designers, each CommUnity is a hub for like-minded individuals
                         to collaborate, innovate, and influence their respective domains.
                     </p>
-                    <button className="uppercase bg-[#A9A3B2] text-[1rem] text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[10rem] xl:h-[3.125rem] mt-5"
-                    >
+                    <button
+                    onClick={handleButtonClick}
+                    className="uppercase bg-[#A9A3B2] text-[1rem] text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[10rem] xl:h-[3.125rem] mt-5">
                         LEARN MORE
                     </button>
                 </div>

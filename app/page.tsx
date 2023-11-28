@@ -50,7 +50,7 @@ export default function Home() {
                     community governance. Vote, earn rewards, and own a stake in
                     the future of AI—all powered by Argocoin.
                   </p>
-                  <div className="justify-center hidden md:flex">
+                  <div className="justify-center">
                       <GetReferral />
                   </div>
               </div>

@@ -29,11 +29,11 @@ export default function ArgoCoin() {
             style={{ backgroundImage: `url(${HeroImage.src})`}}>
                 <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
                     <div className="text-center">
-                        <h1 className="font-bold text-[2.8125rem] md:text-2xl lg:text-3xl xl:text-6xl leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">
+                        <h1 className="font-bold text-[2.25rem] xl:text-[4.8125rem] leading-normal mb-5 text-[#192033] xl:max-w-[82.78975rem]">
                             Argocoin:<br/>
                             Fueling the AI Revolution
                         </h1>
-                        <p className="font-normal text-[1.275rem] md:text-2xl lg:text-3xl xl:text-3xl text-[#495167] m-5 xl:m-5 max-w-[71.375rem]">
+                        <p className="font-normal text-[1.25rem] xl:text-[1.875rem] text-[#495167] m-5 xl:m-5 xl:max-w-[71.375rem]">
                             Step into the future with Argocoin:  The Cornerstone of Devolved AI. Anchored as
                             the native token on our Layer 1 blockchain, AGC isn’t just a digital currency – it's the
                             driving force behind a new era of AI-powered breakthroughs.

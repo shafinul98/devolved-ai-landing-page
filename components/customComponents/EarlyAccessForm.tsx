@@ -11,7 +11,7 @@ import {
 import Image from "next/image";
 
 import DevolvedAIHeroLogo from "../../public/logo.svg";
-import GetReferral from "./GetReferral";
+import GetReferral from "./GetReferral/ViralLoopsForm";
 
 export function EarlyAccessForm({
   children,
@@ -24,7 +24,7 @@ export function EarlyAccessForm({
     <>
       <Dialog>
         <DialogTrigger className="w-full md:w-fit">{children}</DialogTrigger>
-        <DialogContent className="sm:max-w-[600px]">
+        <DialogContent className="sm:max-w-[900px]">
           <DialogHeader>
             <Image
               src={DevolvedAIHeroLogo}

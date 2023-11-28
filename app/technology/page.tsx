@@ -194,7 +194,7 @@ export default function Technology() {
         </section>
 
         {/* Federated Learning System */}
-        <section className="w-full my-10 items-center 3xl:container">
+        <section className="w-full my-20 items-center 3xl:container">
                 <div className="lg:px-4 xl:px-8 md:mx-16 lg:mb-20 flex flex-col items-center px-5 md:mt-16 gap-5 xl:ms-20" 
                 style={{
                     backgroundImage: `url(${Background4.src})`,
@@ -208,7 +208,7 @@ export default function Technology() {
                         <p className="font-bold text-[1.75rem] xl:text-[3.75rem] leading-normal text-[#192033]">
                             Federated Learning System
                         </p>
-                        <p className="text-[1.275rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[86.0625rem]">
+                        <p className="text-[1rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[86.0625rem]">
                             Our Federated Learning System is a game-changer in AI training, 
                             allowing users to contribute to the training process using their GPUs and 
                             earn Argocoin (AGC). This approach not only democratizes AI development but 
@@ -221,7 +221,7 @@ export default function Technology() {
         </section>
 
         {/* Ready to be a part of AI */}
-        <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5 3xl:container">
+        <section className="flex flex-col items-center justify-center my-20 md:my-10 gap-3 md:gap-5 3xl:container">
             <div className="flex flex-col gap-5 p-3 md:p-6 rounded-md shadow-md items-center justify-center w-[20.875rem] xl:w-[66.875rem] max-h-[30rem] xl:h-[45rem]"
                 style={{
                     backgroundImage: `url(${Image3.src})`,

@@ -40,49 +40,29 @@ const SharingStage = () => {
   };
 
   return (
-      <div className="flex flex-col w-full h-auto gap-4 items-center justify-center bg-white/30 backdrop-blur-md p-5 rounded-[1rem]" data-vl-campaign-id={CAMPAIGN_ID} data-vl-container="share-stage">
-        <div className='text-center mb-6 max-w-sm'>
-          <p className="font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
+    <div className="flex flex-col justify-center xl:flex-row gap-10 mb-2">
+      
+      <div className="flex flex-col w-full/2 h-auto gap-2 items-center justify-center bg-white backdrop-blur-md p-4 rounded-[1rem]" data-vl-campaign-id={CAMPAIGN_ID} data-vl-container="share-stage">
+        <div className='text-center max-w-sm'>
+          <p className="font-medium text-[#192033] text-[1rem]">
             🌟 Welcome to Devolved AI!
           </p>
-          <p className="font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
+          <p className="font-normal text-[#192033] text-[1rem]">
             You've taken the first step into a revolutionary AI journey. Check your email for more details.
           </p>
         </div>
 
-        <div className='text-center mb-6 max-w-sm'>
-          <p className="font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
+        <div className='text-center max-w-sm'>
+          <p className="font-medium text-[#192033] text-[1rem]">
             🚀 Start Sharing & Earning!
           </p>
-          <p className="font-normal font-weight-400 text-[#192033] text-[1rem] mb-4">
+          <p className="font-normal text-[#192033] text-[1rem]">
             Join the movement and spread the word. Invite friends to Devolved AI and earn $25 in crypto for each referral. Your unique share link is waiting for you below. Let's innovate and grow together!
           </p>
         </div>
 
-        {/* <div className='text-center mb-6 max-w-sm bg-white'>
-          <h1>Reward Section</h1>
-          <Input
-              readOnly
-              type="text"
-              placeholder="you@example.com"
-              labelPlacement="outside"
-              startContent={
-                <FaCheckCircle className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-              }
-            />
-            <Input
-              readOnly
-              type="text"
-              placeholder="you@example.com"
-              labelPlacement="outside"
-              startContent={
-                <FaSpinner className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-              }
-            />
-        </div> */}
-
         <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex flex-col mb-6 gap-4 w-full max-w-[20rem]">
+          <div className="flex flex-col gap-4 w-full max-w-[20rem]">
             <Controller
               control={control}
               name="inputField"
@@ -94,7 +74,7 @@ const SharingStage = () => {
                   type="url"
                   placeholder=""
                   labelPlacement="outside"
-                  className="m-5 p-5 bg-white rounded-sm"
+                  className="p-5 bg-white/20 border-black border-2"
                   endContent={
                     <Button type='submit' className="flex items-center ml-2 focus:outline-none" onClick={handleCopyToClipboard}>
                       {copyToClipBoard ? (
@@ -137,6 +117,50 @@ const SharingStage = () => {
           </Button>
         </div>
       </div>
+
+      <div className="main flex flex-col w-full/2 h-auto gap-2 items-center justify-center bg-white backdrop-blur-md p-4 rounded-[1rem]">
+        
+        <div className='flex mb-3 md:mb-0'>
+          <p className='text-[1rem] leading-[1rem]'>
+            Here you can see the rewards <br/> 
+            you won when your friends <br/>
+            signed-up
+            </p>
+        </div>
+
+        <div className='border-2 border-black flex flex-col mt-2 mb-2 ml-2 p-2'>
+            <p>Referrals</p>
+            <p className='font-bold'>42</p>
+        </div>
+
+        <div className='pair flex flex-col text-center max-w-sm gap-2'>
+          <Input
+              readOnly
+              type="text"
+              defaultValue="Pair of Socks"
+              placeholder=""
+              labelPlacement="outside"
+              className="border-2 border-black rounded-md p-2 w-auto h-auto"
+              startContent={
+                <FaCheckCircle className="text-2xl mr-5 text-default-400 pointer-events-none flex-shrink-0" />
+              }
+            />
+            <Input
+              readOnly
+              type="text"
+              defaultValue="Infinite supply of coffee"
+              placeholder=""
+              labelPlacement="outside"
+              className="border-2 border-black rounded-md p-2 w-auto h-auto"
+              startContent={
+                <FaSpinner className="text-2xl mr-5 text-default-400 pointer-events-none flex-shrink-0" />
+              }
+            />
+        </div>
+      </div>
+
+    </div>
+      
   );
 };
 
