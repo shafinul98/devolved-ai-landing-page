@@ -124,6 +124,14 @@ const SharingStage = () => {
             color="danger"
             aria-label="Like"
             className="icon-button text-[1rem] w-[3rem] h-[2rem] bg-[#FF6F00] rounded-md"
+            onClick={() =>
+              window.open(
+                `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                  "https://vrlps.co/" + referralCode + "/fb"
+                )}`,
+                "_blank"
+              )
+            }
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -143,6 +151,14 @@ const SharingStage = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1em"
+              onClick={() =>
+                window.open(
+                  `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+                    "https://vrlps.co/" + referralCode + "/tw"
+                  )}`,
+                  "_blank"
+                )
+              }
               viewBox="0 0 512 512"
               fill="white"
             >
@@ -153,8 +169,16 @@ const SharingStage = () => {
             isIconOnly
             color="warning"
             variant="faded"
-            aria-label="Take a photo"
+            aria-label="Share on WhatsApp"
             className="icon-button text-[1rem] w-[3rem] h-[2rem] bg-[#FF6F00] text-white rounded-md"
+            onClick={() =>
+              window.open(
+                `https://wa.me/?text=${encodeURIComponent(
+                  "https://vrlps.co/" + referralCode + "/wa"
+                )}`,
+                "_blank"
+              )
+            }
           >
             <FaWhatsapp />
           </Button>
@@ -162,26 +186,49 @@ const SharingStage = () => {
             isIconOnly
             color="warning"
             variant="faded"
-            aria-label="Take a photo"
+            aria-label="Share on LinkedIn"
             className="icon-button text-[1rem] w-[3rem] h-[2rem] bg-[#FF6F00] text-white rounded-md"
+            onClick={() =>
+              window.open(
+                `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+                  "https://vrlps.co/" + referralCode + "/ln"
+                )}`,
+                "_blank"
+              )
+            }
           >
             <FaLinkedinIn />
           </Button>
+
           <Button
             isIconOnly
             color="warning"
             variant="faded"
-            aria-label="Take a photo"
+            aria-label="Share on Reddit"
             className="icon-button text-[1rem] w-[3rem] h-[2rem] bg-[#FF6F00] text-white rounded-md"
+            onClick={() =>
+              window.open(
+                `https://reddit.com/submit?url=${encodeURIComponent(
+                  "https://vrlps.co/" + referralCode + "/rd"
+                )}`,
+                "_blank"
+              )
+            }
           >
             <FaRedditAlien />
           </Button>
+
           <Button
             isIconOnly
             color="warning"
             variant="faded"
-            aria-label="Take a photo"
+            aria-label="Share via Email"
             className="icon-button text-[1rem] w-[3rem] h-[2rem] bg-[#FF6F00] text-white rounded-md"
+            onClick={() =>
+              (window.location.href = `mailto:?subject=Check out this cool website&body=${encodeURIComponent(
+                "https://vrlps.co/" + referralCode + "/em"
+              )}`)
+            }
           >
             <FaEnvelope />
           </Button>
