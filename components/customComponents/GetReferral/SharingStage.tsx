@@ -39,21 +39,16 @@ const SharingStage = () => {
     console.log(data);
   };
 
+  // Shareable link copy handler from sharing widget
   const handleCopyToClipboard = async () => {
-    handleCopyToClipBoard(true);
-    alert("copied");
-    // const inputField = document.getElementById('inputField');
-
-    // if (inputField instanceof HTMLInputElement) {
-    //   const textToCopy = inputField.value;
-
-    //   try {
-    //     await navigator.clipboard.writeText(textToCopy);
-    //     handleCopyToClipBoard(true);
-    //   } catch (error) {
-    //     console.error('Failed to copy text:', error);
-    //   }
-    // }
+    try {
+      await navigator.clipboard.writeText(
+        `https://vrlps.co/${referralCode}/cp`
+      );
+      alert("Link copied to clipboard!");
+    } catch (error) {
+      console.error("Failed to copy text: ", error);
+    }
   };
 
   return (
