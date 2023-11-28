@@ -60,6 +60,11 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+        <link
+          rel="preload"
+          href="https://app.viral-loops.com/widgetsV2/core/loader.js"
+          as="script"
+        />
       </Head>
       <body className={`${ubuntu.className} grid`}>
         <Header />
