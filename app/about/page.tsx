@@ -103,8 +103,8 @@ export default function About() {
         </section>
 
         {/* Empowering Community, Democratizing AI */}
-        <section className="w-full my-20 items-center xl:container">
-            <div className="flex flex-col items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
+        <section className="flex flex-col w-full my-10 xl:my-20 items-center 3xl:container">
+            <div className="flex flex-col items-center justify-around xl:flex-row xl:px-20 relative">
                 <div className="m-5 xl:m-0">
                     <Image
                     priority
@@ -113,22 +113,22 @@ export default function About() {
                         alt="Empowering Community, Democratizing AI"
                         />
                 </div>
-                <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
+                <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-10">
                     <div className="background-image" />
-                    <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
+                    <p className="font-bold text-[0.875rem] xl:text-[1.25rem] leading-normal text-[#204FA2]">
                         Our Mission
                     </p>
-                    <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
-                        Empowering Community, Democratizing AI
+                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal text-[#192033]">
+                        Empowering Community, <br/> Democratizing AI
                     </p>
-                    <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
+                    <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[45.25rem]">
                         We stand at the forefront of a revolution. Devolved AI is not merely a 
                         tech entity; it is a beacon for a future where Artificial Intelligence 
                         is democratically powered by a diverse, global community. Our mission is 
                         to dismantle the centralization of AI technology, ensuring it serves the 
                         many instead of the few.
                     </p>
-                    <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
+                    <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[45.25rem]">
                         With our innovative Proof of Value (PoV) protocol, we encourage and reward 
                         each member's contributions, creating a thriving ecosystem where every voice 
                         can be heard, and every effort is acknowledged. Our platform is a testament to 
@@ -148,7 +148,7 @@ export default function About() {
                     top: 0;
                     left: 0;
                     position: absolute;
-                    width: 160%;
+                    width: 150%;
                     height: 100%;
                     z-index: -1;
                 }
@@ -157,23 +157,23 @@ export default function About() {
         </section>
 
         {/* Shaping a Decentralized Future */}
-        <section className="w-full my-20 items-center 3xl:container">
-            <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
-                <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
+        <section className="flex flex-col w-full my-10 xl:my-20 items-center 3xl:container">
+            <div className="flex flex-col-reverse items-center xl:flex-row xl:px-20 justify-around relative">
+                <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-10">
                     <div className="background-image" />
-                    <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
+                    <p className="font-bold text-[0.875rem] xl:text-[1.25rem] leading-normal text-[#204FA2]">
                         Our Vision
                     </p>
-                    <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
-                        Shaping a Decentralized Future
+                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] text-[#192033]">
+                        Shaping a Decentralized <br/> Future
                     </p>
-                    <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
+                    <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[45.25rem]">
                         Imagine an age where Artificial General Intelligence (AGI) is as widespread 
                         and participatory as the internet itself. This is the future Devolved AI is 
                         committed to creating. A horizon where AGI is a community-managed resource, 
                         offering unparalleled accessibility and collaborative growth.
                     </p>
-                    <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
+                    <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[45.25rem]">
                         We are expanding the boundaries of what's possible, moving from NLP to the 
                         vast potential of computer vision and predictive analytics. Our vision 
                         encapsulates an AGI ecosystem that is as inclusive as it is intelligent, 
@@ -412,16 +412,15 @@ export default function About() {
                                 {/* Phase 5 content */}
                                 <div className="w-[30rem] h-auto p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent ml-[10rem]">
                                     <h3 className="text-[1.875rem] text-white font-bold mb-1">
-                                        Phase 3
+                                        Phase 5
                                     </h3>
                                     <h5 className="text-[1.5rem] text-white font-normal mb-1">
-                                        AI and Protocol Enhancement <br/> (By Q3 2024)
+                                        AI and Protocol Enhancement <br/> (By Q2 2025)
                                     </h5>
                                     <p className="text-[1.125rem] text-[#E0E0E0] font-light leading-relaxed">
-                                        As Luna 2 enters the AI arena, we'll be bolstering our systems with
-                                        enhanced federated learning and a fortified PoV Protocol, all
-                                        while integrating substantial GPU support from our engaged
-                                        and growing community.
+                                    The project described above is our final test for the federated 
+                                    learning system. Next, we plan to add our Luna Model into this system, 
+                                    bringing us one step closer to finishing our main project.
                                     </p>
                                 </div>
                             </div>
@@ -520,7 +519,7 @@ export default function About() {
 
         {/* Ready to be a part of AI */}
         <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5">
-                <SignUpNow/>
+            <SignUpNow/>
         </section>
         <div className="bg-[#E5E7EB] w-4/5 mx-auto border bottom-1" />
     </main>
