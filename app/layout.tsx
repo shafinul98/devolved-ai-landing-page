@@ -1,15 +1,15 @@
-import Header from "@/components/Custom Components/Header";
+import Header from "@/components/customComponents/Header";
 import "./globals.css";
-import { Lato } from "next/font/google";
-import Footer from "@/components/Custom Components/Footer";
+import { Ubuntu } from "next/font/google";
+import Footer from "@/components/customComponents/Footer";
 import { Metadata } from "next";
 import GoogleAnalytics from "./GoogleAnalytics";
 import Script from "next/script";
 import Head from "next/head";
 
-const lato = Lato({
+const ubuntu = Ubuntu({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -60,8 +60,13 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+        <link
+          rel="preload"
+          href="https://app.viral-loops.com/widgetsV2/core/loader.js"
+          as="script"
+        />
       </Head>
-      <body className={`${lato.className} grid`}>
+      <body className={`${ubuntu.className} grid`}>
         <Header />
         <GoogleAnalytics />
         {children}
@@ -100,6 +105,10 @@ fbq('init', '855397502875334');
 fbq('track', 'PageView');
 `}
         </Script>
+        <Script
+          src="https://app.viral-loops.com/widgetsV2/core/loader.js"
+          strategy="beforeInteractive"
+        />
       </body>
     </html>
   );

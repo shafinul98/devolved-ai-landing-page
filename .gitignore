@@ -34,8 +34,10 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-*~
-*.un~
+next-env.d.ts
 
-# vim
+*.un~
+*.tsx~
+
+# Vim
 *.swp

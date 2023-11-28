@@ -5,13 +5,13 @@ import React, { useEffect } from "react";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-import TrophyIcon from "../../public/Trophy Icon.svg";
-import CalendarIcon from "../../public/Calendar Icon.svg";
-import StayConnectedIcon from "../../public/Stay Connected Icon.svg";
+import TrophyIcon from "../../public/TrophyIcon.svg";
+import CalendarIcon from "../../public/CalendarIcon.svg";
+import StayConnectedIcon from "../../public/StayConnectedIcon.svg";
 
-import MissionImageNew from "../../public/Mission Image New.png";
-import CalendarImage from "../../public/Calendar Image.png";
-import ConnectedWorldImage from "../../public/Connected World Image.png";
+import MissionImageNew from "../../public/MissionImageNew.webp";
+import CalendarImage from "../../public/CalendarImage.webp";
+import ConnectedWorldImage from "../../public/ConnectedWorldImage.webp";
 
 import {
   FaDiscord,
@@ -23,11 +23,10 @@ import {
 import Link from "next/link";
 
 const EarlyAccessSuccess = () => {
-  const pathname = usePathname();
 
   const searchParams = useSearchParams();
 
-  const isSignedUp = searchParams.get("isSignedUp");
+  const isSignedUp = searchParams ? searchParams.get("isSignedUp") : null;
 
   const router = useRouter();
 
@@ -35,7 +34,7 @@ const EarlyAccessSuccess = () => {
     if (!isSignedUp) {
       router.push("/");
     }
-  }, []);
+  }, [isSignedUp, router]);
 
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between p-0 3xl:container">
