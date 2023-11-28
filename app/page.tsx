@@ -208,7 +208,7 @@ export default function Home() {
             <p className="font-bold text-[1.75rem] xl:text-[3.75rem] leading-normal text-[#192033] max-w-[31.625rem]">
               The Tech Behind the Vision
             </p>
-            <p className="text-[1rem] text-[#495167] leading-[1.875rem] font-light max-w-[45rem]">
+            <p className="text-[1rem] xl:text-[1.375rem] text-[#495167] leading-[1.875rem] font-light max-w-[44.125rem]">
               Starting with Natural Language Processing, we are setting the stage for future 
               innovations in Artificial General Intelligence, computer vision, predictive analytics, and more.
             </p>
