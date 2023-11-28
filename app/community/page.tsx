@@ -8,10 +8,7 @@ import Image2 from "../../public/community/image2.webp"
 import Background2 from "../../public/technology/bg2.webp"
 import Background3 from "../../public/technology/bg3.webp"
 import BackgroundUseCase from "../../public/about/bg3.webp"
-import Image3 from "../../public/technology/image3.webp"
 import Background4 from "../../public/technology/bg4.webp"
-import TextBg from "../../public/about/text-bg.webp"
-import Button from "@/components/customComponents/Button";
 import DiverseLeadershipIcon from "../../public/community/diverse_leadership_opportunities_icon.svg"
 import AGCGrantsIcon from "../../public/community/agc_grants_for_value_adding_communities_icon.svg"
 import AutonomyIcon from "../../public/community/autonomy_in_governance_icon.svg"
@@ -23,7 +20,7 @@ import Step1 from "../../public/community/step1.svg"
 import Step2 from "../../public/community/step2.svg"
 import Step3 from "../../public/community/step3.svg"
 import CoreDetailsCard from "@/components/customComponents/CoreDetailsCard";
-import GetReferral from "@/components/customComponents/GetReferral";
+import SignUpNow from "@/components/customComponents/SignUpNow";
 
 
 export default function Community() {
@@ -378,22 +375,7 @@ export default function Community() {
 
         {/* Ready to be a part of AI */}
         <section className="flex flex-col w-full my-20 items-center justify-center 3xl:container">
-            <div className="flex flex-col gap-5 p-5 rounded-md shadow-md items-center justify-center w-[20.875rem] xl:w-[66.875rem] max-h-[30rem] xl:h-[45rem]"
-                style={{
-                    backgroundImage: `url(${Image3.src})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                }}>
-                <p className="text-[#192033] text-[1.5rem] xl:text-[2.5rem] font-medium leading-normal text-center max-w-[50.75rem] max-h-[6.73569rem]">
-                    Ready to be a part of AI's next (d)evolution?
-                    <br />
-                    Sign up now.
-                </p>
-                <div className="hidden md:flex">
-                    <GetReferral />
-                </div>
-            </div>
+            <SignUpNow/>
         </section>
 
         <div className="bg-[#E5E7EB] w-4/5 mx-auto border bottom-1" />

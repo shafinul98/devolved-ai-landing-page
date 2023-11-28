@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import HeroImage from "../../public/about/hero-image.webp"
-import HomeImage1 from "../../public/about/1.webp" 
 import Image1 from "../../public/about/image1.webp"
 import Background1 from "../../public/about/bg1.webp"
 import Image2 from "../../public/about/image2.webp"
@@ -20,7 +19,7 @@ import Nazmul from "../../public/about/team/nazmul.webp";
 import Justin from "../../public/about/team/justin.webp";
 import { useState } from "react";
 import { motion, useAnimation } from 'framer-motion';
-import GetReferral from "@/components/customComponents/GetReferral";
+import SignUpNow from '@/components/customComponents/SignUpNow';
 
 export default function About() {
     const teamMembers = [
@@ -83,10 +82,10 @@ export default function About() {
 
     const controls = useAnimation();
     const moveLeft = () => {
-        controls.start({ x: 300 }); // Adjust the distance as needed
+        controls.start({ x: 600 }); // Adjust the distance as needed
     };
     const moveRight = () => {
-        controls.start({ x: -300 }); // Adjust the distance as needed
+        controls.start({ x: -600 }); // Adjust the distance as needed
     };
 
     return (
@@ -104,7 +103,7 @@ export default function About() {
         </section>
 
         {/* Empowering Community, Democratizing AI */}
-        <section className="w-full my-10 items-center xl:container">
+        <section className="w-full my-20 items-center xl:container">
             <div className="flex flex-col items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
                 <div className="m-5 xl:m-0">
                     <Image
@@ -149,7 +148,7 @@ export default function About() {
                     top: 0;
                     left: 0;
                     position: absolute;
-                    width: 170%;
+                    width: 160%;
                     height: 100%;
                     z-index: -1;
                 }
@@ -158,7 +157,7 @@ export default function About() {
         </section>
 
         {/* Shaping a Decentralized Future */}
-        <section className="w-full my-10 items-center 3xl:container">
+        <section className="w-full my-20 items-center 3xl:container">
             <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
                 <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
                     <div className="background-image" />
@@ -200,7 +199,7 @@ export default function About() {
                         bottom: 0;
                         right: 0;
                         position: absolute;
-                        width: 170%;
+                        width: 130%;
                         height: 100%;
                         z-index: -1;
                     }
@@ -209,7 +208,7 @@ export default function About() {
         </section>
 
         {/* Our values guide every decision, every development, and every interaction */}
-        <section className="flex flex-col my-10 m-5">
+        <section className="flex flex-col my-10 m-3">
             <div className="flex flex-col rounded-[1rem] shadow-md gap-5 items-center justify-center"
                 style={{
                 backgroundImage: `url(${SectionBg1.src})`,
@@ -218,24 +217,24 @@ export default function About() {
                 backgroundRepeat: 'no-repeat'
                 }}>
 
-                <div className="flex flex-col text-center max-w-xxl gap-5 m-5">
-                    <p className="text-[1.25rem] font-bold text-[#204FA2]">
+                <div className="flex flex-col text-center max-w-xxl gap-2 mt-10">
+                    <p className="text-[0.875rem] xl:text-[1.25rem] font-bold text-[#204FA2]">
                         Our Values
                     </p>
-                    <p className="text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033] font-bold">
+                    <p className="text-[1.625rem] xl:text-[1.75rem] leading-normal text-[#192033] font-bold">
                         Our values guide every decision, <br/>
                         every development, and every interaction
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 3xl:container p-5">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 3xl:container p-5 mb-10">
                     
                     {/* Integrity */}
                     <div className="p-5 md:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
                         <Image priority className="w-[3.75rem] h-[3.75rem]" src={IntegrityIcon} alt="IntegrityIcon"/>
-                        <p className="text-[1.25rem] text-[#29233B] font-medium mt-3">
+                        <p className="text-[1.875rem] xl:text-[1.25rem] text-[#29233B] font-medium mt-3">
                             Integrity
                         </p>
-                        <p className="text-[1.125rem] md:text-[1.125rem] lg:text-[1.125rem] xl:text-[1.125rem] leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
+                        <p className="text-[1.125rem] xl:text-[1.125rem] leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
                             We pledge unwavering commitment to transparency and honesty, 
                             anchored by our custom layer 1 blockchain.
                         </p>
@@ -244,10 +243,10 @@ export default function About() {
                     {/* Innovation */}
                     <div className="p-5 md:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
                         <Image priority className="w-[3.75rem] h-[3.75rem]" src={InnovationIcon} alt="InnovationIcon" />
-                        <p className="text-[1.25rem] text-[#29233B] font-medium mt-3">
+                        <p className="text-[1.875rem] xl:text-[1.25rem] text-[#29233B] font-medium mt-3">
                             Innovation
                         </p>
-                        <p className="text-[1.125rem] md:text-[1.125rem] lg:text-[1.125rem] xl:text-[1.125rem] leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
+                        <p className="text-[1.125rem] xl:text-[1.125rem] leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
                             We believe in pushing boundaries, challenging the status quo, and embracing the 
                             journey to AGI.
                         </p>
@@ -256,10 +255,10 @@ export default function About() {
                     {/* Inclusivity */}
                     <div className="p-5 md:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
                         <Image priority className="w-[3.75rem] h-[3.75rem]" src={InclusivityIcon} alt="InclusivityIcon" />
-                        <p className="text-[1.25rem] text-[#29233B] font-medium mt-3">
+                        <p className="text-[1.875rem] xl:text-[1.25rem] text-[#29233B] font-medium mt-3">
                             Inclusivity
                         </p>
-                        <p className="text-[1.125rem] md:text-xl lg:text-xl xl:text-xl leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
+                        <p className="ttext-[1.125rem] xl:text-[1.125rem] leading-[1.875rem] text-[#495167] font-light max-w-[73.5625rem] mt-2">
                             Our ecosystem thrives on diverse perspectives, 
                             ensuring everyone has the opportunity to shape the future of AI.
                         </p>
@@ -287,7 +286,7 @@ export default function About() {
         </section>
 
         {/* Collaborative, Transparent, Rewarding */}
-        <section className="flex flex-col w-full my-10 items-center 3xl:container">
+        <section className="flex flex-col w-full my-20 items-center 3xl:container">
                 <div className="lg:px-4 xl:px-8 md:mx-16 lg:mb-20 flex flex-col items-center px-5 md:mt-16 gap-5 xl:ms-20" 
                 style={{
                     backgroundImage: `url(${SectionBg2.src})`,
@@ -298,13 +297,13 @@ export default function About() {
                 }}>
                     <div className="background-image" />
                     <div className="flex flex-col max-w-xxl gap-5 text-center">
-                        <p className="text-[1.25rem] text-[#204FA2] font-bold leading-normal">
+                        <p className="text-[0.875rem] xl:text-[1.25rem] text-[#204FA2] font-bold leading-normal">
                             Our Approach
                         </p>
-                        <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
+                        <p className="font-bold xl:text-[3.75rem] text-[1.625rem] leading-normal text-[#192033]">
                             Collaborative, Transparent, Rewarding
                         </p>
-                        <p className="text-[0.90rem] md:text-xl lg:text-2xl xl:text-2xl text-[#495167] font-light max-w-[86.0625rem]">
+                        <p className="xl:text-[1.375rem] text-[1.125rem] text-[#495167] font-light max-w-[86.0625rem]">
                             Our approach is rooted in the belief that the best AI should be forged in the 
                             fires of diverse global intellect. We leverage blockchain to ensure transparency 
                             and instill trust, while our PoV protocol rewards every user for their invaluable 
@@ -315,12 +314,12 @@ export default function About() {
         </section>
 
         {/* Roadmap At A Glance */}
-        <section className="flex w-full h-[50rem] items-center justify-center bg-cover bg-center bg-no-repeat"
+        <section className="flex w-full min-h-screen/2 my-20 items-center justify-center bg-cover bg-center bg-no-repeat"
             style={{
                 backgroundImage: `url(${Background3.src})`,
             }}>
             <div className="w-full">
-                <div className="flex flex-row items-start justify-start p-10">
+                <div className="flex flex-row items-center justify-start xl:p-20 p-2">
                     {/* Heading on the left */}
                     <div className="text-[#fff] font-bold text-[1.80rem] xl:text-[3.75rem] leading-normal">
                         <h1>Roadmap At A Glance</h1>
@@ -364,7 +363,8 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="stepper flex flex-col lg:flex-row items-center text-white ml-10 mr-20"
+                {/* scroll div  */}
+                <div className="stepper flex flex-col items-center text-white m-5"
                     style={{
                         overflowX: 'scroll',
                         scrollbarWidth: 'none',  // For Firefox
@@ -374,17 +374,17 @@ export default function About() {
                     <motion.div
                         animate={controls}
                         transition={{ type: 'tween', duration: 0.5 }}>
-                        <div className="lg:order-1 flex flex-col lg:ml-10 space-y-5">
+                        <div className="lg:order-1 flex flex-col xl:ml-10 space-y-5">
                             <div className="flex space-x-[20rem]">
                                 {/* Phase 1 content */}
-                                <div className="w-[18rem] h-[13rem] gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
-                                    <h1 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                <div className="w-[30rem] h-auto gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h1 className="text-[1.875rem] text-white font-bold mb-1">
                                         Phase 1
                                     </h1>
-                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                    <h5 className="text-[1.5rem] text-white font-normal mb-1">
                                         Foundation and MVP Development <br/> (Q3 2023 - Q1 2024)
                                     </h5>
-                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                    <p className="text-[1.125rem] leading-[1.875rem] text-[#E0E0E0] font-light">
                                         We've laid the cornerstone by inaugurating our office and
                                         assembling a dynamic team of visionaries. Currently, we're
                                         channeling our efforts into the MVP, set to unveil in Q1 2024,
@@ -394,14 +394,14 @@ export default function About() {
                                 </div>
 
                                 {/* Phase 3 content */}
-                                <div className="w-[18rem] h-[13rem] p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
-                                    <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                <div className="w-[30rem] h-auto p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h3 className="text-[1.875rem] text-white font-bold mb-1">
                                         Phase 3
                                     </h3>
-                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                    <h5 className="text-[1.5rem] text-white font-normal mb-1">
                                         AI and Protocol Enhancement <br/> (By Q3 2024)
                                     </h5>
-                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                    <p className="text-[1.125rem] text-[#E0E0E0] font-light leading-relaxed">
                                         As Luna 2 enters the AI arena, we'll be bolstering our systems with
                                         enhanced federated learning and a fortified PoV Protocol, all
                                         while integrating substantial GPU support from our engaged
@@ -410,14 +410,14 @@ export default function About() {
                                 </div>
 
                                 {/* Phase 5 content */}
-                                <div className="w-[18rem] h-[13rem] p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent ml-[10rem]">
-                                    <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                <div className="w-[30rem] h-auto p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent ml-[10rem]">
+                                    <h3 className="text-[1.875rem] text-white font-bold mb-1">
                                         Phase 3
                                     </h3>
-                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                    <h5 className="text-[1.5rem] text-white font-normal mb-1">
                                         AI and Protocol Enhancement <br/> (By Q3 2024)
                                     </h5>
-                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                    <p className="text-[1.125rem] text-[#E0E0E0] font-light leading-relaxed">
                                         As Luna 2 enters the AI arena, we'll be bolstering our systems with
                                         enhanced federated learning and a fortified PoV Protocol, all
                                         while integrating substantial GPU support from our engaged
@@ -432,14 +432,14 @@ export default function About() {
 
                             <div className="flex space-x-[15rem] ml-[20rem]">
                                 {/* Phase 2 content */}
-                                <div className="w-[18rem] h-[13rem] p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
-                                    <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem] mb-1">
+                                <div className="w-[30rem] h-auto p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h3 className="text-[1.875rem] text-white font-bold mb-1">
                                         Phase 2
                                     </h3>
-                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem] mb-1">
+                                    <h5 className="text-[1.5rem] text-white font-normal font-ubuntu mb-1">
                                         Team and Infrastructure <br/> (By Q2 2024)
                                     </h5>
-                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                    <p className="text-[1.125rem] text-[#E0E0E0] font-light leading-relaxed">
                                         With our MVP propelling us forward, the next milestone involves
                                         expanding our talent pool and strengthening our infrastructure.
                                         This sets the stage for both technological advancement and a
@@ -448,14 +448,14 @@ export default function About() {
                                 </div>
 
                                 {/* Phase 4 content */}
-                                <div className="w-[18rem] h-[13rem] p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
-                                    <h3 className="text-white font-bold font-ubuntu font-weight-700 text-[1rem]">
+                                <div className="w-[30rem] h-auto p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h3 className="text-[1.875rem] text-white font-bold">
                                         Phase 4
                                     </h3>
-                                    <h5 className="text-white font-normal font-ubuntu font-weight-500 text-[0.80rem]">
+                                    <h5 className="text-[1.5rem] text-white font-normal">
                                         Data and Expansion <br/> (By Q1 2025)
                                     </h5>
-                                    <p className="text-[#E0E0E0] font-light font-ubuntu font-weight-300 text-[0.60rem] leading-relaxed">
+                                    <p className="text-[1.125rem] text-[#E0E0E0] font-light leading-relaxed">
                                         Optimizing our data management and expanding our GPU
                                         network will be our focus, as we strive for superior efficiency
                                         and prepare our platform for more complex AI tasks.
@@ -473,16 +473,16 @@ export default function About() {
             <div className="flex flex-col md:flex-row items-center md:px-8 lg:px-16 xl:px-20">
                 {/* Left Section */}
                 <div className="m-5">
-                    <p className="text-[1.25rem] font-bold text-[#204FA2]">
+                    <p className="xl:text-[1.25rem] text-[0.875rem] font-bold text-[#204FA2]">
                         OUR TEAM
                     </p>
-                    <h1 className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
+                    <h1 className="font-bold xl:text-[3.75rem] text-[1.625rem] leading-normal text-[#192033]">
                         Meet the Pioneers
                     </h1>
-                    <p className="text-[1.25rem] xl:text-2xl text-[#495167] font-light leading-[1.875rem] mb-5 max-w-[30rem]">
-                    Welcome to our skilled ensemble of innovators and thinkers. 
-                    Driven by passion and expertise, 
-                    each member contributes to a collaborative vision.
+                    <p className="text-[1.125rem] xl:text-[1.375rem] text-[#495167] font-light leading-[1.875rem] mb-5 max-w-[30rem]">
+                        Welcome to our skilled ensemble of innovators and thinkers. 
+                        Driven by passion and expertise, 
+                        each member contributes to a collaborative vision.
                     </p>
                     {/* flex instead of hidden */}
                     <div className="text-black hidden">
@@ -519,25 +519,9 @@ export default function About() {
         </section>
 
         {/* Ready to be a part of AI */}
-        <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5 3xl:container">
-            <div className="flex flex-col gap-5 p-3 md:p-6 rounded-md shadow-md items-center justify-center w-[20.875rem] xl:w-[66.875rem] max-h-[30rem] xl:h-[45rem]"
-                style={{
-                    backgroundImage: `url(${HomeImage1.src})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                }}>
-                <p className="text-[#192033] text-[1.5rem] xl:text-[2.5rem] font-medium leading-normal text-center max-w-[50.75rem]">
-                    Ready to be a part of AI's next (d)evolution?
-                    <br />
-                    Sign up now.
-                </p>
-                <div className="hidden md:flex">
-                    <GetReferral />
-                </div>
-            </div>
+        <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5">
+                <SignUpNow/>
         </section>
-
         <div className="bg-[#E5E7EB] w-4/5 mx-auto border bottom-1" />
     </main>
     );

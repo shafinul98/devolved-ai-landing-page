@@ -1,8 +1,7 @@
 "use client"
 
-import Image from "next/image";
+import Image from "next/image"
 import HeroImage from "../public/home/hero-image.webp"
-import HomeImage1 from "../public/home/1.webp"
 import HomeImage2 from "../public/home/2.webp"
 import HomeImage3 from "../public/home/3.webp"
 import HomeImage4 from "../public/home/4.webp"
@@ -14,12 +13,16 @@ import SectionBg5 from "../public/home/section-bg-5.webp"
 import CommunityGovernedIcon from "../public/home/community_governed.svg"
 import SharedProsperityIcon from "../public/home/shared_prosperity.svg"
 import BlockchainBasedIcon from "../public/home/blockchain_based.svg"
-// import GetReferral from "@/components/customComponents/GetReferral";
-import GetReferral from "@/components/customComponents/GetReferral/ViralLoopsForm";
-import { useRouter } from 'next/navigation';
+import GetReferral from "@/components/customComponents/GetReferral/ViralLoopsForm"
+import { useRouter } from 'next/navigation'
+import SignUpNow from "@/components/customComponents/SignUpNow"
 
 export default function Home() {
   const router = useRouter();
+
+  const handleArgoCoinClick = () => {
+    router.push('/argoCoin');
+  };
 
   const handleButtonClick = () => {
     router.push('/community');
@@ -38,13 +41,13 @@ export default function Home() {
       {/* hero section */}
       <section className="w-full h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
         style={{ backgroundImage: `url(${HeroImage.src})` }}>
-          <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
+          <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-10">
               <div className="text-center">
-                  <h1 className="font-bold text-[2.8125rem] xl:text-[4.8125rem] leading-normal xl:mb-5 text-[#192033] max-w-[82.78975rem]">
+                  <h1 className="font-bold text-[2.25rem] xl:text-[4.8125rem] leading-normal mt-5 xl:mb-5 text-[#192033] xl:max-w-[82.78975rem]">
                     AI has evolved.<br />
                     So should its ownership.
                   </h1>
-                  <p className="font-normal text-[1.275rem] xl:text-[1.875rem] leading-[2.375rem] text-[#495167] m-5 xl:mb-5 max-w-[71.375rem]">
+                  <p className="font-normal text-[1.25rem] xl:text-[1.875rem] leading-[1.875rem] xl:leading-[2.375rem] text-[#495167] m-5 xl:m-5 max-w-[24rem] xl:max-w-[71.375rem]">
                     Welcome to AI owned by you, the user. Built on blockchain
                     technology, Devolved AI embodies trust, transparency, and
                     community governance. Vote, earn rewards, and own a stake in
@@ -188,7 +191,7 @@ export default function Home() {
                     it's your voting ticket, your reward, and your stake in the community.
                   </p>
                   <div className="flex justify-center mt-4">
-                    <button className="uppercase bg-[#A9A3B2] text-white font-medium text-[1rem] rounded-[0.3125rem] w-[10rem] h-[3.125rem]">
+                    <button onClick={handleArgoCoinClick} className="uppercase bg-[#A9A3B2] text-white font-medium text-[1rem] rounded-[0.3125rem] w-[10rem] h-[3.125rem]">
                       LEARN MORE
                     </button>
                   </div>
@@ -293,24 +296,8 @@ export default function Home() {
 
       {/* Ready to be a part of AI */}
       <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5 3xl:container">
-            <div className="flex flex-col gap-5 p-3 md:p-6 rounded-md shadow-md items-center justify-center w-[20.875rem] xl:w-[66.875rem] max-h-[30rem] xl:h-[45rem]"
-                style={{
-                    backgroundImage: `url(${HomeImage1.src})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                }}>
-                <p className="text-[#192033] text-[1.5rem] xl:text-[2.5rem] font-medium leading-normal text-center max-w-[50.75rem] max-h-[6.73569rem]">
-                    Ready to be a part of AI's next (d)evolution?
-                    <br />
-                    Sign up now.
-                </p>
-                <div className="hidden md:flex">
-                    <GetReferral />
-                </div>
-            </div>
+        <SignUpNow/>
       </section>
-
 
       {/* Referel Text */}
       <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5 3xl:container">
