@@ -41,7 +41,7 @@ export default function Home() {
       {/* hero section */}
       <section className="w-full xl:h-screen h-[67rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
         style={{ backgroundImage: `url(${HeroImage.src})` }}>
-          <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 xl:mt-0 xl:mb-[18rem]">
+          <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-10">
               <div className="text-center">
                   <h1 className="font-bold text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] xl:text-[4.8125rem] leading-normal mt-5 xl:mb-5 text-[#192033] xl:max-w-[82.78975rem]">
                     AI has evolved.<br />
