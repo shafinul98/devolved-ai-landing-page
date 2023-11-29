@@ -48,7 +48,7 @@ export default function Contact() {
                                 <Link href={"https://www.reddit.com/user/devolvedai"} rel="noopener noreferrer" target="_blank">
                                 <FaReddit size={30} />
                                 </Link>
-                                <Link href={"https://discord.gg/Z2avfRQ4xc"} rel="noopener noreferrer" target="_blank">
+                                <Link href={"https://discord.com/invite/uS4pBdJz"} rel="noopener noreferrer" target="_blank">
                                 <FaDiscord size={30} />
                                 </Link>
                                 <Link href={"https://t.me/devolvedai"} rel="noopener noreferrer" target="_blank">
@@ -62,7 +62,7 @@ export default function Contact() {
                     </div>
 
                     {/* image  */}
-                    <div className="m-5 xl:m-2">
+                    <div className="hidden xl:flex m-5 xl:m-2">
                         <Image
                             src={Image1}
                             alt="Contact form image"
@@ -90,7 +90,7 @@ export default function Contact() {
                 </style>
             </section>
 
-            <div className="bg-[#E5E7EB] w-4/5 mx-auto border bottom-1" />
+            <div className="bg-[#E5E7EB] w-4/6 mx-auto border bottom-1" />
         </main>
     );
 }

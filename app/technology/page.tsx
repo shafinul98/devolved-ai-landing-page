@@ -193,7 +193,7 @@ export default function Technology() {
         </section>
 
         {/* Federated Learning System */}
-        <section className="w-full my-20 items-center 3xl:container">
+        <section className="flex flex-col w-full my-20 items-center 3xl:container">
                 <div className="lg:px-4 xl:px-8 md:mx-16 lg:mb-20 flex flex-col items-center px-5 md:mt-16 gap-5 xl:ms-20" 
                 style={{
                     backgroundImage: `url(${Background4.src})`,
@@ -220,11 +220,11 @@ export default function Technology() {
         </section>
 
         {/* Ready to be a part of AI */}
-        <section className="flex flex-col items-center justify-center my-20 md:my-10 gap-3 md:gap-5 3xl:container">
+        <section className="flex flex-col items-center justify-center mt-[5rem] my-20 3xl:container">
             <SignUpNow/>
         </section>
 
-        <div className="bg-[#E5E7EB] w-4/5 mx-auto border bottom-1" />
+        <div className="bg-[#E5E7EB] w-4/6 mx-auto border bottom-1" />
     </main>
   );
 }

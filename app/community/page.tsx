@@ -22,10 +22,9 @@ import Step3 from "../../public/community/step3.svg"
 import CoreDetailsCard from "@/components/customComponents/CoreDetailsCard";
 import SignUpNow from "@/components/customComponents/SignUpNow";
 
-
 export default function Community() {
     const handleButtonClick = () => {
-        window.open('https://devolved-ai.gitbook.io/devolved-ai-whitepaper/proof-of-value-pov-protocol/introduction', '_blank');
+        window.open('https://devolved-ai.gitbook.io/devolved-ai-whitepaper/community-module-decentralized-self-governance/introduction', '_blank');
     };
 
   return (
@@ -378,7 +377,7 @@ export default function Community() {
             <SignUpNow/>
         </section>
 
-        <div className="bg-[#E5E7EB] w-4/5 mx-auto border bottom-1" />
+        <div className="bg-[#E5E7EB] w-4/6 mx-auto border bottom-1" />
 
     </main>
   );
