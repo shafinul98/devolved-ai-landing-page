@@ -19,23 +19,22 @@ const CoreDetailsCard: React.FC<CoreDetailsCardProps> = ({
   titleStyles,
 }: CoreDetailsCardProps) => {
   return (
-    <article
-      className={`${extraStyles} sm:max-md:w-full rounded-[0.75rem] flex flex-col my-5 p-5 lg:w-[17rem] lg:h-[15rem] xl:h-[28rem] xl:w-[25rem] 2xl:w-[28.25rem] 3xl:w-[32.5rem] hover:shadow-lg transition-all duration-300`}
-    >
+    <article className={`${extraStyles} w-full h:auto xl:w-[25rem] xl:h-[28rem] rounded-[0.75rem] shadow-md flex flex-col my-5 p-5 hover:shadow-lg transition-all duration-300`}>
       {/* Image */}
       <Image
+        priority
         src={image}
         alt={title}
-        className={imageStyles + "md:w-full md:h-60 lg:max-xl:h-44"}
+        className={imageStyles + "md:w-full md:h-60"}
       />
       {/* Title */}
-      <h1
-        className={`text-[1.25rem] text-[#29233B] mt-5 font-ubuntu font-bold text-start ${titleStyles}`}
-      >
+      <p className={`text-[1.5rem] xl:text-[1.75rem] text-[#29233B] mt-2 font-medium text-start ${titleStyles}`}>
         {title}
-      </h1>
+      </p>
       {/* Description */}
-      <p className="text-[#495167] text-[1rem] mt-5 font-ubuntu font-light text-start">{description}</p>
+      <p className="text-[1rem] xl:text-[1.125rem] leading-[1.875rem] text-[#495167] mt-2 font-light xl:max-w-[26.9375rem]">
+        {description}
+      </p>
     </article>
   );
 };

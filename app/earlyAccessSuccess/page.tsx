@@ -23,7 +23,6 @@ import {
 import Link from "next/link";
 
 const EarlyAccessSuccess = () => {
-  const pathname = usePathname();
 
   const searchParams = useSearchParams();
 
@@ -35,7 +34,7 @@ const EarlyAccessSuccess = () => {
     if (!isSignedUp) {
       router.push("/");
     }
-  }, []);
+  }, [isSignedUp, router]);
 
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between p-0 3xl:container">

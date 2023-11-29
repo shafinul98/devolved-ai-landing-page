@@ -90,7 +90,6 @@
 .stepper::-webkit-scrollbar {
   display: none;
 }
-
-.powered-by {
+.teammembercard::-webkit-scrollbar {
   display: none;
 }

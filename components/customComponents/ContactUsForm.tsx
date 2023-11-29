@@ -1,25 +1,19 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-import Button from "./Button";
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
-
-import { useForm, SubmitHandler } from 'react-hook-form';
-import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
+import { useForm } from 'react-hook-form';
+import { Alert, AlertTitle } from "../ui/alert";
 
 const FormSchema = z.object({
   firstName: z.string({
@@ -76,7 +70,7 @@ const ContactUsForm = () => {
     if (isMessageSent && formRef) {
       form.reset();
     }
-  }, [isMessageSent]);
+  }, [isMessageSent, form]);
 
   return (
     <Form {...form}>
@@ -148,6 +142,7 @@ const ContactUsForm = () => {
                 <FormControl>
                   <Textarea
                     className="input-field w-full md:w-[30rem] h-[10.125rem] rounded-[0.3125rem] border-2 border-[#D3D3D3] backdrop-blur-md text-normal text-[#495167] leading-[1.875rem] text-[1rem]"
+                    style={{ resize: 'none' }}
                     placeholder="Comments"
                     {...field}
                     rows={6}
@@ -161,17 +156,18 @@ const ContactUsForm = () => {
         </div>
 
         {isMessageSent ? (
-          <Alert className="w-full bg-green-500 text-white">
+          <Alert className="w-full md:w-[30rem] md:h-[3rem] bg-green-500 text-white">
             <AlertTitle>Your Comment Has Been Sent</AlertTitle>
           </Alert>
         ) : (
           <>
-            <Button
+            <button
               type="submit"
-              title="Submit"
-              extraStyles=" text-white text-[1.125rem] bg-[#FF6F00] font-medium rounded-[0.3125rem] w-full md:w-[30rem] md:h-[3rem]"
+              className="uppercase text-white text-[1.125rem] bg-[#FF6F00] font-medium rounded-[0.3125rem] w-auto xl:w-[30rem] h-[3.75rem]"
               disabled={formState.isValidating}
-            />
+            >
+            Submit
+            </button>
           </>
         )}
       </form>
