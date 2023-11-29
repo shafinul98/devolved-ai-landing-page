@@ -79,7 +79,7 @@ const SharingStage = () => {
         </div>
 
         <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex flex-col xl:w-full max-w-[15rem] xl:max-w-[20rem]">
+          <div className="flex flex-col xl:w-full max-w-[20rem] xl:max-w-[25rem]">
             <Controller
               control={control}
               name="inputField"
@@ -117,7 +117,7 @@ const SharingStage = () => {
           </div>
         </form>
 
-        <div className="flex flex-row gap-2 xl:gap-4 w-full max-w-[20rem] xl:max-w-[25rem] items-center">
+        <div className="flex flex-row gap-2 xl:gap-4 w-full max-w-[15rem] xl:max-w-[20rem] items-center">
           <Tooltip
             content="Share on facebook"
             placement="top">
