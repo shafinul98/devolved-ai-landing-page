@@ -21,7 +21,7 @@ const Footer = () => {
 
       <div className="flex flex-col items-start xl:m-12 m-10 gap-10 xl:flex-row xl:justify-around">
         
-        <div className="flex flex-col items-start"
+        <div className="flex flex-col items-start xl:ml-2"
           style={{
             backgroundImage: `url(${FooterBackground.src})`,
             backgroundSize: 'contain',
@@ -117,7 +117,7 @@ const Footer = () => {
 
             <Link
             className="md:w-[2.82381rem] md:h-[2.82381rem]"
-              href={"https://discord.gg/Z2avfRQ4xc"}
+              href={"https://discord.com/invite/uS4pBdJz"}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -137,7 +137,7 @@ const Footer = () => {
 
       </div>
 
-      <div className="bg-[#E5E7EB] w-4/5 mx-auto border bottom-1" />
+      <div className="bg-[#E5E7EB] w-full mx-auto border bottom-1" />
 
       <p className="text-center my-10 text-[#1D1D1D] text-[1rem] font-normal leading-[1.25rem]">
         © Devolved AI 2023. All rights reserved.

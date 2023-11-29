@@ -51,7 +51,7 @@ const ViralLoopsForm: React.FC = () => {
         data-vl-container="join-stage"
         className="flex flex-col xl:w-full/2 h-auto items-center justify-center text-center mt-5 bg-white/70 backdrop-blur-md p-5 xl:p-10 rounded-[1rem]">
             <p className="font-normal text-[#192033] xl:text-[1rem] leading-[2.375rem] mb-4">
-              Get $50 in crypto for signing up, Plus $50 per referral¹
+              Get $25 in crypto for signing up, Plus $25 per referral¹
             </p>
             <form
               data-vl-action="join-stage#join"
@@ -63,7 +63,7 @@ const ViralLoopsForm: React.FC = () => {
                 data-vl-join-stage-target="input.email"
                 placeholder="Your email address*"
                 type="email"
-                className="w-full h-[3.75rem] px-4 xl:mr-4 border-none rounded-[0.25rem] bg-white/20 backdrop-blur-md focus:outline-none"
+                className="w-full h-[3.75rem] px-4 xl:mr-4 border-none rounded-[0.25rem] bg-white/90 backdrop-blur-md focus:outline-none"
                 required
                 onChange={(e) => setEmail(e.target.value)}
               />
