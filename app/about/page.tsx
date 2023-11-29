@@ -92,7 +92,7 @@ export default function About() {
     
     useEffect(() => {
         controls.start({ x: 600 });
-    }, []);
+    }, [controls]);
 
     return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
