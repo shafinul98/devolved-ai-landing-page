@@ -61,7 +61,7 @@ const SharingStage = () => {
           <p className="font-medium text-[#192033] text-[1rem]">
             🌟 Welcome to Devolved AI!
           </p>
-          <p className="font-normal text-[#192033] text-[1rem] hidden xl:flex">
+          <p className="font-normal text-[#192033] text-[1rem] xl:flex">
             You've taken the first step into a revolutionary AI journey. Check
             your email for more details.
           </p>
@@ -71,7 +71,7 @@ const SharingStage = () => {
           <p className="font-medium text-[#192033] text-[1rem]">
             🚀 Start Sharing & Earning!
           </p>
-          <p className="font-normal text-[#192033] text-[1rem] hidden xl:flex">
+          <p className="font-normal text-[#192033] text-[1rem] xl:flex">
             Join the movement and spread the word. Invite friends to Devolved AI
             and earn $25 in crypto for each referral. Your unique share link is
             waiting for you below. Let's innovate and grow together!
