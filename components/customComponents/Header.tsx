@@ -27,7 +27,7 @@ const Header = () => {
     { href: '/argoCoin', name: 'Argocoin' },
     { href: '/technology', name: 'Technology' },
     { href: '/community', name: 'CommUnity' },
-    { href: '/contact', name: 'Contact' },
+    { href: '/contact', name: 'Contact' }
   ]
 
   useEffect(() => {
