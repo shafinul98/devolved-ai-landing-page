@@ -28,7 +28,7 @@ export default function USDCGiveAway() {
                     cryptocurrencies. Our $25 Cryptocurrency Giveaway and Referral Program is 
                     designed to reward our early adopters and promote active community engagement.
                     </p>
-​
+
                     <p className="font-bold mb-2 text-[1.65rem]">
                     1. New User Reward:
                     </p>
@@ -42,7 +42,7 @@ export default function USDCGiveAway() {
                         verification requirements.
                         </li>
                     </ul>
-​
+
                     <p className="font-bold mb-2 text-[1.65rem]">
                     2. Referral Reward:
                     </p>
