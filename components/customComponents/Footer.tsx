@@ -71,8 +71,9 @@ const Footer = () => {
         <div className="flex flex-col items-start">
           <p className="mb-5 font-medium text-[1.25rem] leading-normal text-[#29233B]">Utility pages</p>
           <div className="flex flex-col gap-2 text-[1rem] font-normal leading-normal text-[#1D1D1D]">
-            <Link href="#">Terms and conditions</Link>
+            <Link href="#">Terms and Conditions</Link>
             <Link href="#">Privacy Policy</Link>
+            <Link href="/usdc-giveaway">USDC Giveaway and Terms</Link>
           </div>
         </div>
 
