@@ -53,7 +53,7 @@ const ViralLoopsForm: React.FC = () => {
         >
           <div className="w-[20rem] xl:w-[40rem] mx-auto">
             <p className="font-normal text-[#192033] xl:text-[1rem] leading-[2.375rem] mb-4">
-              Get $50 in crypto for signing up, Plus $50 per referral¹
+              Get $25 in crypto for signing up, Plus $25 per referral¹
             </p>
             <form
               data-vl-action="join-stage#join"

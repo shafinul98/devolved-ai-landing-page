@@ -17,7 +17,7 @@ import HorizontalStepper from "../../public/about/h-steeper.webp"
 import Nathan from "../../public/about/team/nathan.webp";
 import Nazmul from "../../public/about/team/nazmul.webp";
 import Justin from "../../public/about/team/justin.webp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, useAnimation } from 'framer-motion';
 import SignUpNow from '@/components/customComponents/SignUpNow';
 
@@ -29,7 +29,7 @@ export default function About() {
             cardFooter: [
                 "#",
                 "#",
-                "https://www.linkedin.com/in/nathan-lee-peterson",
+                "https://www.linkedin.com/in/nathan-lee-peterson/",
             ],
             cardTitle: "Nathan Peterson",
             hasFacebook: false,
@@ -42,7 +42,7 @@ export default function About() {
             cardFooter: [
                 "#",
                 "#",
-                "https://www.linkedin.com/in/md-nazmul-hossain",
+                "https://www.linkedin.com/in/md-nazmul-hossain/",
             ],
             cardTitle: "Md. Nazmul Hossain",
             hasFacebook: false,
@@ -80,6 +80,7 @@ export default function About() {
         });
     };
 
+    
     const controls = useAnimation();
     const moveLeft = () => {
         controls.start({ x: 600 }); // Adjust the distance as needed
@@ -87,6 +88,11 @@ export default function About() {
     const moveRight = () => {
         controls.start({ x: -600 }); // Adjust the distance as needed
     };
+    // Call the fetchData function inside getInitialProps
+    
+    useEffect(() => {
+        controls.start({ x: 600 });
+    }, [controls]);
 
     return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
@@ -103,8 +109,8 @@ export default function About() {
         </section>
 
         {/* Empowering Community, Democratizing AI */}
-        <section className="w-full my-20 items-center xl:container">
-            <div className="flex flex-col items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
+        <section className="flex flex-col w-full my-10 xl:my-20 items-center 3xl:container">
+            <div className="flex flex-col items-center justify-around xl:flex-row xl:px-20 relative">
                 <div className="m-5 xl:m-0">
                     <Image
                     priority
@@ -113,22 +119,22 @@ export default function About() {
                         alt="Empowering Community, Democratizing AI"
                         />
                 </div>
-                <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
+                <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-10">
                     <div className="background-image" />
-                    <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
+                    <p className="font-bold text-[0.875rem] xl:text-[1.25rem] leading-normal text-[#204FA2]">
                         Our Mission
                     </p>
-                    <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
-                        Empowering Community, Democratizing AI
+                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal text-[#192033]">
+                        Empowering Community, <br/> Democratizing AI
                     </p>
-                    <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
+                    <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[45.25rem]">
                         We stand at the forefront of a revolution. Devolved AI is not merely a 
                         tech entity; it is a beacon for a future where Artificial Intelligence 
                         is democratically powered by a diverse, global community. Our mission is 
                         to dismantle the centralization of AI technology, ensuring it serves the 
                         many instead of the few.
                     </p>
-                    <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
+                    <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[45.25rem]">
                         With our innovative Proof of Value (PoV) protocol, we encourage and reward 
                         each member's contributions, creating a thriving ecosystem where every voice 
                         can be heard, and every effort is acknowledged. Our platform is a testament to 
@@ -148,7 +154,7 @@ export default function About() {
                     top: 0;
                     left: 0;
                     position: absolute;
-                    width: 160%;
+                    width: 150%;
                     height: 100%;
                     z-index: -1;
                 }
@@ -157,23 +163,23 @@ export default function About() {
         </section>
 
         {/* Shaping a Decentralized Future */}
-        <section className="w-full my-20 items-center 3xl:container">
-            <div className="flex flex-col-reverse items-center lg:flex-row justify-around lg:px-4 xl:px-8 md:mx-16 lg:mb-20 relative">
-                <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
+        <section className="flex flex-col w-full my-10 xl:my-20 items-center 3xl:container">
+            <div className="flex flex-col-reverse items-center xl:flex-row xl:px-20 justify-around relative">
+                <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-10">
                     <div className="background-image" />
-                    <p className="font-bold text-[1.25rem] md:text-xl lg:text-xl xl:text-xl leading-normal text-[#204FA2]">
+                    <p className="font-bold text-[0.875rem] xl:text-[1.25rem] leading-normal text-[#204FA2]">
                         Our Vision
                     </p>
-                    <p className="font-bold text-[1.75rem] md:text-2xl lg:text-3xl xl:text-4xl leading-normal text-[#192033]">
-                        Shaping a Decentralized Future
+                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] text-[#192033]">
+                        Shaping a Decentralized <br/> Future
                     </p>
-                    <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
+                    <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[45.25rem]">
                         Imagine an age where Artificial General Intelligence (AGI) is as widespread 
                         and participatory as the internet itself. This is the future Devolved AI is 
                         committed to creating. A horizon where AGI is a community-managed resource, 
                         offering unparalleled accessibility and collaborative growth.
                     </p>
-                    <p className="text-[1rem] text-[#495167] font-light max-w-[45.25rem]">
+                    <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[45.25rem]">
                         We are expanding the boundaries of what's possible, moving from NLP to the 
                         vast potential of computer vision and predictive analytics. Our vision 
                         encapsulates an AGI ecosystem that is as inclusive as it is intelligent, 
@@ -319,14 +325,14 @@ export default function About() {
                 backgroundImage: `url(${Background3.src})`,
             }}>
             <div className="w-full">
-                <div className="flex flex-row items-center justify-start xl:p-20 p-2">
+                <div className="flex flex-row items-center justify-start xl:p-10 m-10 p-5">
                     {/* Heading on the left */}
-                    <div className="text-[#fff] font-bold text-[1.80rem] xl:text-[3.75rem] leading-normal">
+                    <div className="text-[#fff] font-bold text-[1.46rem] xl:text-[3.75rem] leading-normal">
                         <h1>Roadmap At A Glance</h1>
                     </div>
 
                     {/* Buttons on the right */}
-                    <div className="flex text-[#fff] ml-auto">
+                    <div className="hidden xl:flex text-[#fff] ml-auto">
                         <button className="w-10 h-10 border-2 border-[#fff] rounded-l-lg p-1 cursor-pointer border-r-0"
                         onClick={moveLeft}>
                             <svg
@@ -364,7 +370,7 @@ export default function About() {
                 </div>
 
                 {/* scroll div  */}
-                <div className="stepper flex flex-col items-center text-white m-5"
+                <div className="stepper flex flex-col items-center text-white mt-10 mb-20"
                     style={{
                         overflowX: 'scroll',
                         scrollbarWidth: 'none',  // For Firefox
@@ -375,33 +381,32 @@ export default function About() {
                         animate={controls}
                         transition={{ type: 'tween', duration: 0.5 }}>
                         <div className="lg:order-1 flex flex-col xl:ml-10 space-y-5">
-                            <div className="flex space-x-[20rem]">
+                            <div className="flex space-x-[15rem] xl:space-x-[20rem]">
                                 {/* Phase 1 content */}
-                                <div className="w-[30rem] h-auto gap-2 p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
-                                    <h1 className="text-[1.875rem] text-white font-bold mb-1">
+                                <div className="w-[17rem] xl:w-[30rem] h-[14rem] xl:h-auto gap-2 p-5 xl:p-10 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h1 className="text-[0.90rem] xl:text-[1.875rem] text-white font-bold mb-1">
                                         Phase 1
                                     </h1>
-                                    <h5 className="text-[1.5rem] text-white font-normal mb-1">
+                                    <h5 className="text-[0.80rem] xl:text-[1.5rem] text-white font-normal mb-1">
                                         Foundation and MVP Development <br/> (Q3 2023 - Q1 2024)
                                     </h5>
-                                    <p className="text-[1.125rem] leading-[1.875rem] text-[#E0E0E0] font-light">
-                                        We've laid the cornerstone by inaugurating our office and
-                                        assembling a dynamic team of visionaries. Currently, we're
-                                        channeling our efforts into the MVP, set to unveil in Q1 2024,
-                                        establishing our commitment to innovation and community
-                                        involvement.
+                                    <p className="text-[0.60rem] xl:text-[1.125rem] leading-[1.2rem] xl:leading-[1.875rem] text-[#E0E0E0] font-light">
+                                        We've laid the cornerstone by inaugurating our office and assembling a 
+                                        dynamic team of visionaries. Currently, we're channeling our efforts 
+                                        into the MVP, set to unveil in Q4 2023, establishing our commitment to 
+                                        innovation and community involvement.
                                     </p>
                                 </div>
 
                                 {/* Phase 3 content */}
-                                <div className="w-[30rem] h-auto p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
-                                    <h3 className="text-[1.875rem] text-white font-bold mb-1">
+                                <div className="w-[17rem] xl:w-[30rem] h-[14rem] xl:h-auto gap-2 p-5 xl:p-10 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h3 className="text-[0.90rem] xl:text-[1.875rem] text-white font-bold mb-1">
                                         Phase 3
                                     </h3>
-                                    <h5 className="text-[1.5rem] text-white font-normal mb-1">
+                                    <h5 className="text-[0.80rem] xl:text-[1.5rem] text-white font-normal mb-1">
                                         AI and Protocol Enhancement <br/> (By Q3 2024)
                                     </h5>
-                                    <p className="text-[1.125rem] text-[#E0E0E0] font-light leading-relaxed">
+                                    <p className="text-[0.60rem] xl:text-[1.125rem] leading-[1.2rem] xl:leading-[1.875rem] text-[#E0E0E0] font-light">
                                         As Luna 2 enters the AI arena, we'll be bolstering our systems with
                                         enhanced federated learning and a fortified PoV Protocol, all
                                         while integrating substantial GPU support from our engaged
@@ -410,36 +415,35 @@ export default function About() {
                                 </div>
 
                                 {/* Phase 5 content */}
-                                <div className="w-[30rem] h-auto p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent ml-[10rem]">
-                                    <h3 className="text-[1.875rem] text-white font-bold mb-1">
-                                        Phase 3
+                                <div className="w-[17rem] xl:w-[30rem] h-[14rem] xl:h-auto gap-2 p-5 xl:p-10 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h3 className="text-[0.90rem] xl:text-[1.875rem] text-white font-bold mb-1">
+                                        Phase 5
                                     </h3>
-                                    <h5 className="text-[1.5rem] text-white font-normal mb-1">
-                                        AI and Protocol Enhancement <br/> (By Q3 2024)
+                                    <h5 className="text-[0.80rem] xl:text-[1.5rem] text-white font-normal mb-1">
+                                        Research and Specialized Modules <br/> (By Q4 2025)
                                     </h5>
-                                    <p className="text-[1.125rem] text-[#E0E0E0] font-light leading-relaxed">
-                                        As Luna 2 enters the AI arena, we'll be bolstering our systems with
-                                        enhanced federated learning and a fortified PoV Protocol, all
-                                        while integrating substantial GPU support from our engaged
-                                        and growing community.
+                                    <p className="text-[0.60rem] xl:text-[1.125rem] leading-[1.2rem] xl:leading-[1.875rem] text-[#E0E0E0] font-light">
+                                        The introduction of specialized AI modules marks a significant leap in our capabilities, 
+                                        complemented by advanced ML research and a community expected to reach 100,000 
+                                        members.
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="flex items-center justify-center mb-0">
+                            <div className="flex items-center justify-center mb-0 mr-2">
                                 <Image src={HorizontalStepper} alt={"steps"}/>
                             </div>
 
-                            <div className="flex space-x-[15rem] ml-[20rem]">
+                            <div className="flex space-x-[20rem] ml-[18rem] xl:space-x-[25rem] xl:ml-[30rem]">
                                 {/* Phase 2 content */}
-                                <div className="w-[30rem] h-auto p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
-                                    <h3 className="text-[1.875rem] text-white font-bold mb-1">
+                                <div className="w-[17rem] xl:w-[30rem] h-[14rem] xl:h-auto gap-2 p-5 xl:p-10 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h3 className="text-[0.90rem] xl:text-[1.875rem] text-white font-bold mb-1">
                                         Phase 2
                                     </h3>
-                                    <h5 className="text-[1.5rem] text-white font-normal font-ubuntu mb-1">
+                                    <h5 className="text-[0.80rem] xl:text-[1.5rem] text-white font-normal font-ubuntu mb-1">
                                         Team and Infrastructure <br/> (By Q2 2024)
                                     </h5>
-                                    <p className="text-[1.125rem] text-[#E0E0E0] font-light leading-relaxed">
+                                    <p className="text-[0.60rem] xl:text-[1.125rem] leading-[1.2rem] xl:leading-[1.875rem] text-[#E0E0E0] font-light">
                                         With our MVP propelling us forward, the next milestone involves
                                         expanding our talent pool and strengthening our infrastructure.
                                         This sets the stage for both technological advancement and a
@@ -448,14 +452,14 @@ export default function About() {
                                 </div>
 
                                 {/* Phase 4 content */}
-                                <div className="w-[30rem] h-auto p-5 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
-                                    <h3 className="text-[1.875rem] text-white font-bold">
+                                <div className="w-[17rem] xl:w-[30rem] h-[14rem] xl:h-auto gap-2 p-5 xl:p-10 border border-gray-500 dark:border-gray-700 rounded-md bg-transparent">
+                                    <h3 className="text-[0.90rem] xl:text-[1.875rem] text-white font-bold">
                                         Phase 4
                                     </h3>
-                                    <h5 className="text-[1.5rem] text-white font-normal">
+                                    <h5 className="text-[0.80rem] xl:text-[1.5rem] text-white font-normal">
                                         Data and Expansion <br/> (By Q1 2025)
                                     </h5>
-                                    <p className="text-[1.125rem] text-[#E0E0E0] font-light leading-relaxed">
+                                    <p className="text-[0.60rem] xl:text-[1.125rem] leading-[1.2rem] xl:leading-[1.875rem] text-[#E0E0E0] font-light">
                                         Optimizing our data management and expanding our GPU
                                         network will be our focus, as we strive for superior efficiency
                                         and prepare our platform for more complex AI tasks.
@@ -520,9 +524,9 @@ export default function About() {
 
         {/* Ready to be a part of AI */}
         <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5">
-                <SignUpNow/>
+            <SignUpNow/>
         </section>
-        <div className="bg-[#E5E7EB] w-4/5 mx-auto border bottom-1" />
+        <div className="bg-[#E5E7EB] w-4/6 mx-auto border bottom-1" />
     </main>
     );
 }

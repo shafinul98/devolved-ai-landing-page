@@ -39,22 +39,22 @@ export default function Home() {
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between p-0 md:p-0">
       {/* hero section */}
-      <section className="w-full h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+      <section className="w-full xl:h-screen h-[67rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
         style={{ backgroundImage: `url(${HeroImage.src})` }}>
-          <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-10">
+          <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
               <div className="text-center">
-                  <h1 className="font-bold text-[2.25rem] xl:text-[4.8125rem] leading-normal mt-5 xl:mb-5 text-[#192033] xl:max-w-[82.78975rem]">
+                  <h1 className="font-bold text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] xl:text-[4.8125rem] leading-normal xl:mb-5 text-[#192033] xl:max-w-[82.78975rem]">
                     AI has evolved.<br />
                     So should its ownership.
                   </h1>
-                  <p className="font-normal text-[1.25rem] xl:text-[1.875rem] leading-[1.875rem] xl:leading-[2.375rem] text-[#495167] m-5 xl:m-5 max-w-[24rem] xl:max-w-[71.375rem]">
+                  <p className="font-normal text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[1.875rem] leading-[1.875rem] xl:leading-[2.375rem] text-[#495167] m-5 xl:m-5 max-w-[24rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[71.375rem]">
                     Welcome to AI owned by you, the user. Built on blockchain
                     technology, Devolved AI embodies trust, transparency, and
                     community governance. Vote, earn rewards, and own a stake in
                     the future of AI—all powered by Argocoin.
                   </p>
                   <div className="justify-center">
-                      <GetReferral />
+                    <GetReferral />
                   </div>
               </div>
           </div>
@@ -73,16 +73,16 @@ export default function Home() {
           </div>
           <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-0">
             <div className="background-image" />
-            <p className="font-bold text-[1.75rem] xl:text-[3.75rem] leading-normal text-[#192033]">
+            <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal text-[#192033]">
               What Drives Devolved AI?
             </p>
             <div className="mt-2 mb-2">
-              <p className="text-[1rem] xl:text-[1.375rem] text-[#495167] leading-[1.875rem] font-light max-w-[45.25rem]">
+              <p className="text-[1.125rem] xl:text-[1.375rem] text-[#495167] leading-[1.875rem] font-light max-w-[45.25rem]">
                 We are more than just a platform; we are a movement aimed at redefining the relationship between AI 
                 and humanity. By using a decentralized approach, we ensure that our AI ecosystem is transparent, 
                 secure, and most importantly, governed by you.
               </p>
-              <p className="text-[1rem] xl:text-[1.375rem] text-[#495167] leading-[1.875rem] font-light max-w-[45.25rem] mt-3">
+              <p className="text-[1.125rem] xl:text-[1.375rem] text-[#495167] leading-[1.875rem] font-light max-w-[45.25rem] mt-3">
                 Our mission is to create an AI that is powered by the people, for the people, 
                 ensuring shared prosperity and ethical development. Be a part of this revolutionary journey.
               </p>
@@ -122,17 +122,17 @@ export default function Home() {
               backgroundRepeat: 'no-repeat'
               }}>
 
-              <div className="flex flex-col text-center max-w-xxl m-5 xl:mt-10">
+              <div className="flex flex-col text-center max-w-xxl mt-10 xl:mt-10">
                   <p className="text-[1.75rem] xl:text-[3.75rem] leading-normal text-[#192033] font-bold">
                     Core Principles of Devolved AI
                   </p>
               </div>
-              <div className="grid grid-cols-1 xl:grid-cols-3 gap-3 p-5 xl:mb-10">
+              <div className="grid grid-cols-1 xl:grid-cols-3 gap-3 p-2 mb-10 xl:mb-10">
                   
                   {/* Community Governed */}
                   <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
                       <Image priority className="inset-0 w-[3.75rem] h-auto" src={CommunityGovernedIcon} alt="IntegrityIcon"/>
-                      <p className="text-[1.25rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
+                      <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
                         Community Governed
                       </p>
                       <p className="text-[1.125rem] xl:text-[1.125rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-2">
@@ -144,7 +144,7 @@ export default function Home() {
                   {/* Shared Prosperity */}
                   <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
                       <Image priority className="inset-0 w-[3.75rem] h-auto" src={SharedProsperityIcon} alt="InnovationIcon" />
-                      <p className="text-[1.25rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
+                      <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
                         Shared Prosperity
                       </p>
                       <p className="text-[1.125rem] xl:text-[1.125rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-2">
@@ -156,7 +156,7 @@ export default function Home() {
                   {/* Blockchain-based */}
                   <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
                       <Image priority className="w-[3.75rem] h-auto" src={BlockchainBasedIcon} alt="InclusivityIcon" />
-                      <p className="text-[1.25rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
+                      <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
                         Blockchain-based
                       </p>
                       <p className="text-[1.125rem] xl:text-[1.125rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-2">
@@ -185,7 +185,7 @@ export default function Home() {
                   <p className="font-bold text-[1.75rem] xl:text-[3.75rem] leading-normal text-[#192033]">
                     Argocoin: The Essence of Community
                   </p>
-                  <p className="text-[0.90rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[67.8125rem]">
+                  <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[67.8125rem]">
                     Argocoin (AGC) is your digital passport to Devolved AI's ecosystem. 
                     It's not just a digital asset;
                     it's your voting ticket, your reward, and your stake in the community.
@@ -240,8 +240,8 @@ export default function Home() {
               bottom: 0;
               right: 0;
               position: absolute;
-              width: 150%;
-              height: 110%;
+              width: 140%;
+              height: 90%;
               z-index: -1;
             }
           `}
@@ -287,8 +287,8 @@ export default function Home() {
             top: 0;
             left: 0;
             position: absolute;
-            width: 130%;
-            height: 80%;
+            width: 140%;
+            height: 70%;
             z-index: -1;
           }
   `}</style>
@@ -303,8 +303,8 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5 3xl:container">
         <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
           <p className="text-[0.90rem] xl:text-[1rem] leading-[1.875rem] text-center xl:text-left font-normal text-[#323131] max-w-[80.625rem]">
-            ¹ Devolved AI invites new users to earn $50 in AGC upon successful verification, 
-            plus an additional $50 for each active referral. The commencement of rewards is subject 
+            ¹ Devolved AI invites new users to earn $25 in AGC upon successful verification, 
+            plus an additional $25 for each active referral. The commencement of rewards is subject 
             to the market cap's ability to feasibly sustain disbursements. Devolved AI retains the 
             discretion to alter or discontinue the promotion in response to market and regulatory 
             conditions. Offer activation, modifications, and eligibility are contingent on user 
@@ -313,7 +313,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-[#E5E7EB] w-4/5 mx-auto border bottom-1" />
+      <div className="bg-[#E5E7EB] w-4/6 mx-auto border bottom-1" />
     </main>
   );
 }
