@@ -17,22 +17,22 @@ export default function USDCGiveAway() {
                 </div>
             </section>
 
-            <section className="w-full xl:my-10 items-center bg-gray-100 3xl:container">
-                <div className="flex flex-col items-start justify-around px-4 py-4 xl:px-8 relative">
+            <section className="w-full/2 xl:my-20 mb-10 items-center bg-gray-100">
+                <div className="flex flex-col items-start justify-around px-4 xl:px-16 relative">
 
-                    <h1 className="text-3xl font-bold mb-4">
+                    <p className="font-bold mt-2 mb-2 text-[2rem] max-w-[80rem]">
                     Devolved AI: $25 Cryptocurrency Giveaway and Referral Program Terms
-                    </h1>
-                    <p className="mb-4">
+                    </p>
+                    <p className="mb-4 font-normal text-[1.15rem] leading-[1.5rem] xl:leading-[1.75rem] max-w-[70rem]">
                     Welcome to Devolved AI, where we integrate the thrilling realms of AI and 
                     cryptocurrencies. Our $25 Cryptocurrency Giveaway and Referral Program is 
                     designed to reward our early adopters and promote active community engagement.
                     </p>
-​
-                    <h2 className="text-2xl font-bold mb-2">
+
+                    <p className="font-bold mb-2 text-[1.65rem]">
                     1. New User Reward:
-                    </h2>
-                    <ul className="list-disc list-inside mb-4">
+                    </p>
+                    <ul className="list-disc list-inside mb-4 font-normal text-[1.15rem] leading-[1.5rem] xl:leading-[1.75rem] max-w-[80rem]">
                         <li>
                         Earn $25 in AGC: New users completing the verification process on 
                         Devolved AI are eligible to receive $25 in AGC (Argocoin).
@@ -42,11 +42,11 @@ export default function USDCGiveAway() {
                         verification requirements.
                         </li>
                     </ul>
-​
-                    <h2 className="text-2xl font-bold mb-2">
+
+                    <p className="font-bold mb-2 text-[1.65rem]">
                     2. Referral Reward:
-                    </h2>
-                    <ul className="list-disc list-inside mb-4">
+                    </p>
+                    <ul className="list-disc list-inside mb-4 font-normal text-[1.15rem] leading-[1.5rem] xl:leading-[1.75rem] max-w-[80rem]">
                         <li>
                         Earn and Give $25 per Referral: Earn $25 in AGC for each successful referral. 
                         Each referred user using your link and meeting the criteria also receives $25 in AGC.
@@ -71,10 +71,10 @@ export default function USDCGiveAway() {
                         </li>
                     </ul>
 
-                    <h2 className="text-2xl font-bold mb-2">
+                    <p className="font-bold mb-2 text-[1.65rem]">
                     3. Terms of Disbursement:
-                    </h2>
-                    <ul className="list-disc list-inside mb-4">
+                    </p>
+                    <ul className="list-disc list-inside mb-4 font-normal text-[1.15rem] leading-[1.5rem] xl:leading-[1.75rem] max-w-[80rem]">
                         <li>
                         Market Cap Dependency: Rewards are contingent on the AGC market cap's 
                         ability to support these payouts.
@@ -85,10 +85,10 @@ export default function USDCGiveAway() {
                         </li>
                     </ul>
 
-                    <h2 className="text-2xl font-bold mb-2">
+                    <p className="font-bold mb-2 text-[1.65rem]">
                     4. Program Discretion:
-                    </h2>
-                    <ul className="list-disc list-inside mb-4">
+                    </p>
+                    <ul className="list-disc list-inside mb-4 font-normal text-[1.15rem] leading-[1.5rem] xl:leading-[1.75rem] max-w-[80rem]">
                         <li>
                         Modification and Discontinuation: Devolved AI reserves the right to alter or 
                         discontinue the program based on market and regulatory conditions.
@@ -99,10 +99,10 @@ export default function USDCGiveAway() {
                         </li>
                     </ul>
 
-                    <h2 className="text-2xl font-bold mb-2">
+                    <p className="font-bold mb-2 text-[1.65rem]">
                     5. Regulatory Compliance:
-                    </h2>
-                    <ul className="list-disc list-inside mb-4">
+                    </p>
+                    <ul className="list-disc list-inside mb-4 font-normal text-[1.15rem] leading-[1.5rem] xl:leading-[1.75rem] max-w-[80rem]">
                         <li>
                         Void Where Prohibited: Not valid where prohibited by law.
                         </li>
@@ -111,10 +111,10 @@ export default function USDCGiveAway() {
                         </li>
                     </ul>
 
-                    <h2 className="text-2xl font-bold mb-2">
+                    <p className="font-bold mb-2 text-[1.65rem]">
                     6. Program Commencement and Termination:
-                    </h2>
-                    <ul className="list-disc list-inside mb-4">
+                    </p>
+                    <ul className="list-disc list-inside mb-4 font-normal text-[1.15rem] leading-[1.5rem] xl:leading-[1.75rem] max-w-[80rem]">
                         <li>
                         Market Cap Dependent: Reward distribution heavily relies on the Argocoin market cap.
                         </li>
@@ -124,10 +124,10 @@ export default function USDCGiveAway() {
                         </li>
                     </ul>
 
-                    <h2 className="text-2xl font-bold mb-2">
+                    <p className="font-bold mb-2 text-[1.65rem]">
                     7. Fraud Prevention and User Verification:
-                    </h2>
-                    <ul className="list-disc list-inside mb-4">
+                    </p>
+                    <ul className="list-disc list-inside mb-4 font-normal text-[1.15rem] leading-[1.5rem] xl:leading-[1.75rem] max-w-[80rem]">
                         <li>
                         Viral Loops Service Utilization: Devolved AI uses Viral Loops for managing 
                         this referral program.
@@ -142,7 +142,7 @@ export default function USDCGiveAway() {
                         </li>
                     </ul>
 
-                    <p className="mb-4">
+                    <p className="mb-4 font-normal text-[1.15rem] leading-[1.5rem] xl:leading-[1.75rem] max-w-[80rem]">
                     We are excited to have you join us in this innovative journey at the intersection 
                     of AI and cryptocurrency. Devolved AI is committed to transparency and rewarding 
                     our community.
