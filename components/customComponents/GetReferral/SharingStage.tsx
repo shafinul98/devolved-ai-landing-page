@@ -282,6 +282,8 @@ const SharingStage = () => {
               variant="faded"
               aria-label="Share via Email"
               className="icon-button text-[1rem] w-[3rem] h-[2rem] bg-[#FF6F00] text-white rounded-md"
+              data-vl-sharing-stage-target="shareButton" // Add this line
+              data-vl-share-channel="email" // Add this line
               onClick={() =>
                 (window.location.href = `mailto:?subject=Check out this cool website&body=${encodeURIComponent(
                   "https://vrlps.co/" + referralCode + "/em"
