@@ -26,9 +26,9 @@ export default function ArgoCoin() {
             {/* hero section */}
             <section className="w-full xl:h-screen h-[67rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
             style={{ backgroundImage: `url(${HeroImage.src})`}}>
-                <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-10">
+                <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
                     <div className="text-center">
-                        <h1 className="font-bold text-[2.25rem] xl:text-[4.8125rem] leading-normal mt-5 xl:mb-5 text-[#192033] xl:max-w-[82.78975rem]">
+                        <h1 className="font-bold text-[2.25rem] xl:text-[4.8125rem] leading-normal xl:mb-5 text-[#192033] xl:max-w-[82.78975rem]">
                             Argocoin:<br/>
                             Fueling the AI Revolution
                         </h1>
