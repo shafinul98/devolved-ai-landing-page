@@ -93,3 +93,7 @@
 .teammembercard::-webkit-scrollbar {
   display: none;
 }
+
+.rewards::-webkit-scrollbar {
+  display: none;
+}
