@@ -11,10 +11,10 @@ import {
   FaClone,
   FaCheckCircle,
   FaArrowRight,
-  FaSpinner,
   FaArrowLeft
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import RewardsWidget from "./RewardsWidget";
 const CAMPAIGN_ID = "EeQTn0VkqudBHfkE9leVA0AcX70";
 
 const SharingStage = () => {
@@ -305,50 +305,15 @@ const SharingStage = () => {
       <motion.div
         variants={widgetVariants}
         className={`rewardsWidget ${showRewards && !showSharing ? 'block' : 'hidden'}`}>
-        <div className="flex flex-col xl:w-full/2 h-auto gap-2 items-center mt-5 justify-center bg-white/70 backdrop-blur-md p-4 rounded-[1rem]">
-          <div className="backButton flex gap-4">
-            <Button color="success" startContent={<FaArrowLeft/>} onClick={handleBackToSharingButtonClick}>
-              Back To Sharing
-            </Button>  
+          <div className="flex flex-col xl:w-full/2 h-auto gap-2 items-center mt-5 justify-center bg-white/70 backdrop-blur-md p-4 rounded-[1rem]">
+            <div className="flex">
+              <Button color="success" startContent={<FaArrowLeft/>} onClick={handleBackToSharingButtonClick}>
+                Back To Sharing
+              </Button>
+            </div>
+            <RewardsWidget/>
           </div>
-          <div className="text-center max-w-sm">
-            <p className="font-normal text-[#192033] text-[1rem] xl:flex">
-                  Here you can see the rewards
-                  you won when your friends
-                  signed-up
-            </p>
-          </div>
-
-          <div className='border-2 border-cyan-950 flex flex-col p-3'>
-              <p className='font-normal'>Referrals</p>
-              <p className='font-bold'>42</p>
-          </div>
-
-          <div className='pair flex flex-col text-center max-w-sm gap-2'>
-              <Input
-                  readOnly
-                  type="text"
-                  defaultValue="Pair of Socks"
-                  placeholder=""
-                  labelPlacement="outside"
-                  className="border-2 border-cyan-950 rounded-md p-3 w-auto h-auto"
-                  startContent={
-                      <FaCheckCircle className="text-2xl mr-5 text-default-400 pointer-events-none flex-shrink-0" />
-                  }
-                  />
-                  <Input
-                  readOnly
-                  type="text"
-                  defaultValue="Infinite supply of coffee"
-                  placeholder=""
-                  labelPlacement="outside"
-                  className="border-2 border-cyan-950 rounded-md p-3 w-auto h-auto"
-                  startContent={
-                      <FaSpinner className="text-2xl mr-5 text-default-400 pointer-events-none flex-shrink-0" />
-                  }
-                  />
-          </div>
-        </div>
+          
       </motion.div>
       
     </motion.div>
