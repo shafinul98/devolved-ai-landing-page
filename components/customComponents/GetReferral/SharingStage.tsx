@@ -95,7 +95,7 @@ const SharingStage = () => {
 
           <div className="rewardsButton flex gap-4">
             <Button className="p-2 bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-            color="success" endContent={<FaArrowRight/>} onClick={handleGoToRewardsButtonClick}>
+            endContent={<FaArrowRight/>} onClick={handleGoToRewardsButtonClick}>
               Go To Rewards
             </Button>  
           </div>
@@ -309,7 +309,7 @@ const SharingStage = () => {
           <div className="flex flex-col xl:w-full/2 h-auto gap-2 items-center mt-5 justify-center bg-white/70 backdrop-blur-md p-4 rounded-[1rem]">
             <div className="flex">
               <Button className="p-2 bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-              color="success" startContent={<FaArrowLeft/>} onClick={handleBackToSharingButtonClick}>
+              startContent={<FaArrowLeft/>} onClick={handleBackToSharingButtonClick}>
                 Back To Sharing
               </Button>
             </div>
