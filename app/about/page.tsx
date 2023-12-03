@@ -38,7 +38,7 @@ export default function About() {
         },
         {
             cardImage: Nazmul,
-            cardDescription: "COO",
+            cardDescription: "Co-Founder & COO",
             cardFooter: [
                 "#",
                 "#",
