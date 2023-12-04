@@ -16,37 +16,15 @@ import SectionBg3 from "@/public/home/section-bg-3.webp"
 import GetReferral from "@/components/customComponents/GetReferral/ViralLoopsForm"
 import { EarlyAccessForm } from "@/components/customComponents/EarlyAccessForm"
 import SignUpNow from '@/components/customComponents/SignUpNow'
-import DisCordImageNoHover from "@/public/Join_us_on_discord_button_no_hover.webp"
-import DisCordImageHover from "@/public/Join_us_on_discord_button_hover.webp"
-import { useState } from "react"
 
 export default function ArgoCoin() {
-    const [discordImage, setDiscordImage] = useState(DisCordImageNoHover);
-
-    const handleDiscordButtonClick = () => {
-        setDiscordImage(DisCordImageHover);
-        window.open('https://discord.gg/V4fpatwpAC', '_blank');
-    };
-    const handleDiscordJoinUsButtonClick = () => {
-        window.open('https://discord.gg/TXkvaD4bqu', '_blank');
-    };
-    
-
-    const handleMouseEnter = () => {
-        setDiscordImage(DisCordImageHover);
-    };
-
-    const handleMouseLeave = () => {
-        setDiscordImage(DisCordImageNoHover);
-    };
-
     const handleButtonClick = () => {
         window.open('https://devolved-ai.gitbook.io/devolved-ai-whitepaper/', '_blank');
     };
     return (
         <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
             {/* hero section */}
-            <section className="w-full xl:h-screen h-[55rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+            <section className="w-full xl:h-screen h-[67rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
             style={{ backgroundImage: `url(${HeroImage.src})`}}>
                 <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-3">
                     <div className="text-center">
@@ -59,18 +37,8 @@ export default function ArgoCoin() {
                             the native token on our Layer 1 blockchain, AGC isn’t just a digital currency – it's the
                             driving force behind a new era of AI-powered breakthroughs.
                         </p>
-                        <div className="justify-center pt-2 xl:pt-2">
-                            {/* <GetReferral /> */}
-                            <p className="font-normal text-[1.125rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[1.275rem] leading-[1.875rem] xl:leading-[2.375rem] text-[#495167] m-5 xl:m-3 max-w-[24rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[71.375rem]">
-                                Be Part of the Genesis: Join our Discord to shape the future of Devolved AI. 
-                                Engage, contribute, and grow with our community from the ground up.
-                            </p>
-                            <button className="button w-[20rem] h-auto"
-                            onClick={handleDiscordButtonClick}
-                            onMouseEnter={handleMouseEnter} 
-                            onMouseLeave={handleMouseLeave}>
-                                <Image priority src={discordImage} alt="Discord Image" />
-                            </button>
+                        <div className="justify-center">
+                            <GetReferral />
                         </div>
                     </div>
                 </div>
@@ -295,10 +263,11 @@ export default function ArgoCoin() {
                             contributing to a platform that is truly community-driven and transparent.
                         </p>
                         <div className="hidden xl:flex justify-center">
-                            <button onClick={handleDiscordJoinUsButtonClick}
-                            className="uppercase bg-[#A9A3B2] font-bold leading-normal text-white text-[1rem] rounded-[0.625rem] xl:w-[14.5625rem] xl:h-[3.125rem] mt-5">
-                                join us on discord
+                            <EarlyAccessForm>
+                            <button className="uppercase bg-[#A9A3B2] font-bold leading-normal text-white text-[1rem] rounded-[0.625rem] xl:w-[14.5625rem] xl:h-[3.125rem] mt-5">
+                                JOIN THE REVOLUTION
                             </button>
+                            </EarlyAccessForm>
                         </div>
                     </div>
                 </div>

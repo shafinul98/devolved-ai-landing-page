@@ -30,6 +30,10 @@ const Header = () => {
     { href: '/contact', name: 'Contact' }
   ]
 
+  const handleDiscordButtonClick = () => {
+    window.open('https://discord.gg/TXkvaD4bqu', '_blank');
+  };
+
   useEffect(() => {
     // Function to handle clicks outside the menu
     const handleClickOutside = (event: MouseEvent) => {
@@ -109,12 +113,18 @@ const Header = () => {
               </div>
             ))}
             {/* Join the revolution button (Hidden on MD and below)*/}
-            <div className="md:hidden lg:hidden xl:flex">
+            {/* <div className="md:hidden lg:hidden xl:flex">
               <EarlyAccessForm>
                 <button className="text-[1rem] text-[1D1D1D] font-bold leading-normal border-black border-2 rounded-[0.625rem] xl:w-[15.5625rem] xl:h-[3.125rem] transition-all hover:bg-black hover:text-white">
                   JOIN THE REVOLUTION
                 </button>
               </EarlyAccessForm>
+            </div> */}
+            <div className="md:hidden lg:hidden xl:flex">
+                <button onClick={handleDiscordButtonClick}
+                className="uppercase text-[1rem] text-[1D1D1D] font-bold leading-normal border-black border-2 rounded-[0.625rem] xl:w-[15.5625rem] xl:h-[3.125rem] transition-all hover:bg-black hover:text-white">
+                  join us on discord
+                </button>
             </div>
           </div>
 

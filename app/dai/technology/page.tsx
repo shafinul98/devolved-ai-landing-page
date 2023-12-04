@@ -1,6 +1,6 @@
 "use client"
 
-import Image from "next/image"
+import Image from "next/image";
 import HeroImage from "@/public/technology/hero-image.webp"
 import Image1 from "@/public/technology/image1.webp"
 import Background1 from "@/public/technology/bg1.webp"
