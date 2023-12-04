@@ -13,29 +13,12 @@ import SectionBg5 from "@/public/home/section-bg-5.webp"
 import CommunityGovernedIcon from "@/public/home/community_governed.svg"
 import SharedProsperityIcon from "@/public/home/shared_prosperity.svg"
 import BlockchainBasedIcon from "@/public/home/blockchain_based.svg"
+import GetReferral from "@/components/customComponents/GetReferral/ViralLoopsForm"
 import { useRouter } from 'next/navigation'
-import DisCordImageNoHover from "@/public/Join_us_on_discord_button_no_hover.webp"
-import DisCordImageHover from "@/public/Join_us_on_discord_button_hover.webp"
-import { useState } from "react"
-import JoinUsonDiscord from "@/components/customComponents/JoinUsonDiscord"
+import SignUpNow from "@/components/customComponents/SignUpNow"
 
 export default function Home() {
   const router = useRouter();
-
-  const [discordImage, setDiscordImage] = useState(DisCordImageNoHover);
-
-  const handleDiscordButtonClick = () => {
-    setDiscordImage(DisCordImageHover);
-    window.open('https://discord.gg/wwtpSumZmc', '_blank');
-  };
-
-  const handleMouseEnter = () => {
-    setDiscordImage(DisCordImageHover);
-  };
-
-  const handleMouseLeave = () => {
-    setDiscordImage(DisCordImageNoHover);
-  };
 
   const handleArgoCoinClick = () => {
     router.push('/argoCoin');
@@ -70,18 +53,8 @@ export default function Home() {
                     community governance. Vote, earn rewards, and own a stake in
                     the future of AI—all powered by Argocoin.
                   </p>
-                  <div className="justify-center pt-2 xl:pt-3">
-                    {/* <GetReferral /> */}
-                      <p className="font-normal text-[1.125rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[1.275rem] leading-[1.875rem] xl:leading-[2.375rem] text-[#495167] m-5 xl:m-3 max-w-[24rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[71.375rem]">
-                          Be Part of the Genesis: Join our Discord to shape the future of Devolved AI. 
-                          Engage, contribute, and grow with our community from the ground up.
-                      </p>
-                      <button className="button w-[15.4675rem] h-auto"
-                      onClick={handleDiscordButtonClick}
-                      onMouseEnter={handleMouseEnter} 
-                      onMouseLeave={handleMouseLeave}>
-                        <Image priority src={discordImage} alt="Discord Image" />
-                      </button>
+                  <div className="justify-center">
+                    <GetReferral />
                   </div>
               </div>
           </div>
@@ -323,7 +296,7 @@ export default function Home() {
 
       {/* Ready to be a part of AI */}
       <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5 3xl:container">
-        <JoinUsonDiscord/>
+        <SignUpNow/>
       </section>
 
       {/* Referel Text */}

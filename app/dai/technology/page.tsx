@@ -1,6 +1,6 @@
 "use client"
 
-import Image from "next/image"
+import Image from "next/image";
 import HeroImage from "@/public/technology/hero-image.webp"
 import Image1 from "@/public/technology/image1.webp"
 import Background1 from "@/public/technology/bg1.webp"
@@ -10,7 +10,7 @@ import StandardMode from "@/public/technology/standard-mode.webp"
 import LookingBeyond from "@/public/technology/looking-beyond.webp"
 import Background3 from "@/public/technology/bg3.webp"
 import Background4 from "@/public/technology/bg4.webp"
-import JoinUsonDiscord from "@/components/customComponents/JoinUsonDiscord"
+import SignUpNow from "@/components/customComponents/SignUpNow"
 
 export default function Technology() {
     const handleButtonClick = () => {
@@ -221,7 +221,7 @@ export default function Technology() {
 
         {/* Ready to be a part of AI */}
         <section className="flex flex-col items-center justify-center mt-[5rem] my-20 3xl:container">
-            <JoinUsonDiscord/>
+            <SignUpNow/>
         </section>
 
         <div className="bg-[#E5E7EB] w-4/6 mx-auto border bottom-1" />

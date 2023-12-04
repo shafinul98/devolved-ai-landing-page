@@ -1,6 +1,6 @@
 "use client"
 
-import Image from "next/image"
+import Image from "next/image";
 import HeroImage from "@/public/about/hero-image.webp"
 import Image1 from "@/public/about/image1.webp"
 import Background1 from "@/public/about/bg1.webp"
@@ -12,14 +12,14 @@ import InnovationIcon from "@/public/about/innovation_icon.svg"
 import InclusivityIcon from "@/public/about/inclusivity_icon.svg"
 import SectionBg1 from "@/public/about/section-bg-1.webp"
 import SectionBg2 from "@/public/about/section-bg-2.webp"
-import TeamMemberCard from "@/components/customComponents/TeamMemberCard"
+import TeamMemberCard from "@/components/customComponents/TeamMemberCard";
 import HorizontalStepper from "@/public/about/h-steeper.webp"
-import Nathan from "@/public/about/team/nathan.webp"
-import Nazmul from "@/public/about/team/nazmul.webp"
-import Justin from "@/public/about/team/justin.webp"
-import { useEffect, useState } from "react"
-import { motion, useAnimation } from 'framer-motion'
-import JoinUsonDiscord from "@/components/customComponents/JoinUsonDiscord"
+import Nathan from "@/public/about/team/nathan.webp";
+import Nazmul from "@/public/about/team/nazmul.webp";
+import Justin from "@/public/about/team/justin.webp";
+import { useEffect, useState } from "react";
+import { motion, useAnimation } from 'framer-motion';
+import SignUpNow from '@/components/customComponents/SignUpNow';
 
 export default function About() {
     const teamMembers = [
@@ -524,7 +524,7 @@ export default function About() {
 
         {/* Ready to be a part of AI */}
         <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5">
-            <JoinUsonDiscord/>
+            <SignUpNow/>
         </section>
         <div className="bg-[#E5E7EB] w-4/6 mx-auto border bottom-1" />
     </main>

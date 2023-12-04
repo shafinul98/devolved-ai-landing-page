@@ -4,7 +4,6 @@ import HomeImage1 from "../../public/home/1.webp"
 import GetReferral from "./GetReferral/ViralLoopsForm"
 
 export default function SignUpNow () {
-
     return (
         <div className="flex flex-col gap-5 p-3 md:p-6 rounded-md shadow-md items-center justify-center w-[20.875rem] h-auto xl:w-[66.875rem]"
             style={{

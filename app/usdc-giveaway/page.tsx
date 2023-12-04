@@ -1,6 +1,6 @@
 "use client"
 
-import HeroImage from "../../public/contact/hero-image.webp"
+import HeroImage from "@/public/contact/hero-image.webp"
 
 export default function USDCGiveAway() {
     return (

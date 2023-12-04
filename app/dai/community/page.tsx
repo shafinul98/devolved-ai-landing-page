@@ -1,6 +1,6 @@
 "use client"
 
-import Image from "next/image"
+import Image from "next/image";
 import HeroImage from "@/public/technology/hero-image.webp"
 import Image1 from "@/public/community/image1.webp"
 import Background1 from "@/public/technology/bg1.webp"
@@ -19,8 +19,8 @@ import EarningIcon from "@/public/community/earning_and_utilizing_AGC.svg"
 import Step1 from "@/public/community/step1.svg"
 import Step2 from "@/public/community/step2.svg"
 import Step3 from "@/public/community/step3.svg"
-import CoreDetailsCard from "@/components/customComponents/CoreDetailsCard"
-import JoinUsonDiscord from "@/components/customComponents/JoinUsonDiscord"
+import CoreDetailsCard from "@/components/customComponents/CoreDetailsCard";
+import SignUpNow from "@/components/customComponents/SignUpNow";
 
 export default function Community() {
     const handleButtonClick = () => {
@@ -374,7 +374,7 @@ export default function Community() {
 
         {/* Ready to be a part of AI */}
         <section className="flex flex-col w-full my-20 items-center justify-center 3xl:container">
-            <JoinUsonDiscord/>
+            <SignUpNow/>
         </section>
 
         <div className="bg-[#E5E7EB] w-4/6 mx-auto border bottom-1" />
