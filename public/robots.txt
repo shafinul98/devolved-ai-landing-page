@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /api/
+Disallow: /_next/static/
+Allow: /
+
+Sitemap: https://www.devolvedai.com/sitemap.xml
+
