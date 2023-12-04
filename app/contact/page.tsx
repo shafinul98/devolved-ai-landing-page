@@ -1,12 +1,12 @@
 "use client"
 
-import Image from "next/image";
+import Image from "next/image"
 import HeroImage from "@/public/contact/hero-image.webp"
 import Image1 from "@/public/contact/image1.webp"
 import Background2 from "@/public/contact/bg2.webp"
-import Link from "next/link";
-import { FaDiscord, FaFacebook, FaReddit, FaTelegram, FaTwitter } from "react-icons/fa";
-import ContactUsForm from "@/components/customComponents/ContactUsForm";
+import Link from "next/link"
+import { FaDiscord, FaFacebook, FaReddit, FaTelegram, FaTwitter } from "react-icons/fa"
+import ContactUsForm from "@/components/customComponents/ContactUsForm"
 
 export default function Contact() {
     return (

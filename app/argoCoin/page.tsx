@@ -1,7 +1,7 @@
 "use client"
 
-import React from 'react';
-import Image from "next/image";
+import React from 'react'
+import Image from "next/image"
 import HeroImage from "@/public/argoCoin/hero-image.webp"
 import Image1 from "@/public/argoCoin/image1.webp"
 import TextBG from "@/public/argoCoin/text-bg.webp"
@@ -13,12 +13,10 @@ import Image5 from "@/public/argoCoin/image5.webp"
 import Image6 from "@/public/argoCoin/image6.webp"
 import Image7 from "@/public/argoCoin/image7.webp"
 import SectionBg3 from "@/public/home/section-bg-3.webp"
-import GetReferral from "@/components/customComponents/GetReferral/ViralLoopsForm"
-import { EarlyAccessForm } from "@/components/customComponents/EarlyAccessForm"
-import SignUpNow from '@/components/customComponents/SignUpNow'
 import DisCordImageNoHover from "@/public/Join_us_on_discord_button_no_hover.webp"
 import DisCordImageHover from "@/public/Join_us_on_discord_button_hover.webp"
 import { useState } from "react"
+import JoinUsonDiscord from '@/components/customComponents/JoinUsonDiscord'
 
 export default function ArgoCoin() {
     const [discordImage, setDiscordImage] = useState(DisCordImageNoHover);
@@ -65,7 +63,7 @@ export default function ArgoCoin() {
                                 Be Part of the Genesis: Join our Discord to shape the future of Devolved AI. 
                                 Engage, contribute, and grow with our community from the ground up.
                             </p>
-                            <button className="button w-[20rem] h-auto"
+                            <button className="button w-[15.4675rem] h-auto"
                             onClick={handleDiscordButtonClick}
                             onMouseEnter={handleMouseEnter} 
                             onMouseLeave={handleMouseLeave}>
@@ -446,7 +444,7 @@ export default function ArgoCoin() {
 
             {/* Ready to be a part of AI */}
             <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5">
-                <SignUpNow/>
+                <JoinUsonDiscord/>
             </section>
 
             <div className="bg-[#E5E7EB] w-4/6 mx-auto border bottom-1" />

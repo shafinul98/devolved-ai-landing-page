@@ -14,10 +14,10 @@ import CommunityGovernedIcon from "@/public/home/community_governed.svg"
 import SharedProsperityIcon from "@/public/home/shared_prosperity.svg"
 import BlockchainBasedIcon from "@/public/home/blockchain_based.svg"
 import { useRouter } from 'next/navigation'
-import SignUpNow from "@/components/customComponents/SignUpNow"
 import DisCordImageNoHover from "@/public/Join_us_on_discord_button_no_hover.webp"
 import DisCordImageHover from "@/public/Join_us_on_discord_button_hover.webp"
 import { useState } from "react"
+import JoinUsonDiscord from "@/components/customComponents/JoinUsonDiscord"
 
 export default function Home() {
   const router = useRouter();
@@ -76,7 +76,7 @@ export default function Home() {
                           Be Part of the Genesis: Join our Discord to shape the future of Devolved AI. 
                           Engage, contribute, and grow with our community from the ground up.
                       </p>
-                      <button className="button w-[20rem] h-auto"
+                      <button className="button w-[15.4675rem] h-auto"
                       onClick={handleDiscordButtonClick}
                       onMouseEnter={handleMouseEnter} 
                       onMouseLeave={handleMouseLeave}>
@@ -323,7 +323,7 @@ export default function Home() {
 
       {/* Ready to be a part of AI */}
       <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5 3xl:container">
-        <SignUpNow/>
+        <JoinUsonDiscord/>
       </section>
 
       {/* Referel Text */}
