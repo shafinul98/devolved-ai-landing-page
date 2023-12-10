@@ -98,11 +98,8 @@ export default function ArgoCoin() {
                         <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
                             Argocoin (AGC) is not just a cryptocurrency; it's the linchpin of Devolved 
                             AI's mission to decentralize the future of Artificial Intelligence. 
-                            As the proprietary digital currency on our layer 1 blockchain
-                        </p>
-                        <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
-                            AGC stands at the forefront of a new digital economy - set for launch to empower 
-                            community-driven innovation and governance.
+                            As the proprietary digital currency on our layer 1 blockchain AGC stands at the forefront of a 
+                            new digital economy - set for launch to empower community-driven innovation and governance.
                         </p>
                         <button onClick={handleButtonClick}
                             className=" uppercase bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[10rem] xl:h-[3.125rem] mt-5">
