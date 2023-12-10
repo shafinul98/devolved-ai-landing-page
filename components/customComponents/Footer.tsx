@@ -76,6 +76,7 @@ const Footer = () => {
             <Link href="/terms-and-conditions">Terms and Conditions</Link>
             <Link href="/privacy-policy">Privacy Policy</Link>
             <Link href="/usdc-giveaway">USDC Giveaway and Terms</Link>
+            <Link href="/notarized-identity-statement.pdf">Notarized Identity Statement</Link>
           </div>
         </div>
 
