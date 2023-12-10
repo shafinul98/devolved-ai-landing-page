@@ -23,10 +23,12 @@ export default function NotarizedIdentityStatement() {
       <section className="w-full xl:my-10 items-center bg-gray-100 3xl:container">
         <div className="flex flex-col items-center justify-center px-4 py-4 xl:px-8">
             <div style={{ width: '100%' }}>
-                <object data= {pdfFilepath}
-                    width="100%"
-                    className="w-full h-[20rem] xl:h-[100rem]"> 
-                </object>
+                <iframe
+                src={pdfFilepath}
+                width="100%"
+                className="w-full h-[20rem] xl:h-[100rem]"
+                title="PDF Viewer"
+                />
             </div>
         </div>
       </section>
