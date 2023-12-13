@@ -48,7 +48,7 @@ export default function Contact() {
                                 <Link href={"https://www.reddit.com/user/devolvedai"} rel="noopener noreferrer" target="_blank">
                                 <FaReddit size={30} />
                                 </Link>
-                                <Link href={"https://discord.com/invite/uS4pBdJz"} rel="noopener noreferrer" target="_blank">
+                                <Link href={"https://discord.com/invite/devolvedai"} rel="noopener noreferrer" target="_blank">
                                 <FaDiscord size={30} />
                                 </Link>
                                 <Link href={"https://t.me/devolvedai"} rel="noopener noreferrer" target="_blank">

@@ -23,10 +23,10 @@ export default function ArgoCoin() {
 
     const handleDiscordButtonClick = () => {
         setDiscordImage(DisCordImageHover);
-        window.open('https://discord.gg/V4fpatwpAC', '_blank');
+        window.open('https://discord.com/invite/devolvedai', '_blank');
     };
     const handleDiscordJoinUsButtonClick = () => {
-        window.open('https://discord.gg/TXkvaD4bqu', '_blank');
+        window.open('https://discord.com/invite/devolvedai', '_blank');
     };
     
 
