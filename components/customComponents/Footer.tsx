@@ -76,7 +76,6 @@ const Footer = () => {
           <div className="flex flex-col gap-2 text-[1rem] font-normal leading-normal text-[#1D1D1D]">
             <Link href="/terms-and-conditions">Terms and Conditions</Link>
             <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/usdc-giveaway">USDC Giveaway and Terms</Link>
             <Link href="/notarized-identity-statement.pdf">Notarized Identity Statement</Link>
           </div>
         </div>
