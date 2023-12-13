@@ -26,7 +26,7 @@ export default function Home() {
 
   const handleDiscordButtonClick = () => {
     setDiscordImage(DisCordImageHover);
-    window.open('https://discord.gg/wwtpSumZmc', '_blank');
+    window.open('https://discord.com/invite/devolvedai', '_blank');
   };
 
   const handleMouseEnter = () => {

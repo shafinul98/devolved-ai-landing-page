@@ -123,7 +123,7 @@ const Footer = () => {
 
             <Link
               className="md:w-[2.82381rem] md:h-[2.82381rem]"
-              href={"https://discord.com/invite/uS4pBdJz"}
+              href={"https://discord.com/invite/devolvedai"}
               rel="noopener noreferrer"
               target="_blank"
             >

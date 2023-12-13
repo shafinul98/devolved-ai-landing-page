@@ -11,7 +11,7 @@ export default function JoinUsonDiscord () {
 
     const handleDiscordButtonClick = () => {
         setDiscordImage(DisCordImageHover);
-        window.open('https://discord.gg/TXkvaD4bqu', '_blank');
+        window.open('https://discord.com/invite/devolvedai', '_blank');
     };
 
     const handleMouseEnter = () => {
