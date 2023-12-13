@@ -5,7 +5,7 @@ import HeroImage from "@/public/contact/hero-image.webp"
 import Image1 from "@/public/contact/image1.webp"
 import Background2 from "@/public/contact/bg2.webp"
 import Link from "next/link"
-import { FaDiscord, FaFacebook, FaReddit, FaTelegram, FaTwitter } from "react-icons/fa"
+import { FaDiscord, FaFacebook, FaReddit, FaTelegram, FaTwitter, FaLinkedin } from "react-icons/fa"
 import ContactUsForm from "@/components/customComponents/ContactUsForm"
 
 export default function Contact() {
@@ -44,6 +44,9 @@ export default function Contact() {
                                 </Link>
                                 <Link href={"https://twitter.com/devolvedai"} rel="noopener noreferrer" target="_blank">
                                 <FaTwitter size={30} />
+                                </Link>
+                                <Link href={"https://www.linkedin.com/company/devolvedai"} rel="noopener noreferrer" target="_blank">
+                                <FaLinkedin size={30} />
                                 </Link>
                                 <Link href={"https://www.reddit.com/user/devolvedai"} rel="noopener noreferrer" target="_blank">
                                 <FaReddit size={30} />
