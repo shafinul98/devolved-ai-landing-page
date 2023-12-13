@@ -326,20 +326,6 @@ export default function Home() {
         <JoinUsonDiscord/>
       </section>
 
-      {/* Referel Text */}
-      <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5 3xl:container">
-        <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
-          <p className="text-[0.90rem] xl:text-[1rem] leading-[1.875rem] text-center xl:text-left font-normal text-[#323131] max-w-[80.625rem]">
-            ¹ Devolved AI invites new users to earn $25 in AGC upon successful verification, 
-            plus an additional $25 for each active referral. The commencement of rewards is subject 
-            to the market cap's ability to feasibly sustain disbursements. Devolved AI retains the 
-            discretion to alter or discontinue the promotion in response to market and regulatory 
-            conditions. Offer activation, modifications, and eligibility are contingent on user 
-            engagement levels and market capitalization and are void where prohibited.
-          </p>
-        </div>
-      </section>
-
       <div className="bg-[#E5E7EB] w-4/6 mx-auto border bottom-1" />
     </main>
   );
