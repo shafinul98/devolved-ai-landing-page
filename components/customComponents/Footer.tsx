@@ -12,6 +12,7 @@ import {
   FaDiscord,
   FaReddit,
   FaTelegram,
+  FaLinkedin
 } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 
@@ -110,6 +111,15 @@ const Footer = () => {
               target="_blank"
             >
               <FaTwitter size={25} />
+            </Link>
+
+            <Link
+              className="md:w-[2.82381rem] md:h-[2.82381rem]"
+              href={"https://www.linkedin.com/company/devolvedai"}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FaLinkedin size={25} />
             </Link>
 
             <Link
