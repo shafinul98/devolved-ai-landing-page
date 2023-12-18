@@ -1,10 +1,10 @@
 "use client";
 
-import MenuIcon from "../../public/Menu Icon.svg";
+import MenuIcon from "@/public/Menu Icon.svg";
 import { AiOutlineClose } from "react-icons/ai";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import Logo from "../../public/logo.svg";
+import Logo from "@/public/logo.svg";
 import Link from "next/link";
 import { EarlyAccessForm } from "./EarlyAccessForm";
 import { useActivePath } from "./UseActivePath";
