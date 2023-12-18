@@ -13,10 +13,26 @@ import Image5 from "@/public/argoCoin/image5.webp"
 import Image6 from "@/public/argoCoin/image6.webp"
 import Image7 from "@/public/argoCoin/image7.webp"
 import SectionBg3 from "@/public/home/section-bg-3.webp"
+import RoadMap from "@/public/argoCoin/roadmap.svg"
 import DisCordImageNoHover from "@/public/Join_us_on_discord_button_no_hover.webp"
 import DisCordImageHover from "@/public/Join_us_on_discord_button_hover.webp"
 import { useState } from "react"
 import JoinUsonDiscord from '@/components/customComponents/JoinUsonDiscord'
+import DevolvedAILogo from '@/public/logo_white.svg'
+import ArrowUpRight from '@/public/argoCoin/arrow-up-right.svg'
+import ArrowUpRight2 from '@/public/argoCoin/arrow_up_right_2.svg'
+import AGCMATIC from '@/public/argoCoin/agc_matic.svg'
+import AGCBNB from '@/public/argoCoin/agc_bnb.svg'
+import AGCETH from '@/public/argoCoin/agc_eth.svg'
+import LiveOnUniswap from '@/public/argoCoin/live_on_uniswap.svg'
+import { FaClone } from "react-icons/fa"
+import CopyCode from "@/public/argoCoin/copy_button.svg"
+import InfoButton from "@/public/argoCoin/info_button.svg"
+import Million200AGC from "@/public/argoCoin/200_million_agc.svg"
+import Million100AGC from "@/public/argoCoin/100_million_agc.svg"
+import Million80AGC from "@/public/argoCoin/80_million_agc.svg"
+import Million20AGC from "@/public/argoCoin/20_million_agc.svg"
+import Link from 'next/link'
 
 export default function ArgoCoin() {
     const [discordImage, setDiscordImage] = useState(DisCordImageNoHover);
@@ -41,6 +57,18 @@ export default function ArgoCoin() {
     const handleButtonClick = () => {
         window.open('https://devolved-ai.gitbook.io/devolved-ai-whitepaper/', '_blank');
     };
+
+    // Shareable link copy handler from sharing widget
+  const handleCopyToClipboard = async ({text}: any) => {
+    try {
+      await navigator.clipboard.writeText(
+        `${text}`
+      );
+    } catch (error) {
+      console.error("Failed to copy text: ", error);
+    }
+  };
+
     return (
         <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
             {/* hero section */}
@@ -69,6 +97,280 @@ export default function ArgoCoin() {
                             onMouseLeave={handleMouseLeave}>
                                 <Image priority src={discordImage} alt="Discord Image" />
                             </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* live on uniswap  */}
+            <section className="flex flex-col items-center justify-center my-10 xl:my-20 gap-3 3xl:container">
+                <div className="flex flex-col rounded-xl items-center justify-center xl:justify-between w-[20rem] h-auto xl:w-[90rem] xl:px-20"
+                    style={{
+                        backgroundImage: `url(${LiveOnUniswap.src})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
+                    }}>
+                        <p className='text-[1.625rem] xl:text-[3.75rem] xs:text-center font-bold leading-norma text-[#192033] m-5'>
+                            Argocoin (AGC) Now Live on Uniswap: Trade AGC BNB, and ETH Pairs!
+                        </p>
+
+                        {/* Contracts  */}
+                        <div className='flex flex-col mt-3 mb-3 gap-5 xl:mr-[30rem]'>
+                            <p className='text-[1.25rem] xl:text-[2.1875rem] font-medium text-[#192033] leading-[2.375rem]'>
+                                Contracts
+                            </p>
+
+                            {/* AGC (Polygon) */}
+                            <div className='flex flex-row gap-3'>
+                                <button className='copyButton' onClick={handleCopyToClipboard}>
+                                    <Image src={CopyCode} alt='CopyCode' className="w-[1.125rem] h-[1.125rem] xl:w-[1.6875rem] xl:h-[1.875rem]" />
+                                </button>
+                                <p className='text-[1rem] xl:text-[1.5rem] font-normal text-[#495167] leading-[1.25rem] xl:leading-[2.375rem]'>
+                                    AGC (Polygon) 10269a5452e57029305BdBFB773949340F703A32
+                                </p>
+                            </div>
+
+                            {/* AGC (BSC)  */}
+                            <div className='flex flex-row gap-3'>
+                                <button className='copyButton' onClick={handleCopyToClipboard}>
+                                    <Image src={CopyCode} alt='CopyCode' className="w-[1.125rem] h-[1.125rem] xl:w-[1.6875rem] xl:h-[1.875rem]"/>
+                                </button>
+                                <p className='text-[1rem] xl:text-[1.5rem] font-normal text-[#495167] leading-[1.25rem] xl:leading-[2.375rem]'>
+                                    AGC (BSC) 10269a5452e57029305BdBFB773949340F703A32
+                                </p>
+                            </div>
+
+                            {/* AGC (ETH) */}
+                            <div className='flex flex-row gap-3'>
+                                <button className='copyButton' onClick={handleCopyToClipboard}>
+                                    <Image src={CopyCode} alt='CopyCode' className="w-[1.125rem] h-[1.125rem] xl:w-[1.6875rem] xl:h-[1.875rem]"/>
+                                </button>
+                                <p className='text-[1rem] xl:text-[1.5rem] font-normal text-[#495167] leading-[1.25rem] xl:leading-[2.375rem]'>
+                                    AGC (ETH) 10269a5452e57029305BdBFB773949340F703A32
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Quick Links  */}
+                        <div className='flex flex-col mt-3 mb-3'>
+                            <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
+                                Quick Links
+                            </p>
+
+                            <div className="grid grid-cols-1 xl:grid-cols-3 gap-10 mb-10 mt-3">
+                                {/* Doxxed / KYC */}
+                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
+                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
+                                        Doxxed / KYC
+                                    </p>
+                                    <div className='flex flex-row gap-3 mt-5'>
+                                        <div className="flex flex-row">
+                                            <span className='text-[#FF6F00]'>
+                                                <Link href={"#"}>Watch Video</Link>
+                                            </span>
+                                            <span>
+                                                <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-2 mt-1.5' />
+                                            </span>
+                                        </div> 
+                                        
+                                        <div className="flex flex-row">
+                                            <span className='text-[#FF6F00]'>
+                                                <Link href={"/notarized-identity-statement.pdf"}>View Document</Link>
+                                            </span>
+                                            <span>
+                                                <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-2 mt-1.5' />
+                                            </span>
+                                        </div> 
+                                    </div>
+                                </div>
+
+                                {/* Track AGC on Dextools */}
+                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300 mt-3 mb-3">
+                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
+                                        Track AGC on Dextools
+                                    </p>
+                                    <div className='flex flex-row gap-3 mt-5'>
+                                        <div className="flex flex-row">
+                                            <span className='text-[#FF6F00]'>
+                                                <Link href={"#"}>Visit Dextools</Link>
+                                            </span>
+                                            <span>
+                                                <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-2 mt-1.5' />
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* AGC Charts on Poocoin */}
+                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
+                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
+                                        AGC Charts on Poocoin
+                                    </p>
+                                    <div className='flex flex-row gap-3 mt-5'>
+                                        <div className="flex flex-row">
+                                            <span className='text-[#FF6F00]'>
+                                                <Link href={"#"}>Visit Poocoin</Link>
+                                            </span>
+                                            <span>
+                                                <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-2 mt-1.5' />
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {/* Tokenomics  */}
+                        <div className='flex flex-col'>
+                            <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
+                                Tokenomics
+                            </p>
+
+                            <div className="grid grid-cols-1 xl:grid-cols-4 gap-3 p-2 mt-3 mb-10">
+                                {/* 200 million agc */}
+                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
+                                    <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
+                                    <Image priority className="w-[3.75rem] h-auto" src={Million200AGC} alt="Million200AGC"/>
+                                    <p className="text-[1.125rem] xl:text-[1rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-2"
+                                    >
+                                        Max Supply
+                                    </p>
+                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
+                                        200 Million AGC
+                                    </p>
+                                </div>
+
+                                {/* 100 million agc */}
+                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
+                                    <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
+                                    <Image priority className="w-[3.75rem] h-auto" src={Million100AGC} alt="Million100AGC"/>
+                                    <p className="text-[1.125rem] xl:text-[1rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-2"
+                                    >
+                                        Liquidity Allocation
+                                    </p>
+                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
+                                        100 Million AGC
+                                    </p>
+                                </div>
+
+                                {/* 80 million agc */}
+                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
+                                    <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
+                                    <Image priority className="w-[3.75rem] h-auto" src={Million80AGC} alt="Million80AGC"/>
+                                    <p className="text-[1.125rem] xl:text-[1rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-2"
+                                    >
+                                        Locked for Devolved AI Rewards
+                                    </p>
+                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
+                                        80 Million AGC
+                                    </p>
+                                </div>
+
+                                {/* 20 million agc */}
+                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
+                                    <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
+                                    <Image priority className="w-[3.75rem] h-auto" src={Million20AGC} alt="Million20AGC"/>
+                                    <p className="text-[1.125rem] xl:text-[1rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-2"
+                                    >
+                                        Locked in DAO
+                                    </p>
+                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
+                                        20 Million AGC
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        {/* Smart Contract Audit Report */}
+                        <div className='flex flex-col mr-[25rem] mb-10'>
+                            <p className='text-[1.625rem] xl:text-[3.75rem] font-bold leading-normal text-[#192033]'>
+                                Smart Contract Audit Report
+                            </p>
+                            <button className="uppercase bg-[#FF6F00] text-white rounded-[0.3125rem] w-[10.625rem] h-[3.125rem] mt-5">
+                                <div className="flex">
+                                    <span className='text-[#fff] ml-5'>
+                                        Read Report
+                                    </span>
+                                    <span>
+                                        <Image src={ArrowUpRight} alt='ArrowUpRight' className='ml-3 mt-1.5' />
+                                    </span>
+                                </div>    
+                            </button>
+                        </div>
+                </div>
+            </section>
+
+            {/* uniswap  */}
+            <section className="flex flex-col items-center justify-center my-10 xl:my-20 gap-3 3xl:container">
+                <div className="flex xl:flex-row flex-col rounded-xl shadow-md items-center justify-between w-[20rem] h-auto xl:w-[90rem] xl:h-[10rem] px-20"
+                    style={{
+                    backgroundImage: `url(${RoadMap.src})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    }}>
+                    <div className='logo flex xl:flex-row flex-col items-center mt-5 mb-3'>
+                        <Image src={DevolvedAILogo} alt='DevolvedAILogo' className='w-[11.25rem] h-[1.51444rem]' />
+                        <p className="text-[#FFF] text-[1.10rem] xl:text-[1.625rem] font-bold leading-normal text-center xl:ml-10 mt-2 xl:mt-0">
+                            Swap Argocoin (AGC) on Uniswap
+                        </p>
+                    </div>
+
+                    <div className='coin xl:m-5 mt-2 mb-5 flex xl:flex-row flex-col xl:gap-2 gap-3'>
+                        {/* AGC/MATIC  */}
+                        <div className="w-40 h-20 backdrop-filter backdrop-blur-2xl flex flex-col items-center justify-center"
+                        style={{
+                            backgroundColor: 'rgba(255, 255, 255, 0.25)',
+                            borderRadius: '0.625rem',
+                            border: '1px solid #d7d7d7',
+                            }}>
+                            <Image src={AGCMATIC} alt='AGCMATIC' className="mb-2 w-10 h-10" />
+                            <div className="flex">
+                                <span className='underline text-[#fff] ml-5'>
+                                    AGC/MATIC
+                                </span>
+                                <span>
+                                    <Image src={ArrowUpRight} alt='ArrowUpRight' className='ml-3 mt-1.5' />
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* AGC/BNB */}
+                        <div className="w-40 h-20 backdrop-filter backdrop-blur-2xl flex flex-col items-center justify-center"
+                        style={{
+                            backgroundColor: 'rgba(255, 255, 255, 0.25)',
+                            borderRadius: '0.625rem',
+                            border: '1px solid #d7d7d7',
+                            }}>
+                            <Image src={AGCBNB} alt='AGCBNB' className="mb-2 w-10 h-10" />
+                            <div className="flex">
+                                <span className='underline text-[#fff] ml-5'>
+                                    AGC/BNB
+                                </span>
+                                <span>
+                                    <Image src={ArrowUpRight} alt='ArrowUpRight' className='ml-3 mt-1.5' />
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="w-40 h-20 backdrop-filter backdrop-blur-2xl flex flex-col items-center justify-center"
+                        style={{
+                            backgroundColor: 'rgba(255, 255, 255, 0.25)',
+                            borderRadius: '0.625rem',
+                            border: '1px solid #d7d7d7',
+                            }}>
+                            <Image src={AGCETH} alt='AGCETH' className="mb-2 w-10 h-10" />
+                            <div className="flex">
+                                <span className='underline text-[#fff] ml-5'>
+                                    AGC/ETH
+                                </span>
+                                <span>
+                                    <Image src={ArrowUpRight} alt='ArrowUpRight' className='ml-3 mt-1.5' />
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
