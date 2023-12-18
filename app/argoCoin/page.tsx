@@ -24,8 +24,7 @@ import ArrowUpRight2 from '@/public/argoCoin/arrow_up_right_2.svg'
 import AGCMATIC from '@/public/argoCoin/agc_matic.svg'
 import AGCBNB from '@/public/argoCoin/agc_bnb.svg'
 import AGCETH from '@/public/argoCoin/agc_eth.svg'
-import LiveOnUniswap from '@/public/argoCoin/live_on_uniswap.svg'
-import { FaClone } from "react-icons/fa"
+import LiveOnUniswap from '@/public/argoCoin/bg_uniswap.svg'
 import CopyCode from "@/public/argoCoin/copy_button.svg"
 import InfoButton from "@/public/argoCoin/info_button.svg"
 import Million200AGC from "@/public/argoCoin/200_million_agc.svg"
@@ -33,9 +32,13 @@ import Million100AGC from "@/public/argoCoin/100_million_agc.svg"
 import Million80AGC from "@/public/argoCoin/80_million_agc.svg"
 import Million20AGC from "@/public/argoCoin/20_million_agc.svg"
 import Link from 'next/link'
+import { Tooltip } from "@nextui-org/react";
 
 export default function ArgoCoin() {
     const [discordImage, setDiscordImage] = useState(DisCordImageNoHover);
+    const [polygonCopyToClipBoard, setPolygonCopyToClipBoard] = useState(false);
+    const [bSCCopyToClipBoard, setBSCCopyToClipBoard] = useState(false);
+    const [eTHCopyToClipBoard, setETHCopyToClipBoard] = useState(false);
 
     const handleDiscordButtonClick = () => {
         setDiscordImage(DisCordImageHover);
@@ -59,15 +62,38 @@ export default function ArgoCoin() {
     };
 
     // Shareable link copy handler from sharing widget
-  const handleCopyToClipboard = async ({text}: any) => {
-    try {
-      await navigator.clipboard.writeText(
-        `${text}`
-      );
-    } catch (error) {
-      console.error("Failed to copy text: ", error);
-    }
-  };
+    const handlePolygonCopyToClipboard = async () => {
+        try {
+        await navigator.clipboard.writeText(
+            `AGC (Polygon) 10269a5452e57029305BdBFB773949340F703A32`
+        );
+        setPolygonCopyToClipBoard(true);
+        } catch (error) {
+        console.error("Failed to copy text: ", error);
+        }
+    };
+
+    const handleBSCCopyToClipboard = async () => {
+        try {
+          await navigator.clipboard.writeText(
+            `AGC (BSC) 10269a5452e57029305BdBFB773949340F703A32`
+          );
+          setBSCCopyToClipBoard(true);
+        } catch (error) {
+          console.error("Failed to copy text: ", error);
+        }
+    };
+
+    const handleETHCopyToClipboard = async () => {
+        try {
+          await navigator.clipboard.writeText(
+            `AGC (ETH) 10269a5452e57029305BdBFB773949340F703A32`
+          );
+          setETHCopyToClipBoard(true);
+        } catch (error) {
+          console.error("Failed to copy text: ", error);
+        }
+    };
 
     return (
         <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between px-0 py-0 md:p-0">
@@ -111,54 +137,72 @@ export default function ArgoCoin() {
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat'
                     }}>
-                        <p className='text-[1.625rem] xl:text-[3.75rem] xs:text-center font-bold leading-norma text-[#192033] m-5'>
-                            Argocoin (AGC) Now Live on Uniswap: Trade AGC BNB, and ETH Pairs!
-                        </p>
+                        <div className='flex flex-col items-center justify-center xl:text-start text-center m-10'>
+                            <p className='text-[1.625rem] xl:text-[3.75rem] font-bold leading-normal text-[#192033]'>
+                                Argocoin (AGC) Now Live on Uniswap: Trade AGC BNB, and ETH Pairs!
+                            </p>
+                        </div>
 
                         {/* Contracts  */}
-                        <div className='flex flex-col mt-3 mb-3 gap-5 xl:mr-[30rem]'>
+                        <div className='flex flex-col gap-5 items-start justify-around m-5 xl:mr-[28rem]'>
                             <p className='text-[1.25rem] xl:text-[2.1875rem] font-medium text-[#192033] leading-[2.375rem]'>
                                 Contracts
                             </p>
 
-                            {/* AGC (Polygon) */}
-                            <div className='flex flex-row gap-3'>
-                                <button className='copyButton' onClick={handleCopyToClipboard}>
-                                    <Image src={CopyCode} alt='CopyCode' className="w-[1.125rem] h-[1.125rem] xl:w-[1.6875rem] xl:h-[1.875rem]" />
-                                </button>
-                                <p className='text-[1rem] xl:text-[1.5rem] font-normal text-[#495167] leading-[1.25rem] xl:leading-[2.375rem]'>
-                                    AGC (Polygon) 10269a5452e57029305BdBFB773949340F703A32
-                                </p>
-                            </div>
+                            <div className='flex flex-col mb-5 mt-3 gap-3'>
 
-                            {/* AGC (BSC)  */}
-                            <div className='flex flex-row gap-3'>
-                                <button className='copyButton' onClick={handleCopyToClipboard}>
-                                    <Image src={CopyCode} alt='CopyCode' className="w-[1.125rem] h-[1.125rem] xl:w-[1.6875rem] xl:h-[1.875rem]"/>
-                                </button>
-                                <p className='text-[1rem] xl:text-[1.5rem] font-normal text-[#495167] leading-[1.25rem] xl:leading-[2.375rem]'>
-                                    AGC (BSC) 10269a5452e57029305BdBFB773949340F703A32
-                                </p>
-                            </div>
+                                {/* AGC (Polygon) */}
+                                <div className='flex flex-row xl:gap-3'>
+                                    <Tooltip
+                                    content={polygonCopyToClipBoard ? "Contract copied" : "Copy Contract"}
+                                    placement="top">
+                                        <button className='copyButton' onClick={handlePolygonCopyToClipboard}>
+                                            <Image src={CopyCode} alt='CopyCode' className="w-[1.125rem] h-[1.125rem] xl:w-[1.6875rem] xl:h-[1.875rem]"/>
+                                        </button>
+                                    </Tooltip>
+                                    <p className='text-[0.90rem] xl:text-[1.5rem] font-normal text-[#495167] leading-[1.25rem] xl:leading-[2.375rem]'>
+                                        AGC (Polygon) 10269a5452e57029305BdBFB773949340F703A32
+                                    </p>
+                                </div>
 
-                            {/* AGC (ETH) */}
-                            <div className='flex flex-row gap-3'>
-                                <button className='copyButton' onClick={handleCopyToClipboard}>
-                                    <Image src={CopyCode} alt='CopyCode' className="w-[1.125rem] h-[1.125rem] xl:w-[1.6875rem] xl:h-[1.875rem]"/>
-                                </button>
-                                <p className='text-[1rem] xl:text-[1.5rem] font-normal text-[#495167] leading-[1.25rem] xl:leading-[2.375rem]'>
-                                    AGC (ETH) 10269a5452e57029305BdBFB773949340F703A32
-                                </p>
+                                {/* AGC (BSC)  */}
+                                <div className='flex flex-row xl:gap-3'>
+                                    <Tooltip
+                                    content={bSCCopyToClipBoard ? "BSC copied" : "Copy BSC"}
+                                    placement="top">
+                                        <button className='copyButton' onClick={handleBSCCopyToClipboard}>
+                                            <Image src={CopyCode} alt='CopyCode' className="w-[1.125rem] h-[1.125rem] xl:w-[1.6875rem] xl:h-[1.875rem]"/>
+                                        </button>
+                                    </Tooltip>
+                                    <p className='text-[0.90rem] xl:text-[1.5rem] font-normal text-[#495167] leading-[1.25rem] xl:leading-[2.375rem]'>
+                                        AGC (BSC) 10269a5452e57029305BdBFB773949340F703A32
+                                    </p>
+                                </div>
+
+                                {/* AGC (ETH) */}
+                                <div className='flex flex-row xl:gap-3'>
+                                    <Tooltip
+                                    content={eTHCopyToClipBoard ? "ETH copied" : "Copy ETH"}
+                                    placement="top">
+                                        <button className='copyButton' onClick={handleETHCopyToClipboard}>
+                                            <Image src={CopyCode} alt='CopyCode' className="w-[1.125rem] h-[1.125rem] xl:w-[1.6875rem] xl:h-[1.875rem]"/>
+                                        </button>
+                                    </Tooltip>
+                                    <p className='text-[0.90rem] xl:text-[1.5rem] font-normal text-[#495167] leading-[1.25rem] xl:leading-[2.375rem]'>
+                                        AGC (ETH) 10269a5452e57029305BdBFB773949340F703A32
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
+
                         {/* Quick Links  */}
-                        <div className='flex flex-col mt-3 mb-3'>
-                            <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
+                        <div className='flex flex-col mt-3'>
+                            <p className="text-[1.25rem] xl:text-[1.875rem] text-[#29233B] font-medium">
                                 Quick Links
                             </p>
 
-                            <div className="grid grid-cols-1 xl:grid-cols-3 gap-10 mb-10 mt-3">
+                            <div className="grid grid-cols-1 xl:grid-cols-3 gap-5 mb-10 mt-3">
                                 {/* Doxxed / KYC */}
                                 <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
                                     <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
@@ -166,33 +210,33 @@ export default function ArgoCoin() {
                                     </p>
                                     <div className='flex flex-row gap-3 mt-5'>
                                         <div className="flex flex-row">
-                                            <span className='text-[#FF6F00]'>
+                                            <span className='text-[#FF6F00] text-[1rem] underline uppercase leading-normal'>
                                                 <Link href={"#"}>Watch Video</Link>
                                             </span>
                                             <span>
-                                                <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-2 mt-1.5' />
+                                                <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-1 mt-1.5 xl:ml-2' />
                                             </span>
                                         </div> 
                                         
                                         <div className="flex flex-row">
-                                            <span className='text-[#FF6F00]'>
+                                            <span className='text-[#FF6F00] text-[1rem] underline uppercase leading-normal'>
                                                 <Link href={"/notarized-identity-statement.pdf"}>View Document</Link>
                                             </span>
                                             <span>
-                                                <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-2 mt-1.5' />
+                                                <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-1 mt-1.5 xl:ml-2' />
                                             </span>
                                         </div> 
                                     </div>
                                 </div>
 
                                 {/* Track AGC on Dextools */}
-                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300 mt-3 mb-3">
+                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
                                     <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
                                         Track AGC on Dextools
                                     </p>
                                     <div className='flex flex-row gap-3 mt-5'>
                                         <div className="flex flex-row">
-                                            <span className='text-[#FF6F00]'>
+                                            <span className='text-[#FF6F00] text-[1rem] underline uppercase leading-normal'>
                                                 <Link href={"#"}>Visit Dextools</Link>
                                             </span>
                                             <span>
@@ -209,7 +253,7 @@ export default function ArgoCoin() {
                                     </p>
                                     <div className='flex flex-row gap-3 mt-5'>
                                         <div className="flex flex-row">
-                                            <span className='text-[#FF6F00]'>
+                                            <span className='text-[#FF6F00] text-[1rem] underline uppercase leading-normal'>
                                                 <Link href={"#"}>Visit Poocoin</Link>
                                             </span>
                                             <span>
@@ -224,59 +268,79 @@ export default function ArgoCoin() {
 
                         {/* Tokenomics  */}
                         <div className='flex flex-col'>
-                            <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
+                            <p className="text-[1.25rem] xl:text-[1.875rem] text-[#29233B] font-medium xl:ml-3">
                                 Tokenomics
                             </p>
 
                             <div className="grid grid-cols-1 xl:grid-cols-4 gap-3 p-2 mt-3 mb-10">
                                 {/* 200 million agc */}
-                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
-                                    <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
+                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
+                                <Tooltip
+                                    content={"Help?"}
+                                    placement="top"
+                                    >
+                                        <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
+                                    </Tooltip>
                                     <Image priority className="w-[3.75rem] h-auto" src={Million200AGC} alt="Million200AGC"/>
-                                    <p className="text-[1.125rem] xl:text-[1rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-2"
+                                    <p className="text-[1.125rem] xl:text-[1rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-3"
                                     >
                                         Max Supply
                                     </p>
-                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
+                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-2">
                                         200 Million AGC
                                     </p>
                                 </div>
 
                                 {/* 100 million agc */}
-                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
-                                    <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
+                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
+                                <Tooltip
+                                    content={"Help?"}
+                                    placement="top"
+                                    >
+                                        <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
+                                    </Tooltip>
                                     <Image priority className="w-[3.75rem] h-auto" src={Million100AGC} alt="Million100AGC"/>
-                                    <p className="text-[1.125rem] xl:text-[1rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-2"
+                                    <p className="text-[1.125rem] xl:text-[1rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-3"
                                     >
                                         Liquidity Allocation
                                     </p>
-                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
+                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-2">
                                         100 Million AGC
                                     </p>
                                 </div>
 
                                 {/* 80 million agc */}
-                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
-                                    <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
+                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
+                                <Tooltip
+                                    content={"Help?"}
+                                    placement="top"
+                                    >
+                                        <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
+                                    </Tooltip>
                                     <Image priority className="w-[3.75rem] h-auto" src={Million80AGC} alt="Million80AGC"/>
-                                    <p className="text-[1.125rem] xl:text-[1rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-2"
+                                    <p className="text-[1.125rem] xl:text-[1rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-3"
                                     >
                                         Locked for Devolved AI Rewards
                                     </p>
-                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
+                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-2">
                                         80 Million AGC
                                     </p>
                                 </div>
 
                                 {/* 20 million agc */}
-                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-md transition-all duration-300">
-                                    <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
+                                <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
+                                <Tooltip
+                                    content={"Help?"}
+                                    placement="top"
+                                    >
+                                        <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
+                                    </Tooltip>
                                     <Image priority className="w-[3.75rem] h-auto" src={Million20AGC} alt="Million20AGC"/>
-                                    <p className="text-[1.125rem] xl:text-[1rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-2"
+                                    <p className="text-[1.125rem] xl:text-[1rem] leading-[1.875rem] text-[#495167] font-light max-w-[26.75rem] mt-3"
                                     >
                                         Locked in DAO
                                     </p>
-                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-3">
+                                    <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium mt-2">
                                         20 Million AGC
                                     </p>
                                 </div>
@@ -285,13 +349,13 @@ export default function ArgoCoin() {
                         </div>
                         
                         {/* Smart Contract Audit Report */}
-                        <div className='flex flex-col mr-[25rem] mb-10'>
+                        <div className='flex flex-col m-5 xl:mr-[25rem] mb-10'>
                             <p className='text-[1.625rem] xl:text-[3.75rem] font-bold leading-normal text-[#192033]'>
                                 Smart Contract Audit Report
                             </p>
                             <button className="uppercase bg-[#FF6F00] text-white rounded-[0.3125rem] w-[10.625rem] h-[3.125rem] mt-5">
                                 <div className="flex">
-                                    <span className='text-[#fff] ml-5'>
+                                    <span className='text-[#fff] uppercase text-[1rem] leading-normal ml-5'>
                                         Read Report
                                     </span>
                                     <span>
@@ -319,58 +383,65 @@ export default function ArgoCoin() {
                         </p>
                     </div>
 
-                    <div className='coin xl:m-5 mt-2 mb-5 flex xl:flex-row flex-col xl:gap-2 gap-3'>
+                    <div className='xl:m-5 mt-2 mb-5 flex xl:flex-row flex-col xl:gap-2 gap-3'>
                         {/* AGC/MATIC  */}
-                        <div className="w-40 h-20 backdrop-filter backdrop-blur-2xl flex flex-col items-center justify-center"
-                        style={{
-                            backgroundColor: 'rgba(255, 255, 255, 0.25)',
-                            borderRadius: '0.625rem',
-                            border: '1px solid #d7d7d7',
+                        <div className="w-[15.625rem] h-[7.8125rem] backdrop-filter backdrop-blur-2xl flex flex-col items-center justify-center"
+                            style={{
+                                backgroundColor: 'rgba(255, 255, 255, 0.25)',
+                                borderRadius: '0.625rem',
+                                border: '1px solid #d7d7d7'
                             }}>
-                            <Image src={AGCMATIC} alt='AGCMATIC' className="mb-2 w-10 h-10" />
-                            <div className="flex">
-                                <span className='underline text-[#fff] ml-5'>
-                                    AGC/MATIC
-                                </span>
-                                <span>
-                                    <Image src={ArrowUpRight} alt='ArrowUpRight' className='ml-3 mt-1.5' />
-                                </span>
-                            </div>
+                            <Image src={AGCMATIC} alt='AGCMATIC' className="mb-2 mt-5 w-[3.75rem] h-[3.75rem]" />
+                            <Link href={"#"}>
+                                <div className="flex mb-5">
+                                    <span className='underline text-[#fff] text-[1.25rem] leading-normal font-medium ml-5'>
+                                        AGC/MATIC
+                                    </span>
+                                    <span>
+                                        <Image src={ArrowUpRight} alt='ArrowUpRight' className='ml-3 mt-2.5 w-[0.625rem] h-[0.625rem]' />
+                                    </span>
+                                </div>
+                            </Link>
                         </div>
 
                         {/* AGC/BNB */}
-                        <div className="w-40 h-20 backdrop-filter backdrop-blur-2xl flex flex-col items-center justify-center"
-                        style={{
-                            backgroundColor: 'rgba(255, 255, 255, 0.25)',
-                            borderRadius: '0.625rem',
-                            border: '1px solid #d7d7d7',
+                        <div className="w-[15.625rem] h-[7.8125rem] backdrop-filter backdrop-blur-2xl flex flex-col items-center justify-center"
+                            style={{
+                                backgroundColor: 'rgba(255, 255, 255, 0.25)',
+                                borderRadius: '0.625rem',
+                                border: '1px solid #d7d7d7'
                             }}>
-                            <Image src={AGCBNB} alt='AGCBNB' className="mb-2 w-10 h-10" />
-                            <div className="flex">
-                                <span className='underline text-[#fff] ml-5'>
-                                    AGC/BNB
-                                </span>
-                                <span>
-                                    <Image src={ArrowUpRight} alt='ArrowUpRight' className='ml-3 mt-1.5' />
-                                </span>
-                            </div>
+                            <Image src={AGCBNB} alt='AGCBNB' className="mb-2 mt-5 w-[3.75rem] h-[3.75rem]" />
+                            <Link href={"#"}>
+                                <div className="flex mb-5">
+                                    <span className='underline text-[#fff] text-[1.25rem] leading-normal font-medium ml-5'>
+                                        AGC/BNB
+                                    </span>
+                                    <span>
+                                        <Image src={ArrowUpRight} alt='ArrowUpRight' className='ml-3 mt-2.5 w-[0.625rem] h-[0.625rem]' />
+                                    </span>
+                                </div>
+                            </Link>
                         </div>
 
-                        <div className="w-40 h-20 backdrop-filter backdrop-blur-2xl flex flex-col items-center justify-center"
-                        style={{
-                            backgroundColor: 'rgba(255, 255, 255, 0.25)',
-                            borderRadius: '0.625rem',
-                            border: '1px solid #d7d7d7',
+                        {/* AGC/ETH */}
+                        <div className="w-[15.625rem] h-[7.8125rem] backdrop-filter backdrop-blur-2xl flex flex-col items-center justify-center"
+                            style={{
+                                backgroundColor: 'rgba(255, 255, 255, 0.25)',
+                                borderRadius: '0.625rem',
+                                border: '1px solid #d7d7d7'
                             }}>
-                            <Image src={AGCETH} alt='AGCETH' className="mb-2 w-10 h-10" />
-                            <div className="flex">
-                                <span className='underline text-[#fff] ml-5'>
-                                    AGC/ETH
-                                </span>
-                                <span>
-                                    <Image src={ArrowUpRight} alt='ArrowUpRight' className='ml-3 mt-1.5' />
-                                </span>
-                            </div>
+                            <Image src={AGCETH} alt='AGCETH' className="mb-2 mt-5 w-[3.75rem] h-[3.75rem]" />
+                            <Link href={"#"}>
+                                <div className="flex mb-5">
+                                    <span className='underline text-[#fff] text-[1.25rem] leading-normal font-medium ml-5'>
+                                        AGC/ETH
+                                    </span>
+                                    <span>
+                                        <Image src={ArrowUpRight} alt='ArrowUpRight' className='ml-3 mt-2.5 w-[0.625rem] h-[0.625rem]' />
+                                    </span>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
