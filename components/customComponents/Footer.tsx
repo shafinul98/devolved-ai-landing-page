@@ -1,20 +1,19 @@
-"use client";
+"use client"
 
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import FooterLogo from "../../public/logo.svg";
-import FooterBackground from "../../public/footer/background.webp";
-
+import React from "react"
+import Image from "next/image"
+import Link from "next/link"
+import FooterLogo from "@/public/logo.svg"
+import FooterBackground from "@/public/footer/background.webp"
 import {
   FaFacebook,
-  FaTwitter,
   FaDiscord,
   FaReddit,
   FaTelegram,
   FaLinkedin
-} from "react-icons/fa";
-import { HiLocationMarker } from "react-icons/hi";
+} from "react-icons/fa"
+import { HiLocationMarker } from "react-icons/hi"
+import FaXTwitter from '@/public/twitter.svg'
 
 const Footer = () => {
   return (
@@ -109,7 +108,13 @@ const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <FaTwitter size={25} />
+              <Image
+                priority
+                src={FaXTwitter}
+                alt="footer_twitter_logo"
+                quality={100}
+                className="w-6 h-auto"
+              />
             </Link>
 
             <Link

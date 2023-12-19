@@ -13,13 +13,32 @@ import Image5 from "@/public/argoCoin/image5.webp"
 import Image6 from "@/public/argoCoin/image6.webp"
 import Image7 from "@/public/argoCoin/image7.webp"
 import SectionBg3 from "@/public/home/section-bg-3.webp"
+import RoadMap from "@/public/argoCoin/roadmap.svg"
 import DisCordImageNoHover from "@/public/Join_us_on_discord_button_no_hover.webp"
 import DisCordImageHover from "@/public/Join_us_on_discord_button_hover.webp"
 import { useState } from "react"
 import JoinUsonDiscord from '@/components/customComponents/JoinUsonDiscord'
+import DevolvedAILogo from '@/public/logo_white.svg'
+import ArrowUpRight from '@/public/argoCoin/arrow-up-right.svg'
+import ArrowUpRight2 from '@/public/argoCoin/arrow_up_right_2.svg'
+import AGCMATIC from '@/public/argoCoin/agc_matic.svg'
+import AGCBNB from '@/public/argoCoin/agc_bnb.svg'
+import AGCETH from '@/public/argoCoin/agc_eth.svg'
+import LiveOnUniswap from '@/public/argoCoin/bg_uniswap.svg'
+import CopyCode from "@/public/argoCoin/copy_button.svg"
+import InfoButton from "@/public/argoCoin/info_button.svg"
+import Million200AGC from "@/public/argoCoin/200_million_agc.svg"
+import Million100AGC from "@/public/argoCoin/100_million_agc.svg"
+import Million80AGC from "@/public/argoCoin/80_million_agc.svg"
+import Million20AGC from "@/public/argoCoin/20_million_agc.svg"
+import Link from 'next/link'
+import { Tooltip } from "@nextui-org/react";
 
 export default function ArgoCoin() {
     const [discordImage, setDiscordImage] = useState(DisCordImageNoHover);
+    const [polygonCopyToClipBoard, setPolygonCopyToClipBoard] = useState(false);
+    const [bSCCopyToClipBoard, setBSCCopyToClipBoard] = useState(false);
+    const [eTHCopyToClipBoard, setETHCopyToClipBoard] = useState(false);
 
     const handleDiscordButtonClick = () => {
         setDiscordImage(DisCordImageHover);
@@ -40,6 +59,40 @@ export default function ArgoCoin() {
 
     const handleButtonClick = () => {
         window.open('https://devolved-ai.gitbook.io/devolved-ai-whitepaper/', '_blank');
+    };
+
+    // Shareable link copy handler from sharing widget
+    const handlePolygonCopyToClipboard = async () => {
+        try {
+        await navigator.clipboard.writeText(
+            `AGC (Polygon) 10269a5452e57029305BdBFB773949340F703A32`
+        );
+        setPolygonCopyToClipBoard(true);
+        } catch (error) {
+        console.error("Failed to copy text: ", error);
+        }
+    };
+
+    const handleBSCCopyToClipboard = async () => {
+        try {
+          await navigator.clipboard.writeText(
+            `AGC (BSC) 10269a5452e57029305BdBFB773949340F703A32`
+          );
+          setBSCCopyToClipBoard(true);
+        } catch (error) {
+          console.error("Failed to copy text: ", error);
+        }
+    };
+
+    const handleETHCopyToClipboard = async () => {
+        try {
+          await navigator.clipboard.writeText(
+            `AGC (ETH) 10269a5452e57029305BdBFB773949340F703A32`
+          );
+          setETHCopyToClipBoard(true);
+        } catch (error) {
+          console.error("Failed to copy text: ", error);
+        }
     };
 
     return (

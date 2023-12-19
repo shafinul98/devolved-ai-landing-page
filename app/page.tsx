@@ -60,7 +60,7 @@ export default function Home() {
         style={{ backgroundImage: `url(${HeroImage.src})` }}>
           <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-3">
               <div className="text-center">
-                  <h1 className="font-bold text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] xl:text-[4.8125rem] leading-normal xl:mb-5 text-[#192033] xl:max-w-[82.78975rem]">
+                  <h1 className="font-bold text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] xl:text-[4.8125rem] leading-[2.75rem] xl:leading-[5.50rem] xl:mb-5 text-[#192033] xl:max-w-[82.78975rem]">
                     AI has evolved.<br />
                     So should its ownership.
                   </h1>
@@ -100,7 +100,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-0">
             <div className="background-image" />
-            <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal text-[#192033]">
+            <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal xl:leading-[4.5rem] text-[#192033]">
               What Drives Devolved AI?
             </p>
             <div className="mt-2 mb-2">
@@ -232,7 +232,7 @@ export default function Home() {
           
           <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-0">
             <div className="background-image w-full h-64 md:h-auto" />
-            <p className="font-bold text-[1.75rem] xl:text-[3.75rem] leading-normal text-[#192033] max-w-[31.625rem]">
+            <p className="font-bold text-[1.75rem] xl:text-[3.75rem] leading-normal xl:leading-[4.5rem] text-[#192033] max-w-[31.625rem]">
               The Tech Behind the Vision
             </p>
             <p className="text-[1rem] xl:text-[1.375rem] text-[#495167] leading-[1.875rem] font-light max-w-[44.125rem]">
@@ -288,7 +288,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
               <div className="background-image" />
-              <p className="font-bold text-[1.75rem] xl:text-[3.75rem] leading-normal text-[#192033]">
+              <p className="font-bold text-[1.75rem] xl:text-[3.75rem] leading-normal xl:leading-[4.5rem] text-[#192033]">
                 Be an Early Governor
               </p>
               <p className="text-[1rem] xl:text-[1.375rem] text-[#495167] leading-[1.875rem] font-light max-w-[44.125rem]">

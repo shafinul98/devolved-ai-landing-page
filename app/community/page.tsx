@@ -56,7 +56,7 @@ export default function Community() {
                 {/* text  */}
                 <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5 xl:ms-20">
                     <div className="background-image" />
-                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal text-[#192033]">
+                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal xl:leading-[4.5rem] text-[#192033]">
                         Welcome to CommUnity
                     </p>
                     <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
@@ -96,7 +96,7 @@ export default function Community() {
                 {/* text  */}
                 <div className="flex flex-col px-5 mt-10 md:mt-10 gap-5">
                     <div className="background-image" />
-                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal text-[#192033]">
+                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal xl:leading-[4.5rem] text-[#192033]">
                         What is CommUnity?
                     </p>
                     <p className="text-[1.125rem] xl:text-[1.375rem] text-[#495167] leading-[1.875rem] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
