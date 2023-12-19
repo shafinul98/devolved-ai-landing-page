@@ -5,39 +5,39 @@ const nextConfig = {
     return [
       {
         source: "/argocoin(.*)",
-        destination: "https://devolved-ai-landing-page-ktq6-git-tanvir-test-shafinul98.vercel.app/argoCoin"
+        destination: "/argoCoin"
       },
       {
         source: "/about(.*)",
-        destination: "https://devolved-ai-landing-page-ktq6-git-tanvir-test-shafinul98.vercel.app/about"
+        destination: "/about"
       },
       {
         source: "/technology(.*)",
-        destination: "https://devolved-ai-landing-page-ktq6-git-tanvir-test-shafinul98.vercel.app/technology"
+        destination: "/technology"
       },
       {
         source: "/community(.*)",
-        destination: "https://devolved-ai-landing-page-ktq6-git-tanvir-test-shafinul98.vercel.app/community"
+        destination: "/community"
       },
       {
         source: "/contact(.*)",
-        destination: "https://devolved-ai-landing-page-ktq6-git-tanvir-test-shafinul98.vercel.app/contact"
+        destination: "/contact"
       },
       {
         source: "/terms-and-conditions(.*)",
-        destination: "https://devolved-ai-landing-page-ktq6-git-tanvir-test-shafinul98.vercel.app/terms-and-conditions"
+        destination: "/terms-and-conditions"
       },
       {
         source: "/privacy-policy(.*)",
-        destination: "https://devolved-ai-landing-page-ktq6-git-tanvir-test-shafinul98.vercel.app/privacy-policy"
+        destination: "/privacy-policy"
       },
       {
         source: "/notarized-identity-statement.pdf(.*)",
-        destination: "https://devolved-ai-landing-page-ktq6-git-tanvir-test-shafinul98.vercel.app/notarized-identity-statement.pdf"
+        destination: "/notarized-identity-statement.pdf"
       },
       {
         source: "/usdc-giveaway(.*)",
-        destination: "https://devolved-ai-landing-page-ktq6-git-tanvir-test-shafinul98.vercel.app/usdc-giveaway"
+        destination: "/usdc-giveaway"
       },
     ];
   },
