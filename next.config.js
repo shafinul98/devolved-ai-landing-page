@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: "/:slug*",
-        destination: "/:slug",
+        destination: "https://devolved-ai-landing-page-ktq6-git-tanvir-test-shafinul98.vercel.app/:slug",
       }
     ];
   },
