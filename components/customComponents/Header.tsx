@@ -122,7 +122,7 @@ const Header = () => {
             </div> */}
             <div className="md:hidden lg:hidden xl:flex">
                 <button onClick={handleDiscordButtonClick}
-                className="uppercase text-[1rem] text-[1D1D1D] font-bold leading-normal border-black border-2 rounded-[0.625rem] xl:w-[15.5625rem] xl:h-[3.125rem] transition-all hover:bg-black hover:text-white">
+                className="uppercase text-[1rem] text-[1D1D1D] font-bold leading-normal border-black border-2 rounded-[0.625rem] xl:w-[12.5625rem] xl:h-[3.125rem] transition-all hover:bg-black hover:text-white">
                   join us on discord
                 </button>
             </div>

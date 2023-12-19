@@ -45,8 +45,8 @@ export default function Technology() {
 
                 <div className="flex flex-col px-5 gap-5 xl:ms-20">
                     <div className="background-image" />
-                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal text-[#192033]">
-                        Proof of Value (PoV) <br/> Protocol
+                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal xl:leading-[4.5rem] text-[#192033]">
+                        Proof of Value (PoV) Protocol
                     </p>
                     <p className="text-[1.125rem] xl:text-[1.375rem] text-[#495167] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
                         The PoV protocol at Devolved AI represents a groundbreaking approach in AI development, 
@@ -58,7 +58,7 @@ export default function Technology() {
                         AGC token holders to actively participate in shaping its future.
                     </p>
                     <button
-                    onClick={handleButtonClick}
+                        onClick={handleButtonClick}
                         className="uppercase bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[10rem] xl:h-[3.125rem] mt-5"
                     >
                         LEARN MORE
@@ -89,7 +89,7 @@ export default function Technology() {
             <div className="flex flex-col-reverse items-center xl:flex-row justify-around xl:px-20 xl:m-20 relative">
                 <div className="flex flex-col px-5 gap-5 xl:ms-20">
                     <div className="background-image" />
-                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal text-[#192033]">
+                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal xl:leading-[4.5rem] text-[#192033]">
                         Layer 1 Blockchain
                     </p>
                     <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">

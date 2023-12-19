@@ -5,8 +5,9 @@ import HeroImage from "@/public/contact/hero-image.webp"
 import Image1 from "@/public/contact/image1.webp"
 import Background2 from "@/public/contact/bg2.webp"
 import Link from "next/link"
-import { FaDiscord, FaFacebook, FaReddit, FaTelegram, FaTwitter, FaLinkedin } from "react-icons/fa"
+import { FaDiscord, FaFacebook, FaReddit, FaTelegram, FaLinkedin } from "react-icons/fa"
 import ContactUsForm from "@/components/customComponents/ContactUsForm"
+import FaXTwitter from '@/public/twitter.svg'
 
 export default function Contact() {
     return (
@@ -30,9 +31,8 @@ export default function Contact() {
                     {/* form  */}
                     <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-5 w-full md:w-1/2 lg:w-auto text-start">
                         <div className="background-image-text" />
-                        <p className="text-[1.625rem] xl:text-[3.75rem] text-[#192033] font-bold leading-normal">
-                            We'd love to hear your <br />
-                            Feedback
+                        <p className="text-[1.625rem] xl:text-[3.75rem] text-[#192033] font-bold leading-normal xl:leading-[4.5rem]">
+                            We'd love to hear your Feedback
                         </p>
                         <p className="text-[1.125rem] xl:text-[1.375rem] text-[#495167] font-light leading-[1.875rem] max-w-[24.0625rem] xl:max-w-[36.125rem]">
                             Need to get in touch? You can reach us at all our socials below, or using the contact form on this page.
@@ -43,7 +43,13 @@ export default function Contact() {
                                 <FaFacebook size={30} />
                                 </Link>
                                 <Link href={"https://twitter.com/devolvedai"} rel="noopener noreferrer" target="_blank">
-                                <FaTwitter size={30} />
+                                <Image
+                                    priority
+                                    src={FaXTwitter}
+                                    alt="contact_twitter_logo"
+                                    quality={100}
+                                    className="w-7 h-auto"
+                                />
                                 </Link>
                                 <Link href={"https://www.linkedin.com/company/devolvedai"} rel="noopener noreferrer" target="_blank">
                                 <FaLinkedin size={30} />

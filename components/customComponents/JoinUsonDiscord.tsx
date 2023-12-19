@@ -29,7 +29,7 @@ export default function JoinUsonDiscord () {
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
             }}>
-            <p className="text-[#192033] mt-4 text-[1.5rem] xl:text-[2.5rem] font-medium leading-normal text-center max-w-[50.75rem] max-h-[6.73569rem]">
+            <p className="text-[#192033] mt-4 text-[1.5rem] xl:text-[2.5rem] font-medium leading-normal xl:leading-[3rem] text-center max-w-[50.75rem] max-h-[6.73569rem]">
                 Be Part of the Genesis: Join our Discord to shape the future of Devolved AI. 
                 Engage, contribute, and grow with our community from the ground up.
             </p>

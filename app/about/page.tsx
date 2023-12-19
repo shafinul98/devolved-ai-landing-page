@@ -124,7 +124,7 @@ export default function About() {
                     <p className="font-bold text-[0.875rem] xl:text-[1.25rem] leading-normal text-[#204FA2]">
                         Our Mission
                     </p>
-                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal text-[#192033]">
+                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] leading-normal xl:leading-[4.5rem] text-[#192033]">
                         Empowering Community, <br/> Democratizing AI
                     </p>
                     <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[45.25rem]">
@@ -170,7 +170,7 @@ export default function About() {
                     <p className="font-bold text-[0.875rem] xl:text-[1.25rem] leading-normal text-[#204FA2]">
                         Our Vision
                     </p>
-                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] text-[#192033]">
+                    <p className="font-bold text-[1.625rem] xl:text-[3.75rem] text-[#192033] leading-normal xl:leading-[4.5rem]">
                         Shaping a Decentralized <br/> Future
                     </p>
                     <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[45.25rem]">
@@ -227,7 +227,7 @@ export default function About() {
                     <p className="text-[0.875rem] xl:text-[1.25rem] font-bold text-[#204FA2]">
                         Our Values
                     </p>
-                    <p className="text-[1.625rem] xl:text-[1.75rem] leading-normal text-[#192033] font-bold">
+                    <p className="text-[1.625rem] xl:text-[1.75rem] leading-normal xl:leading-[2rem] text-[#192033] font-bold">
                         Our values guide every decision, <br/>
                         every development, and every interaction
                     </p>
@@ -480,7 +480,7 @@ export default function About() {
                     <p className="xl:text-[1.25rem] text-[0.875rem] font-bold text-[#204FA2]">
                         OUR TEAM
                     </p>
-                    <h1 className="font-bold xl:text-[3.75rem] text-[1.625rem] leading-normal text-[#192033]">
+                    <h1 className="font-bold xl:text-[3.75rem] text-[1.625rem] leading-normal xl:leading-[4rem] text-[#192033]">
                         Meet the Pioneers
                     </h1>
                     <p className="text-[1.125rem] xl:text-[1.375rem] text-[#495167] font-light leading-[1.875rem] mb-5 max-w-[30rem]">
