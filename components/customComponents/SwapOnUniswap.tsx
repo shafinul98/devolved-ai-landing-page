@@ -6,8 +6,6 @@ import RoadMap from "@/public/argoCoin/roadmap.svg"
 import DevolvedAILogo from '@/public/logo_white.svg'
 import ArrowUpRight from '@/public/argoCoin/arrow-up-right.svg'
 import AGCMATIC from '@/public/argoCoin/agc_matic.svg'
-import AGCBNB from '@/public/argoCoin/agc_bnb.svg'
-import AGCETH from '@/public/argoCoin/agc_eth.svg'
 import Link from 'next/link'
 
 export default function SwapOnUniswap () {
@@ -35,7 +33,7 @@ export default function SwapOnUniswap () {
                         border: '1px solid #d7d7d7'
                     }}>
                     <Image src={AGCMATIC} alt='AGCMATIC' className="mb-2 mt-5 w-[3.75rem] h-[3.75rem]" />
-                    <Link href={"#"}>
+                    <div>
                         <div className="flex mb-5">
                             <span className='underline text-[#fff] text-[1.25rem] leading-normal font-medium ml-5'>
                                 AGC/MATIC
@@ -44,7 +42,7 @@ export default function SwapOnUniswap () {
                                 <Image src={ArrowUpRight} alt='ArrowUpRight' className='ml-3 mt-2.5 w-[0.625rem] h-[0.625rem]' />
                             </span>
                         </div>
-                    </Link>
+                    </div>
                 </div>
             </div>
         </div>

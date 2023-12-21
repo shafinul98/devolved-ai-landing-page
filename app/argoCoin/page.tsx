@@ -29,6 +29,7 @@ import Million20AGC from "@/public/argoCoin/20_million_agc.svg"
 import Link from 'next/link'
 import { Tooltip } from "@nextui-org/react"
 import SwapOnUniswap from '@/components/customComponents/SwapOnUniswap'
+import NowListed from '@/components/customComponents/NowListed'
 
 export default function ArgoCoin() {
     const [discordImage, setDiscordImage] = useState(DisCordImageNoHover);
@@ -76,6 +77,7 @@ export default function ArgoCoin() {
             {/* hero section */}
             <section className="w-full xl:h-screen h-[55rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
                 style={{ backgroundImage: `url(${HeroImage.src})`}}>
+                    <NowListed/>
                 <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-3">
                     <div className="text-center">
                         <h1 className="font-bold text-[2.25rem] xl:text-[4.8125rem] leading-[2.75rem] xl:leading-[5.50rem] xl:mb-5 text-[#192033] xl:max-w-[82.78975rem]">
@@ -163,7 +165,7 @@ export default function ArgoCoin() {
                                     </span>
                                 </Link> 
                                 
-                                <Link className="flex flex-row items-center" href={"#"} target="_blank">
+                                <Link className="flex flex-row items-center" href={"/notarized-identity-statement.pdf"} target='_blank'>
                                     <span className='text-[#FF6F00] text-[1rem] underline uppercase leading-normal'>
                                         {/* <Link href={"/notarized-identity-statement.pdf"}>View Document</Link> */}
                                         View Document
@@ -180,14 +182,14 @@ export default function ArgoCoin() {
                             <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
                                 Track AGC on Dextools
                             </p>
-                            <Link className="flex flex-row gap-3 mt-5" href={"#"} target="_blank">
+                            <div className="flex flex-row gap-3 mt-3">
                                 <span className='text-[#FF6F00] text-[1rem] underline uppercase leading-normal'>
                                     Visit Dextools
                                 </span>
                                 <span>
                                     <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-2 mt-1.5' />
                                 </span>
-                            </Link>
+                            </div>
                         </div>
 
                         {/* AGC Charts on Poocoin */}
@@ -195,14 +197,14 @@ export default function ArgoCoin() {
                             <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
                                 AGC Charts on Poocoin
                             </p>
-                            <Link className="flex flex-row gap-3 mt-5" href={"#"} target="_blank">
+                            <div className="flex flex-row gap-3 mt-3">
                                 <span className='text-[#FF6F00] text-[1rem] underline uppercase leading-normal'>
                                     Visit Poocoin
                                 </span>
                                 <span>
                                     <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-2 mt-1.5' />
                                 </span>
-                            </Link>
+                            </div>
                         </div>
 
                     </div>
@@ -218,7 +220,14 @@ export default function ArgoCoin() {
                         {/* 200 million agc */}
                         <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
                         <Tooltip
-                            content={"Help?"}
+                            content={
+                                <div style={{ width: '250px', wordWrap: 'break-word', backgroundColor: "#090421", color:"#ffffff", padding: "10px" }}>
+                                  {/* Use a multiline string for better readability */}
+                                  This is the total amount of AGC that can ever be minted. Note that once
+                                  we transition to our Layer 1 blockchain, we will do a DAO vote to update
+                                  our tokenomics to better reflect the update.
+                                </div>
+                              }
                             placement="top"
                             >
                                 <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
@@ -236,7 +245,11 @@ export default function ArgoCoin() {
                         {/* 100 million agc */}
                         <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
                         <Tooltip
-                            content={"Help?"}
+                            content={
+                                <div style={{ width: '250px', wordWrap: 'break-word', backgroundColor: "#090421", color:"#ffffff", padding: "10px" }}>
+                                33,333,333 AGC has been used to provide liquidity to AGC/MATIC on Uniswap, the remaining 66,666,667 is locked in our DAO and will be used as liquidity for AGC/BNB AND AGC/ETH when we add those wrapped tokens.
+                                </div>
+                                }
                             placement="top"
                             >
                                 <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
@@ -254,7 +267,11 @@ export default function ArgoCoin() {
                         {/* 80 million agc */}
                         <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
                         <Tooltip
-                            content={"Help?"}
+                            content={
+                                <div style={{ width: '250px', wordWrap: 'break-word', backgroundColor: "#090421", color:"#ffffff", padding: "10px" }}>
+                                    These tokens will be locked into our rewards contract to dispense to Devolved AI users for providing value to the ecosystem. As of right now, these are also locked in our DAO until we add them to the rewards contract.
+                                </div>
+                                }
                             placement="top"
                             >
                                 <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
@@ -272,7 +289,10 @@ export default function ArgoCoin() {
                         {/* 20 million agc */}
                         <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
                         <Tooltip
-                            content={"Help?"}
+                            content={
+                                <div style={{ width: '250px', wordWrap: 'break-word', backgroundColor: "#090421", color:"#ffffff", padding: "10px" }}>
+                                20M AGC will stay in our DAO and be voted out when needed to pay for operational expenses and marketing.
+                                </div>}
                             placement="top"
                             >
                                 <Image priority className="w-[1rem] h-auto float-right" src={InfoButton} alt="InfoButton"/>
@@ -310,7 +330,7 @@ export default function ArgoCoin() {
             </section>
 
             {/* uniswap  */}
-            <section className="flex flex-col items-center justify-center my-10 xl:my-20 gap-3 3xl:container">
+            <section className="flex flex-col items-center justify-center my-10 xl:my-20 3xl:container">
                 <SwapOnUniswap/>
             </section>
 

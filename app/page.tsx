@@ -18,6 +18,7 @@ import DisCordImageNoHover from "@/public/Join_us_on_discord_button_no_hover.web
 import DisCordImageHover from "@/public/Join_us_on_discord_button_hover.webp"
 import { useState } from "react"
 import JoinUsonDiscord from "@/components/customComponents/JoinUsonDiscord"
+import SwapOnUniswap from "@/components/customComponents/SwapOnUniswap"
 
 export default function Home() {
   const router = useRouter();
@@ -85,6 +86,10 @@ export default function Home() {
                   </div>
               </div>
           </div>
+      </section>
+
+      <section className="flex flex-col items-center justify-center my-10 xl:my-10 3xl:container">
+        <SwapOnUniswap/>
       </section>
 
       {/* What Drives Devolved AI? */}
