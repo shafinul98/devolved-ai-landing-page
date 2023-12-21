@@ -28,7 +28,7 @@ const Header = () => {
     { href: '/argoCoin', name: 'Argocoin' },
     { href: '/technology', name: 'Technology' },
     { href: '/community', name: 'CommUnity' },
-    { href: 'https://app.uniswap.org/swap', name: 'Argonauts NFT', target: '_blank' },
+    { href: 'https://spearmint.xyz/p/argonauts', name: 'Argonauts NFT', target: '_blank' },
     { href: '/contact', name: 'Contact' }
   ]
 
