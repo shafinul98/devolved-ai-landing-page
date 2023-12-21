@@ -11,6 +11,7 @@ import LookingBeyond from "@/public/technology/looking-beyond.webp"
 import Background3 from "@/public/technology/bg3.webp"
 import Background4 from "@/public/technology/bg4.webp"
 import JoinUsonDiscord from "@/components/customComponents/JoinUsonDiscord"
+import NowListed from "@/components/customComponents/NowListed"
 
 export default function Technology() {
     const handleButtonClick = () => {
@@ -22,6 +23,7 @@ export default function Technology() {
       {/* technology hero section */}
         <section className="w-full h-[25rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
         style={{ backgroundImage: `url(${HeroImage.src})`}}>
+            <NowListed/>
             <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
                 <div className="text-center">
                     <h1 className="font-bold text-[2.25rem] xl:text-[4.8125rem] leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">

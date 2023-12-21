@@ -8,6 +8,7 @@ import Link from "next/link"
 import { FaDiscord, FaFacebook, FaReddit, FaTelegram, FaLinkedin } from "react-icons/fa"
 import ContactUsForm from "@/components/customComponents/ContactUsForm"
 import FaXTwitter from '@/public/twitter.svg'
+import NowListed from "@/components/customComponents/NowListed"
 
 export default function Contact() {
     return (
@@ -16,6 +17,7 @@ export default function Contact() {
             {/* Contact hero section */}
             <section className="w-full h-[25rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
                 style={{ backgroundImage: `url(${HeroImage.src})`}}>
+                <NowListed/>
                 <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
                     <div className="text-center">
                         <h1 className="font-bold text-[2.25rem] xl:text-[4.8125rem] leading-normal mb-5 text-[#192033]">
