@@ -28,7 +28,7 @@ const Header = () => {
     { href: '/argoCoin', name: 'Argocoin' },
     { href: '/technology', name: 'Technology' },
     { href: '/community', name: 'CommUnity' },
-    { href: 'https://spearmint.xyz/p/argonauts', name: 'ARGONAUTS NFT', target: '_blank' },
+    { href: 'https://app.uniswap.org/swap', name: 'Argonauts NFT', target: '_blank' },
     { href: '/contact', name: 'Contact' }
   ]
 
@@ -64,7 +64,7 @@ const Header = () => {
             } z-30 transition-all`}>
 
           {/* logo */}
-          <div className="col-span-1 flex xl:justify-center justify-end">
+          <div className="col-span-1 flex xl:justify-center md:justify-start justify-end">
             <Link href={"/"} className="m-3 xl:mr-[20rem]">
               <Image
                 src={Logo}
@@ -76,7 +76,7 @@ const Header = () => {
           </div>
 
           {/* Menu (Hidden on LG and above) */}
-          <div className="xl:hidden fixed m-5 top-0 right-0" ref={menuRef}>
+          <div className="xl:hidden md:block lg:flex fixed lg:m-0 m-5 top-0 right-0" ref={menuRef}>
 
             {/* Mobile menu icon */}
             <div className="w-10 h-10 flex lg:hidden border items-center justify-center rounded-sm p-1 me-3.5" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -106,7 +106,7 @@ const Header = () => {
           </div>
 
           {/* Menu (Hidden on MD and below) xl:justify-between */}
-          <div className="col-span-1 p-3 xl:mr-[25rem] lg:justify-center items-center xl:gap-10 md:gap-4 lg:gap-5 hidden lg:flex text-sm text-[#2D3748]">
+          <div className="col-span-1 p-3 xl:mr-[25rem] lg:justify-center items-center xl:gap-8 md:gap-3 lg:gap-4 hidden md:hidden xl:flex lg:hidden text-sm text-[#2D3748]">
             {navigation.map(({ href, name, target }) => (
               <div key={name} className="text-[1rem] xl:whitespace-nowrap xl:text-[1rem] text-[#1D1D1D] font-normal leading-normal relative ms-[5px]" onClick={() => setIsMenuOpen(false)}>
                 <Link target= {target} href={href} className={checkActivePath(href) ? "active" : ""}>
