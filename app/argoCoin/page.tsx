@@ -341,7 +341,7 @@ export default function ArgoCoin() {
                         community-driven innovation and governance.
                         </p>
                         <button onClick={handleWhitepaperButtonClick}
-                            className="uppercase bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[10rem] xl:h-[3.125rem] mt-5">
+                            className="uppercase bg-[#A9A3B2] font-medium text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[10rem] xl:h-[3.125rem] mt-5">
                             WHITEPAPER
                         </button>
                     </div>
@@ -436,7 +436,7 @@ export default function ArgoCoin() {
 
                         <div className="flex justify-start">
                             <button onClick={handleVoteUsingDaoButtonClick}
-                            className="uppercase bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[10rem] xl:h-[3.125rem] mt-5">
+                            className="uppercase bg-[#A9A3B2] font-medium text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[14.4375rem] xl:h-[3.125rem] mt-5">
                                 Vote using our dao
                             </button>
                         </div>
@@ -601,7 +601,7 @@ export default function ArgoCoin() {
                             </p>
                             <div className="flex justify-start">
                                 <button onClick={handleReadReportButtonClick}
-                                className="uppercase bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[10rem] xl:h-[3.125rem] mt-5">
+                                className="uppercase bg-[#A9A3B2] font-medium text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[12.375rem] xl:h-[3.125rem] mt-5">
                                     Read our Audit
                                 </button>
                             </div>
@@ -660,7 +660,7 @@ export default function ArgoCoin() {
                             </p>
                             <div className="flex justify-start">
                                 <button onClick={handleVoteUsingDaoButtonClick}
-                                className="uppercase bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[10rem] xl:h-[3.125rem] mt-5">
+                                className="uppercase bg-[#A9A3B2] font-medium text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[14.4375rem] xl:h-[3.125rem] mt-5">
                                     submit a proposal
                                 </button>
                             </div>
