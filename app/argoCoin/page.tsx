@@ -25,10 +25,6 @@ export default function ArgoCoin() {
         setDiscordImage(DisCordImageHover);
         window.open('https://discord.com/invite/devolvedai', '_blank');
     };
-    const handleDiscordJoinUsButtonClick = () => {
-        window.open('https://discord.com/invite/devolvedai', '_blank');
-    };
-    
 
     const handleMouseEnter = () => {
         setDiscordImage(DisCordImageHover);
@@ -54,16 +50,14 @@ export default function ArgoCoin() {
                             Fueling the AI Revolution
                         </h1>
                         <p className="font-normal text-[1.25rem] xl:text-[1.875rem] leading-[1.875rem] xl:leading-[2.375rem] text-[#495167] m-5 xl:m-5 max-w-[24rem] xl:max-w-[71.375rem]">
-                            Step into the future with Argocoin:  The Cornerstone of Devolved AI. Anchored as
-                            the native token on our Layer 1 blockchain, AGC isn’t just a digital currency – it's the
-                            driving force behind a new era of AI-powered breakthroughs.
+                        Step into the future with Argocoin:  The Cornerstone of Devolved AI. Anchored as the native token on our upcoming Layer 1 blockchain, AGC isn’t just a digital currency – it's the driving force behind a new era of AI-powered breakthroughs.
                         </p>
                         <div className="justify-center pt-2 xl:pt-2">
                             {/* <GetReferral /> */}
-                            <p className="font-normal text-[1.125rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[1.275rem] leading-[1.875rem] xl:leading-[2.375rem] text-[#495167] m-5 xl:m-3 max-w-[24rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[71.375rem]">
+                            {/* <p className="font-normal text-[1.125rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[1.275rem] leading-[1.875rem] xl:leading-[2.375rem] text-[#495167] m-5 xl:m-3 max-w-[24rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[71.375rem]">
                                 Be Part of the Genesis: Join our Discord to shape the future of Devolved AI. 
                                 Engage, contribute, and grow with our community from the ground up.
-                            </p>
+                            </p> */}
                             <button className="button w-[15.4675rem] h-auto"
                             onClick={handleDiscordButtonClick}
                             onMouseEnter={handleMouseEnter} 
@@ -97,10 +91,9 @@ export default function ArgoCoin() {
                             Cryptocurrency
                         </p>
                         <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
-                            Argocoin (AGC) is not just a cryptocurrency; it's the linchpin of Devolved 
-                            AI's mission to decentralize the future of Artificial Intelligence. 
-                            As the proprietary digital currency on our layer 1 blockchain AGC stands at the forefront of a 
-                            new digital economy - set for launch to empower community-driven innovation and governance.
+                        Argocoin (AGC) isn’t just a cryptocurrency; it's the linchpin of Devolved AI's mission to decentralize the future of Artificial Intelligence. 
+                        As the proprietary digital currency on our upcoming layer 1 blockchain, AGC stands at the forefront of a new digital economy - set for launch to empower 
+                        community-driven innovation and governance.
                         </p>
                         <button onClick={handleButtonClick}
                             className=" uppercase bg-[#A9A3B2] text-white rounded-[0.3125rem] w-full h-[3.125rem] xl:w-[10rem] xl:h-[3.125rem] mt-5">
@@ -139,10 +132,8 @@ export default function ArgoCoin() {
                             Forge Value, Earn AGC
                         </p>
                         <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
-                            Though AGC is yet to be released, the anticipation is high for the multitude of 
-                            ways users will be able to earn AGC. From validating network transactions to 
-                            contributing valuable data for AI training, our Proof of Value (PoV) protocol 
-                            is designed to reward every valuable action within the ecosystem.
+                            AGC has now launched, transforming anticipation into active engagement. Users will soon be earning AGC through diverse activities, from validating 
+                            transactions to aiding AI training. Our Proof of Value (PoV) protocol rewards these contributions, showcasing the growing impact of our ecosystem.
                         </p>
                     </div>
                     <div className="m-5 xl:m-0">
@@ -193,11 +184,9 @@ export default function ArgoCoin() {
                             Your Stake, Your Voice
                         </p>
                         <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
-                            Argocoin is not just currency; it's a stake in the future of AI. 
-                            Upon release, AGC holders will exercise their governance rights, 
-                            shaping the ecosystem's policies, and making decisions that will 
-                            direct the platform's evolution - all through a transparent, 
-                            democratic voting process powered by blockchain.
+                        Argocoin has evolved beyond a mere currency; it's now a tangible stake in AI's future. 
+                        AGC holders are actively exercising governance rights, shaping policies, 
+                        and guiding the platform's evolution through a democratic, blockchain-powered voting process.
                         </p>
                     </div>
                 </div>
@@ -232,10 +221,9 @@ export default function ArgoCoin() {
                             Designed for <br/> Sustainability and Growth
                         </p>
                         <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
-                            The economic model behind AGC balances new token creation with a deflationary 
-                            mechanism to ensure a stable and growing ecosystem. The utility of AGC will go 
-                            beyond transactional use; it's the key to accessing enhanced AI services, 
-                            participating in the ecosystem, and incentivizing growth and innovation.
+                        Our current tokenomics for AGC are straightforward and effective: 100 million AGC tokens are available for liquidity, with 80 million dedicated 
+                        to rewards through our Proof of Value (PoV) Protocol, and 20 million locked for operational costs in our DAO. This model fosters a stable and progressively growing ecosystem, 
+                        where AGC's utility extends beyond mere transactions, unlocking advanced AI services and fostering participation, growth, and innovation within our community.
                         </p>
                     </div>
                     <div className="m-5 xl:m-0">
@@ -290,20 +278,19 @@ export default function ArgoCoin() {
                             the ecosystem's growth but also become part of a movement to democratize AI, 
                             contributing to a platform that is truly community-driven and transparent.
                         </p>
-                        <div className="hidden xl:flex justify-center">
+                        {/* <div className="flex justify-center">
                             <button onClick={handleDiscordJoinUsButtonClick}
                             className="uppercase bg-[#A9A3B2] font-bold leading-normal text-white text-[1rem] rounded-[0.625rem] xl:w-[14.5625rem] xl:h-[3.125rem] mt-5">
                                 join us on discord
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
 
-            <div className="bg-gradient-to-t from-[#F1F2F5] via-transparent to-[#fff] my-20">
-                
+            <section className="bg-gradient-to-t from-[#F1F2F5] via-transparent to-[#fff] my-10">
                 {/* Future Vision and Expansion */}
-                <section className="flex flex-col w-full my-10 items-center 3xl:container">
+                <div className="flex flex-col w-full my-10 items-center 3xl:container">
                     <div className="flex flex-col items-center justify-around xl:flex-row xl:px-20 relative">
                         <div className="m-5 xl:m-0">
                             <Image
@@ -322,10 +309,8 @@ export default function ArgoCoin() {
                                 Future Vision and <br/>  Expansion
                             </p>
                             <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
-                                The journey doesn't end with the release of AGC. We have a roadmap that 
-                                includes expanding into modules like computer vision and predictive analytics, 
-                                creating a comprehensive suite of AI tools governed by AGC holders - ensuring 
-                                a continuously evolving and advancing ecosystem.
+                            The journey doesn't end with the release of AGC. We have a roadmap that includes expanding into modules like computer vision and predictive 
+                            analytics, creating a comprehensive suite of AI tools governed by AGC holders - ensuring a continuously evolving and advancing ecosystem.
                             </p>
                         </div>
                     </div>
@@ -346,10 +331,10 @@ export default function ArgoCoin() {
                         }
                     `}
                     </style>
-                </section>
+                </div>
 
                 {/* Security and Stability Measures */}
-                <section className="flex flex-col w-full my-20 items-center 3xl:container">
+                <div className="flex flex-col w-full my-20 items-center 3xl:container">
                     <div className="flex flex-col-reverse items-center justify-around xl:flex-row xl:px-20 relative">
                         <div className="flex flex-col px-5 md:mt-16 gap-5 xl:ms-10">
                             <div className="background-image" />
@@ -360,8 +345,9 @@ export default function ArgoCoin() {
                                 Security and <br/>Stability Measures
                             </p>
                             <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
-                                We commit to the highest standards of security and economic resilience. 
-                                The launch will be accompanied by strategies to prevent market manipulation and ensure a fair distribution, while also prioritizing the stability and long-term viability of AGC.
+                            We uphold the highest standards of security and economic resilience, which are evident now that AGC has launched. 
+                            Our current strategies are effectively preventing market manipulation and ensuring a fair distribution of AGC, all 
+                            while prioritizing its stability and long-term viability.
                             </p>
                         </div>
                         <div className="m-5 xl:m-0">
@@ -390,10 +376,10 @@ export default function ArgoCoin() {
                         }
                     `}
                     </style>
-                </section>
+                </div>
 
                 {/* Your Pathway to Being a Part of the AI Evolution */}
-                <section className="flex flex-col w-full my-20 items-center 3xl:container">
+                <div className="flex flex-col w-full my-20 items-center 3xl:container">
                     <div className="flex flex-col items-center justify-around xl:flex-row xl:px-20 relative">
                         <div className="m-5 xl:m-0">
                             <Image 
@@ -412,11 +398,9 @@ export default function ArgoCoin() {
                                 Your Pathway to Being a <br/> Part of the AI Evolution
                             </p>
                             <p className="text-[1.125rem] xl:text-[1.375rem] leading-[1.875rem] text-[#495167] font-light max-w-[24.0625rem] xl:max-w-[45.25rem]">
-                                Argocoin is not just currency; it's a stake in the future of AI. 
-                                Upon release, AGC holders will exercise their governance rights, 
-                                shaping the ecosystem's policies, and making decisions that will direct 
-                                the platform's evolution - all through a transparent, democratic voting 
-                                process powered by blockchain.
+                            Argocoin is more than just a currency; it represents a stake in the future of AI. AGC holders are now exercising their governance rights, 
+                            actively shaping the ecosystem's policies and making decisions that guide the platform's evolution. This is all happening through a transparent, 
+                            democratic voting process, empowered by blockchain technology.
                             </p>
                         </div>
                     </div>
@@ -437,8 +421,8 @@ export default function ArgoCoin() {
                         }
                     `}
                     </style>
-                </section>
-            </div>
+                </div>
+            </section>
 
             {/* Ready to be a part of AI */}
             <section className="flex flex-col items-center justify-center my-6 md:my-10 gap-3 md:gap-5">
