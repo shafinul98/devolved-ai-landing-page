@@ -182,31 +182,15 @@ export default function ArgoCoin() {
                             <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
                                 Track AGC on Dextools
                             </p>
-                            <div className="flex flex-row gap-3 mt-3">
+                            <Link className="flex flex-row gap-3 mt-3" href={"https://www.dextools.io/app/en/polygon/pair-explorer/0x8837a61644d523cbe5216dde226f8f85e3aa9be3"} target='_blank'>
                                 <span className='text-[#FF6F00] text-[1rem] underline uppercase leading-normal'>
                                     Visit Dextools
                                 </span>
                                 <span>
                                     <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-2 mt-1.5' />
                                 </span>
-                            </div>
+                            </Link>
                         </div>
-
-                        {/* AGC Charts on Poocoin */}
-                        <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
-                            <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
-                                AGC Charts on Poocoin
-                            </p>
-                            <div className="flex flex-row gap-3 mt-3">
-                                <span className='text-[#FF6F00] text-[1rem] underline uppercase leading-normal'>
-                                    Visit Poocoin
-                                </span>
-                                <span>
-                                    <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-2 mt-1.5' />
-                                </span>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
