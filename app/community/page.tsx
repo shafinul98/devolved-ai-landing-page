@@ -21,6 +21,7 @@ import Step2 from "@/public/community/step2.svg"
 import Step3 from "@/public/community/step3.svg"
 import CoreDetailsCard from "@/components/customComponents/CoreDetailsCard"
 import JoinUsonDiscord from "@/components/customComponents/JoinUsonDiscord"
+import NowListed from "@/components/customComponents/NowListed"
 
 export default function Community() {
     const handleButtonClick = () => {
@@ -32,6 +33,7 @@ export default function Community() {
       {/* community hero section */}
         <section className="flex flex-col w-full h-[25rem] items-center justify-center bg-cover bg-center bg-no-repeat" 
         style={{ backgroundImage: `url(${HeroImage.src})`}}>
+            <NowListed/>
             <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 mt-5">
                 <div className="text-center">
                     <h1 className="font-bold text-[2.25rem] md:text-[3.5625rem] lg:text-[4.8125rem] xl:text-[4.8125rem] leading-normal mb-5 text-[#192033] max-w-[82.78975rem]">

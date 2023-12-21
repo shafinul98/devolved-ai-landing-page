@@ -19,6 +19,7 @@ const Header = () => {
   type NavigationItem = {
     href: string
     name: string
+    target?: string
   }
   
   const navigation: NavigationItem[] = [
@@ -27,6 +28,7 @@ const Header = () => {
     { href: '/argoCoin', name: 'Argocoin' },
     { href: '/technology', name: 'Technology' },
     { href: '/community', name: 'CommUnity' },
+    { href: 'https://spearmint.xyz/p/argonauts', name: 'ARGONAUTS NFT', target: '_blank' },
     { href: '/contact', name: 'Contact' }
   ]
 
@@ -104,22 +106,14 @@ const Header = () => {
           </div>
 
           {/* Menu (Hidden on MD and below) xl:justify-between */}
-          <div className="col-span-1 p-3 xl:mr-[25rem] lg:justify-center items-center xl:gap-10 lg:gap-5 hidden lg:flex text-sm text-[#2D3748]">
-            {navigation.map(({ href, name }) => (
+          <div className="col-span-1 p-3 xl:mr-[25rem] lg:justify-center items-center xl:gap-10 md:gap-4 lg:gap-5 hidden lg:flex text-sm text-[#2D3748]">
+            {navigation.map(({ href, name, target }) => (
               <div key={name} className="text-[1rem] xl:whitespace-nowrap xl:text-[1rem] text-[#1D1D1D] font-normal leading-normal relative ms-[5px]" onClick={() => setIsMenuOpen(false)}>
-                <Link href={href} className={checkActivePath(href) ? "active" : ""}>
+                <Link target= {target} href={href} className={checkActivePath(href) ? "active" : ""}>
                   {name}
                 </Link>
               </div>
             ))}
-            {/* Join the revolution button (Hidden on MD and below)*/}
-            {/* <div className="md:hidden lg:hidden xl:flex">
-              <EarlyAccessForm>
-                <button className="text-[1rem] text-[1D1D1D] font-bold leading-normal border-black border-2 rounded-[0.625rem] xl:w-[15.5625rem] xl:h-[3.125rem] transition-all hover:bg-black hover:text-white">
-                  JOIN THE REVOLUTION
-                </button>
-              </EarlyAccessForm>
-            </div> */}
             <div className="md:hidden lg:hidden xl:flex">
                 <button onClick={handleDiscordButtonClick}
                 className="uppercase text-[1rem] text-[1D1D1D] font-bold leading-normal border-black border-2 rounded-[0.625rem] xl:w-[12.5625rem] xl:h-[3.125rem] transition-all hover:bg-black hover:text-white">
@@ -127,8 +121,6 @@ const Header = () => {
                 </button>
             </div>
           </div>
-
-          
         </div>
       </nav>
     </header>
