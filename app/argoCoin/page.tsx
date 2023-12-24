@@ -28,7 +28,6 @@ import Million80AGC from "@/public/argoCoin/80_million_agc.svg"
 import Million20AGC from "@/public/argoCoin/20_million_agc.svg"
 import Link from 'next/link'
 import { Tooltip } from "@nextui-org/react"
-import SwapOnUniswap from '@/components/customComponents/SwapOnUniswap'
 import NowListed from '@/components/customComponents/NowListed'
 
 export default function ArgoCoin() {
@@ -85,7 +84,7 @@ export default function ArgoCoin() {
                             Fueling the AI Revolution
                         </h1>
                         <p className="font-normal text-[1.25rem] xl:text-[1.875rem] leading-[1.875rem] xl:leading-[2.375rem] text-[#495167] m-5 xl:m-5 max-w-[24rem] xl:max-w-[71.375rem]">
-                        Step into the future with Argocoin:  The Cornerstone of Devolved AI. Anchored as the native token on our upcoming Layer 1 blockchain, AGC isn’t just a digital currency – it's the driving force behind a new era of AI-powered breakthroughs.
+                            Step into the future with Argocoin:  The Cornerstone of Devolved AI. Anchored as the native token on our upcoming Layer 1 blockchain, AGC isn’t just a digital currency – it's the driving force behind a new era of AI-powered breakthroughs.
                         </p>
                         <div className="justify-center pt-2 xl:pt-2">
                             <button className="button w-[15.4675rem] h-auto"
@@ -110,7 +109,7 @@ export default function ArgoCoin() {
                 {/* title  */}
                 <div className='flex flex-col items-start justify-center xl:text-start text-center 3xl:container m-5'>
                     <p className='text-[1.625rem] xl:text-[3.75rem] font-bold leading-normal text-[#192033]'>
-                    Argocoin (AGC) Now Live on Uniswap: Trade AGC with MATIC!
+                        Argocoin (AGC) Now Live on Uniswap: Trade AGC with MATIC!
                     </p>
                 </div>
 
@@ -180,11 +179,11 @@ export default function ArgoCoin() {
                         {/* Track AGC on Dextools */}
                         <div className="p-4 xl:p-8 rounded-[1.25rem] bg-white hover:shadow-xl transition-all duration-300">
                             <p className="text-[1.5rem] xl:text-[1.875rem] text-[#29233B] font-medium">
-                                Track AGC on Dextools
+                                Track AGC on DEX Screener
                             </p>
-                            <Link className="flex flex-row gap-3 mt-3" href={"https://www.dextools.io/app/en/polygon/pair-explorer/0x8837a61644d523cbe5216dde226f8f85e3aa9be3"} target='_blank'>
+                            <Link className="flex flex-row gap-3 mt-3" href={"https://dexscreener.com/polygon/0x8837a61644d523cbe5216dde226f8f85e3aa9be3"} target='_blank'>
                                 <span className='text-[#FF6F00] text-[1rem] underline uppercase leading-normal'>
-                                    Visit Dextools
+                                    Visit DEXSCREENER
                                 </span>
                                 <span>
                                     <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-2 mt-1.5' />
@@ -311,11 +310,6 @@ export default function ArgoCoin() {
                         </div>    
                     </button>
                 </div>
-            </section>
-
-            {/* uniswap  */}
-            <section className="flex flex-col items-center justify-center my-10 xl:my-20 3xl:container">
-                <SwapOnUniswap/>
             </section>
 
             {/* A Revolutionary Native Cryptocurrency */}
@@ -537,10 +531,6 @@ export default function ArgoCoin() {
                 </div>
             </section>
 
-            {/* uniswap  */}
-            <section className="flex flex-col items-center my-20 xl:my-10 3xl:container">
-                <SwapOnUniswap/>
-            </section>
 
             <section className="bg-gradient-to-t from-[#F1F2F5] via-transparent to-[#fff] my-10">
                 {/* Future Vision and Expansion */}
