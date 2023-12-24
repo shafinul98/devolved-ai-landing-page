@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen overflow-x-hidden flex-col items-center justify-between p-0 md:p-0">
       {/* hero section */}
-      <section className="w-full xl:h-screen h-[60rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+      <section className="w-full xl:h-screen h-[55rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
         style={{ backgroundImage: `url(${HeroImage.src})` }}>
           <NowListed/>
           <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 xl:mt-3 mt-[10rem]">
@@ -88,10 +88,6 @@ export default function Home() {
                   </div>
               </div>
           </div>
-      </section>
-
-      <section className="flex flex-col items-center justify-center my-10 xl:my-10 3xl:container">
-        <SwapOnUniswap/>
       </section>
 
       {/* What Drives Devolved AI? */}

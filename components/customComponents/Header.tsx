@@ -6,7 +6,6 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import Logo from "@/public/logo.svg";
 import Link from "next/link";
-import { EarlyAccessForm } from "./EarlyAccessForm";
 import { useActivePath } from "./UseActivePath";
 import useScroll from "@/lib/hooks/use-scroll";
 
@@ -28,7 +27,7 @@ const Header = () => {
     { href: '/argoCoin', name: 'Argocoin' },
     { href: '/technology', name: 'Technology' },
     { href: '/community', name: 'CommUnity' },
-    { href: 'https://app.uniswap.org/swap', name: 'Argonauts NFT', target: '_blank' },
+    { href: 'https://spearmint.xyz/p/argonauts', name: 'Argonauts NFT', target: '_blank' },
     { href: '/contact', name: 'Contact' }
   ]
 
@@ -75,11 +74,11 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Menu (Hidden on LG and above) */}
-          <div className="xl:hidden md:block lg:flex fixed lg:m-0 m-5 top-0 right-0" ref={menuRef}>
+          {/* Mobile Menu */}
+          <div className="xl:hidden md:flex fixed lg:m-5 md:m-5 m-5 top-0 right-0" ref={menuRef}>
 
             {/* Mobile menu icon */}
-            <div className="w-10 h-10 flex lg:hidden border items-center justify-center rounded-sm p-1 me-3.5" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <div className="w-10 h-10 flex border items-center justify-center rounded-sm p-1 me-3.5" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               <Image src={MenuIcon} alt="Menu Icon" />
             </div>
 
@@ -92,7 +91,7 @@ const Header = () => {
                 </div>
               </div>
 
-              {/* Home Menu item */}
+              {/* Menu item */}
               <ul className="uppercase text-[1rem] text-[#1D1D1D] font-normal leading-normal pt-5 min-h-screen flex flex-col gap-5 items-start pl-5">
                 {navigation.map(({ href, name }) => (
                   <li key={name} className="relative ms-[5px]" onClick={() => setIsMenuOpen(false)}>
@@ -101,12 +100,16 @@ const Header = () => {
                     </Link>
                   </li>
                 ))}
+                <button onClick={handleDiscordButtonClick}
+                  className="uppercase text-[1rem] text-[#ffffff] font-bold leading-normal p-3 mr-2 bg-[#1D1D1D] border-2 rounded-[0.425rem] w-auto h-auto">
+                  join on discord
+                </button>
               </ul>
             </div>
           </div>
 
-          {/* Menu (Hidden on MD and below) xl:justify-between */}
-          <div className="col-span-1 p-3 xl:mr-[25rem] lg:justify-center items-center xl:gap-8 md:gap-3 lg:gap-4 hidden md:hidden xl:flex lg:hidden text-sm text-[#2D3748]">
+          {/* Desktop Menu*/}
+          <div className="col-span-1 p-3 xl:mr-[25rem] justify-center items-center xl:gap-4 hidden md:hidden lg:hidden xl:flex text-sm text-[#2D3748] min-w-screen">
             {navigation.map(({ href, name, target }) => (
               <div key={name} className="text-[1rem] xl:whitespace-nowrap xl:text-[1rem] text-[#1D1D1D] font-normal leading-normal relative ms-[5px]" onClick={() => setIsMenuOpen(false)}>
                 <Link target= {target} href={href} className={checkActivePath(href) ? "active" : ""}>
@@ -114,7 +117,7 @@ const Header = () => {
                 </Link>
               </div>
             ))}
-            <div className="md:hidden lg:hidden xl:flex">
+            <div className="flex">
                 <button onClick={handleDiscordButtonClick}
                 className="uppercase text-[1rem] text-[1D1D1D] font-bold leading-normal border-black border-2 rounded-[0.625rem] xl:w-[12.5625rem] xl:h-[3.125rem] transition-all hover:bg-black hover:text-white">
                   join us on discord
