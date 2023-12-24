@@ -28,7 +28,6 @@ import Million80AGC from "@/public/argoCoin/80_million_agc.svg"
 import Million20AGC from "@/public/argoCoin/20_million_agc.svg"
 import Link from 'next/link'
 import { Tooltip } from "@nextui-org/react"
-import SwapOnUniswap from '@/components/customComponents/SwapOnUniswap'
 import NowListed from '@/components/customComponents/NowListed'
 
 export default function ArgoCoin() {
@@ -184,7 +183,7 @@ export default function ArgoCoin() {
                             </p>
                             <Link className="flex flex-row gap-3 mt-3" href={"https://dexscreener.com/polygon/0x8837a61644d523cbe5216dde226f8f85e3aa9be3"} target='_blank'>
                                 <span className='text-[#FF6F00] text-[1rem] underline uppercase leading-normal'>
-                                    Visit DEX Screener
+                                    Visit DEXSCREENER
                                 </span>
                                 <span>
                                     <Image src={ArrowUpRight2} alt='ArrowUpRight2' className='ml-2 mt-1.5' />

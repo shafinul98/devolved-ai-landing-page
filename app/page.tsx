@@ -18,7 +18,6 @@ import DisCordImageNoHover from "@/public/Join_us_on_discord_button_no_hover.web
 import DisCordImageHover from "@/public/Join_us_on_discord_button_hover.webp"
 import { useState } from "react"
 import JoinUsonDiscord from "@/components/customComponents/JoinUsonDiscord"
-import SwapOnUniswap from "@/components/customComponents/SwapOnUniswap"
 import NowListed from "@/components/customComponents/NowListed"
 
 export default function Home() {
