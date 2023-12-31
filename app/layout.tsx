@@ -60,6 +60,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        <title>Devolved AI - Leading Innovation in Decentralized AI Technology</title>
+        <meta name="description" content="Join the forefront of AI evolution with Devolved AI's decentralized platform. Experience the power of community-driven AI development and governance." />
+        
+        {/* Primary Meta Tags */}
+        <meta name="title" content="Devolved AI - Leading Innovation in Decentralized AI Technology" />
+        <meta name="description" content="Join the forefront of AI evolution with Devolved AI's decentralized platform. Experience the power of community-driven AI development and governance." />
+        <meta name="image" content="https://www.devolvedai.com/_next/image?url=/_next/static/media/thumbnail.e89bec38.png&w=1920&q=75" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.devolvedai.com/" />
+        <meta property="og:title" content="Devolved AI - Leading Innovation in Decentralized AI Technology" />
+        <meta property="og:description" content="Join the forefront of AI evolution with Devolved AI's decentralized platform. Experience the power of community-driven AI development and governance." />
+        <meta property="og:image" content="https://www.devolvedai.com/_next/image?url=/_next/static/media/thumbnail.e89bec38.png&w=1920&q=75" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.devolvedai.com/" />
+        <meta property="twitter:title" content="Devolved AI - Leading Innovation in Decentralized AI Technology" />
+        <meta property="twitter:description" content="Join the forefront of AI evolution with Devolved AI's decentralized platform. Experience the power of community-driven AI development and governance." />
+        <meta property="twitter:image" content="https://www.devolvedai.com/_next/image?url=/_next/static/media/thumbnail.e89bec38.png&w=1920&q=75" />
+
         <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
         <link
           rel="preload"
