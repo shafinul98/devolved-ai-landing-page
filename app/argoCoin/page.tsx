@@ -59,6 +59,10 @@ export default function ArgoCoin() {
         window.open('https://app.aragon.org/#/daos/polygon/0x443f4ffa82e0b26a3855e75651a10a7f3fcff116', '_blank');
     };
 
+    const handleBuyAgcNowButtonClick = () => {
+        window.open('https://kyberswap.com/partner-swap?chainId=137&inputCurrency=MATIC&outputCurrency=0x2Ad2934d5BFB7912304754479Dd1f096D5C807Da&clientId=dexscreener&feeReceiver=0x0DA2a82ED2c387d1751ccbAf999A80b65bdb269E&enableTip=true&feeAmount=0&chargeFeeBy=currency_in&tab=swap', '_blank');
+    };
+
     // Shareable link copy handler from sharing widget
     const handlePolygonCopyToClipboard = async () => {
         try {
@@ -87,13 +91,25 @@ export default function ArgoCoin() {
                             Step into the future with Argocoin:  The Cornerstone of Devolved AI. Anchored as the native token on our upcoming Layer 1 blockchain, AGC isn’t just a digital currency – it's the driving force behind a new era of AI-powered breakthroughs.
                         </p>
                         <div className="justify-center pt-2 xl:pt-2">
+                            <button onClick={handleBuyAgcNowButtonClick}
+                            className="uppercase bg-[#FF6F00] text-[#fff] text-[1.25rem] leading-normal rounded-[0.3125rem] w-[13.125rem] h-[4.125rem] mt-5">
+                                BUY $AGC NOW 
+                            </button>
+                        </div>
+                        <div className='underline uppercase text-[#000] text-[1rem] font-medium leading-normal justify-center mt-3 xl:mt-3'>
+                            <Link href={"https://dexscreener.com/polygon/0x8837a61644d523cbe5216dde226f8f85e3aa9be3"} target='_blank'>Or view chart on dexscreener
+                            </Link>
+                        </div>
+                        
+                        
+                        {/* <div className="justify-center pt-2 xl:pt-2">
                             <button className="button w-[15.4675rem] h-auto"
                             onClick={handleDiscordButtonClick}
                             onMouseEnter={handleMouseEnter} 
                             onMouseLeave={handleMouseLeave}>
                                 <Image priority src={discordImage} alt="Discord Image" />
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
