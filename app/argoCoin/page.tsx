@@ -92,7 +92,7 @@ export default function ArgoCoin() {
                         </p>
                         <div className="justify-center pt-2 xl:pt-2">
                             <button onClick={handleBuyAgcNowButtonClick}
-                            className="uppercase bg-[#FF6F00] text-[#fff] text-[1.25rem] leading-normal rounded-[0.3125rem] w-[13.125rem] h-[4.125rem] mt-5">
+                            className="uppercase bg-[#FF6F00] hover:bg-[#EB6904] text-[#fff] text-[1.25rem] leading-normal rounded-[0.3125rem] w-[13.125rem] h-[4.125rem] mt-5">
                                 BUY $AGC NOW 
                             </button>
                         </div>
