@@ -29,9 +29,9 @@ export default function NowListed () {
         <>
             {showSticky && (
                 <div className="fixed w-full xl:h-[2rem] bg-[#FF6F00] top-16 xl:top-28 flex justify-between p-2 xl:z-50 z-10 m-5 xl:m-0">
-                    <Link href={'https://app.uniswap.org/tokens/polygon/0x2ad2934d5bfb7912304754479dd1f096d5c807da'} target="_blank" className="flex items-center justify-center xl:w-full">
+                    <Link href={'https://kyberswap.com/partner-swap?chainId=137&inputCurrency=MATIC&outputCurrency=0x2Ad2934d5BFB7912304754479Dd1f096D5C807Da&clientId=dexscreener&feeReceiver=0x0DA2a82ED2c387d1751ccbAf999A80b65bdb269E&enableTip=true&feeAmount=0&chargeFeeBy=currency_in&tab=swap'} target="_blank" className="flex items-center justify-center xl:w-full">
                         <span className="text-[#ffffff] text-[0.70rem] xl:text-sm uppercase leading-normal">
-                        Argocoin now listed on Uniswap. Trade now!
+                        $AGC NOW LISTED ON UNISWAP. TRADE NOW!
                         </span>
                         <span>
                         <Image src={ArrowUpRight} alt="ArrowUpRight2" className="xl:ml-3 ml-2" />
