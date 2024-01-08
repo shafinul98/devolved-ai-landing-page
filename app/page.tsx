@@ -60,7 +60,7 @@ export default function Home() {
       <section className="w-full xl:h-screen h-[55rem] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
         style={{ backgroundImage: `url(${HeroImage.src})` }}>
           <NowListed/>
-          <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 xl:mt-3 mt-[10rem]">
+          <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:p-12 xl:mt-[7rem] mt-[10rem]">
               <div className="text-center">
                   <h1 className="font-bold text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] xl:text-[4.8125rem] leading-[2.75rem] xl:leading-[5.50rem] xl:mb-5 text-[#192033] xl:max-w-[82.78975rem]">
                     AI has evolved.<br />
